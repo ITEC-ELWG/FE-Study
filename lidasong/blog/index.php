@@ -1,9 +1,8 @@
-﻿
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <?php
 include "cookie.php"; //引用php外部文件
-?> 
+?>
 <head>
 <title>Index</title>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -21,6 +20,8 @@ include "cookie.php"; //引用php外部文件
             </ul>
          </div>
   </div>
+  <div>
+  </div>
     <div>
             <ul  id="ul2">
                 <li>唐诗鉴赏</li>
@@ -34,5 +35,8 @@ include "cookie.php"; //引用php外部文件
       <div class="footer">
             Welcome to visit my pesonnal website!
       </div>
+      <form action="login.php" method="post">
+      <input type="submit" id="exit" value="退出登录"></input>
+     </form>
 </body>
 </html>
