@@ -3,8 +3,22 @@ ELWG前端学习小组任务提交处
 
 ## 说明
 
-* 将你们完成的项目放到以姓名全拼命名的文件夹里面，命名如：`linshoushan`
+* 将你们完成的项目放到以姓名全拼命名的文件夹里面，命名如：`linshoushan`。注意：**这里是公共的repo，大家不要修改别人的文件夹或整个项目结构**
 * 每个项目一个文件夹，命名如：`linshoushan/calculator`
+
+## 部署说明
+
+请第一次提交代码的同学遵照以下步骤来部署你的代码（此处假设你已经注册了Github账号，安装并配置好了Git）：
+
+1. 到[ELWG前端学习小组任务提交处][]，把`ELWG-FE-Study/tasks`这个项目**Fork**到你自己的账号。
+2. 在你自己**本机**上创建一个文件夹，比如命名为`ELWG-FE-Study`，然后进入该文件夹，在文件夹中打开命令行窗口，输入以下命令（注意把中文部分替换成你自己的昵称）把远程repo克隆到本地：
+    
+    git clone https://github.com/你的Github昵称/tasks.git
+
+3. 现在在你本地应该有这样一个目录：`ELWG-FE-Study/tasks/你的名字全拼`，进入该目录，你可以在这里面创建你的项目文件夹以及你的所有代码。再次提醒**不要修改别人的文件夹**。
+4. 当你在本地完成你的代码后（本地多次commit），将你的本地repo**Push**到远程repo，然后再点**Pull Request**，小组管理员确认你的请求版本无误后，将**Merge**你提交的版本。
+
+以后提交新的代码时，只需执行以上**第4步**即可。
 
 ## 推荐开发环境
 
@@ -31,3 +45,4 @@ ELWG前端学习小组任务提交处
 [Git]: https://sublime.wbond.net/packages/Git
 [Stack Overflow]: http://stackoverflow.com/
 [Google编码规范]: https://code.google.com/p/google-styleguide/
+[ELWG前端学习小组任务提交处]: https://github.com/ELWG-FE-Study/tasks
