@@ -13,3 +13,7 @@ ELWG前端学习小组任务
 * 注册Github账号
 * 安装并配置好相关的开发环境（[推荐开发环境](https://github.com/ELWG-FE-Study/tasks#%E6%8E%A8%E8%8D%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)）
 
+## 任务1
+
+* 学习Git的基本使用方法，推荐阅读[Git Community Book 中文版](http://gitbook.liuhui998.com/index.html)的第2章（第一步）和第3章（基本用法）。其他参考读物：[Git Immersion](http://gitimmersion.com)
+* **按照[部署说明](https://github.com/ELWG-FE-Study/tasks#%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E)，在你们的专有文件夹（以你的姓名全拼命名）下，修改base.md文件，在里面填上你们的姓名、手机，以及诸如兴趣爱好等你愿意介绍的个人信息，然后发起一次Pull Request**
