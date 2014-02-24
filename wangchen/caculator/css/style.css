@@ -1,0 +1,230 @@
+body{
+	background-color: #2d2d2d;
+}
+
+.outline{
+	position: absolute;
+	left: 37.9%;
+	right: 38.9%;
+	top: 60px;
+    width: 310px;
+    height: 506px;
+    border: 4px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 20px;
+    border-color: #f1f1f1;
+}
+
+.screen{
+	float: left;
+	width: 300px;
+	height: 113px;
+	margin-left: 6px;
+	margin-top: 7px;
+	background-color: #e8e8e8;
+}
+
+.buttonAll{
+	float: left;
+	width: 300px;
+	height: 380px;
+	margin-left: 6px;
+	margin-top: 6px;
+}
+
+.textOneInButton{
+	position: relative;
+	top: 10px;
+	font-family: "Lucide Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
+.textTwoInButton{
+	position: relative;
+	top: 26px;
+	font-family: "Lucide Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
+.textInUselessButton{
+	position: relative;
+	top: 10px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+.buttonOne{
+   display:inline-block;
+   text-decoration:none;
+   text-align: center;
+   font-size:24px;
+   font-weight:bold;
+   width: 63px;
+   height: 48px;
+   color:#fff;
+   border :1px;
+   border-style:solid;
+   border-width:1px;
+   border-radius:4px;
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset;
+   background:#666666;
+   border-color:#919191;
+}
+
+
+.buttonOne:hover{
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset,0 0 2px rgba(0,0,0,0.2);
+   opacity:0.9;
+}
+
+.buttonOne:active{
+   box-shadow:0px 0px 6px 0px rgba(0,0,0,0.4) inset;
+   opacity:1;
+   color:rgba(255,255,255,0.5);
+}
+
+.buttonTwo{
+   display:inline-block;
+   text-decoration:none;
+   text-align: center;
+   font-size:24px;
+   font-weight:bold;
+   width: 63px;
+   height: 73px;
+   color:#fff;
+   border :1px;
+   margin-top: 7px;
+   border-style:solid;
+   border-width:1px;
+   border-radius:4px;
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset;
+   background:#383838;
+   border-color:#5d5d5d;
+}
+
+
+.buttonTwo:hover{
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset,0 0 2px rgba(0,0,0,0.2);
+   opacity:0.9;
+}
+
+.buttonTwo:active{
+   box-shadow:0px 0px 6px 0px rgba(0,0,0,0.4) inset;
+   opacity:1;
+   color:rgba(255,255,255,0.5);
+}
+
+.buttonThree{
+   display:inline-block;
+   text-decoration:none;
+   text-align: center;
+   font-size:24px;
+   font-weight:bold;
+   width: 63px;
+   height: 73px;
+   color:#fff;
+   border :1px;
+   margin-top: 7px;
+   border-style:solid;
+   border-width:1px;
+   border-radius:4px;
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset;
+   background:#666666;
+   border-color:#868686;
+}
+
+
+.buttonThree:hover{
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset,0 0 2px rgba(0,0,0,0.2);
+   opacity:0.9;
+}
+
+.buttonThree:active{
+   box-shadow:0px 0px 6px 0px rgba(0,0,0,0.4) inset;
+   opacity:1;
+   color:rgba(255,255,255,0.5);
+}
+
+.buttonFour{
+   display:inline-block;
+   text-decoration:none;
+   text-align: center;
+   font-size:24px;
+   font-weight:bold;
+   width: 63px;
+   height: 73px;
+   color:#fff;
+   border :1px;
+   margin-top: 7px;
+   border-style:solid;
+   border-width:1px;
+   border-radius:4px;
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset;
+   background:#565b79;
+   border-color:#6d7290;
+}
+
+
+.buttonFour:hover{
+   box-shadow:0 1px 1px rgba(255,255,255,0.5) inset,0 0 2px rgba(0,0,0,0.2);
+   opacity:0.9;
+}
+
+.buttonFour:active{
+   box-shadow:0px 0px 6px 0px rgba(0,0,0,0.4) inset;
+   opacity:1;
+   color:rgba(255,255,255,0.5);
+}
+
+.buttonUseless{
+   display:inline-block;
+   text-decoration:none;
+   text-align: center;
+   font-size:24px;
+   font-weight:bold;
+   width: 63px;
+   height: 48px;
+   color:#fff;
+   border :1px;
+   border-style:solid;
+   border-width:1px;
+   border-radius:4px;
+   background:#2d2d2d;
+   border-color:rgba(255,255,255,0);
+}
+
+#result{
+	position: relative;
+	width: 268px;
+	top: 70px;
+	left: 6px;
+	margin-right: 0.4em;
+	display: block;
+	float: right;
+	text-align: right;
+	font-family:"Lucide Grande",Verdana,Arial,Helvetica,sans-serif;
+	font-size: 24px;
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border: 0;
+    background-color: #e8e8e8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
