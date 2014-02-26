@@ -1,0 +1,416 @@
+.wrapper{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/login_background.png);
+	background-size: cover;
+	background-position: 0 top;
+	background-repeat: no-repeat;
+}
+
+.header{
+	width: 178px;
+	height: 36px;
+	position: absolute;
+	left: 50%;
+	margin-left: -89px;
+	right: 50%;
+	top: 0;
+	z-index: 1;
+	background-color: #ffd200;
+}
+
+.headerLogo{
+	position: absolute;
+	left: 14px;
+	top: 3px;
+}
+
+.headerTitle{
+	position: absolute;
+	left: 48px;
+	top: 7px;
+}
+
+.leftTriangle{
+	position: absolute;
+	left: -20px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width:18px 10px 18px 10px;
+	border-color: #ffd200  #ffd200 transparent transparent;
+}
+
+.rightTriangle{
+	position: absolute;
+	left: 178px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 18px 10px 18px 10px;
+	border-color: #ffd200 transparent transparent #ffd200;
+}
+
+.bottomTriangle{
+	position: absolute;
+	left: 50%;
+	top: 36px;
+	margin-left:-6px;
+	width: 0;
+	height: 0;
+	border-width: 8px 6px 0 6px;
+	border-style: solid;
+	border-color: #ffd200 transparent transparent transparent
+}
+
+.partLeft{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.lineVerticalOne{
+	position: absolute;
+	left: 50%;
+	width: 2;
+	height: 100%;
+	margin-left: -2px;
+    float: right;
+    right: 0;
+    background-color: rgba(255,255,255,0.3);
+
+}
+
+.partRight{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.SignInbar{
+	position: relative;
+	width: 428px; 
+	height: 25px;
+	padding: 95px 0 9px 39px; 
+	font-size: 24px;
+	color: rgba(255,255,255,0.7);
+	font-family: "STHeiti Light" "HelveticaNeue-Light","Helvetica Neue Light";
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: rgba(255,255,255,0.2);
+}
+
+.circle-24px{
+	width: 24px;
+    height: 24px;
+	border-radius: 16px;
+	background-color: rgba(255,255,255,0.3);
+	position: absolute;
+	left: -13px;
+	top: 118px;
+}
+
+.circle-24px-inner{
+	width: 12px;
+	height: 12px;
+	border-radius: 16px;
+	background: rgba(255,255,255,0.7);
+	position: absolute;
+	top: 6px;
+	left: 6px;
+}
+
+.loginItem{
+	width: 185px;
+	height: 45px;
+	padding: 40px 0 40px 0;
+	position: relative;
+}
+
+.lineSidewardsOne{
+    width: 39px;
+    height: 22px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.3);
+    float: left;
+}
+
+.signInIconLinkedin{
+	display: block;
+	width: 46px;
+	height: 46px;
+	float: left;
+	background-image: url(../img/login_in1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.signInIconLinkedin:hover{
+background-image: url(../img/login_in2.png);
+}
+
+.lineSidewardsTwo{
+    width: 18px;
+    height: 22px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.3);
+    float: left;	
+}
+
+.loginItemText-or{
+	display: block;
+	float: left;
+	color: rgba(255,255,255,0.7);
+	text-align: center;
+	width: 18px;
+	font-size: 16px;
+}
+
+.signInIconFacebook{
+	display: block;
+	width: 46px;
+	height: 46px;
+	float: left;
+	background-image: url(../img/login_facebook1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.signInIconFacebook:hover{
+	background-image: url(../img/login_facebook2.png);
+}
+
+.circle-14px-one{
+	position: absolute;
+    left: -8px;
+    top: 55px;
+	width: 14px;
+	height: 14px;
+	border-radius: 16px;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.circle-14px-inner-one{
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 16px;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.loginItemText-with{
+	display: block;
+	position: absolute;
+	left: -45px;
+	top: 40px;
+	color: rgba(255,255,255,0.7);
+	font-size: 16px;
+}
+
+.loginBlock{
+	width: 281px;
+	height: 137px;
+	position: relative;
+}
+
+.lineTurn{
+	width: 160px;
+	height: 18px;
+	border-width:1px 1px 0 0;
+	border-style: solid;
+	color: rgba(255,255,255,0.4);
+	position: relative;
+}
+
+.semiCircle{
+	display: block;
+	position: absolute;
+	left: 155px;
+	top: 12px;
+	width: 11px;
+	height: 6px;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	background-color: rgba(255,255,255,0.9);
+}
+
+.circel-14px-two{
+	position: absolute;
+	left: -8px;
+	top: -7px;
+	width: 14px;
+	height: 14px;
+	border-radius: 14px;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.circle-14px-inner-two{
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 14px;
+	background-color: rgba(255,255,255,0.7);
+}
+
+.loginInput{
+	margin-left: 39px;
+	width: 244px;
+	height: 30px;
+	text-align: center;
+	border-width: 0;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.loginInput:focus{
+	background-color: white;
+}
+
+.lineVerticalTwo{
+	width: 160px;
+	height: 14px;
+	border-width: 0 1px 0 0;
+	border-style: solid;
+	border-color: rgba(255,255,255,0.4);
+}
+
+.siginInBtn{
+	display: block;
+	width: 244px;
+	height: 30px;
+	margin-left: 39px;
+	background-color: #ffd125;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	color: black;
+}
+
+.siginInBtn:hover{
+	background-color: #ff4c00;
+	color: white;
+}
+
+.siginInText{
+	display: inline-block;
+	margin-top: 8;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-family: "HelveticaNeue";
+}
+
+.siginSymbol{
+	display: block;
+	position: absolute;
+	left: 224px;
+	top:-9px; 
+}
+
+.loginBlocksText-or{
+	display: block;
+	position: absolute;
+	left: -35px;
+	top:-7px;
+	color:rgba(255,255,255,0.7);
+}
+
+.loginOutBlock{
+	width: 125px;
+	height: 30px;
+	margin-top: 28px;
+	margin-left: -125px;
+	position: relative;
+}
+
+.signUp{
+	display: block;
+	width: 86px;
+	height: 26px;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 16px;
+	color: rgba(255,255,255,0.5);
+	border-color: rgba(255,255,255,0.5);
+	text-decoration: none;
+	text-align: center;
+	float: left;
+}
+
+.signUp:hover{
+	border-color: #f05213;
+	color: #f05213;
+}
+
+.signUpText{
+	display: block;
+	margin-top: 3px;
+	font-family: "HelveticaNeue-Light"
+}
+
+.lineSidewardsThree{
+	width: 35px;
+	height: 13px;
+	border-width: 0 0 2px 0;
+	border-style: solid;
+	border-color: rgba(255,255,255,0.6);
+	float: left;
+}
+
+.cirlcle-18px-one{
+	position: absolute;
+	left: 115px;
+	top: 6px;
+	width: 18px;
+	height: 18px;
+	border-radius: 16px;
+	background-color: rgba(255,255,255,0.3);
+}
+
+.circle-18px-inner-one{
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 10px;
+	height: 10px;
+	border-radius: 16px;
+	background-color: rgba(255,255,255,0.7);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
