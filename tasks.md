@@ -23,4 +23,10 @@ ELWG前端学习小组任务
 * 学习W3School的[HTML基础教程](http://www.w3school.com.cn/html/index.asp)（页面左侧“课程表”的“HTML基础教程”部分）
 * 学习W3School的[CSS基础教程](http://www.w3school.com.cn/css/index.asp)（页面左侧“课程表”的“CSS基础教程”“CSS样式”“CSS框模型”“CSS定位”部分）
 * 学习Chrome DevTools的[Elements面板](https://developers.google.com/chrome-developer-tools/docs/dom-and-styles?hl=zh-CN)（可能需要翻墙），了解“审查元素”及HTML/CSS的调试方法
-* **设计一个简单的登录页面login.html和你的个人主页首页index.html。要求：登录页面使用居中布局（[参考图](http://ww2.sinaimg.cn/large/74990035jw1edvnyluzlvj21al0qfahl.jpg)）；首页使用上中下布局（[参考图](http://ww3.sinaimg.cn/large/74990035jw1edvnyxdby7j20zd0a60sz.jpg)）；登录页点击“登录”跳转到首页。首页的标题、内容、脚注的内容和样式没有特定要求，一切按照你的个人喜好来设计。**
+* **设计一个简单的登录页面login.html和你的个人主页首页index.html。要求：项目名称`Blog`；登录页面使用居中布局（[参考图](http://ww2.sinaimg.cn/large/74990035jw1edvnyluzlvj21al0qfahl.jpg)）；首页使用上中下布局（[参考图](http://ww3.sinaimg.cn/large/74990035jw1edvnyxdby7j20zd0a60sz.jpg)）；登录页点击“登录”跳转到首页。首页的标题、内容、脚注的内容和样式没有特定要求，一切按照你的个人喜好来设计。**
+
+## 任务3：Javascript入门
+
+* 学习W3School的[Javascript教程](http://www.w3school.com.cn/js/index.asp)（页面左侧“课程表”的“JS教程”“JS HTML DOM”“JS对象”部分）
+* **+**推荐读物：[《Javascript语言精粹》](http://book.douban.com/subject/11874748/)
+* **使用HTML/CSS/Javascript制作一个简单的计算器，要求：项目名称`Calculator`；具备两个数字（包括小数）的加减乘除，一个数字的求百分比功能；各种颜色和字体等样式都按照你的个人喜好来设计（[参考图](http://ww1.sinaimg.cn/large/74990035gw1edwkx6v8hjj208h08j3ym.jpg)）。**
