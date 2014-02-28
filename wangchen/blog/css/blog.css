@@ -1,0 +1,151 @@
+body{
+	font-size: 62.5%;
+	margin:0;
+	padding: 0;
+}
+
+.header, .footer{
+	width: 100%;
+	background-color: #22A79D;	
+}
+
+.header{
+	height: 5em;
+}
+
+.footer{
+	height: 4em;
+}
+
+.headerContent, .footerContent{
+	width: 74%;
+	padding-top: 1em;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.headerContent{
+	height: 4em;
+}
+
+
+.footerContent{
+	height: 3em;
+}
+
+.logo, .title{
+	float: left;
+}
+
+.logo{
+	margin-top: -10px;
+}
+
+.title{
+	margin-top: 1em;
+	margin-left: 1em;
+	font-family: sans-serif;
+	font-size: 1.6em;
+}
+
+.navi{
+	float: right;
+}
+
+.naviText{
+	float: right;
+	margin-right: 1em;
+	margin-top: 1em;
+	font-family: inherit;
+	color: black;
+}
+
+.main{
+	width: 74%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.brief{
+	width: 14%;
+	float: left;
+	margin-top: 1em;
+}
+
+.date{
+	font-size: 2.3em;
+}
+
+.tags{
+	float: left;
+	background-color: #22A79D;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+	padding: 0.3em 0.75em 0.3em 0.75em;
+}
+
+.clear{
+	clear: both;
+}
+
+.content{
+	width: 80%;
+	float: right;
+	margin-top: 1em;
+}
+
+.articleTitle, .mainContent{
+	display: block;
+}
+
+.articleTitle{
+	font-size: 2em;
+	margin-bottom: 0.5em;
+	color: #0d6962;
+	text-decoration: none;
+	width: 15em;
+	height: 1em;
+}
+
+.mainContent{
+	color: #454747;
+	line-height: 2em;
+	margin-bottom: 1em;
+	font-size: 1.4em;
+}
+
+.about{
+	margin-top: 0.7em;
+	float: left;
+}
+
+.renren, .weibo{
+	margin-top: 0.5em;
+	margin-right: 0.8em;
+	display: block;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

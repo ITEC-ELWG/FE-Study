@@ -1,0 +1,86 @@
+body{
+	font-size: 62.5%;
+	margin:0;
+	padding: 0;
+	background-color: #c8c8c8;
+}
+
+.logo,.prompts{
+	display: block;
+}
+
+.logo{
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 2em; 
+}
+
+.prompts{
+	font-family: serif;
+	font-size: 3em;
+	text-align: center;
+	color: #09655e;
+}
+
+.username,.password,.BtnSignIn{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.username,.password{
+	width: 20em;
+	height: 2em;
+	border-width: 0;
+	padding: 0;
+}
+
+
+
+.BtnSignIn{
+	width: 22em;
+	height:1.7em;
+	background-color: #209a91;
+	text-decoration:none;
+	color: white;
+	padding-top:0.7em; 
+}
+
+.signInText{
+	//display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
