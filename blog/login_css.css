@@ -1,0 +1,32 @@
+div{
+    text-align:center;
+    vertical-align:middle;    
+}
+body{
+    background:#fafaff;
+    margin:20%;
+ 
+}
+input{
+    width:250px;
+    height:30px;
+    margin:3px;
+    padding:3px;
+    border:1px solid #000;
+    background:#fafaff;
+   
+}
+button{
+    position:relative;
+    background:#efefff;
+    border:1px solid #fafaff;
+    padding-bottom:2px;
+    margin:5px;
+    color:red;
+    width:250px;
+    height:35px;
+    font-size:100%;
+    font-weight:bold;
+    text-align:cnter;
+    left:-3px; 	
+}
