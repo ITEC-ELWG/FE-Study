@@ -1,6 +1,7 @@
-div{
+.login{
     text-align:center;
-    vertical-align:middle;    
+    //vertical-align:middle;    
+    margin£º0 auto;
 }
 body{
     background:#fafaff;
@@ -16,7 +17,7 @@ input{
     background:#fafaff;
    
 }
-button{
+.login_butt{
     position:relative;
     background:#efefff;
     border:1px solid #fafaff;
