@@ -55,5 +55,5 @@ function equal() {
 	if (sym == '%')
 		b = parseFloat(num1) / 100;
 	document.getElementById("result").value = b;
-	num1 = '', num2 = '', sym = '', numInScreen = '', flag = 1;
+	num1 = b, num2 = '', sym = '', numInScreen = b, flag = 1;
 }
