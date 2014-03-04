@@ -4,6 +4,16 @@ body{
 	padding: 0;
 }
 
+.wrapper{
+	min-height: 100%;
+	position: relative;
+}
+
+.footer{
+	position: absolute;
+	bottom: 0;
+}
+
 .header, .footer{
 	width: 100%;
 	background-color: #22A79D;	
