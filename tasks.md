@@ -30,3 +30,10 @@ ELWG前端学习小组任务
 * 学习W3School的[Javascript教程](http://www.w3school.com.cn/js/index.asp)（页面左侧“课程表”的“JS教程”“JS HTML DOM”“JS对象”部分）
 * **+**推荐读物：[《Javascript语言精粹》](http://book.douban.com/subject/11874748/)
 * **使用HTML/CSS/Javascript制作一个简单的计算器，要求：项目名称`Calculator`；具备两个数字（包括小数）的加减乘除，一个数字的求百分比功能；各种颜色和字体等样式都按照你的个人喜好来设计（[参考图](http://ww1.sinaimg.cn/large/74990035gw1edwkx6v8hjj208h08j3ym.jpg)）。**
+
+## 任务4：初识服务器后台和数据库
+
+* 学习W3School的[SQL教程](http://www.w3school.com.cn/sql/index.asp)（页面左侧“课程表”的“SQL基础教程”部分）
+* 学习W3School的[PHP教程](http://www.w3school.com.cn/php/index.asp)（页面左侧“课程表”的“PHP基础教程”“PHP数据库”以及“PHP高级教程（日期、Include、文件、文件上传、Cookies、Sessions）”部分）
+* **在你们的机器上部署一套PHP开发环境（Apache+PHP+MySQL），Windows用户推荐安装[WAMP集成环境](http://www.wampserver.com/en/)（其他系统的就得自己折腾了）和[数据库管理工具Navicat For MySQL](http://www.navicat.com.cn/products/navicat-for-mysql)。配置Apache的alias指向你们的`blog`文件夹，然后把`login.html`改成`login.php`，在浏览器中访问`http://localhost/blog`可以正常打开登录页面即可。**
+
