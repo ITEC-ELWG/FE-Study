@@ -1,0 +1,34 @@
+<style>
+* {
+        margin: 0;
+        padding: 0;
+        border:0;
+    }
+    body {
+        width: 320px;
+        height: 280px;
+        margin:auto;
+        margin-top: 100px;
+    }
+    table.cxtable {
+        width: 100%;
+        border-collapse: separate;
+        background-color: #abcdef;
+    }
+    table.cxtable tr td input.cl {
+        border: 2px;
+        border-color: black;
+        height: 30px;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: right;
+    }
+    .oper {
+        width:50px;
+        height:35px;
+    }
+    .num {
+        width: 60px;
+        height: 45px;
+    }
+    </style>
