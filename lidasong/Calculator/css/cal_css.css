@@ -1,0 +1,26 @@
+body{
+      position: absolute ;
+      left: 40% ;
+      top: 150px ; 
+    }
+#result{
+    width:320px ;
+    height:40px ;
+    left:0px ;
+    background:#fefdff ;  
+ }
+button{                    
+    
+    width:70px ;
+    height:35px ;
+    margin-top:20px ;
+    margin-left:5px;
+}
+#buttonPercentage{
+
+    width:70px;
+    height:35px;
+    margin-top:20px;
+    margin-left:170px;
+   
+}
