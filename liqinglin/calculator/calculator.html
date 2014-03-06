@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<html>
+
+<head>
+    <title>计算器</title>
+    <link rel="stylesheet" type="text/css" href="cal.css">
+    
+    <script type="text/javascript" src="D:\ELWG-FE-Study\tasks\liqinglin\calculator\js\cal.js">
+    </script>
+    
+</head>
+
+<body>
+
+        <table class="cxtable">
+            <tr>
+                <td colspan="4">
+                    <input type="text"  id="answer" class="cl" value="0.">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="%" value="%" onclick="doPercent()" class="oper">
+                </td>
+                <td>
+                    <input type="button" name="AC" value="AC" onclick="doClear()" class="num">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="7" value="7" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="8" value="8" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="9" value="9" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="/" value="/" onclick="getNumber(this.value)" class="oper">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="4" value="4" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="5" value="5" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="6" value="6" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="*" value="*" onclick="getNumber(this.value)" class="oper">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="1" value="1" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="2" value="2" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="3" value="3" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="-" value="-" onclick="getNumber(this.value)" class="oper">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="0" value="0" onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="." value="." onclick="getNumber(this.value)" class="num">
+                </td>
+                <td>
+                    <input type="button" name="=" value="=" onclick="getNumber(this.value)" class="oper">
+                </td>
+                <td>
+                    <input type="button" name="+" value="+" onclick="getNumber(this.value)" class="oper">
+                </td>
+            </tr>
+        </table>
+    
+</body>
+
+</html>
