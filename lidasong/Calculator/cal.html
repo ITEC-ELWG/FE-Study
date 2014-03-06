@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang = "en" xmlns = "http://www.w3.org/1999/xhtml" lang = "en">
+<head>
+	<title>Calculator</title>
+	<meta content = "text/html; charset = UTF-8" http-equiv = "Content-Type">
+	<link rel = "stylesheet" type = "text/css" href = "css/cal_css.css"/>
+	<script type = "text/javascript" src = "js/cal_js.js"></script>
+</head>
+<body>
+    <div>
+        <input type = "text" id = "result"   value = ''></input>
+    </div>
+        <button type = "button" id = "buttonPercentage" onclick = "press(100)" >%</button>
+        <button type = "button"  onclick = "press(10)">AC</button>
+    <div>
+        <button type = "button" onclick = "press(1)")>1</button>
+        <button type = "button" onclick = "press(2)">2</button> 
+        <button type = "button" onclick = "press(3)">3</button>
+        <button type = "button" onclick = "press(11)">+</button>
+    </div>
+    <div>
+        <button type = "button" onclick = "press(4)">4</button>
+        <button type = "button" onclick = "press(5)">5</button>
+        <button type = "button" onclick = "press(6)">6</button>
+        <button type = "button" onclick = "press(12)">-</button>
+    </div>
+    <div>
+        <button type = "button" onclick = "press(7)">7</button>
+        <button type = "button" onclick = "press(8)">8</button>
+        <button type = "button" onclick = "press(9)">9</button>
+        <button type = "button" onclick = "press(13)">x</button>
+    </div>
+    <div>
+        <button type = "button" onclick = "press(0)">0</button>
+        <button type = "button" onclick = "press(15)">.</button>
+        <button type = "button" onclick = "calculate()"> = </button>
+        <button type = "button" onclick = "press(14)">/</button>                    
+    </div>
+</body>
+</html>
