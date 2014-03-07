@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <meta charset="utf-8">
 <html>
 
@@ -14,7 +14,7 @@
 <body align="center">
 <div class="con">
 	<div class="txt">
-	<img src="D:\ELWG-FE-Study\tasks\liqinglin\blog\img\beijing.jpg"  width="300" height="100">
+	<img src="img\beijing.jpg"  width="300" height="100">
     <form action="login_validate.php" method="get">
         用户：
         <input type="text" name="user">

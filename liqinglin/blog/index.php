@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <meta charset="utf-8">
 <html>
 
 <head>
     <title>个人主页</title>
-    <link rel="stylesheet" type="text/css" href="D:\ELWG-FE-Study\tasks\liqinglin\blog\css\index.css">
+    <link rel="stylesheet" type="text/css" href="css\index.css">
 </head>
 
 <body>
