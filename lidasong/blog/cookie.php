@@ -1,6 +1,6 @@
-<?php 
-if(!$_COOKIE["username"]||!$_COOKIE["password"])
-	echo '<meta http-equiv="refresh" content="0;url=login.php" />';
-	setcookie("username"," ",time()-3600);
-	setcookie("password"," ",time()-3600); //删除cookie
+<?php
+if (($_COOKIE["username"] != 'lidsaong') && ($_COOKIE["password"] != 'elwg'))
+    echo '<meta http-equiv="refresh" content="2;url=login.php" />';
+//setcookie("username"," ",time()-3600);
+//setcookie("password"," ",time()-3600); //删除cookie	 
 ?>

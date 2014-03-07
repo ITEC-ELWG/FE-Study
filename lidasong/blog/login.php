@@ -9,14 +9,14 @@
 <body >
 <form action="login_validate.php" method="post">
     <div class="login">
-    	<input class="import" type="text" name="username" id="username" value="username" onclick="this.value=''"> 	
-   	 	</input>
-    		<br/>
-    		<br/>
-    		<input type="password" name="password" value="password" id="password" onclick="this.value=''">
-    		</input>
-    		<br/>
-    		<br/>
+        <input class="import" type="text" name="username" id="username" value="username" onclick="this.value=''">   
+        </input>
+            <br/>
+            <br/>
+            <input type="password" name="password" value="password" id="password" onclick="this.value=''">
+            </input>
+            <br/>
+            <br/>
     <input class="login_butt" type="submit" value="Submit"></input>
     </div>
     </form>
