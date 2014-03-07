@@ -1,0 +1,58 @@
+    <style type="text/css"> * {
+        margin:0;
+        padding: 0;
+    }
+    div#container {
+        position:relative;
+        height: auto;
+        width:100%;
+        min-height: 100%;
+    }
+    div#header {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-image:url(D:\ELWG-FE-Study\tasks\liqinglin\blog\img\tu.jpg);
+        background-repeat: repeat;
+        text-align: center;
+    }
+    div#menu {
+        
+        top:40px;
+        background-color: #ffff99;
+        height: 100%;
+        width: 40%;
+        float: left;
+    }
+    div#content {
+        
+        top: 40px;
+        background-color: #eeeeee;
+        height:100%;
+        width: 60%;
+        float: left;   
+    }
+    div#footer {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        background-color: #99bbbb;
+        clear: both;
+        text-align: center;
+        top:500px;
+    }
+    h1 {
+        margin-bottom: 0;
+        padding: 5px;
+    }
+    h2 {
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+}
+li {
+    list-style:none;
+}
+</style>
