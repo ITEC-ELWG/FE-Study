@@ -36,7 +36,7 @@ ELWG前端学习小组任务
 * 学习W3School的[SQL教程](http://www.w3school.com.cn/sql/index.asp)（页面左侧“课程表”的“SQL基础教程”部分）
 * 学习W3School的[PHP教程](http://www.w3school.com.cn/php/index.asp)（页面左侧“课程表”的“PHP基础教程”“PHP数据库”以及“PHP高级教程（日期、Include、文件、文件上传、Cookies、Sessions）”部分）
 * **在你们的机器上部署一套PHP开发环境（Apache+PHP+MySQL），Windows用户推荐安装[WAMP集成环境](http://www.wampserver.com/en/)（其他系统的就得自己折腾了）和[数据库管理工具Navicat For MySQL](http://www.navicat.com.cn/products/navicat-for-mysql)。配置Apache的alias指向你们的`blog`文件夹（自行搜索`apache alias`），然后把两个文件的`.html`后缀改成`.php`，在浏览器中访问`http://localhost/blog`可以正常打开页面即可。**
-* **完善`login.php`中的登录表单，要求将你填写的用户名和密码发送到`login_validate.php`中与数据库`db_elwg_fe_study`中的用户表`table_user`存放的用户信息（用户名是你们的姓名全拼，密码是elwg）做比较，只有验证正确之后才能跳转到index.html。下面是数据库的连接信息：**
+* **完善`login.php`中的登录表单，要求将你填写的用户名和密码POST到`login_validate.php`中，在这个文件中需要与数据库`db_elwg_fe_study`中的用户表`table_user`存放的用户信息（用户名是你们的姓名全拼，密码是elwg）做比较，只有验证正确之后才能跳转到index.html。下面是数据库的连接信息：**
 
 ```
     数据库服务器：115.156.216.95
@@ -44,3 +44,9 @@ ELWG前端学习小组任务
     密码：123
 ```
 * **++** **如果你在浏览器中直接访问index.php是可以绕过登录页面的，现在要求改成访问index.php的时候，验证session（或cookie）有没有登录信息，如果有则正常打开，否则重定向到登录页。**
+
+## 任务5：神奇的jQuery
+
+* 学习W3School的[AJAX教程](http://www.w3school.com.cn/ajax/index.asp)（页面左侧“课程表”的“AJAX基础教程”“AJAX XHR”“AJAX 高级”部分）
+* 学习W3School的[jQuery教程](http://www.w3school.com.cn/jquery/index.asp)（页面左侧“课程表”的“jQuery基础教程”“jQuery效果”“jQuery HTML”“jQuery遍历”“jQuery AJAX”部分）
+* **使用JS实现一个8格拼图游戏，要求：项目名称`Puzzle8`；点击方块若周围有空格则移动；可以判定胜利条件；有一个“重置”按钮，点击后发起AJAX请求从服务器获取打乱的顺序并重置拼图；界面自行设计（[参考图](http://ww4.sinaimg.cn/large/74990035jw1ee78msr09fj20ax0auaa3.jpg)）**
