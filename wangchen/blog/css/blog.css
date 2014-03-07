@@ -1,49 +1,55 @@
-body{
-	font-size: 62.5%;
-	margin:0;
-	padding: 0;
+html {
+	height: 100%;
 }
 
-.wrapper{
+body {
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.wrapper {
 	min-height: 100%;
+
 	position: relative;
 }
 
-.footer{
+.footer {
 	position: absolute;
 	bottom: 0;
 }
 
-.header, .footer{
+.header, .footer {
 	width: 100%;
 	background-color: #22A79D;	
 }
 
-.header{
+.header {
 	height: 5em;
 }
 
-.footer{
+.footer, .falseFooter {
 	height: 4em;
 }
 
-.headerContent, .footerContent{
+.headerContent, .footerContent {
 	width: 74%;
 	padding-top: 1em;
 	margin-left: auto;
 	margin-right: auto;	
 }
 
-.headerContent{
+.headerContent {
 	height: 4em;
 }
 
 
-.footerContent{
+.footerContent {
 	height: 3em;
 }
 
-.logo, .title{
+.logo, .title {
 	float: left;
 }
 
@@ -51,18 +57,18 @@ body{
 	margin-top: -10px;
 }
 
-.title{
+.title {
 	margin-top: 1em;
 	margin-left: 1em;
 	font-family: sans-serif;
 	font-size: 1.6em;
 }
 
-.navi{
+.navi {
 	float: right;
 }
 
-.naviText{
+.naviText {
 	float: right;
 	margin-right: 1em;
 	margin-top: 1em;
@@ -70,23 +76,23 @@ body{
 	color: black;
 }
 
-.main{
+.main {
 	width: 74%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.brief{
+.brief {
 	width: 14%;
 	float: left;
 	margin-top: 1em;
 }
 
-.date{
+.date {
 	font-size: 2.3em;
 }
 
-.tags{
+.tags {
 	float: left;
 	background-color: #22A79D;
 	margin-top: 0.5em;
@@ -94,21 +100,21 @@ body{
 	padding: 0.3em 0.75em 0.3em 0.75em;
 }
 
-.clear{
+.clear {
 	clear: both;
 }
 
-.content{
+.content {
 	width: 80%;
 	float: right;
 	margin-top: 1em;
 }
 
-.articleTitle, .mainContent{
+.articleTitle, .mainContent {
 	display: block;
 }
 
-.articleTitle{
+.articleTitle {
 	font-size: 2em;
 	margin-bottom: 0.5em;
 	color: #0d6962;
@@ -117,19 +123,19 @@ body{
 	height: 1em;
 }
 
-.mainContent{
+.mainContent {
 	color: #454747;
 	line-height: 2em;
 	margin-bottom: 1em;
 	font-size: 1.4em;
 }
 
-.about{
+.about {
 	margin-top: 0.7em;
 	float: left;
 }
 
-.renren, .weibo{
+.renren, .weibo {
 	margin-top: 0.5em;
 	margin-right: 0.8em;
 	display: block;

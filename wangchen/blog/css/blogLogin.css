@@ -38,18 +38,15 @@ body{
 }
 
 
-
 .BtnSignIn{
-	width: 22em;
+	display: block;
+	width: 20em;
 	height:1.7em;
 	background-color: #209a91;
+  	color: white;
 	text-decoration:none;
-	color: white;
-	padding-top:0.7em; 
-}
-
-.signInText{
-	//display: block;
+	padding-top:0.1em; 
+	border: 0;
 }
 
 
