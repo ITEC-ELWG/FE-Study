@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>Index</title>
+<?php
+include "cookie.php"; //引用php外部文件
+?> 
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 <link rel="stylesheet" type="text/css" href="main_page.css"/>
 </head>
@@ -15,20 +18,20 @@
                   <li id="li1"><a href="#classify">归类</a></li>   
                   <li id="li1"><a href="#home">首页</a></li>
             </ul>
-        </div>
+         </div>
   </div>
     <div>
-    		<ul  id="ul2">
-    			<li>唐诗鉴赏</li>
-    			<li>宋词鉴赏</li>
-    			<li>元曲鉴赏</li>
-    			<li>明清小说</li>
-    			<li>现代文学</li>
-    		</ul>
+            <ul  id="ul2">
+                <li>唐诗鉴赏</li>
+                <li>宋词鉴赏</li>
+                <li>元曲鉴赏</li>
+                <li>明清小说</li>
+                <li>现代文学</li>
+            </ul>
     
     </div>
       <div class="footer">
             Welcome to visit my pesonnal website!
-        </div>
+      </div>
 </body>
 </html>
