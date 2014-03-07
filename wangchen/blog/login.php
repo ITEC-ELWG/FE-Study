@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>blogLogin</title>
+</head>
+<link rel="stylesheet" href="css/blogLogin.css" type="text/css" />
+<body>
+	<div>
+		<img src="img/logo.png" alt="logo" class="logo" />
+		<span class="prompts">Panda's room</span>
+		<form action="login_validate.php" method="post" enctype="multipart/form-data"s>
+			<input type="text" name="username" class="username" placeholder="username" />
+			<input type="password" name="password" class="password" placeholder="password" />
+			<input type="submit" mame="submit" value="Go Go Go" class="BtnSignIn" />
+		</form>
+	</div>
+</body>
+</html>
