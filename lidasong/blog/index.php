@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-<head>
-<title>Index</title>
 <?php
 include "cookie.php"; //引用php外部文件
 ?> 
+<head>
+<title>Index</title>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<link rel="stylesheet" type="text/css" href="main_page.css"/>
+<link rel="stylesheet" type="text/css" href="css/main_page.css"/>
 </head>
 <body>
   <div class="head">
