@@ -3,8 +3,8 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 <title>Login Page</title>
-<link  href="login_css.css" rel="stylesheet"  media="screen" type="text/css"/>
-<script type="text/javascript"  src="login_js.js"></script>
+<link  href="css/login_css.css" rel="stylesheet"  media="screen" type="text/css"/>
+<script type="text/javascript"  src="js/login_js.js"></script>
 </head>
 <body >
 <form action="login_validate.php" method="post">
