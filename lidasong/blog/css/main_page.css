@@ -49,3 +49,11 @@ a {
     padding-bottom:0;
     text-align:center;
 }
+#exit{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: lime;
+    left: 50%;
+    top:50%;
+}
