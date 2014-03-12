@@ -1,0 +1,106 @@
+body{
+	margin: 10px;
+	padding: 10px;
+	background-color: gray;
+}
+
+.wrapper {
+	position: absolute;
+	height: 400px;
+	width: 400px;
+	border: 2px;
+	border-style: solid;
+	border-color: black;
+}
+
+.blockIn {
+	height: 120px;
+	width: 120px;
+	margin: 10px;
+	text-align: center;
+	position: absolute;
+	background-color: #414141;
+}
+
+.blockOne {
+	left: 0;
+	top: 0;
+}
+
+.blockTwo {
+	left: 130px;
+	top: 0;
+}
+
+.blockThree {
+	left: 260px;
+	top: 0;
+}
+
+.blockFour {
+	left: 0;
+	top: 130px;
+}
+
+.blockFive {
+	left: 130px;
+	top: 130px;
+}
+
+.blockSix {
+	left: 260px;
+	top: 130px;
+}
+
+.blockSeven {
+	left: 0;
+	top: 260px;
+}
+
+.blockEight {
+	left: 130px;
+	top: 260px;
+}
+
+.text {
+	position: relative;
+	top: 50px;
+	font-family: arial;
+	font-size: 20px;
+	color: #dddddd;
+}
+
+.buttonOk, .buttonReset{
+	display: block;
+	position: absolute;
+	border: 0;
+	top: 420px;
+	width: 100px;
+	height: 40px;
+}
+
+.buttonOk {
+	left: 50px;
+}
+
+.buttonReset {
+	left: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
