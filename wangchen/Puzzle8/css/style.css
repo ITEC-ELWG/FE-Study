@@ -70,7 +70,7 @@ body{
 	color: #dddddd;
 }
 
-.buttonOk, .buttonReset{
+.buttonOk, .buttonReset, .buttonTest{
 	display: block;
 	position: absolute;
 	border: 0;
@@ -87,9 +87,16 @@ body{
 	left: 250px;
 }
 
+.buttonTest {
+	left: 450px;
+}
 
-
-
+.result {
+	display: block;
+	width: 100px;
+	position: absolute;
+	left: 500px;
+}
 
 
 
