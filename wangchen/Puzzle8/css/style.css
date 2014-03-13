@@ -14,12 +14,16 @@ body{
 }
 
 .blockIn {
-	height: 120px;
+	padding-top: 50px;
+	height: 70px;
 	width: 120px;
 	margin: 10px;
 	text-align: center;
 	position: absolute;
 	background-color: #414141;
+		font-family: arial;
+	font-size: 20px;
+	color: #dddddd;
 }
 
 .blockOne {
@@ -93,7 +97,7 @@ body{
 
 .result {
 	display: block;
-	width: 100px;
+	width: 300px;
 	position: absolute;
 	left: 500px;
 }
