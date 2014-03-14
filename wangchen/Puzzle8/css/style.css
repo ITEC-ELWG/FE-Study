@@ -14,12 +14,16 @@ body{
 }
 
 .blockIn {
-	height: 120px;
+	padding-top: 50px;
+	height: 70px;
 	width: 120px;
 	margin: 10px;
 	text-align: center;
 	position: absolute;
 	background-color: #414141;
+		font-family: arial;
+	font-size: 20px;
+	color: #dddddd;
 }
 
 .blockOne {
@@ -70,7 +74,7 @@ body{
 	color: #dddddd;
 }
 
-.buttonOk, .buttonReset{
+.buttonOk, .buttonReset, .buttonTest{
 	display: block;
 	position: absolute;
 	border: 0;
@@ -87,9 +91,16 @@ body{
 	left: 250px;
 }
 
+.buttonTest {
+	left: 450px;
+}
 
-
-
+.result {
+	display: block;
+	width: 300px;
+	position: absolute;
+	left: 500px;
+}
 
 
 
