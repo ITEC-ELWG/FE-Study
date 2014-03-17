@@ -14,7 +14,7 @@ $(document).ready(function() {
 	});
 	grid[8] = '0';
 	$(".buttonReset").click(function() {
-		$(".result").load('js/demo.html');
+		$(".result").load('demo.php');
 	});
 });
 
