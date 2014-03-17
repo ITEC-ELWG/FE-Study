@@ -1,0 +1,11 @@
+div#container{width:1300px}
+div#header {background-color:#99bbbb;text-align: center;}
+div#menu1 {background-color:#ffff99;height:200px;width:300px;float:left;}
+div#content1 {background-color:#FFE66F;height:200px;width:1000px;float:left;}
+div#menu2 {background-color:#ffff99;height:200px;width:300px;float:left;}
+div#content2 {background-color:#FFE66F;height:200px;width:1000px;float:left;}
+div#footer {background-color:#99bbbb;clear:both;text-align:center;}
+h1 {margin-bottom:0;}
+h2 {margin-bottom:1;font-size:18px;}
+ul {margin:10;}
+li {list-style:none;}
