@@ -4,11 +4,11 @@ var topButton, leftCheck, topBlank, leftBlank;
 function clickButton(value) {
     buttonChoose = $(buttonType[value - 1]);
     blankGet = $("#blank");
-    moveCheck();
+    move();
     suceessCheck();
 }
 
-function moveCheck() {
+function move() {
     topButton = buttonChoose.offset().top;
     leftCheck = buttonChoose.offset().left;
     leftBlank = blankGet.offset().left;
