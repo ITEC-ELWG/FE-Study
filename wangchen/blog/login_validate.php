@@ -22,6 +22,3 @@
 		header("location:login.php");
 	}
 ?>
-
-
-
