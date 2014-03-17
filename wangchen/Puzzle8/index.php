@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="js/Puzzle8.js"></script>
 </head>
 <body >
-	<div class="wrapper" onmousedown="getEventTarget(event)" >
+	<div class="wrapper">
 		<div class="blockIn blockOne" id="picOne">1</div>
 		<div class="blockIn blockTwo" id="picTwo">2</div>
 		<div class="blockIn blockThree" id="picThree">3</div>
@@ -20,7 +20,6 @@
 		<div class="" id="picZero"></div>
 		<p class="result">U can complete it only U R a genius!</p>
 		<input type="button" value="Reset" class="buttonReset"  />
-		<input type="button" value="Ok" class="buttonOk" onclick="compare()" />
 	</div>
 </body>
 </html>
