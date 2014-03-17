@@ -1,0 +1,26 @@
+body {
+    width:306px;
+    height:364px;
+    margin:0 auto;
+    margin-top:50px;
+    border:2px solid red;
+    background:gray;
+}
+#head {
+    background:green;
+    height:50px;
+    border-bottom:2px solid red;
+}
+#commit {
+    position:absolute;
+    width:200px;
+    height:50px;
+    margin-left:53px;
+}
+button {
+    position:relative;
+    float:left;
+    width:100px;
+    height:100px;
+    background:red;
+}
