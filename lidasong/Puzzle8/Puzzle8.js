@@ -49,6 +49,8 @@ function moveCheck() {
 }
 
 function suceessCheck() {
+    if ($(buttonType[0]).offset().top > $(buttonType[3]).offset().top || $(buttonType[3]).offset().top > $(buttonType[6]).offset().top)
+        return;
     if ($(buttonType[0]).offset().top == $(buttonType[1]).offset().top && $(buttonType[1]).offset().top == $(buttonType[2]).offset().top)
 
     {
