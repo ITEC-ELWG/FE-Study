@@ -34,7 +34,7 @@
                 <th>
                     <button type="button" id="buttonSeven" onclick="clickButton(7)">7</button>
                     <button type="button" id="buttonEight" onclick="clickButton(8)">8</button>
-                    <button id="blank" name="moveLocation"></button>
+                    <button id="blank" name="moveLocation" ></button>
                 </th>
             </tr>
         </table>

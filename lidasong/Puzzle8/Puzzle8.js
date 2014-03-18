@@ -17,7 +17,7 @@ function loadXMLDoc(){
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {      
         backString=xmlhttp.responseText;
-        for(var i=0;i<=7;i++)
+         for(var i=0;i<=7;i++)
     {
         var charGet=backString.charAt(i);
         $(buttonType[i]).text(charGet);
