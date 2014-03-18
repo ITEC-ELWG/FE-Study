@@ -17,24 +17,24 @@
         <table>
             <tr>
                 <th>
-                    <button type="button" id="buttonOne" onclick="clickButton(1)">1</button>
-                    <button type="button" id="buttonTwo" onclick="clickButton(2)">2</button>
-                    <button type="button" id="buttonThree" onclick="clickButton(3)">3</button>
+                    <input type="button" id="buttonOne" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonTwo" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonThree" onclick="clickButton(value)" value=''></input>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button type="button" id="buttonFour" onclick="clickButton(4)">4</button>
-                    <button type="button" id="buttonFive" onclick="clickButton(5)">5</button>
-                    <button type="button" id="buttonSix" onclick="clickButton(6)">6</button>
+                    <input type="button" id="buttonFour" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonFive" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonSix" onclick="clickButton(value)" value=''></input>
 
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button type="button" id="buttonSeven" onclick="clickButton(7)">7</button>
-                    <button type="button" id="buttonEight" onclick="clickButton(8)">8</button>
-                    <button id="blank" name="moveLocation" ></button>
+                    <input type="button" id="buttonSeven" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonEight" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="blank" name="moveLocation" ></input>
                 </th>
             </tr>
         </table>

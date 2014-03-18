@@ -2,7 +2,13 @@ var buttonType = ["#buttonOne", "#buttonTwo", "#buttonThree", "#buttonFour",
  "#buttonFive", "#buttonSix", "#buttonSeven", "#buttonEight"];
  var buttonTypeChange=[];
 var topButton, leftCheck, topBlank, leftBlank;
-function loadXMLDoc(){
+window.onload=function(){         //设置input中value的初始值
+  for(var i=0;i<=7;i++)
+  {
+    $(buttonType[i]).attr({"value":i+1});
+  }
+}
+function loadXMLDoc(){          //Ajax获得randArrange.php中的数据
   var xmlhttp;
   if(window.XMLHttpRequest)
   {
@@ -17,12 +23,11 @@ function loadXMLDoc(){
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {      
         backString=xmlhttp.responseText;
-         for(var i=0;i<=7;i++)
-    {
+         for(var i=0;i<=7;i++)            //通过返回字符串重新设置value
+    {                                     //并且相应改变buttonType
         var charGet=backString.charAt(i);
-        $(buttonType[i]).text(charGet);
+        $(buttonType[i]).attr({"value":charGet});
         buttonTypeChange[i]=buttonType[charGet-1];
-        //sortRandom();
     }
     for (var i = 0; i<=7; i++) {
       buttonType[i]=buttonTypeChange[i];
@@ -36,11 +41,9 @@ function clickButton(value){
     buttonChoose = $(buttonType[value - 1]);
     blankGet = $("#blank");
     move();
-    setTimeout("suceessCheck()",1000);
-   // suceessCheck();
+    setTimeout("suceessCheck()",500);
 }
-
-function move() {
+function move() {                   //经过比对移动相应按钮
   condition=false;
     topButton = buttonChoose.offset().top;
     leftCheck = buttonChoose.offset().left;
@@ -50,39 +53,38 @@ function move() {
         if ((topButton + 104) == topBlank) {
             blankGet.animate({
                 top: '-=104px'
-            },"slow");
+            },500);
             buttonChoose.animate({
                 top: '+=104px'
-            },"slow");
+            },500);
         } else if ((topButton - 104) == topBlank) {
             blankGet.animate({
                 top: '+=104px'
             });
             buttonChoose.animate({
                 top: '-=104px'
-            },"slow");   
+            },500);   
         }
     } else if (topButton == topBlank) {
         if ((leftCheck + 100) == leftBlank) {
             blankGet.animate({
                 left: '-=100px'
-            },"slow");
+            },500);
             buttonChoose.animate({
                 left: '+=100px'
-            },"slow")
+            },500)
         } else if ((leftCheck - 100) == leftBlank) {
             blankGet.animate({
                 left: '+=100px'
-            },"slow");
+            },500);
             buttonChoose.animate({
                 left: '-=100px'
-            },"slow");
+            },500);
         }
     }
 
 }
-
-function suceessCheck() {
+function suceessCheck() {               //成功检测
 
     if ($(buttonType[0]).offset().top > $(buttonType[3]).offset().top
      || $(buttonType[3]).offset().top > $(buttonType[6]).offset().top
@@ -111,14 +113,3 @@ function suceessCheck() {
         alert("You succeed,Congratulations!");
     else return;
 }
-/*function sortRandom(){
-for(var i=0;i<=7;i++)
-{
-  var charGet=backString.charAt(i);
-  //var temp=backString[i];
-  $(buttonType[i]).test(charGet);
-  var interVariable=buttonType[charGet];
-  buttonType[charGet]=buttonType[i];
-  buttonType[i]=interVariable;
-}
-}*/
