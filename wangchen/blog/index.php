@@ -1,5 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<?php
+	require "cookies.php";
+?>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>blog</title>
@@ -14,6 +17,9 @@
 				</a>
 				<span class="title">Panda's room</span>
 				<div class="navi">
+					<a href="deleteCookies.php">
+						<span class="naviText">login out</span>
+					</a>
 					<a href="javascript:void(0)">
 						<span class="naviText">call me</span>
 					</a>
