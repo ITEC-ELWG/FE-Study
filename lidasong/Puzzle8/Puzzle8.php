@@ -17,23 +17,23 @@
         <table>
             <tr>
                 <th>
-                    <input type="button" id="buttonOne" onclick="clickButton(value)" value=''></input>
-                    <input type="button" id="buttonTwo" onclick="clickButton(value)" value=''></input>
-                    <input type="button" id="buttonThree" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonOne" onclick="clickButton(id)" value='1'></input>
+                    <input type="button" id="buttonTwo" onclick="clickButton(id)" value='2'></input>
+                    <input type="button" id="buttonThree" onclick="clickButton(id)" value='3'></input>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <input type="button" id="buttonFour" onclick="clickButton(value)" value=''></input>
-                    <input type="button" id="buttonFive" onclick="clickButton(value)" value=''></input>
-                    <input type="button" id="buttonSix" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonFour" onclick="clickButton(id)" value='4'></input>
+                    <input type="button" id="buttonFive" onclick="clickButton(id)" value='5'></input>
+                    <input type="button" id="buttonSix" onclick="clickButton(id)" value='6'></input>
 
                 </th>
             </tr>
             <tr>
                 <th>
-                    <input type="button" id="buttonSeven" onclick="clickButton(value)" value=''></input>
-                    <input type="button" id="buttonEight" onclick="clickButton(value)" value=''></input>
+                    <input type="button" id="buttonSeven" onclick="clickButton(id)" value='7'></input>
+                    <input type="button" id="buttonEight" onclick="clickButton(id)" value='8'></input>
                     <input type="button" id="blank" name="moveLocation" ></input>
                 </th>
             </tr>

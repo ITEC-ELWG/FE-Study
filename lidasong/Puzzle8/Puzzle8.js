@@ -1,13 +1,13 @@
-var buttonType = ["#buttonOne", "#buttonTwo", "#buttonThree", "#buttonFour",
- "#buttonFive", "#buttonSix", "#buttonSeven", "#buttonEight"];
- var buttonTypeChange=[];
+var buttonType = ["buttonOne", "buttonTwo", "buttonThree", "buttonFour",
+ "buttonFive", "buttonSix", "buttonSeven", "buttonEight"];
 var topButton, leftCheck, topBlank, leftBlank;
-window.onload=function(){         //设置input中value的初始值
+var buttonChoose;
+/*window.onload=function(){         //设置input中value的初始值
   for(var i=0;i<=7;i++)
   {
     $(buttonType[i]).attr({"value":i+1});
   }
-}
+}*/
 function loadXMLDoc(){          //Ajax获得randArrange.php中的数据
   var xmlhttp;
   if(window.XMLHttpRequest)
@@ -23,28 +23,29 @@ function loadXMLDoc(){          //Ajax获得randArrange.php中的数据
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {      
         backString=xmlhttp.responseText;
-         for(var i=0;i<=7;i++)            //通过返回字符串重新设置value
+    for(var i=0;i<=7;i++)     //通过返回字符串重新设置value
     {                                     //并且相应改变buttonType
         var charGet=backString.charAt(i);
-        $(buttonType[i]).attr({"value":charGet});
-        buttonTypeChange[i]=buttonType[charGet-1];
-    }
-    for (var i = 0; i<=7; i++) {
-      buttonType[i]=buttonTypeChange[i];
+        //alert(charGet);
+        $('#'+buttonType[i]).attr({"value":charGet});
+        $('#'+buttonType[i]).attr({"id":buttonType[charGet-1]});
+        //buttonType[i]=buttonTypeChange[charGet-1];
+        //alert(buttonType[i]);
     }
     }
   }
 xmlhttp.open("GET","randArrange.php",true);
 xmlhttp.send();
 }
-function clickButton(value){
-    buttonChoose = $(buttonType[value - 1]);
+
+function clickButton(id){
+    buttonChoose = $('#'+id);
     blankGet = $("#blank");
     move();
     setTimeout("suceessCheck()",500);
+
 }
-function move() {                   //经过比对移动相应按钮
-  condition=false;
+function move() {                   //经过比对,移动相应按钮
     topButton = buttonChoose.offset().top;
     leftCheck = buttonChoose.offset().left;
     leftBlank = blankGet.offset().left;
@@ -82,10 +83,8 @@ function move() {                   //经过比对移动相应按钮
             },500);
         }
     }
-
 }
 function suceessCheck() {               //成功检测
-
     if ($(buttonType[0]).offset().top > $(buttonType[3]).offset().top
      || $(buttonType[3]).offset().top > $(buttonType[6]).offset().top
      ||$(buttonType[7]).offset().left>blankGet.offset().left)
