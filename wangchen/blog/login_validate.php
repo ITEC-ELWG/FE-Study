@@ -16,9 +16,14 @@
 	}
 	$userInfor = mysql_fetch_array($result);
 	if ($password == $userInfor["password"] && $username!='') {
+		setcookie("username", $username, time() + 3600);
+    	setcookie("password", $password, time() + 3600);
 		header ("location:index.php");
 	}
 	else {
 		header("location:login.php");
 	}
 ?>
+
+
+
