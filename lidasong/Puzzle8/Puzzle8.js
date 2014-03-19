@@ -42,7 +42,7 @@ function clickButton(id){
     buttonChoose = $('#'+id);
     blankGet = $("#blank");
     move();
-    setTimeout("suceessCheck()",1000);
+    setTimeout("suceessCheck()",500);
 
 }
 function move() {                   //经过比对,移动相应按钮
@@ -84,7 +84,7 @@ function move() {                   //经过比对,移动相应按钮
         }
     }
 }
-function suceessCheck() {               //成功检测
+function suceessCheck() {      //成功检测,若成功返回You succeed,Congratulations!
     if ($('#'+buttonType[0]).offset().top > $('#'+buttonType[3]).offset().top
      || $('#'+buttonType[3]).offset().top > $('#'+buttonType[6]).offset().top
      ||$('#'+buttonType[7]).offset().left>blankGet.offset().left)
