@@ -1,12 +1,14 @@
 body {
     width:306px;
-    height:364px;
+    height:366px;
     margin:0 auto;
     margin-top:50px;
     border:2px solid red;
     background:gray;
 }
 #head {
+    padding-top: 1px;
+    padding-bottom: 1px;
     background:green;
     height:50px;
     border-bottom:2px solid red;
@@ -16,8 +18,9 @@ body {
     width:200px;
     height:50px;
     margin-left:53px;
+    font-family:Arial;
 }
-button {
+input{
     position:relative;
     float:left;
     width:100px;
