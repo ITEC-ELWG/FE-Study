@@ -50,3 +50,8 @@ ELWG前端学习小组任务
 * 学习W3School的[AJAX教程](http://www.w3school.com.cn/ajax/index.asp)（页面左侧“课程表”的“AJAX基础教程”“AJAX XHR”“AJAX 高级”部分）
 * 学习W3School的[jQuery教程](http://www.w3school.com.cn/jquery/index.asp)（页面左侧“课程表”的“jQuery基础教程”“jQuery效果”“jQuery HTML”“jQuery遍历”“jQuery AJAX”部分）
 * **使用JS实现一个8格拼图游戏，要求：项目名称`Puzzle8`；点击方块若周围有空格则移动；可以判定胜利条件；有一个“重置”按钮，点击后发起AJAX请求从服务器获取打乱的顺序并重置拼图；界面自行设计（[参考图](http://ww4.sinaimg.cn/large/74990035jw1ee78msr09fj20ax0auaa3.jpg)）**
+
+## 任务Special：学习Markdown标记语言
+
+* 学习[Markdown语法说明（简体中文版）](http://wowubuntu.com/markdown/)
+* **使用Markdown记录会议笔记，并发布到Github上**
