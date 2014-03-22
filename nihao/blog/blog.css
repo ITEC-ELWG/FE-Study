@@ -30,6 +30,10 @@ body {
 	clear:both;
 	text-align:center;
 }
+
+.button {
+	text-align: center;
+}
 h1 {
 	margin-left: 1cm;
 	margin-bottom:0;
