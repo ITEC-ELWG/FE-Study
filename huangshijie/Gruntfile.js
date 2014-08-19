@@ -4,7 +4,7 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			scripts: {
-				files: ['blog/scripts/**/*.js'],
+				files: ['caculator/**/*.js'],
 				tasks: ['jshint'],
 				options: {
 					livereload: true
@@ -12,7 +12,7 @@ module.exports = function(grunt){
 			},
 
 			css: {
-				files: ['blog/css/**/*.css', 'blog/**/*.html'],
+				files: ['caculator/**/*.css', 'caculator/**/*.html'],
 				options: {
 					livereload: true
 				}
@@ -21,7 +21,7 @@ module.exports = function(grunt){
 
 		jshint: {
 			all: {
-				src: ['blog/scripts/**/*.js', '! blog/scripts/output.min.js']
+				src: ['caculator/**/*.js']
 			}
 		}
 	});
