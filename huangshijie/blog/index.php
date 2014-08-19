@@ -1,4 +1,8 @@
 <html>
+	<?php 
+		if(! isset($_COOKIE['username']) || ! isset($_COOKIE['password']))
+			echo '<meta http-equiv="refresh" content="0;url=login.html" />'
+	?>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>index</title>
