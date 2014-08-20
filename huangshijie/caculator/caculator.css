@@ -1,0 +1,21 @@
+.container{
+	position: absolute;
+	left: 40%;
+	top: 30%;
+}
+
+.show{
+	width: 224px;
+	height: 35px;
+	border: 1px solid #cccccc;
+	margin-bottom: 15px;
+}
+
+button{
+	width: 50px;
+	height: 30px;
+}
+
+.first{
+	margin-left: 116px;
+}
