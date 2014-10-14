@@ -1,0 +1,31 @@
+.word-color 
+{
+	color:red;
+	font-weight: 900;
+	font-size: 1.4em;
+	font-family: "微软雅黑"；
+}
+.wrapper 
+{
+	width: 300px;
+	margin: 30px auto;
+	text-align: center;
+}
+.bgc
+{
+	background-image: url("../image/bodybg.jpg");
+}
+.formtext
+{
+	margin-top: 15px;
+}
+.formsub
+{
+	width: 236px;
+	height:30px;
+	font-size: 1.5em;
+	font-family: "微软雅黑";
+	background-color: rgb(0,100,255);
+	border: 0;
+	margin-top: 15px;
+}

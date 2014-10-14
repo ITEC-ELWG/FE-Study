@@ -1,0 +1,269 @@
+.bgimg
+{
+
+	font-family: "微软雅黑";
+}
+
+.topindex
+{
+	position: relative;<!--采用相对定位，为后面的绝对定位做准备-->
+	margin: 0px;
+	height: 50px;
+	width: 1366px;
+    background-color: #48D1CC;
+}
+
+.topindex-title
+{	
+	width: 300px;
+	height: 50px; 
+    font-family: "微软雅黑";
+    font-size: 2em;
+    line-height: 50px;<!--利用行高定位-->
+    position: relative;
+    margin-left: 200px;
+    color: #4B0082;
+}
+
+.title-ul 
+{
+	position: relative;
+   
+    height: 50px;
+    margin: -50px 100px -50px 800px;
+    line-height: 50px;
+    color:#4B0082;
+}
+.title-ul li
+{
+	display: inline-block;/*将无序列表行显示*/
+	font-family: "微软雅黑"；
+}
+
+
+.title-ul a/*派生属性的定义方法*/
+{
+	text-decoration: none;
+	color: #4B0082;
+}
+/*设置不同情况下的不同显示效果*/
+
+
+.title-ul a:visited
+{
+    color: #FF0000;
+}
+
+.title-ul a:hover/*注意顺序：alink和avisited在最前，ahover，aactive在最后*/
+{
+	text-decoration: underline;
+	color: #B3EE3A;
+	font-size: 150%;/*鼠标指示在上面的时候字体变大*/
+}
+
+.title-ul a:active
+{
+	text-decoration: line-through;
+}
+
+.basicinfor
+{
+	position: relative;
+    background: rgba(154,192,205,0.5);/*设置背景透明文字不透明*/
+    height: 150px;
+    width: 1366px;
+}
+
+.basicinfor ul
+{
+	list-style-type: square;
+	padding-left: 100px;
+	padding-top: 10px;
+}
+
+.basicinfor ul li
+{
+	padding: 6px;
+	font-family: "微软雅黑"；
+}
+
+.basicimg
+{
+    position: relative;
+    margin-top: -150px;
+    margin-left: 1000px;
+}
+
+.education
+{
+	background: rgba(202,255,112,0.2);
+	height: 180px;
+	width: 1366px;
+	position: relative;
+	margin-top: 0px;
+}
+
+.education-h1
+{
+	font-size: 25px;
+	text-align: center;
+	position: relative;
+	padding-top: 10px;/*用padding定位才能实现背景的无缝连接，否则会产生缝隙,margin外面是透明的，padding外面显示背景*/
+}
+
+.education-master
+{
+    font-size: 1.2em;
+    font-weight: 580;
+}
+
+.education-master ul li
+{
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	position: relative;
+	margin:3px 85px 0px 85px;/*对列表中各项的定位和展示方法都在li级别进行*/
+
+}
+
+.education-college
+{
+    font-family: Times;
+}
+
+.education-college ul li
+{
+	display: inline-block;
+	position: relative;
+	width: 130px;
+	margin:8px 0px 8px 88px;
+}
+
+.education-senior
+{
+	font-size: 1.2em;
+    font-weight: 500;
+}
+
+.education-senior-h1
+{
+    position: relative;
+    margin-left: 95px;
+}
+
+.education-senior-h2
+{
+    position: relative;
+    margin-top: -20px;
+    margin-left: 300px;
+    
+}
+
+.outschool
+{
+	background:rgba(202,150,112,0.2);
+	height: 300px;
+	width: 1366px;
+    position: relative;
+    margin: 0px;
+}
+
+.uli
+{
+	position: relative;
+	width: 966px;
+	padding:8px 0px 8px 400px;
+}
+
+.ulli ul
+{
+	list-style-type: square;
+}
+.ulli ul li
+{
+	width:966px;
+    margin:8px 0px 8px 400px;
+	font-family: Times;
+}
+
+.activity
+{
+	background: rgba(255,228,181,0.2);
+	width: 1366px;
+	height: 600px;
+	position: relative;
+	margin: 0px;
+}
+
+.award
+{
+	background: rgba(0,255,127,0.2);
+	width: 1366px;
+	height: 150px;
+	position: relative;
+	margin: 0px;
+}
+
+.award ul li
+{
+	display: inline-block;
+	width: 300px;
+	margin: 8px 50px 8px 50px;
+	font-family: Times; 
+}
+
+.award ul
+{
+	list-style-type: square;
+}
+
+.up
+{
+	margin-top: -23px;
+	margin-left: 100px;
+}
+
+.qualification
+{
+    background: rgba(0,255,127,0.2);
+	width: 1366px;
+	height: 160px;
+	position: relative;
+	margin: 0px;
+}
+
+
+
+.qualification ul li
+{
+	display: inline-block;
+	width: 450px;
+	margin: 8px 50px 8px 50px;
+	font-family: Times;
+}
+
+.qualification ul
+{
+	list-style-type: square;
+}
+
+.copyright
+{
+	text-align: center;
+	position: relative;
+	padding-top: 8px;
+}
+
+.topz
+{
+	z-index: 20;
+}
+
+.lowz/*设置背景图像，翻动的时候图像保持不动*/
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
