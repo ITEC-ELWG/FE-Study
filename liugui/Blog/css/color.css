@@ -1,5 +1,6 @@
 .word-color 
 {
+	margin-top: 20px;
 	color:red;
 	font-weight: 900;
 	font-size: 1.4em;
@@ -13,7 +14,7 @@
 }
 .bgc
 {
-	background-image: url("../image/bodybg.jpg");
+	background: url("../image/bodybg.jpg") no-repeat;
 }
 .formtext
 {
