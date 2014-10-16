@@ -9,7 +9,7 @@
 	position: relative;<!--采用相对定位，为后面的绝对定位做准备-->
 	margin: 0px;
 	height: 50px;
-	width: 1366px;
+
     background-color: #48D1CC;
 }
 
@@ -71,7 +71,7 @@
 	position: relative;
     background: rgba(154,192,205,0.5);/*设置背景透明文字不透明*/
     height: 150px;
-    width: 1366px;
+
 }
 
 .basicinfor ul
@@ -98,7 +98,7 @@
 {
 	background: rgba(202,255,112,0.2);
 	height: 180px;
-	width: 1366px;
+
 	position: relative;
 	margin-top: 0px;
 }
@@ -164,7 +164,6 @@
 {
 	background:rgba(202,150,112,0.2);
 	height: 300px;
-	width: 1366px;
     position: relative;
     margin: 0px;
 }
@@ -190,7 +189,6 @@
 .activity
 {
 	background: rgba(255,228,181,0.2);
-	width: 1366px;
 	height: 600px;
 	position: relative;
 	margin: 0px;
@@ -199,7 +197,6 @@
 .award
 {
 	background: rgba(0,255,127,0.2);
-	width: 1366px;
 	height: 150px;
 	position: relative;
 	margin: 0px;
@@ -227,7 +224,6 @@
 .qualification
 {
     background: rgba(0,255,127,0.2);
-	width: 1366px;
 	height: 160px;
 	position: relative;
 	margin: 0px;
