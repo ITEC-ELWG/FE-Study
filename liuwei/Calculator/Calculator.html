@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>简单计算器</title>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <link type="text/css" rel="stylesheet" href="reset.css">
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- // <script type="text/javascript" src="cal.js"></script> -->
+   <!--  // <script type="text/javascript" src="http://www.imooc.com/data/jquery-1.8.2.min.js"></script>
+    // <script type="text/javascript" src="http://www.imooc.com/data/jquery.validate.js"></script>
+    // <script type="text/javascript" src="http://www.imooc.com/data/jquery.validate.messages_cn.js"></script> -->
+    <script type="text/javascript">
+    function command(num){
+      $("#numS").append(num);
+      $("#test").append(num+1);
+      $("#numS").val(num);
+    }
+      // document.write(num);}    
+    </script>
+</head>
+<body>
+    <div class="calBox comWidth">
+      <div class="numDisBox">
+        <input type="text" id="numScreen" name="numScreen" class="ndb_numInput" placeholder = "0" disabled = "disabled">
+      </div>
+      <div class="numKeyBox">
+        <div class="nkb_leftArea fl">
+          <div class="nb_5x5 fl" onclick="command(7)">7</div>
+          <div class="nb_5x5 fl" onclick="command(7)">8</div>
+          <div class="nb_5x5 fl">9</div>          
+          <div class="nb_5x5 fl">4</div>
+          <div class="nb_5x5 fl">5</div>
+          <div class="nb_5x5 fl">6</div>
+          <div class="nb_5x5 fl">1</div>
+          <div class="nb_5x5 fl">2</div>
+          <div class="nb_5x5 fl">3</div>          
+          <div class="nb_5x5 fl">0</div>
+          <div class="nb_5x5 fl">00</div>
+          <div class="nb_5x5 fl">.</div>          
+        </div>
+        <div class="nkb_rightArea fr">
+          <div class="nb_5x5_f fl">%</div>
+          <div class="nb_5x5_f fl">AC</div>
+          <div class="nb_5x5_f fl">-</div>
+          <div class="nb_5x5_f fl">x</div>
+          <div class="nb_5x10 fl">+</div>
+          <div class="nb_5x5_f fl">÷</div>
+          <div class="nb_5x5_f fl">=</div>
+        </div>
+      </div>
+      <div class="test" id="test"></div>
+      <input type="text" id="numS" name="numS" class="ndb_numInput">
+    </div>
+</body>
+</html>
+
