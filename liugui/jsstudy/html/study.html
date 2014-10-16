@@ -20,8 +20,16 @@
 
 <body class="bg">
     <p>test</p>
-    <button type="button" onclick="writesome()">click</button>
+    <button onclick="writesome()">click
+        <br/>
+    </button>
+    <button onclick="ceo('Bill Gate','CEO')">ceo</button><!--参数传递的时候常量参数值必须用单引号括起来-->
     <script type="text/javascript" src="../js/js.js"></script>
+    <script type="text/javascript">
+    var myself = new person('liu','gui','22','black');
+    document.write(myself.firstname + myself.lastname + myself.age + myself.eyecolor);
+    </script>
+
 </body>
 
 </html>
