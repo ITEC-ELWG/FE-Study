@@ -6,7 +6,7 @@
 .calBox{height:306px;background-color: #DDD;border:1px solid #888;}
 a:hover{ color:#8C0000;}
 .numDisBox{border-bottom:1px solid #888;}
-.ndb_numInput{width: 300px;height: 45px;margin: 15px 20px;background-color: #FFF;border:1px solid #888;}
+.show{width: 300px;height: 45px;margin: 15px 20px;background-color: #FFF;border:1px solid #888;}
 .clearll{clear: both;}
 
 /*numKeyBox*/
