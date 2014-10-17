@@ -1,3 +1,0 @@
-log
-version2
-version3
