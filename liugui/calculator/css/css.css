@@ -15,6 +15,7 @@
 
 .displayer
 {
+	width: 590px;
 	font-size: 5em;
 	font-weight: 700;
 	text-align: right;
@@ -35,7 +36,7 @@
 
 }
 
-.keyboard ul li button
+.keyboard ul li input
 {
 	width: 134px;
 	height: 67px;
@@ -53,3 +54,9 @@
 {
     background-color: #8B8878;
 }
+
+.specialac
+{
+	background-color: red;
+}
+
