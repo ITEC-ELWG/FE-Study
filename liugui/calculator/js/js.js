@@ -38,7 +38,6 @@ function res(equal){
 		break;
 		case "÷":result = temp / changeinput;
 		break;
-
 	}
 	display.innerHTML = result;
 	outtag = 1;
@@ -47,7 +46,7 @@ function res(equal){
 
 function percent100(per){
 	var beforper = parseFloat(display.innerHTML);
-	var afterper = beforper * 100 + "%";
-	display.innerHTML = afterper;
+	var afterper = beforper * 100;
+	display.innerHTML = afterper + "%";
 }
 
