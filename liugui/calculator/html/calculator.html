@@ -1,25 +1,91 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<meta name="author" content="liugui">
-	<meta name="copyright" content="">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+    <meta name="author" content="liugui">
+    <meta name="copyright" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
-	<title>在线计算器</title>
+    <title>在线计算器</title>
 
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/css.css">
 </head>
 
 <body class="bg">
-    
+
     <div class="calborder">
-    	<p class="displayer">welcome</p>
+        <h1 class="displayer" id="led">welcome</h1>
     </div>
-	
+
+    <div class="keyboard">
+        <ul>
+            <li>
+                <button type="button" onclick="numinput()" class="blank"></button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()" class="blank"></button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">%</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">AC</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">7</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">8</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">9</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">÷</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">4</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">5</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">6</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">×</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">1</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">2</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">3</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">-</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">0</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">.</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">=</button>
+            </li>
+            <li>
+                <button type="button" onclick="numinput()">+</button>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../js/js.js"></script>
+
 </body>
 
 </html>
