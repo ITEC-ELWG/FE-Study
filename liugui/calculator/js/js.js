@@ -20,7 +20,7 @@ function ope(acc){
        outtag="0";
        result = "0";
    }
-   else if ((op == "+")||(op == "-")||(op = "×")||(op == "÷")){
+   else if ((op == "+")||(op == "-")||(op == "×")||(op == "÷")){
    	    temp = (outtag == 1) ? result : changeinput;
    	    intinput = "";
    	    changeinput = "0";
