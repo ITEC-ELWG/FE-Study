@@ -20,13 +20,6 @@
 	text-align: right;
 }
 
-.nine 
-{
-	width: 142.5px;
-	margin-left: 380px;
-	margin-top: 5px;
-	font-size:3em;
-}
 
 .keyboard
 {
@@ -53,4 +46,10 @@
 {
 	border: 0px;
 	opacity: 0;/*opacity属性设置透明度，从0到1，0的时候完全透明*/
+}
+
+
+.special
+{
+    background-color: #8B8878;
 }
