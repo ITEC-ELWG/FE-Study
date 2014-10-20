@@ -1,0 +1,95 @@
+<!DocType HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="liugui">
+    <meta name="copyright" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>在线计算器</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+</head>
+
+<body class="bg">
+
+    <div class="calborder">
+        <h1 class="displayer" id="led"></h1>
+    </div>
+
+
+    <div class="keyboard">
+
+        <ul>
+            <li>
+                <input type="button" class="blank">
+            </li>
+            <li>
+                <input type="button" class="blank">
+            </li>
+            <li>
+                <input type="button" value="%" title="%" class="special" onclick="percent100(this)">
+            </li>
+            <li>
+                <input type="button" value="AC" title="AC" class="specialac" onclick="ope(this)">
+            </li>
+            <li>
+                <input type="button" value="7" title="7" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="8" title="8" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="9" title="9" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="÷" title="÷" class="special" onclick="ope(this)">
+            </li>
+            <li>
+                <input type="button" value="4" title="4" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="5" title="5" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="6" title="6" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="×" title="×" class="special" onclick="ope(this)">
+            </li>
+            <li>
+                <input type="button" value="1" title="1" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="2" title="2" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="3" title="3" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="-" title="-" class="special" onclick="ope(this)">
+            </li>
+            <li>
+                <input type="button" value="0" title="0" onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="." title="." onclick="numinput(this)">
+            </li>
+            <li>
+                <input type="button" value="=" tilte="=" onclick="res(this)">
+            </li>
+            <li>
+                <input type="button" value="+" tilte="+" class="special" onclick="ope(this)">
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="../js/js.js"></script>
+
+</body>
+
+</html>
