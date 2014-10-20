@@ -14,13 +14,25 @@ $(function() {
             show.attr('value', jnum1);
         } else if (jcacu == "") {
             jnum1 = jnum1 + temp;
-            show.attr('value', jnum1);
+            var jnum1_temp = parseInt(jnum1);
+            if (jnum1_temp == 0) {
+                show.attr('value', jnum1_temp);
+                jnum1 = "";
+            } else {
+                show.attr('value', jnum1);
+            }
         } else if (jnum2 == "") {
             jnum2 = temp;
             show.attr('value', jnum2);
         } else {
             jnum2 = jnum2 + temp;
-            show.attr('value', jnum2);
+            var jnum2_temp = parseInt(jnum2);
+            if (jnum2_temp == 0) {
+                show.attr('value', jnum2_temp);
+                jnum2 = "";
+            } else {
+                show.attr('value', jnum2);
+            }
         }
     }
 
@@ -82,12 +94,12 @@ $(function() {
                 break;
         }
         // if (math.abs(res) > 1e15) {
-    //     show.attr('value', "beyond measure");
-    //     res = 0;
-    // };
-    // else {
-    //     show.attr('value', res);
-    // };
+        //     show.attr('value', "beyond measure");
+        //     res = 0;
+        // };
+        // else {
+        //     show.attr('value', res);
+        // };
 
         show.attr('value', res);
         return res;
@@ -138,22 +150,22 @@ $(function() {
         num($(this).attr('id'));
     });
 
-    $('.cacu').bind("click", function() {
+    $('.cacu').on("click", function() {
 
         cacu($(this).attr('value'));
     });
 
-    $('.clear').bind("click", function() {
+    $('.clear').on("click", function() {
 
         clear();
     });
 
-    $('.equal').bind("click", function() {
+    $('.equal').on("click", function() {
 
         equal();
     });
 
-    $('.percent').bind("click", function() {
+    $('.percent').on("click", function() {
 
         percent();
     });
