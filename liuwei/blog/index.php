@@ -1,15 +1,15 @@
 <!doctype html>
 <html>
-
+<?php 
+    if(! isset($_COOKIE['username']) || ! isset($_COOKIE['password']))
+        echo '<meta http-equiv="refresh" content="1;url=login.php" />'
+?>
 <head>
     <meta charset="utf-8">
     <title>Blog</title>
     <link type="text/css" rel="stylesheet" href="style/reset.css">
     <link type="text/css" rel="stylesheet" href="style/main.css">
-    <!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
-<script type="text/javascript" src="js/ie6Fixpng.js"></script>
-<![endif]-->
+
 </head>
 
 <body>
