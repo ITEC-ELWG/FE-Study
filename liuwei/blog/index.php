@@ -1,21 +1,24 @@
 <!doctype html>
 <html>
+
 <?php 
-    if(! isset($_COOKIE['username']) || ! isset($_COOKIE['password']))
-        echo '<meta http-equiv="refresh" content="1;url=login.php" />'
-?>
+if (! isset($_COOKIE['username'])) 
+{ 
+Header("Location: login.php"); 
+exit; //from www.w3sky.com 
+} 
+?> 
+
 <head>
     <meta charset="utf-8">
     <title>Blog</title>
     <link type="text/css" rel="stylesheet" href="style/reset.css">
     <link type="text/css" rel="stylesheet" href="style/main.css">
-
 </head>
 
 <body>
     <div class="headerBar">
         <div class="logoBar red_logo">
-            <!-- <span class="fl blog_name">刘苇的 blog</span> -->
             <div class="logo fl">
                 <a href="#">
                     <img src="img/logo1.png" alt="logo">
@@ -23,9 +26,6 @@
             </div>
             <h3 class="welcome_title">刘 苇</h3>
             <h3 class="welcome_signature clearfix">Stay Hungry, Stay Foolish.</h3>
-            <!-- <div class="comWidth">
-
-		</div> -->
         </div>
     </div>
 
