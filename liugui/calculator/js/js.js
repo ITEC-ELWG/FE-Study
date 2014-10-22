@@ -87,7 +87,7 @@ function getResult(equal) {
 function percent100(per) {
     if (pertag == 1) {
         var beforper = parseFloat(display.innerHTML);
-        var afterper = beforper * 100;
+        var afterper = beforper / 100;
         //同时输出变量和特殊文本字符的方法
         display.innerHTML = afterper + "%";
         pertag = 0;
