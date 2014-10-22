@@ -11,7 +11,13 @@ $(function() {
         if (jnum1 == "" || res_flog == 1) {
             jnum1 = temp;
             res_flog = 0;
-            show.attr('value', jnum1);
+            var jnum1_temp = parseInt(jnum1);
+            if (jnum1_temp == 0) {
+                show.attr('value', jnum1_temp);
+                jnum1 = "";
+            } else {
+                show.attr('value', jnum1);
+            }
         } else if (jcacu == "") {
             jnum1 = jnum1 + temp;
             var jnum1_temp = parseInt(jnum1);
@@ -23,7 +29,13 @@ $(function() {
             }
         } else if (jnum2 == "") {
             jnum2 = temp;
-            show.attr('value', jnum2);
+            var jnum2_temp = parseInt(jnum2);
+            if (jnum2_temp == 0) {
+                show.attr('value', jnum2_temp);
+                jnum2 = "";
+            } else {
+                show.attr('value', jnum2);
+            }
         } else {
             jnum2 = jnum2 + temp;
             var jnum2_temp = parseInt(jnum2);
