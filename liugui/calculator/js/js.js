@@ -21,13 +21,22 @@ var afterDecimal = 0;
 //读取数字的输入
 function numInput(num)
 {
-    
-
-
     if (decimalTag == 1) 
     {
-    afterDecimal += 1;
+      if(intInput == ".")
+      {
+        afterDecimal = afterDecimal;
+      }
+      else
+      {
+        afterDecimal += 1;
+      }
     } 
+
+    else
+    {
+      afterDecimal = 0;
+    }
 
     if (changeinput <= 9999999) 
     {
@@ -36,7 +45,7 @@ function numInput(num)
 
 
 
-        if (afterDecimal <= 5) 
+        if (afterDecimal <= 4) 
         {
             //修复一开始能输入多个0的BUG问题
             if (display.innerHTML == "0") 
@@ -50,8 +59,15 @@ function numInput(num)
                     //修复一开始不能输入小数的问题
                     if (intInput == ".") 
                     {
+                        if(decimalTag == 0)
+                        {
                         display.innerHTML += intInput;
                         decimalTag = 1;
+                        }
+                        else
+                        {
+                          display.innerHTML = display.innerHTML;
+                        }
                     } 
                     else 
                     {
@@ -65,8 +81,15 @@ function numInput(num)
              {
                 if (intInput == ".") 
                 {
+                    if(decimalTag == 0)
+                    {
                     display.innerHTML += intInput;
                     decimalTag = 1;
+                    }
+                    else 
+                    {
+                      display.innerHTML = display.innerHTML;
+                    }
                 }
                 else
                 {
