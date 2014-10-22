@@ -1,5 +1,5 @@
 //存储原始输入
-var intinput;
+var intInput;
 //存储转换后的输入值
 var changeinput = 0;
 //存储第一个输入的值
@@ -14,11 +14,11 @@ var pertag = 1;
 //显示元素用一个变量代替
 var display = document.getElementById("led");
 //读取数字的输入
-function numinput (num){
+function numInput (num){
 	if (changeinput <= 999999999){
     //用这种方式读入button按钮输入的值！！！！value不仅可以用在button上面的显示，其值也是可以调用的
-    intinput = num.value;
-    display.innerHTML += intinput;
+    intInput = num.value;
+    display.innerHTML += intInput;
     //将文本转换成浮点数
     changeinput = parseFloat(display.innerHTML); 
     }
@@ -27,7 +27,7 @@ function numinput (num){
     }
 }
 
-function ope(acc){
+function operate_sign(acc){
     op = acc.value;
     if (op == "AC"){
        display.innerHTML = "";
@@ -38,14 +38,14 @@ function ope(acc){
    }
    else if ((op == "+")||(op == "-")||(op == "×")||(op == "÷")){
    	    temp = (outtag == 1) ? result : changeinput;
-   	    intinput = "";
+   	    intInput = "";
    	    changeinput = "0";
    	    display.innerHTML = "";
    	    pertag = 1;
         }
 }
 
-function res(equal){
+function getResult(equal){
 	switch(op){
 		case "+":result = temp + changeinput;
 		break;
