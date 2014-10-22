@@ -16,17 +16,26 @@ var display = document.getElementById("led");
 display.innerHTML = "0";
 //读取数字的输入
 function numInput(num) {
-    if (changeinput <= 999999999) {
+    if (changeinput <= 9999999) {
         //用这种方式读入button按钮输入的值！！！！value不仅可以用在button上面的显示，其值也是可以调用的
         intInput = num.value;
+        var afterDecimal = 0;
+
         //修复一开始能输入多个0的BUG问题
         if (display.innerHTML == "0") {
             if (intInput == "0")
                 display.innerHTML = "0";
 
             else {
-                display.innerHTML = "";
-                display.innerHTML += intInput;
+              //修复一开始不能输入小数的问题
+                if(intInput == ".")
+                {
+                  display.innerHTML += intInput;
+                }
+                else{
+                  display.innerHTML = "";
+                  display.innerHTML += intInput;
+                  }
             }
         }
         else{ 
@@ -35,7 +44,7 @@ function numInput(num) {
         
         //将文本转换成浮点数
         changeinput = parseFloat(display.innerHTML);
-
+        
 
 
     } else {
@@ -75,7 +84,8 @@ function getResult(equal) {
             result = temp / changeinput;
             break;
     }
-    if (result <= 999999999) {
+    if (result <= 9999999) {
+        result = decimalNumber(result,5);
         display.innerHTML = result;
         outtag = 1;
     } else {
@@ -94,4 +104,10 @@ function percent100(per) {
     } else {
         display.innerHTML = display.innerHTML;
     }
+}
+
+//限定小数的位数的函数
+function decimalNumber(number,v){
+  var vv = Math.pow(10,v);
+  return Math.round(number*vv)/vv;
 }
