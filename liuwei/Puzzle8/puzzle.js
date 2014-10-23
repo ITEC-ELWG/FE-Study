@@ -82,65 +82,36 @@ $(function() {
     }
 
     function judgeFinished() {
-        if (($('#1').html() == '1') && ($('#2').html() == '2') && ($('#3').html() == '3') &&
-            ($('#4').html() == '4') && ($('#5').html() == '5') && ($('#6').html() == '6') &&
-            ($('#7').html() == '7') && ($('#8').html() == '8') && ($('#9').html() == ''))
-            alert("You win!");
+        var getFinished = 1;
+        $('.green').each(function(index) {
+            if ($(this).html() != $(this).attr('id'))
+                getFinished = 0;
+            return;
+        });
+        if (getFinished) alert('You win!');
     }
 
     $('#btn').on("click", function() {
         var $this = $(this);
-
         $.getJSON("puzzle.php", function(data) {
             var items = [];
-            $(data).each(function(index, val) {
-                switch (index) {
-                    case 0:
-                        $("#1").html(val);
-                        break;
-                    case 1:
-                        $("#2").html(val);
-                        break;
-                    case 2:
-                        $("#3").html(val);
-                        break;
-                    case 3:
-                        $("#4").html(val);
-                        break;
-                    case 4:
-                        $("#5").html(val);
-                        break;
-                    case 5:
-                        $("#6").html(val);
-                        break;
-                    case 6:
-                        $("#7").html(val);
-                        break;
-                    case 7:
-                        $("#8").html(val);
-                        break;
-                    case 8:
-                        $("#9").html(val);
-                        break;
-                    default:
-                        break;
+            $('.puzzle-box').empty();
+            for (var $i = 0; $i < data.length; $i++) {
+                if (data[$i] != 9)
+                    $('<div>').addClass('green').html(data[$i]).attr('id', $i + 1)
+                    .appendTo('.puzzle-box');
+                else {
+                    zeroObject = $('<div>').addClass('blue').html('').attr('id', $i + 1)
+                        .appendTo('.puzzle-box');
                 }
-            });
-            $('#1, #2, #3, #4, #5, #6, #7, #8, #9').removeClass("green blue");
-            $('#1, #2, #3, #4, #5, #6, #7, #8, #9').addClass("green");
-            for (i = 1; i <= 9; i++)
-                if ($('#' + i).html() == '9') {
-                    $('#' + i).html('');
-                    $('#' + i).removeClass("green");
-                    $('#' + i).addClass("blue");
-                    zeroObject = $('#' + i);
-                }
+            }
         });
 
     })
 
-    $('#1, #2, #3, #4, #5, #6, #7, #8, #9').on("click", function() {
+    $('.puzzle-box').on('click', '.green,.blue', function() {
         var movePermiFlog;
+        var getFinished;
         clickObject = $(this);
         // clickNum = $(this).html;
         movePermiFlog = movePermission(zeroObject, clickObject);
