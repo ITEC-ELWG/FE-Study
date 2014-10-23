@@ -1,0 +1,44 @@
+.sign-in-form {
+	text-align: center;
+}
+
+.input-container input {
+	padding: 10px;
+	width: 380px;
+  	height: 48px;
+}
+
+.input-submit input {
+	padding: 10px;
+	width: 380px;
+  	height: 48px;
+  	font-family: Georgia, serif;
+  	letter-spacing: 3px
+}
+
+.input-container{
+	padding: 10px;
+}
+
+.input-submit{
+	width: 380px;
+	height: 38px;
+	margin: 0 auto;
+	font-size: 20px;
+	background-color: steelblue;
+	padding-top: 10;
+}
+
+.container{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.login-link{
+	color: white;
+	text-decoration:none;
+}
+
+input[type="text"]{
+	font-size: 20px;
+}

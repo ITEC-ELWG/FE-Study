@@ -1,0 +1,89 @@
+.title-p{
+	margin: 0 0 0 0;
+	color: white;
+	font-size: 35px;
+}
+
+footer p{
+	margin: 0 0 0 0;
+	color: white;
+	font-size: 15px;
+}
+
+div p{
+	font-size: 14px;
+	font-family: Microsoft YaHei;
+}
+
+h2,a,p{
+	font-family: Microsoft YaHei;
+}
+
+header{
+	background-color: #4169E1;
+	height: 55px;
+	padding-top: 10px;
+}
+
+body{
+	margin: 0 0 0 0;
+	background-color: rgb(235,248,255);
+}
+
+footer{
+	margin-top: 40px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	text-align: center;
+	background-color: #4682B4;
+}
+
+.header-main{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header-title{
+	margin-right: 500px;
+	width: 250px;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+
+.header-link{
+	padding-left: 20px;
+	margin-top: 10px;
+	float: left;
+}
+
+.header-a{
+	margin: 0 0 0 0;
+	color: white;
+	font-size: 20px;
+	text-decoration:none;
+	padding-left: 15px;
+}
+
+.body-main{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.item-left{
+	float: left;
+	margin-top: 10px;
+}
+
+.item-right{
+	float: left;
+	margin-left: 100px;
+}
+
+.body-hr{
+	width: 100%;
+	height: 1px;
+}
