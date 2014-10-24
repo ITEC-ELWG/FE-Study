@@ -1,5 +1,15 @@
 <!DocType HTML>
 <html lang="zh-cmn-hans">
+<?php
+
+//检查是否已经设置了cookies，如果没有，那么跳到登陆界面
+ if (!isset($_COOKIE['username']) || (!isset($_COOKIE['password'])))
+     {
+        echo'<meta http-equiv = refresh content ="0;url = error.php">';
+        echo'<meta http-equiv = refresh content ="3;url = index.php">';
+     }
+
+?>
 
 <head>
 <meta charset="utf-8">
@@ -15,6 +25,7 @@
 
 
 <body class="bgimg">
+
 <div class="lowz"><img src="../image/pagebg.jpg"/></div>
 
 <div class="topz">
