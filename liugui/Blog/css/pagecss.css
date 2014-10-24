@@ -263,3 +263,12 @@
 	left: 0px;
 	z-index: 0;
 }
+
+.outlog
+{
+	margin-left: 600px;
+	padding: 5px 5px;
+	text-align: center;
+	font-size: 2em;
+	background:rgba(120,201,123,0.5);
+}
