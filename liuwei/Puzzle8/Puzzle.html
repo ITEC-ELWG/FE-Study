@@ -3,20 +3,27 @@
 
 <head>
     <title>Puzzle8</title>
-    <!-- <link type="text/css" rel="stylesheet" href="main.css"> -->
-    <!-- <link type="text/css" rel="stylesheet" href="reset.css"> -->
     <script type="text/javascript" src="jquery-1.11.1.js"></script>
     <script type="text/javascript" src="puzzle.js"></script>
     <style type="text/css">
     .puzzle-box {
-        height: 306px;
+        height: 204px;
+        width: 204px;
+        margin: 0px auto;
+        margin-top: 50px;
+        border: 1px solid #02987B;
+        background-color: #1A52B8;
+        font: 16px/30px"Microsoft YaHei";
+        color: #FFF;
+    }
+    .user-box {
         width: 306px;
         margin: 0px auto;
-        margin-top: 100px;
-        border: 1px solid #02987B;
+        margin-top: 20px;
     }
     .green,
     .blue {
+        position: relative;
         height: 100px;
         width: 100px;
         border: 1px solid #02987B;
@@ -41,25 +48,27 @@
         width: 100px;
         float: right;
     }
+    .input-num {
+        height: 30px;
+        margin-left: 20px;
+        float: left;
+    }
     </style>
 </head>
 
 <body>
     <div class="puzzle-box">
-        <div class="green" id='1'>1</div>
-        <div class="green" id='2'>2</div>
-        <div class="green" id='3'>3</div>
-        <div class="green" id='4'>4</div>
-        <div class="green" id='5'>5</div>
-        <div class="green" id='6'>6</div>
-        <div class="green" id='7'>7</div>
-        <div class="green" id='8'>8</div>
-        <div class="blue" id='9'></div>
+        <!-- <div class="welcome-box"> -->
+        <p>Welcome to Puzzle Game!</p>
+        <p>Please input a number (1&lt;num&lt;21) and click button RUN.</p>
+        <!-- </div> -->
     </div>
-    <div class="btn-box">
-        <button class="btn" id='btn'>Restart</button>
+    <div class="user-box">
+        <input class="input-num">
+        <div class="btn-box">
+            <button class="btn" id='btn'>RUN</button>
+        </div>
     </div>
-    <div class="display" id='display'></div>
 </body>
 
 </html>
