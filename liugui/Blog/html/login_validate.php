@@ -40,7 +40,7 @@ if (($resultArray['username'] == $usernameInput) && ($resultArray['password'] ==
     //echo '<meta http-equiv="refresh" content="0;url=liugui.php" />';
     header('Location:liugui.php');
     setcookie("username",$usernameInput,time()+3600);
-    setcookie("password",$passwordInput,time()+3600);
+    //setcookie("password",$passwordInput,time()+3600);由于密码比较隐私，不设置cookies
 }
 else
 {
