@@ -1,0 +1,40 @@
+.bg{
+	background-color: #E6E6FA;
+}
+
+.mainBox{
+    margin-left: auto;
+	margin-right: auto;
+	/*border属性的设置方法*/
+    border: 1px solid red;
+	width: 600px;
+	height: 600px;
+	/*使整个div水平居中的方法！注意是整个div居中，而不是里面的文本居中*/
+
+}
+
+.mainBox ul li {
+	width: 198px;
+	height: 198px;
+	border: 1px solid #696969;
+	font-size: 8em;
+	/*设置该元素中字体的颜色*/
+	color: #FFFFFF;
+	/*设置列表按照水平的方式显示*/
+	display: inline-block;
+	/*利用行高实现垂直居中*/
+	line-height: 200px;
+	/*利用text-align实现水平居中*/
+    text-align: center;
+	position: relative;
+	margin-right: -8px;
+}
+
+.number{
+	/*设置该元素中的背景颜色*/
+	background-color: #7CCD7C;
+}
+
+.special{
+	background-color: #63B8FF;
+}
