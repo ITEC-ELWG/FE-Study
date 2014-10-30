@@ -1,0 +1,33 @@
+.user-input{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+}
+
+.invisible{
+	visibility: hidden;
+	width: 20%;
+	height: 70%;
+}
+
+.line-container{
+	width: 200px;
+	margin-top: 10px;
+	height: 40px;
+	padding-left: 8px;
+}
+
+.operator-input{
+	width: 20%;
+	height: 70%;
+}
+
+.num-input{
+	width: 20%;
+	height: 70%;
+}
+
+.dot-input{
+	width: 20%;
+	height: 70%;	
+}
