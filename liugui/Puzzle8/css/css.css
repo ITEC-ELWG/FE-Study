@@ -3,20 +3,21 @@
 }
 
 .mainBox{
+	/*使整个div水平居中的方法！注意是整个div居中，而不是里面的文本居中*/
     margin-left: auto;
 	margin-right: auto;
 	/*border属性的设置方法*/
     border: 1px solid red;
 	width: 600px;
 	height: 600px;
-	/*使整个div水平居中的方法！注意是整个div居中，而不是里面的文本居中*/
+
 
 }
 
 .mainBox ul li {
 	width: 198px;
 	height: 198px;
-	border: 1px solid #696969;
+	
 	font-size: 8em;
 	/*设置该元素中字体的颜色*/
 	color: #FFFFFF;
@@ -33,8 +34,20 @@
 .number{
 	/*设置该元素中的背景颜色*/
 	background-color: #7CCD7C;
+	border: 1px solid #696969;
 }
 
 .special{
-	background:rgba(100,149,237,1);
+	border: 0px;
+	opacity: 0;
+}
+
+.reset{
+	margin-left: 575px;
+    margin-top: 10px;
+	width: 200px;
+	height: 50px;
+	position:relative;
+    font-size: 2em;
+    text-align: center;
 }
