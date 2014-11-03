@@ -1,15 +1,18 @@
-<!DocType HTML>
-<html lang="zh-cmn-hans">
 <?php
 
 //检查是否已经设置了cookies，如果没有，那么跳到登陆界面
  if (!isset($_COOKIE['username']) || (!isset($_COOKIE['password'])))
-     {
-        echo'<meta http-equiv = refresh content ="0;url = error.php">';
-        echo'<meta http-equiv = refresh content ="3;url = index.php">';
+     {       
+    // echo'<meta http-equiv = refresh content ="0;url = error.php">';
+    //在页面执行之前执行，这样可以避免闪现登陆后的页面
+     header('Location:error.php');
      }
 
 ?>
+
+<!DocType HTML>
+<html lang="zh-cmn-hans">
+
 
 <head>
 <meta charset="utf-8">
@@ -316,6 +319,13 @@
     </div>
 	
 </div>
+</div>
+
+<div>
+    <form action="outlog.php" method="post">
+    <!--只有使用submit才能传，使用button不能传过去-->
+    <input type="submit" class="outlog" name="outlog" value="退出登录"/>
+    </form>
 </div>
 </body>
 </html>

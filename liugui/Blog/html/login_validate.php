@@ -19,6 +19,7 @@
 $usernameInput = $_POST['username'];
 $passwordInput = $_POST['password'];
 
+
 //系统提示mysql_connect()即将被移除，所以用myaqli_connect()代替
 $con = mysql_connect("127.0.0.1","liugui","123");
 if (!$con)
@@ -36,9 +37,10 @@ $resultArray = mysql_fetch_array($result);
 
 if (($resultArray['username'] == $usernameInput) && ($resultArray['password'] == $passwordInput))
 {
-    echo '<meta http-equiv="refresh" content="0;url=liugui.php" />';
+    //echo '<meta http-equiv="refresh" content="0;url=liugui.php" />';
+    header('Location:liugui.php');
     setcookie("username",$usernameInput,time()+3600);
-    setcookie("password",$passwordInput,time()+3600);
+    //setcookie("password",$passwordInput,time()+3600);由于密码比较隐私，不设置cookies
 }
 else
 {
