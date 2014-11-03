@@ -38,16 +38,19 @@
 }
 
 .special{
-	border: 0px;
+	border: 1px solid #E6E6FA;
 	opacity: 0;
 }
 
 .reset{
-	margin-left: 575px;
+	margin-left: auto;
+	margin-right: auto;
     margin-top: 10px;
+	position:relative;
+    text-align: center;
+}
+.buttonCss{
 	width: 200px;
 	height: 50px;
-	position:relative;
-    font-size: 2em;
-    text-align: center;
+	font-size: 2em;
 }
