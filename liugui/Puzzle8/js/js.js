@@ -150,7 +150,8 @@ $(document).ready(function() {
         $("ul li:eq(8)").nextAll().remove();
         //然后增加需要的元素
         for (var i = 9; i < (nTemp * nTemp); i++) {
-            $("ul li:eq(" + (i - 1) + ")").after("<li>" + i + "</li>");
+            //注意在jQuery中所有变量的实现方法：除变量外全部加双引号，并且用加号连接
+            $("ul li:eq(" + (i - 1) + ")").after("<li>" + (i + 1) + "</li>");
         }
         //最后给所有元素赋属性
         for (var j = 0; j < (nTemp * nTemp); j++) {
@@ -160,9 +161,12 @@ $(document).ready(function() {
                 "height": (600 / nTemp - 2) + "px",
                 "font-size": (24 / nTemp) + "em",
                 "line-height": (600 / nTemp) + "px",
-                "border": "1px solid",
-                "color": "#FFFFFF"
-            });
+                "border": "1px solid #696969",
+                "color": "#FFFFFF",
+                "positon":"relative",
+                "margin-right":"0px",
+                "display":"inline-block"
+            })
         }
     });
 })

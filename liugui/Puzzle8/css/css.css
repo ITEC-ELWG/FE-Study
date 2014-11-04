@@ -27,8 +27,6 @@
 	line-height: 200px;
 	/*利用text-align实现水平居中*/
     text-align: center;
-	position: relative;
-	margin-right: -8px;
 }
 
 .number{
@@ -71,3 +69,4 @@
 .submit{
 	font-size: 0.8em;
 }
+
