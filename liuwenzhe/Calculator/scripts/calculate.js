@@ -3,13 +3,14 @@ var values = new Array();
 var type = new Array();
 var equal;
 var i = 0;
+var j = 0;
 
 function initInputBtn(){
 	inputs = document.getElementsByTagName("input");
 
-	for (var i = 1; i < inputs.length; i++) {
-		if (!(inputs[i].value == "AC" || inputs[i].value == "=")) {
-			inputs[i].onclick = function(){
+	for (var k = 1; k < inputs.length; k++) {
+		if (!(inputs[k].value == "AC" || inputs[k].value == "=")) {
+			inputs[k].onclick = function(){
 			input(this);
 			};
 		}	
@@ -18,10 +19,18 @@ function initInputBtn(){
 
 
 function input(element){
-	inputs[0].value += element.value;
+	if (element.className == "operator-input") {
+		j ++;
+		if (j == 2) {
+			getResult();
+			j = 1;
+		};
+	};
 
 	values[i] = element.value;
 	type[i] = element.className;
+	inputs[0].value += element.value;
+
 	i ++;
 }
 
@@ -86,6 +95,11 @@ function calculate(num1, num2, operator){
 			break;
 	}
 
+	//初始化num1
+	values.length = 0;
+	type.length = 0;
+	values[0] = result;
+	type[0] = "num-input";
 	return result;
 }
 

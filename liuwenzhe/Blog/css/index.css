@@ -12,10 +12,9 @@ footer p{
 
 div p{
 	font-size: 14px;
-	font-family: Microsoft YaHei;
 }
 
-h2,a,p{
+body{
 	font-family: Microsoft YaHei;
 }
 
@@ -73,13 +72,15 @@ footer{
 	position: relative;
 }
 
-.item-left{
+.pull-left{
 	float: left;
+}
+
+.mt-10{
 	margin-top: 10px;
 }
 
-.item-right{
-	float: left;
+.ml-100{
 	margin-left: 100px;
 }
 
