@@ -21,6 +21,7 @@ function initInputBtn(){
 function input(element){
 	if (element.className == "operator-input") {
 		j ++;
+		//如果检测到二次输入运算符，则获取运算结果
 		if (j == 2) {
 			getResult();
 			j = 1;
@@ -31,6 +32,10 @@ function input(element){
 	type[i] = element.className;
 	inputs[0].value += element.value;
 
+	if (element.value == "%") {
+		getResult();
+	};
+
 	i ++;
 }
 
@@ -38,6 +43,8 @@ function clearInput(){
 	inputs[0].value = "";
 	values.length = 0;
 	type.length = 0;
+	i = 0;
+	j = 0;
 }
 
 function getResult(){
@@ -71,35 +78,36 @@ function calculate(num1, num2, operator){
 
 	if (num2 == "" && operator == "%") {
 		var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
-		return num1/100;
-	};
+		result = num1/100;
+	}else{
+		var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
+		var num2 = (is_int(num2) == true) ? parseInt(num2) : parseFloat(num2);
 
-	var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
-	var num2 = (is_int(num2) == true) ? parseInt(num2) : parseFloat(num2);
-
-	switch(operator){
-		case "+":
-			result = num1+num2;
-			break;
-		case "X":
-			result = num1*num2;
-			break;
-		case "/":
-			result = num1/num2;
-			break;
-		case "%":
-			result = num1%num2;
-			break;
-		case "-":
-			result = num1-num2;
-			break;
+		switch(operator){
+			case "+":
+				result = num1+num2;
+				break;
+			case "X":
+				result = num1*num2;
+				break;
+			case "/":
+				result = num1/num2;
+				break;
+			case "%":
+				result = num1%num2;
+				break;
+			case "-":
+				result = num1-num2;
+				break;
+		}
 	}
 
-	//初始化num1
+	//重新初始化
 	values.length = 0;
 	type.length = 0;
 	values[0] = result;
 	type[0] = "num-input";
+	j = 0;
 	return result;
 }
 
