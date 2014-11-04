@@ -54,3 +54,20 @@
 	height: 50px;
 	font-size: 2em;
 }
+.nInput{
+	position: relative;
+	margin-top: -300px;
+	margin-left: 1000px;
+	font-size: 1.5em;
+}
+
+.box{
+	width: 100px;
+	height: 30px;
+	position: relative;
+	top: -3px;
+	font-size: 0.8em;
+}
+.submit{
+	font-size: 0.8em;
+}
