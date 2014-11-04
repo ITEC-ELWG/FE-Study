@@ -2,8 +2,6 @@
 var nowStatus = new Array(0, 1, 2, 3, 4, 5, 6, 8, 7);
 //var initStatus = new Array;
 var setStatus = new Array();
-//这个数组用于判断是否游戏过关成功
-var success = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8);
 
 var n = 3;
 
@@ -125,19 +123,19 @@ $(document).ready(function() {
                 nowStatus[p] = 8;
             }
         }
+        successful();
     });
 })
 
 
 function successful() {
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < (n * n); i++) {
         var successTag = 0;
-        if (nowStatus[i] != success[i]) {
+        if (nowStatus[i] != i) {
             successTag = 1;
             break;
         }
     }
-
     if (successTag == 0) {
         //document.getElementById("test").innerHTML = "successful!!";
         alert("恭喜过关，请按重置按钮开始下一轮游戏！");
