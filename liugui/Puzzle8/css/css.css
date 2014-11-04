@@ -27,6 +27,8 @@
 	line-height: 200px;
 	/*利用text-align实现水平居中*/
     text-align: center;
+    /*一定要加定位方式，否则动画效果不能出来*/
+    position: relative;
 }
 
 .number{
