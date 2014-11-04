@@ -80,50 +80,60 @@ $(document).ready(function() {
 
             //向上的情况
             if (((p - n) >= 0) && (nowStatus[p - n] == 8)) {
-                $("#" + nowStatus[p]).animate({
-                    top: "-=200px"
-                }, 100);
-                $("#" + nowStatus[p - n]).animate({
-                    top: "+=200px"
-                }, 100);
                 nowStatus[p - n] = nowStatus[p];
                 nowStatus[p] = 8;
+                $("#" + nowStatus[p - n]).animate({
+                    top: "-=200px"
+                }, 100);
+                $("#" + nowStatus[p]).animate({
+                    top: "+=200px"
+                }, 100,function(){
+                    successful();
+                });
+                
             }
             //向下的情况
             else if (((p + n) < (n * n)) && (nowStatus[p + n] == 8)) {
-                $("#" + nowStatus[p]).animate({
-                    top: "+=200px"
-                }, 100);
-                $("#" + nowStatus[p + n]).animate({
-                    top: "-=200px"
-                }, 100);
                 nowStatus[p + n] = nowStatus[p];
                 nowStatus[p] = 8;
+                $("#" + nowStatus[p + n]).animate({
+                    top: "+=200px"
+                }, 100);
+                $("#" + nowStatus[p]).animate({
+                    top: "-=200px"
+                }, 100,function(){
+                    successful();
+                });
+                
             }
             //向左的情况
             else if (((p - 1) >= 0) && ((p - 1) < (n * n - 1)) && (nowStatus[p - 1] == 8)) {
-                $("#" + nowStatus[p]).animate({
-                    left: "-=200px"
-                }, 100);
-                $("#" + nowStatus[p - 1]).animate({
-                    left: "+=200px"
-                }, 100);
                 nowStatus[p - 1] = nowStatus[p];
                 nowStatus[p] = 8;
+                $("#" + nowStatus[p - 1]).animate({
+                    left: "-=200px"
+                }, 100);
+                $("#" + nowStatus[p]).animate({
+                    left: "+=200px"
+                }, 100,function(){ successful()
+                });
+                
             }
             //向右的情况
             else if (((p + 1) > 0) && ((p + 1) < n * n) && (nowStatus[p + 1] == 8)) {
-                $("#" + nowStatus[p]).animate({
-                    left: "+=200px"
-                }, 100);
-                $("#" + nowStatus[p + 1]).animate({
-                    left: "-=200px"
-                }, 100);
                 nowStatus[p + 1] = nowStatus[p];
                 nowStatus[p] = 8;
+                $("#" + nowStatus[p + 1]).animate({
+                    left: "+=200px"
+                }, 100);
+                $("#" + nowStatus[p]).animate({
+                    left: "-=200px"
+                }, 100,function(){
+                    successful();
+                });
+                
             }
         }
-        successful();
     });
 })
 
@@ -137,7 +147,6 @@ function successful() {
         }
     }
     if (successTag == 0) {
-        //document.getElementById("test").innerHTML = "successful!!";
         alert("恭喜过关，请按重置按钮开始下一轮游戏！");
     }
 }
