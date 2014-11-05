@@ -27,8 +27,8 @@
 	line-height: 200px;
 	/*利用text-align实现水平居中*/
     text-align: center;
-	position: relative;
-	margin-right: -8px;
+    /*一定要加定位方式，否则动画效果不能出来*/
+    position: relative;
 }
 
 .number{
@@ -54,3 +54,21 @@
 	height: 50px;
 	font-size: 2em;
 }
+.nInput{
+	position: relative;
+	margin-top: -300px;
+	margin-left: 1050px;
+	font-size: 1.5em;
+}
+
+.box{
+	width: 100px;
+	height: 30px;
+	position: relative;
+	top: -3px;
+	font-size: 0.8em;
+}
+.submit{
+	font-size: 0.8em;
+}
+

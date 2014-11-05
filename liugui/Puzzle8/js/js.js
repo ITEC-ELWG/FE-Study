@@ -1,428 +1,201 @@
 //这个数组记录当前每个位置上的方块情况
-var nowStatus = new Array(0, 1, 2, 3, 4, 5, 6, 8, 7);
+var nowStatus = [0, 1, 2, 3, 4, 5, 6, 8, 7];
 //var initStatus = new Array;
-var setStatus = new Array();
-//这个数组用于判断是否游戏过关成功
-var success = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8);
+var setStatus = [];
+
+var n = 3;
 
 function valueGet(e) {
     //vget存储当前点击到的方块的值
     var vget = e.value;
-    document.getElementById("test").innerHTML = vget;
+    $("#test").text(vget);
     //找出当前点击的那一块在游戏方格中的位置，并保存在k中 
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < n * n; i++) {
         if (nowStatus[i] == vget) {
             var k = i;
-            document.getElementById("test2").innerHTML = k;
+            $("#test2").text(k);
             break;
         }
     }
     return k;
 }
 
-function set(nowstatus,setStatus) 
-{
+function set(nowStatus, setStatus, n) {
     //根据给定的initStatus值设定nowStatues值并且排列界面！
-    for (var i = 0; i < 9; i++) {
-        if (nowstatus[i] != 8) {
-            var setNum = nowstatus[i] + 1;
+    for (var i = 0; i < n * n; i++) {
+        if (nowStatus[i] != (n * n - 1)) {
+            var setNum = nowStatus[i] + 1;
             $("[value=" + setStatus[i] + "]").text(setNum)
                 //先要把之前设置的属性移出再添加，相当于修改class
                 .removeClass()
                 .addClass("number")
                 .attr({
-                    "id": nowstatus[i]
-                    //"value": nowstatus[i]
+                    "id": nowStatus[i]
                 });
-        } else if (nowstatus[i] === 8) {
-            $("[value=" + setStatus[i] + "]").text("9")
+        } else if (nowStatus[i] == (n * n - 1)) {
+            $("[value=" + setStatus[i] + "]").text(n * n)
                 .removeClass()
                 .addClass("special")
                 .attr({
-                    "id": 8
-                    //"value": 8
+                    "id": (n * n - 1)
                 });
         }
     }
     //分两次设置，解决BUG了！！
-    for (var j = 0;j < 9;j++){
-            $("#" + nowStatus[j]).attr({"value":nowstatus[j]});
+    for (var j = 0; j < (n * n); j++) {
+        $("#" + nowStatus[j]).attr({
+            "value": nowStatus[j]
+        });
     }
 }
-
-
 
 $(document).ready(function() {
     $(".buttonCss").click(function() {
         //用setStatus将当前的nowStatus暂存下来
         setStatus = nowStatus;
+
         $.ajax({
-            url: "../php/initStatus.php",
             type: "POST",
+            url: "../php/initStatus.php",
+            data: {
+                num: n,
+                num1: n
+            },
             dataType: "json",
             success: function(data) {
                 nowStatus = data;
-                set(nowStatus,setStatus);
-            },
-            async: false
+                set(nowStatus, setStatus, n);
+            }
         });
-        
-        //for (var j = 0;j < 9;j++)
-        //{
-             //var temp= $("ul li:eq("+setStatus[j]+")").text();
-             //nowStatus[j] = temp - 1;
-             //nowStatus[j] = initStatus[j];
-        //}
-
-
     });
 });
 
 
 $(document).ready(function() {
-    $("ul li").click(function() {
-        //valueGet()函数放在这里调用
-        var p = valueGet(this);
-        if (nowStatus[p] != 8) {
-            switch (p) {
-                //所有的交换针对位置和抽象的位置上的value值，而不应该是具体的常数值
-                case 0:
-                    {
-                        if (nowStatus[1] == 8) {
-                            $("#" + nowStatus[0]).animate({
-                                left: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[1]).animate({
-                                left: "-=200px"
-                            }, 100);
-
-                            nowStatus[1] = nowStatus[0];
-                            nowStatus[0] = 8;
-                     
-
-                        } else if (nowStatus[3] == 8) {
-                            /*当下面有多个动画时：如果是关于同一个元素的同一类型动作，那么是按照顺序执行，如果是关于不同元素的，那么同时执行*/
-                            $("#" + nowStatus[0]).animate({
-                                top: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[3]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-                            nowStatus[3] = nowStatus[0];
-                            nowStatus[0] = 8;
-
-                        }
-                        break;
-                    }
-                case 1:
-                    {
-                        if (nowStatus[0] == 8) {
-                            $("#" + nowStatus[1]).animate({
-                                left: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[0]).animate({
-                                left: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[0] = nowStatus[1];
-                            nowStatus[1] = 8;
-                        } else if (nowStatus[2] == 8) {
-                            $("#" + nowStatus[1]).animate({
-                                left: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[2]).animate({
-                                left: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[2] = nowStatus[1];
-                            nowStatus[1] = 8;
-
-                        } else if (nowStatus[4] == 8) {
-                            $("#" + nowStatus[1]).animate({
-                                top: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[4]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[4] = nowStatus[1];
-                            nowStatus[1] = 8;
-
-                        }
-                        break;
-                    }
-                case 2:
-                    {
-                        if (nowStatus[1] == 8) {
-                            $("#" + nowStatus[2]).animate({
-                                left: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[1]).animate({
-                                left: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[1] = nowStatus[2];
-                            nowStatus[2] = 8;
-                        } else if (nowStatus[5] == 8) {
-                            $("#" + nowStatus[2]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-                            $("#" + nowStatus[5]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-                            nowStatus[5] = nowStatus[2];
-                            nowStatus[2] = 8;
-
-                        }
-                        break;
-                    }
-                case 3:
-                    {
-                        if (nowStatus[0] == 8) {
-                            $("#" + nowStatus[3]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-                            $("#" + nowStatus[0]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-                            nowStatus[0] = nowStatus[3];
-                            nowStatus[3] = 8;
-                        } else if (nowStatus[4] == 8) {
-                            $("#" + nowStatus[3]).animate({
-                                left: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[4]).animate({
-                                left: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[4] = nowStatus[3];
-                            nowStatus[3] = 8;
-
-                        } else if (nowStatus[6] == 8) {
-                            $("#" + nowStatus[3]).animate({
-                                top: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[6]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[6] = nowStatus[3];
-                            nowStatus[3] = 8;
-
-                        }
-                        break;
-                    }
-                case 4:
-                    {
-                        if (nowStatus[1] == 8) {
-                            $("#" + nowStatus[4]).animate({
-                                top: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[1]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[1] = nowStatus[4];
-                            nowStatus[4] = 8;
-                        } else if (nowStatus[3] == 8) {
-                            $("#" + nowStatus[4]).animate({
-                                left: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[3]).animate({
-                                left: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[3] = nowStatus[4];
-                            nowStatus[4] = 8;
-
-                        } else if (nowStatus[5] == 8) {
-                            $("#" + nowStatus[4]).animate({
-                                left: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[5]).animate({
-                                left: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[5] = nowStatus[4];
-                            nowStatus[4] = 8;
-
-                        } else if (nowStatus[7] == 8) {
-                            $("#" + nowStatus[4]).animate({
-                                top: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[7]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[7] = nowStatus[4];
-                            nowStatus[4] = 8;
-
-                        }
-                        break;
-                    }
-                case 5:
-                    {
-                        if (nowStatus[2] == 8) {
-                            $("#" + nowStatus[5]).animate({
-                                top: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[2]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[2] = nowStatus[5];
-                            nowStatus[5] = 8;
-                        } else if (nowStatus[4] == 8) {
-                            $("#" + nowStatus[5]).animate({
-                                left: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[4]).animate({
-                                left: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[4] = nowStatus[5];
-                            nowStatus[5] = 8;
-
-                        } else if (nowStatus[8] == 8) {
-                            $("#" + nowStatus[5]).animate({
-                                top: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[8]).animate({
-                                top: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[8] = nowStatus[5];
-                            nowStatus[5] = 8;
-
-                        }
-                        break;
-                    }
-                case 6:
-                    {
-                        if (nowStatus[3] == 8) {
-                            $("#" + nowStatus[6]).animate({
-                                top: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[3]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[3] = nowStatus[6];
-                            nowStatus[6] = 8;
-                        } else if (nowStatus[7] == 8) {
-                            $("#" + nowStatus[6]).animate({
-                                left: "+=200px"
-                            }, 100);
-                            $("#" + nowStatus[7]).animate({
-                                left: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[7] = nowStatus[6];
-                            nowStatus[6] = 8;
-
-                        }
-                        break;
-                    }
-                case 7:
-                    {
-                        if (nowStatus[4] == 8) {
-                            $("#" + nowStatus[7]).animate({
-                                top: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[4]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[4] = nowStatus[7];
-                            nowStatus[7] = 8;
-                        } else if (nowStatus[6] == 8) {
-                            $("#" + nowStatus[7]).animate({
-                                left: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[6]).animate({
-                                left: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[6] = nowStatus[7];
-                            nowStatus[7] = 8;
-
-                        } else if (nowStatus[8] == 8) {
-                            $("#" + nowStatus[7]).animate({
-                                left: "+=200px"
-                            }, 100);
-                            //jQuery中属性选择器加变量的问题
-                            $("#" + nowStatus[8]).animate({
-                                left: "-=200px"
-                            }, 100);
-
-
-                            nowStatus[8] = nowStatus[7];
-                            nowStatus[7] = 8;
-                        }
-                        break;
-                    }
-                case 8:
-                    {
-                        if (nowStatus[5] == 8) {
-                            $("#" + nowStatus[8]).animate({
-                                top: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[5]).animate({
-                                top: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[5] = nowStatus[8];
-                            nowStatus[8] = 8;
-                        } else if (nowStatus[7] == 8) {
-                            $("#" + nowStatus[8]).animate({
-                                left: "-=200px"
-                            }, 100);
-                            $("#" + nowStatus[7]).animate({
-                                left: "+=200px"
-                            }, 100);
-
-
-                            nowStatus[7] = nowStatus[8];
-                            nowStatus[8] = 8;
-                        }
-                        break;
-                    }
+        //$("ul li").click(function() {
+        $("ul").on("click", "li", function() {
+            //valueGet()函数放在这里调用
+            var p = valueGet(this);
+            if (nowStatus[p] != (n * n - 1)) {
+                var row = Math.floor(p / n);
+                var col = p % n;
+                //向上的情况
+                if (((p - n) >= 0) && (nowStatus[p - n] == (n * n - 1))) {
+                    nowStatus[p - n] = nowStatus[p];
+                    nowStatus[p] = (n * n - 1);
+                    $("#" + nowStatus[p - n]).animate({
+                        top: "-=" + (600 / n) + "px"
+                    }, 100);
+                    //callback函数不能直接调用，要用function代入
+                    $("#" + nowStatus[p]).animate({
+                        top: "+=" + (600 / n) + "px"
+                    }, 100, function() {
+                        successful();
+                    });
+                }
+                //向下的情况
+                else if (((parseInt(p) + parseInt(n)) < (n * n)) && (nowStatus[parseInt(p) + parseInt(n)] == (n * n - 1))) {
+                    nowStatus[parseInt(p) + parseInt(n)] = nowStatus[p];
+                    nowStatus[p] = (n * n - 1);
+                    $("#" + nowStatus[parseInt(p) + parseInt(n)]).animate({
+                        top: "+=" + (600 / n) + "px"
+                    }, 100);
+                    $("#" + nowStatus[p]).animate({
+                        top: "-=" + (600 / n) + "px"
+                    }, 100, function() {
+                        successful();
+                    });
+                }
+                //向左的情况
+                else if (((p - 1) >= 0) && ((p - 1) < (n * n - 1)) && (nowStatus[p - 1] == (n * n - 1))) {
+                    nowStatus[p - 1] = nowStatus[p];
+                    nowStatus[p] = (n * n - 1);
+                    $("#" + nowStatus[p - 1]).animate({
+                        left: "-=" + (600 / n) + "px"
+                    }, 100);
+                    $("#" + nowStatus[p]).animate({
+                        left: "+=" + (600 / n) + "px"
+                    }, 100, function() {
+                        successful()
+                    });
+                }
+                //向右的情况
+                else if (((p + 1) > 0) && ((p + 1) < n * n) && (nowStatus[p + 1] == (n * n - 1))) {
+                    nowStatus[p + 1] = nowStatus[p];
+                    nowStatus[p] = (n * n - 1);
+                    $("#" + nowStatus[p + 1]).animate({
+                        left: "+=" + (600 / n) + "px"
+                    }, 100);
+                    $("#" + nowStatus[p]).animate({
+                        left: "-=" + (600 / n) + "px"
+                    }, 100, function() {
+                        successful();
+                    });
+                }
             }
+        });
+    })
+    //一个document.ready下面只能有一个函数，不能同时有多个
+    //用jQuery获取输入的表单值
+$(document).ready(function() {
+    $(".submit").on("click", function() {
+        var nTemp = 0;
+        nTemp = $("#box").val();
+        n = nTemp;
+        var inputStatus = [];
+        var tempArray = [];
+        //先删除所有元素
+        $("ul").empty();
+        //然后增加需要数目的元素
+        for (var i = 0; i < (nTemp * nTemp); i++) {
+            //注意在jQuery中所有变量的实现方法：除变量外全部加双引号，并且用加号连接
+            $("ul").append("<li>" + (i + 1) + "</li>");
         }
-        for (var i = 0; i < 9; i++) {
-            var successTag = 0;
-            if (nowStatus[i] != success[i]) {
-                successTag = 1;
-                break;
-            }
+        //最后给所有元素赋属性
+        for (var j = 0; j < (nTemp * nTemp); j++) {
+            //只有用这种赋值方法打乱的时候才不会同时打乱，为什额？？
+            tempArray[j] = inputStatus[j] = j;
+            $("ul li:eq(" + j + ")").css({
+                    "width": (600 / nTemp - 2) + "px",
+                    "height": (600 / nTemp - 2) + "px",
+                    "font-size": (24 / nTemp) + "em",
+                    "line-height": (600 / nTemp) + "px",
+                    "border": "1px solid #696969",
+                    "color": "#FFFFFF",
+                    "positon": "relative",
+                    "margin-right": "0px"
+                })
+                .attr({
+                    "id": j,
+                    "value": j
+                });
         }
 
-        if (successTag == 0) {
-            //document.getElementById("test").innerHTML = "successful!!";
-            alert("恭喜过关，请按重置按钮开始下一轮游戏！");
+        //打乱数组
+        for (var p = 0; p < inputStatus.length; p++) {
+            var temp;
+            var m = parseInt(inputStatus.length * Math.random());
+            temp = inputStatus[p];
+            inputStatus[p] = inputStatus[m];
+            inputStatus[m] = temp;
         }
+        set(inputStatus, tempArray, nTemp);
+        nowStatus = inputStatus;
+
+
     });
 })
+
+
+function successful() {
+    for (var i = 0; i < (n * n); i++) {
+        var successTag = 0;
+        if (nowStatus[i] != i) {
+            successTag = 1;
+            break;
+        }
+    }
+    if (successTag == 0) {
+        alert("恭喜过关，请按重置按钮开始下一轮游戏！");
+    }
+}
