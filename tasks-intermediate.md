@@ -32,3 +32,6 @@ ELWG前端学习小组任务（中级）
 * 了解[Socket.IO](http://socket.io/)，并自行在网上查找使用Socket.IO实现在线聊天功能的教程
 * 了解WebRTC
 
+## 任务7：Grunt
+* 了解并学习[Grunt](http://www.gruntjs.org/)的使用方法
+* **配置grunt-contrib-watch和grunt-contrib-less插件，实现目标：实时监控你编写的LESS文件，只要一保存就自动将LESS编译成CSS**
