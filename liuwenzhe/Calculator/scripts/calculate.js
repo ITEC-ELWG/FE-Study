@@ -19,24 +19,33 @@ function initInputBtn(){
 
 
 function input(element){
+	var result;
 	if (element.className == "operator-input") {
 		j ++;
 		//如果检测到二次输入运算符，则获取运算结果
 		if (j == 2) {
-			getResult();
+			result = getResult();
+			if (result == false) {
+				return;
+			};
 			j = 1;
 		};
 	};
+
 
 	values[i] = element.value;
 	type[i] = element.className;
 	inputs[0].value += element.value;
 
 	if (element.value == "%") {
-		getResult();
+		result = getResult();
+		if (result == false) {
+				return;
+		};
 	};
 
 	i ++;
+
 }
 
 function clearInput(){
@@ -70,15 +79,29 @@ function getResult(){
 	}
 
 	result = calculate(num1,num2,operator);
+	if (result == false) {
+		return false;
+	};
+
 	inputs[0].value = result;
 }
 
 function calculate(num1, num2, operator){
 	var result;
+	if (num1 == "") {
+		alert('wrong input');
+		clearInput();
+		return false;
+	};
 
 	if (num2 == "" && operator == "%") {
 		var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
 		result = num1/100;
+	}else if(num2 == ""){
+		alert('wrong input');
+		clearInput();
+		return false;
+		// window.location.reload();
 	}else{
 		var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
 		var num2 = (is_int(num2) == true) ? parseInt(num2) : parseFloat(num2);
@@ -91,6 +114,12 @@ function calculate(num1, num2, operator){
 				result = num1*num2;
 				break;
 			case "/":
+				if (num2 == 0) {
+					alert('wrong input');
+					clearInput();
+					return false;
+					// window.location.reload();
+				};
 				result = num1/num2;
 				break;
 			case "%":
