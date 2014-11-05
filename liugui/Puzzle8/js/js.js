@@ -2,10 +2,9 @@
 var nowStatus = [0, 1, 2, 3, 4, 5, 6, 8, 7];
 //var initStatus = new Array;
 var setStatus = [];
-
 var n = 3;
 
-function valueGet(e) {
+function getValue(e) {
     //vget存储当前点击到的方块的值
     var vget = e.value;
     $("#test").text(vget);
@@ -70,12 +69,11 @@ $(document).ready(function() {
     });
 });
 
-
 $(document).ready(function() {
         //$("ul li").click(function() {
         $("ul").on("click", "li", function() {
-            //valueGet()函数放在这里调用
-            var p = valueGet(this);
+            //getValue()函数放在这里调用
+            var p = getValue(this);
             if (nowStatus[p] != (n * n - 1)) {
                 var row = Math.floor(p / n);
                 var col = p % n;
@@ -90,7 +88,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         top: "+=" + (600 / n) + "px"
                     }, 100, function() {
-                        successful();
+                        checkSuccessful();
                     });
                 }
                 //向下的情况
@@ -103,7 +101,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         top: "-=" + (600 / n) + "px"
                     }, 100, function() {
-                        successful();
+                        checkSuccessful();
                     });
                 }
                 //向左的情况
@@ -116,7 +114,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         left: "+=" + (600 / n) + "px"
                     }, 100, function() {
-                        successful()
+                        checkSuccessful()
                     });
                 }
                 //向右的情况
@@ -129,14 +127,13 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         left: "-=" + (600 / n) + "px"
                     }, 100, function() {
-                        successful();
+                        checkSuccessful();
                     });
                 }
             }
         });
     })
-    //一个document.ready下面只能有一个函数，不能同时有多个
-    //用jQuery获取输入的表单值
+//用jQuery获取输入的表单值
 $(document).ready(function() {
     $(".submit").on("click", function() {
         var nTemp = 0;
@@ -181,13 +178,9 @@ $(document).ready(function() {
         }
         set(inputStatus, tempArray, nTemp);
         nowStatus = inputStatus;
-
-
     });
 })
-
-
-function successful() {
+function checkSuccessful() {
     for (var i = 0; i < (n * n); i++) {
         var successTag = 0;
         if (nowStatus[i] != i) {
