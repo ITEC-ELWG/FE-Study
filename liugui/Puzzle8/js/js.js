@@ -80,11 +80,11 @@ $(document).ready(function() {
                     nowStatus[p - n] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p - n]).animate({
-                        top: "-=200px"
+                        top: "-="+ (600/n) +"px"
                     }, 100);
                     //callback函数不能直接调用，要用function代入
                     $("#" + nowStatus[p]).animate({
-                        top: "+=200px"
+                        top: "+="+ (600/n) +"px"
                     }, 100, function() {
                         successful();
                     });
@@ -94,10 +94,10 @@ $(document).ready(function() {
                     nowStatus[p + n] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p + n]).animate({
-                        top: "+=200px"
+                        top: "+="+ (600/n) +"px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
-                        top: "-=200px"
+                        top: "-="+ (600/n) +"px"
                     }, 100, function() {
                         successful();
                     });
@@ -107,10 +107,10 @@ $(document).ready(function() {
                     nowStatus[p - 1] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p - 1]).animate({
-                        left: "-=200px"
+                        left: "-="+ (600/n) +"px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
-                        left: "+=200px"
+                        left: "+="+ (600/n) +"px"
                     }, 100, function() {
                         successful()
                     });
@@ -120,10 +120,10 @@ $(document).ready(function() {
                     nowStatus[p + 1] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p + 1]).animate({
-                        left: "+=200px"
+                        left: "+="+ (600/n) +"px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
-                        left: "-=200px"
+                        left: "-="+ (600/n) +"px"
                     }, 100, function() {
                         successful();
                     });
