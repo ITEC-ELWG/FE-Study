@@ -46,22 +46,26 @@ function set(nowStatus, setStatus, n) {
     }
 }
 
+function getAjax(setStatus) {
+    $.ajax({
+        type: "POST",
+        url: "../php/initStatus.php",
+        data: {
+            num: n
+        },
+        dataType: "json",
+        success: function(data) {
+            nowStatus = data;
+            set(nowStatus, setStatus, n);
+        }
+    });
+}
+
 $(document).ready(function() {
     $(".buttonCss").click(function() {
         //用setStatus将当前的nowStatus暂存下来
         setStatus = nowStatus;
-        $.ajax({
-            type: "POST",
-            url: "../php/initStatus.php",
-            data: {
-                num: n
-            },
-            dataType: "json",
-            success: function(data) {
-                nowStatus = data;
-                set(nowStatus, setStatus, n);
-            }
-        });
+        getAjax(setStatus);
     });
 });
 //实现滑块移动的函数
@@ -134,7 +138,6 @@ $(document).ready(function() {
     $(".submit").on("click", function() {
         n = $("#box").val();
         var inputStatus = [];
-        var tempArray = [];
         //先删除所有元素
         $("ul").empty();
         //然后增加需要数目的元素
@@ -145,7 +148,7 @@ $(document).ready(function() {
         //最后给所有元素赋属性
         for (var j = 0; j < (n * n); j++) {
             //只有用这种赋值方法打乱的时候才不会同时打乱，因为定义的是一个指针，如果直接相等相当于将指针指向同一个地方
-            tempArray[j] = inputStatus[j] = j;
+            inputStatus[j] = j;
             $("ul li:eq(" + j + ")").css({
                     "width": (600 / n - 2) + "px",
                     "height": (600 / n - 2) + "px",
@@ -162,18 +165,7 @@ $(document).ready(function() {
                 });
         }
         //打乱数组,用的Ajax打乱的方法
-        $.ajax({
-            type: "POST",
-            url: "../php/initStatus.php",
-            data: {
-                num: n
-            },
-            dataType: "json",
-            success: function(data) {
-                nowStatus = data;
-                set(nowStatus, inputStatus, n);
-            }
-        });
+        getAjax(inputStatus);
     });
 })
 
