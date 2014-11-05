@@ -68,7 +68,8 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-        $("ul li").click(function() {
+        //$("ul li").click(function() {
+        $("ul").on("click","li",function(){
             //valueGet()函数放在这里调用
             var p = valueGet(this);
             if (nowStatus[p] != (n * n - 1)) {
