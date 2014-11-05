@@ -26,16 +26,12 @@ function set(nowStatus, setStatus, n) {
                 //先要把之前设置的属性移出再添加，相当于修改class
                 .removeClass()
                 .addClass("number")
-                .attr({
-                    "id": nowStatus[i]
-                });
+                .attr("id", nowStatus[i]);
         } else if (nowStatus[i] == (n * n - 1)) {
             $("[value=" + setStatus[i] + "]").text(n * n)
                 .removeClass()
                 .addClass("special")
-                .attr({
-                    "id": (n * n - 1)
-                });
+                .attr("id", (n * n - 1));
         }
     }
     //分两次设置，解决BUG了！！
@@ -88,7 +84,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         top: "+=" + (600 / n) + "px"
                     }, 100, function() {
-                        checkSuccessful();
+                        checkSuccess();
                     });
                 }
                 //向下的情况
@@ -101,7 +97,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         top: "-=" + (600 / n) + "px"
                     }, 100, function() {
-                        checkSuccessful();
+                        checkSuccess();
                     });
                 }
                 //向左的情况
@@ -114,7 +110,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         left: "+=" + (600 / n) + "px"
                     }, 100, function() {
-                        checkSuccessful()
+                        checkSuccess()
                     });
                 }
                 //向右的情况
@@ -127,7 +123,7 @@ $(document).ready(function() {
                     $("#" + nowStatus[p]).animate({
                         left: "-=" + (600 / n) + "px"
                     }, 100, function() {
-                        checkSuccessful();
+                        checkSuccess();
                     });
                 }
             }
@@ -153,11 +149,7 @@ $(document).ready(function() {
                     "width": (600 / n - 2) + "px",
                     "height": (600 / n - 2) + "px",
                     "font-size": (24 / n) + "em",
-                    "line-height": (600 / n) + "px",
-                    "border": "1px solid #696969",
-                    "color": "#FFFFFF",
-                    "positon": "relative",
-                    "margin-right": "0px"
+                    "line-height": (600 / n) + "px"
                 })
                 .attr({
                     "id": j,
@@ -169,7 +161,7 @@ $(document).ready(function() {
     });
 })
 
-function checkSuccessful() {
+function checkSuccess() {
     for (var i = 0; i < (n * n); i++) {
         var successTag = 0;
         if (nowStatus[i] != i) {
