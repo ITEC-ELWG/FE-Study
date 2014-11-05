@@ -138,6 +138,7 @@ $(document).ready(function() {
         var nTemp = 0;
         nTemp = $("#box").val();
         var inputStatus = new Array();
+        var tempArray = new Array();
         //先删除多余的元素
         //$("ul li:eq(8)").nextAll().remove();
         //先删除所有元素
@@ -149,7 +150,7 @@ $(document).ready(function() {
         }
         //最后给所有元素赋属性
         for (var j = 0; j < (nTemp * nTemp); j++) {
-            inputStatus[j] = j;
+            tempArray[j] = inputStatus[j] = j;
             $("ul li:eq(" + j + ")").css({
                 "width": (600 / nTemp - 2) + "px",
                 "height": (600 / nTemp - 2) + "px",
@@ -165,7 +166,15 @@ $(document).ready(function() {
                 "value": j
             });
         }
-        set(inputStatus,inputStatus,nTemp);
+        for(var p = 0; p < inputStatus.length; p++)
+        {
+            var temp;
+            var m = parseInt(inputStatus.length * Math.random());
+            temp = inputStatus[p];
+            inputStatus[p] = inputStatus[m];
+            inputStatus[m] = temp;
+        }
+        set(inputStatus, tempArray,nTemp);
     });
 })
 
