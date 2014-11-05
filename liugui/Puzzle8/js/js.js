@@ -1,7 +1,7 @@
 //这个数组记录当前每个位置上的方块情况
-var nowStatus = new Array(0, 1, 2, 3, 4, 5, 6, 8, 7);
+var nowStatus = [0, 1, 2, 3, 4, 5, 6, 8, 7];
 //var initStatus = new Array;
-var setStatus = new Array();
+var setStatus = [];
 
 var n = 3;
 
@@ -10,7 +10,7 @@ function valueGet(e) {
     var vget = e.value;
     $("#test").text(vget);
     //找出当前点击的那一块在游戏方格中的位置，并保存在k中 
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < n * n; i++) {
         if (nowStatus[i] == vget) {
             var k = i;
             $("#test2").text(k);
@@ -20,7 +20,7 @@ function valueGet(e) {
     return k;
 }
 
-function set(nowStatus, setStatus,n) {
+function set(nowStatus, setStatus, n) {
     //根据给定的initStatus值设定nowStatues值并且排列界面！
     for (var i = 0; i < n * n; i++) {
         if (nowStatus[i] != (n * n - 1)) {
@@ -32,24 +32,22 @@ function set(nowStatus, setStatus,n) {
                 .attr({
                     "id": nowStatus[i]
                 });
-        } else if (nowStatus[i] === (n * n - 1)) {
-            $("[value=" + setStatus[i] + "]").text("9")
+        } else if (nowStatus[i] == (n * n - 1)) {
+            $("[value=" + setStatus[i] + "]").text(n * n)
                 .removeClass()
                 .addClass("special")
                 .attr({
-                    "id": (n * n)
+                    "id": (n * n - 1)
                 });
         }
     }
     //分两次设置，解决BUG了！！
-    for (var j = 0; j < 9; j++) {
+    for (var j = 0; j < (n * n); j++) {
         $("#" + nowStatus[j]).attr({
             "value": nowStatus[j]
         });
     }
 }
-
-
 
 $(document).ready(function() {
     $(".buttonCss").click(function() {
@@ -61,24 +59,25 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 nowStatus = data;
-                set(nowStatus, setStatus,n);
+                set(nowStatus, setStatus, n);
             },
             async: true
         });
     });
 });
 
+
 $(document).ready(function() {
         $("ul li").click(function() {
             //valueGet()函数放在这里调用
             var p = valueGet(this);
-            if (nowStatus[p] != 8) {
+            if (nowStatus[p] != (n * n - 1)) {
                 var row = Math.floor(p / n);
                 var col = p % n;
                 //向上的情况
-                if (((p - n) >= 0) && (nowStatus[p - n] == 8)) {
+                if (((p - n) >= 0) && (nowStatus[p - n] == (n * n - 1))) {
                     nowStatus[p - n] = nowStatus[p];
-                    nowStatus[p] = 8;
+                    nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p - n]).animate({
                         top: "-=200px"
                     }, 100);
@@ -90,9 +89,9 @@ $(document).ready(function() {
                     });
                 }
                 //向下的情况
-                else if (((p + n) < (n * n)) && (nowStatus[p + n] == 8)) {
+                else if (((p + n) < (n * n)) && (nowStatus[p + n] == (n * n - 1))) {
                     nowStatus[p + n] = nowStatus[p];
-                    nowStatus[p] = 8;
+                    nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p + n]).animate({
                         top: "+=200px"
                     }, 100);
@@ -103,9 +102,9 @@ $(document).ready(function() {
                     });
                 }
                 //向左的情况
-                else if (((p - 1) >= 0) && ((p - 1) < (n * n - 1)) && (nowStatus[p - 1] == 8)) {
+                else if (((p - 1) >= 0) && ((p - 1) < (n * n - 1)) && (nowStatus[p - 1] == (n * n - 1))) {
                     nowStatus[p - 1] = nowStatus[p];
-                    nowStatus[p] = 8;
+                    nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p - 1]).animate({
                         left: "-=200px"
                     }, 100);
@@ -116,9 +115,9 @@ $(document).ready(function() {
                     });
                 }
                 //向右的情况
-                else if (((p + 1) > 0) && ((p + 1) < n * n) && (nowStatus[p + 1] == 8)) {
+                else if (((p + 1) > 0) && ((p + 1) < n * n) && (nowStatus[p + 1] == (n * n - 1))) {
                     nowStatus[p + 1] = nowStatus[p];
-                    nowStatus[p] = 8;
+                    nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p + 1]).animate({
                         left: "+=200px"
                     }, 100);
@@ -134,13 +133,12 @@ $(document).ready(function() {
     //一个document.ready下面只能有一个函数，不能同时有多个
     //用jQuery获取输入的表单值
 $(document).ready(function() {
-    $(".submit").bind("click", function() {
+    $(".submit").on("click", function() {
         var nTemp = 0;
         nTemp = $("#box").val();
-        var inputStatus = new Array();
-        var tempArray = new Array();
-        //先删除多余的元素
-        //$("ul li:eq(8)").nextAll().remove();
+        n = nTemp;
+        var inputStatus = [];
+        var tempArray = [];
         //先删除所有元素
         $("ul").empty();
         //然后增加需要数目的元素
@@ -150,31 +148,34 @@ $(document).ready(function() {
         }
         //最后给所有元素赋属性
         for (var j = 0; j < (nTemp * nTemp); j++) {
+            //只有用这种赋值方法打乱的时候才不会同时打乱，为什额？？
             tempArray[j] = inputStatus[j] = j;
             $("ul li:eq(" + j + ")").css({
-                "width": (600 / nTemp - 2) + "px",
-                "height": (600 / nTemp - 2) + "px",
-                "font-size": (24 / nTemp) + "em",
-                "line-height": (600 / nTemp) + "px",
-                "border": "1px solid #696969",
-                "color": "#FFFFFF",
-                "positon": "relative",
-                "margin-right": "0px"
-            })
-            .attr({
-                "id": j,
-                "value": j
-            });
+                    "width": (600 / nTemp - 2) + "px",
+                    "height": (600 / nTemp - 2) + "px",
+                    "font-size": (24 / nTemp) + "em",
+                    "line-height": (600 / nTemp) + "px",
+                    "border": "1px solid #696969",
+                    "color": "#FFFFFF",
+                    "positon": "relative",
+                    "margin-right": "0px"
+                })
+                .attr({
+                    "id": j,
+                    "value": j
+                });
         }
-        for(var p = 0; p < inputStatus.length; p++)
-        {
+
+        //打乱数组
+        for (var p = 0; p < inputStatus.length; p++) {
             var temp;
             var m = parseInt(inputStatus.length * Math.random());
             temp = inputStatus[p];
             inputStatus[p] = inputStatus[m];
             inputStatus[m] = temp;
         }
-        set(inputStatus, tempArray,nTemp);
+        set(inputStatus, tempArray, nTemp);
+        nowStatus = inputStatus;
     });
 })
 
