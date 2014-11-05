@@ -20,10 +20,10 @@ function valueGet(e) {
     return k;
 }
 
-function set(nowStatus, setStatus) {
+function set(nowStatus, setStatus,n) {
     //根据给定的initStatus值设定nowStatues值并且排列界面！
     for (var i = 0; i < n * n; i++) {
-        if (nowStatus[i] != 8) {
+        if (nowStatus[i] != (n * n - 1)) {
             var setNum = nowStatus[i] + 1;
             $("[value=" + setStatus[i] + "]").text(setNum)
                 //先要把之前设置的属性移出再添加，相当于修改class
@@ -32,12 +32,12 @@ function set(nowStatus, setStatus) {
                 .attr({
                     "id": nowStatus[i]
                 });
-        } else if (nowStatus[i] === 8) {
+        } else if (nowStatus[i] === (n * n - 1)) {
             $("[value=" + setStatus[i] + "]").text("9")
                 .removeClass()
                 .addClass("special")
                 .attr({
-                    "id": 8
+                    "id": (n * n)
                 });
         }
     }
@@ -61,7 +61,7 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data) {
                 nowStatus = data;
-                set(nowStatus, setStatus);
+                set(nowStatus, setStatus,n);
             },
             async: true
         });
@@ -165,6 +165,7 @@ $(document).ready(function() {
                 "value": j
             });
         }
+        set(inputStatus,inputStatus,nTemp);
     });
 })
 
