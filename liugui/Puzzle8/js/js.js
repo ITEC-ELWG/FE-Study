@@ -53,15 +53,19 @@ $(document).ready(function() {
     $(".buttonCss").click(function() {
         //用setStatus将当前的nowStatus暂存下来
         setStatus = nowStatus;
+
         $.ajax({
+            type: "POST",
             url: "../php/initStatus.php",
-            type: "GET",
+            data: {
+                num: n,
+                num1: n
+            },
             dataType: "json",
             success: function(data) {
                 nowStatus = data;
                 set(nowStatus, setStatus, n);
-            },
-            async: true
+            }
         });
     });
 });
@@ -69,7 +73,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
         //$("ul li").click(function() {
-        $("ul").on("click","li",function(){
+        $("ul").on("click", "li", function() {
             //valueGet()函数放在这里调用
             var p = valueGet(this);
             if (nowStatus[p] != (n * n - 1)) {
@@ -80,11 +84,11 @@ $(document).ready(function() {
                     nowStatus[p - n] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p - n]).animate({
-                        top: "-="+ (600/n) +"px"
+                        top: "-=" + (600 / n) + "px"
                     }, 100);
                     //callback函数不能直接调用，要用function代入
                     $("#" + nowStatus[p]).animate({
-                        top: "+="+ (600/n) +"px"
+                        top: "+=" + (600 / n) + "px"
                     }, 100, function() {
                         successful();
                     });
@@ -94,10 +98,10 @@ $(document).ready(function() {
                     nowStatus[parseInt(p) + parseInt(n)] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[parseInt(p) + parseInt(n)]).animate({
-                        top: "+="+ (600/n) +"px"
+                        top: "+=" + (600 / n) + "px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
-                        top: "-="+ (600/n) +"px"
+                        top: "-=" + (600 / n) + "px"
                     }, 100, function() {
                         successful();
                     });
@@ -107,10 +111,10 @@ $(document).ready(function() {
                     nowStatus[p - 1] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p - 1]).animate({
-                        left: "-="+ (600/n) +"px"
+                        left: "-=" + (600 / n) + "px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
-                        left: "+="+ (600/n) +"px"
+                        left: "+=" + (600 / n) + "px"
                     }, 100, function() {
                         successful()
                     });
@@ -120,10 +124,10 @@ $(document).ready(function() {
                     nowStatus[p + 1] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
                     $("#" + nowStatus[p + 1]).animate({
-                        left: "+="+ (600/n) +"px"
+                        left: "+=" + (600 / n) + "px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
-                        left: "-="+ (600/n) +"px"
+                        left: "-=" + (600 / n) + "px"
                     }, 100, function() {
                         successful();
                     });
@@ -177,6 +181,8 @@ $(document).ready(function() {
         }
         set(inputStatus, tempArray, nTemp);
         nowStatus = inputStatus;
+
+
     });
 })
 
