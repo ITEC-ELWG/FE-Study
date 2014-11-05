@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
@@ -5,40 +6,41 @@
 	<body>
 		<div>
 			<div class="input-container"> 
-				<input class="user-input" type="text" name="numbers" readonly="readonly" />
+				<input class="user-input" type="text" name="numbers" readonly="readonly"/>
 			</div>
 			<div class="buttons-keyboard">
 				<div class="line-container">
-					<input class="invisible" type="submit" value=""/>
-					<input class="invisible" type="submit" value=""/>
-					<input class="operator-input" type="submit" value="%"/>
-					<input class="operator-input" type="submit" value="AC"/>
+					<input class="invisible" type="button" value=""/>
+					<input class="invisible" type="button" value=""/>
+					<input class="operator-input" type="button" value="%" onclick="getResult();"/>
+					<input class="operator-input" type="button" value="AC" onclick="clearInput();"/>
 				</div>
 				<div class="line-container">
-					<input class="num-input" type="submit" value="7"/>
-					<input class="num-input" type="submit" value="8"/>
-					<input class="num-input" type="submit" value="9"/>
-					<input class="operator-input" type="submit" value="%"/>
+					<input class="num-input" type="button" value="7"/>
+					<input class="num-input" type="button" value="8"/>
+					<input class="num-input" type="button" value="9"/>
+					<input class="operator-input" type="button" value="/"/>
 				</div>
 				<div class="line-container">
-					<input class="num-input" type="submit" value="4"/>
-					<input class="num-input" type="submit" value="5"/>
-					<input class="num-input" type="submit" value="6"/>
-					<input class="operator-input" type="submit" value="X"/>
+					<input class="num-input" type="button" value="4"/>
+					<input class="num-input" type="button" value="5"/>
+					<input class="num-input" type="button" value="6"/>
+					<input class="operator-input" type="button" value="X"/>
 				</div>
 				<div class="line-container">
-					<input class="num-input" type="submit" value="1"/>
-					<input class="num-input" type="submit" value="2"/>
-					<input class="num-input" type="submit" value="3"/>
-					<input class="operator-input" type="submit" value="-"/>
+					<input class="num-input" type="button" value="1"/>
+					<input class="num-input" type="button" value="2"/>
+					<input class="num-input" type="button" value="3"/>
+					<input class="operator-input" type="button" value="-"/>
 				</div>
 				<div class="line-container">
-					<input class="num-input" type="submit" value="0"/>
-					<input class="dot-input" type="submit" value="."/>
-					<input class="operator-input" type="submit" value="="/>
-					<input class="operator-input" type="submit" value="+"/>
+					<input class="num-input" type="button" value="0"/>
+					<input class="dot-input" type="button" value="."/>
+					<input class="operator-equal" type="button" value="=" onclick="getResult();"/>
+					<input class="operator-input" type="button" value="+"/>
 				</div>
 			</div>
 		</div>
+		<script src="scripts/calculate.js"></script>
 	</body>
 </html>

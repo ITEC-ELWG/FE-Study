@@ -22,6 +22,12 @@
 	height: 70%;
 }
 
+.operator-equal{
+	width: 20%;
+	height: 70%;
+	background-color: green;
+}
+
 .num-input{
 	width: 20%;
 	height: 70%;
