@@ -90,10 +90,10 @@ $(document).ready(function() {
                     });
                 }
                 //向下的情况
-                else if (((p + n) < (n * n)) && (nowStatus[p + n] == (n * n - 1))) {
-                    nowStatus[p + n] = nowStatus[p];
+                else if (((parseInt(p) + parseInt(n)) < (n * n)) && (nowStatus[parseInt(p) + parseInt(n)] == (n * n - 1))) {
+                    nowStatus[parseInt(p) + parseInt(n)] = nowStatus[p];
                     nowStatus[p] = (n * n - 1);
-                    $("#" + nowStatus[p + n]).animate({
+                    $("#" + nowStatus[parseInt(p) + parseInt(n)]).animate({
                         top: "+="+ (600/n) +"px"
                     }, 100);
                     $("#" + nowStatus[p]).animate({
