@@ -59,7 +59,6 @@ function getAjax(setStatus) {
 
 $(document).ready(function() {
     $(".buttonCss").click(function() {
-        //用setStatus将当前的nowStatus暂存下来
         setStatus = nowStatus;
         getAjax(setStatus);
     });
@@ -143,7 +142,6 @@ $(document).ready(function() {
         }
         //最后给所有元素赋属性
         for (var j = 0; j < (n * n); j++) {
-            //只有用这种赋值方法打乱的时候才不会同时打乱，因为定义的是一个指针，如果直接相等相当于将指针指向同一个地方
             inputStatus[j] = j;
             $("ul li:eq(" + j + ")").css({
                     "width": (600 / n - 2) + "px",
