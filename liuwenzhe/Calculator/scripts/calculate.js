@@ -2,6 +2,7 @@ var inputs;
 var values = new Array();
 var type = new Array();
 var equal;
+var error_flag;
 var i = 0;
 var j = 0;
 
@@ -17,49 +18,81 @@ function initInputBtn(){
 	}
 }
 
+function initValue(){
+	error_flag = false;
+	values[i] = 0;
+	type[i] = "num-input";
+	i ++;
+	inputs[0].value = 0;
+}
 
 function input(element){
-	var result;
-	if (element.className == "operator-input") {
-		j ++;
-		//如果检测到二次输入运算符，则获取运算结果
-		if (j == 2) {
-			result = getResult();
-			if (result == false) {
-				return;
-			};
-			j = 1;
-		};
+	if (error_flag) {
+		return;
 	};
-
 
 	values[i] = element.value;
 	type[i] = element.className;
-	inputs[0].value += element.value;
 
-	if (element.value == "%") {
-		result = getResult();
-		if (result == false) {
-				return;
+	if (i == 1) {
+		if (type[i] == "num-input" && values[i-1] == 0) {
+			values[i-1] = values[i];
+			inputs[0].value = values[i];
+			return;
 		};
 	};
 
-	i ++;
+	//检测是否连续输入运算符或小数点
+	if (i > 0) {
+		if ((type[i] == "operator-input" && type[i-1] == "operator-input") || 
+			(type[i] == "dot-input" && type[i-1] == "dot-input")) {
+			values[i-1] = values[i];
+			values = values.del(i);
+			type = type.del(i);
+			inputs[0].value = '';
+			for (var k = 0; k < values.length; k++) {
+				inputs[0].value += values[k];
+			};
+			return;
+		}else if (type[i] == "operator-input"){
+			j++;
+		}
+	};
 
+	if (j == 2) {
+		values = values.del(i);
+		type = type.del(i);
+		getResult();
+		values[1] = element.value;
+		type[1] = element.className;
+		j = 1;
+	};
+
+	if (element.value == "%") {
+		getResult();
+		return;
+	};
+
+	inputs[0].value += element.value;
+
+	i ++;
 }
 
 function clearInput(){
-	inputs[0].value = "";
+	inputs[0].value = 0;
 	values.length = 0;
 	type.length = 0;
-	i = 0;
+	values[0] = 0;
+	type[0] = "num-input";
+	i = 1;
 	j = 0;
+	error_flag = false;
 }
 
 function getResult(){
 	var num1 = "";
 	var num2 = "";
-	var operator;
+	var operator = "";
 	var flag = true;
 	var result;
 
@@ -79,7 +112,7 @@ function getResult(){
 	}
 
 	result = calculate(num1,num2,operator);
-	if (result == false) {
+	if (result === false) {
 		return false;
 	};
 
@@ -88,20 +121,18 @@ function getResult(){
 
 function calculate(num1, num2, operator){
 	var result;
-	if (num1 == "") {
-		alert('wrong input');
-		clearInput();
-		return false;
+
+	if (operator == "") {
+		return inputs[0].value;
 	};
 
 	if (num2 == "" && operator == "%") {
 		var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
 		result = num1/100;
 	}else if(num2 == ""){
-		alert('wrong input');
-		clearInput();
+		error_flag = true;
+		inputs[0].value = "error";
 		return false;
-		// window.location.reload();
 	}else{
 		var num1 = (is_int(num1) == true) ? parseInt(num1) : parseFloat(num1);
 		var num2 = (is_int(num2) == true) ? parseInt(num2) : parseFloat(num2);
@@ -115,10 +146,9 @@ function calculate(num1, num2, operator){
 				break;
 			case "/":
 				if (num2 == 0) {
-					alert('wrong input');
-					clearInput();
+					error_flag = true;
+					inputs[0].value = "error";
 					return false;
-					// window.location.reload();
 				};
 				result = num1/num2;
 				break;
@@ -137,6 +167,7 @@ function calculate(num1, num2, operator){
 	values[0] = result;
 	type[0] = "num-input";
 	j = 0;
+	i = 1;
 	return result;
 }
 
@@ -148,4 +179,21 @@ function is_int(num){
 	}
 }
 
-window.onload = initInputBtn;
+Array.prototype.del=function(n) {　//n表示第几项，从0开始算起。
+//prototype为对象原型，注意这里为对象增加自定义方法的方法。
+　if(n<0)　//如果n<0，则不进行任何操作。
+　　return this;
+　else
+　　return this.slice(0,n).concat(this.slice(n+1,this.length));
+　　/*
+　　　concat方法：返回一个新数组，这个新数组是由两个或更多数组组合而成的。
+　　　　　　　　　这里就是返回this.slice(0,n)/this.slice(n+1,this.length)
+　　 　　　　　　组成的新数组，这中间，刚好少了第n项。
+　　　slice方法： 返回一个数组的一段，两个参数，分别指定开始和结束的位置。
+　　*/
+}
+
+window.onload = function(){
+	initInputBtn();
+	initValue();
+}
