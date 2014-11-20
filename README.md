@@ -5,8 +5,10 @@ ELWG前端学习小组任务提交处
 
 * 将你们完成的项目放到以姓名全拼命名的文件夹里面，命名如：`linshoushan`。注意：**这里是公共的repo，大家不要修改别人的文件夹或整个项目结构**
 * 每个项目一个文件夹，命名如：`linshoushan/calculator`
-* [初级任务传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/tasks.md)
-* [中极任务传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/tasks-intermediate.md)
+* [英雄榜](https://github.com/ELWG-FE-Study/tasks/blob/master/hero.md)
+* [初级任务传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/tasks-primary.md)
+* [中级任务传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/tasks-intermediate.md)
+* [高级任务传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/tasks-advanced.md)
 * [任务反馈说明](https://github.com/ELWG-FE-Study/tasks/blob/master/feedback.md)
 
 ## 部署说明
