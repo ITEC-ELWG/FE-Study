@@ -57,9 +57,3 @@ ELWG前端学习小组任务（初级）
 
 * 学习[Markdown语法说明（简体中文版）](http://wowubuntu.com/markdown/)
 * **使用Markdown记录会议笔记，并发布到Github上**
-
-## 任务Boss：ELWG Life
-
-* 了解MVC设计模式的概念
-* 学习[Pure](http://purecss.io/) CSS框架（左边目录中的Base、Grids、Forms、Buttons、Tables、Menus部分）
-* **前期调研分析系统的需求，整理好需求文档，**
