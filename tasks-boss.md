@@ -24,7 +24,7 @@ ELWG前端学习小组任务（副本）
     3. 培养最基本的Web网站审美能力
 * 要求：
     1. 自己从零开始搭建项目
-    2. 使用技术：CodeIgniter框架+Smarty模板，LESS/Sass，自选一款CSS框架，Javascript模块化，Grunt部署站点
+    2. 使用技术：自选一门后端语言（PHP/Python/Node.js等等）、框架及模板引擎；LESS/Sass+自选一款CSS框架；Javascript模块化；Grunt部署站点
     3. 界面美观，扁平化风格，布局、视觉、交互均自行设计（注意移动端布局的设计）
     4. 支持响应式设计，布局可以在PC端、iPad及主流大屏手机正常显示
 
