@@ -48,6 +48,10 @@ ELWG前端学习小组任务提交处
 * 和项目成员遵循同一种编码风格
 * 参考[Google编码规范][]
 
+## 推荐书籍
+
+* [推荐书籍传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/recommended-books.md)
+
 [Package Control]: https://sublime.wbond.net/installation
 [HTML-CSS-JS Prettify]: https://github.com/victorporof/Sublime-HTMLPrettify
 [Git]: https://sublime.wbond.net/packages/Git
