@@ -14,7 +14,6 @@ ELWG前端学习推荐书籍
 * JavaScript DOM编程艺术 -Jeremy Keith Jeffrey Sambells著
 * JavaScript语言精粹
 * HTTP权威指南（第一部分和第二部分）
-
 * JavaScript高级程序设计
 * javascript权威指南
 
