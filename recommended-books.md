@@ -22,7 +22,7 @@ ELWG前端学习推荐书籍
 * JavaScript模式
 * 高性能JavaScript
 * 编写可维护的JavaScript
-* jQuery技术内幕 ([作者博客](http://nuysoft.com/)
+* jQuery技术内幕（[作者博客](http://nuysoft.com/)）
 
 ### 新兴
 
