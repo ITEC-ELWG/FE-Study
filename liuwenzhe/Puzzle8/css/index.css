@@ -1,0 +1,37 @@
+body {
+    font-family: Microsoft YaHei;
+    font-size: 25px;
+}
+.pull-left {
+    float: left;
+}
+.main-container {
+    position: relative;
+    float: left;
+    background-color: rgb(53, 152, 219);
+}
+.block{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    /*border: 1px solid #fff;*/
+    display: inline-block;
+}
+.number-block-color{
+    background-color: rgb(27, 188, 155);
+}
+.empty-block-color{
+    background-color: rgb(53, 152, 219);
+}
+.number {
+    text-align: center;
+    color: white;
+    margin-top: 33px;
+}
+.num-input{
+    margin-left: 10px;
+}
+
