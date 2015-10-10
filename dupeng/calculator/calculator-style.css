@@ -1,6 +1,10 @@
 p{
 	margin: 0;
 }
+button{
+	margin: 0;
+	border: 0;
+}
 div.content{
 	position: absolute;
 	left: 50%;
@@ -25,7 +29,7 @@ div.line{
 div.line1{
 	padding-left: 196px;
 }
-div.line p{
+div.line button{
 	font-size: 16px;
 	font-family: "Consolas";
 	display: inline-block;
@@ -39,9 +43,11 @@ div.line p{
 div.line p:hover{
 	cursor: pointer;
 }
-p.data{
+input.data{
 	font-family:"Microsoft YaHei";
 	font-size: 30px;
-	margin-top: 60px;
+	margin-top: 58px;
 	text-align: right;
+	width: 399px;
+	border-style: none;
 }

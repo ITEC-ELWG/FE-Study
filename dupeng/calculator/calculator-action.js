@@ -1,23 +1,24 @@
-var operand1="",operator="",operand2="",operand="",expression="";
+var operand1="",operator="",operand2="",operand="",expression="";//分别记录操作数1，操作符，操作数2，操作数临时值，表达式。
 var label=0;
 for(var i=0;i<2;i++){
-	document.getElementsByClassName("line")[0].children[i].onclick=function(){
+	document.getElementsByClassName("line")[0].children[i].onclick=function(){//gerElementsByClassName得到的是结点的数组集合
 		var data=this.innerHTML;
 		var node=document.getElementsByClassName("data")[0];
 		switch(data){
 			case "AC": 
-				node.innerHTML="";
+				node.value="";
 				operand="";
 				operand1="";
 				operand2="";
 				expression="";
+				label=0;
 				break;
 			case "%":
 				if(operand1!=""&&operator==""){
 					operand1=operand1/100;
 					expression=operand1;
-					node.innerHTML=operand1;
-					label=1;
+					node.value=operand1;
+					// label=1;
 				}
 				break;
 			default:
@@ -43,19 +44,14 @@ for(var i=1;i<5;i++){
 				case "8":
 				case "9":
 				case ".":
-					if(label==0){
-						operand+=data;
-						expression+=data;
-						if(operator==""){
-							operand1=operand;
-						}else{
-							operand2=operand;
-						}
-						node.innerHTML=expression;
+					operand+=data;
+					expression+=data;
+					if(operator==""){
+						operand1=operand;
 					}else{
-						operand+=data;
-												
+						operand2=operand;
 					}
+					node.value=expression;
 					break;
 				case "+":
 				case "-":
@@ -67,7 +63,7 @@ for(var i=1;i<5;i++){
 					operator=data;
 					operand="";
 					expression+=operator;
-					node.innerHTML=expression;
+					node.value=expression;
 					break;
 				case "=":
 					calculate();
@@ -85,21 +81,21 @@ function calculate(){
 	switch(operator)
 	{
 		case "+":
-		node.innerHTML=data1+data2;
+		node.value=data1+data2;
 		break;
 		case "-":
-		node.innerHTML=data1-data2;
+		node.value=data1-data2;
 		break;
 		case "*":
-		node.innerHTML=data1*data2;
+		node.value=data1*data2;
 		break;
 		case "/":
-		node.innerHTML=data1/data2;
+		node.value=data1/data2;
 		default:
 		break;
 	}
 	operator="";
-	operand1=node.innerHTML;
+	operand1=node.value;
 	operand2="";
 	operand="";
 	expression=operand1;
