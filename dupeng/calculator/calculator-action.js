@@ -5,18 +5,20 @@ for(var i=0;i<2;i++){
 		var data=this.innerHTML;
 		var node=document.getElementsByClassName("data")[0];
 		switch(data){
-			case "AC": 
+			case "AC": //清空所有值
 				node.value="";
+				operator="";
 				operand="";
 				operand1="";
 				operand2="";
 				expression="";
-				label=0;
+				// label=0;
 				break;
 			case "%":
 				if(operand1!=""&&operator==""){
 					operand1=operand1/100;
 					expression=operand1;
+					operand=operand1;
 					node.value=operand1;
 					// label=1;
 				}
@@ -43,7 +45,6 @@ for(var i=1;i<5;i++){
 				case "7":
 				case "8":
 				case "9":
-				case ".":
 					operand+=data;
 					expression+=data;
 					if(operator==""){
@@ -53,12 +54,24 @@ for(var i=1;i<5;i++){
 					}
 					node.value=expression;
 					break;
+				case ".":
+					if(operand.indexOf(".")==-1){
+						operand+=data;
+						expression+=data;
+						if(operator==""){
+							operand1=operand;
+						}else{
+							operand2=operand;
+						}
+						node.value=expression;
+					}
+					break;				
 				case "+":
 				case "-":
 				case "*":
 				case "/":
 					if (operator!=""){
-						calculate();
+						Calculate();
 					}
 					operator=data;
 					operand="";
@@ -66,7 +79,7 @@ for(var i=1;i<5;i++){
 					node.value=expression;
 					break;
 				case "=":
-					calculate();
+					Calculate();
 			   		break;
 			   	default:
 			   		break;
@@ -74,7 +87,7 @@ for(var i=1;i<5;i++){
 		};
 	}
 }
-function calculate(){
+function Calculate(){//进行基本计算
 	var data1=parseFloat(operand1);
 	var data2=parseFloat(operand2);
 	var node=document.getElementsByClassName("data")[0];
@@ -97,6 +110,6 @@ function calculate(){
 	operator="";
 	operand1=node.value;
 	operand2="";
-	operand="";
+	operand=operand1;
 	expression=operand1;
 }
