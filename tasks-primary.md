@@ -36,7 +36,7 @@ ELWG前端学习小组任务（初级）
 * 学习W3School的[SQL教程](http://www.w3school.com.cn/sql/index.asp)（页面左侧“课程表”的“SQL基础教程”部分）
 * 学习W3School的[PHP教程](http://www.w3school.com.cn/php/index.asp)（页面左侧“课程表”的“PHP基础教程”“PHP数据库”以及“PHP高级教程（日期、Include、文件、文件上传、Cookies、Sessions）”部分）
 * **在你们的机器上部署一套PHP开发环境（Windows:Apache+PHP+MySQL, Linux:Nginx+php-fpm+PHP+MySQL）。Windows用户推荐安装[WAMP集成环境](http://www.wampserver.com/en/)和[数据库管理工具Navicat For MySQL](http://www.navicat.com.cn/products/navicat-for-mysql)。Linux用户推荐使用centos，[nginx服务器搭建教程](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-centos-6)。安装配置完成后，将http跟目录指向blog文件夹，访问"http://localhost"，能成功显示即环境搭建完成。**
-* **完善`login.php`中的登录表单，添加一个注册按钮和一个注册页面，在Mysql里新建一个数据库`test`，在里面新建一个用户表`user`，表中至少包含以下字段:`account`,`password`,`name`。用户需要先注册，注册成功后，在数据库里保存用户信息（密码不要明文保存！），然后跳转至登录页面。用户填写信息，点击登录按钮，验证用户信息，正确后再跳转至`index.php`。**
+* **完善`login.php`中的登录表单，添加一个注册按钮和一个注册页面`register.php`，在Mysql里新建一个数据库`test`，在里面新建一个用户表`user`，表中至少包含以下字段:`account`,`password`,`name`。用户需要先注册，注册成功后，在数据库里保存用户信息（密码不要明文保存！），然后跳转至登录页面。用户填写信息，点击登录按钮，验证用户信息，正确后再跳转至`index.php`。**
 * **++** **如果你在浏览器中直接访问index.php是可以绕过登录页面的，现在要求改成访问index.php的时候，验证session（或cookie）有没有登录信息，如果有则正常打开，否则重定向到登录页。**
 
 ## 任务5：神奇的jQuery
