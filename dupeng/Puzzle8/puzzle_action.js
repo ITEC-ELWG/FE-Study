@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	$.get("randomNumber.php",function(data,status){
+		if(status=="success"){
+			for(var i=1;i<9;i++){
+				$("p.grid"+i).text(data[i-1]);
+			}
+		}
+	},"json");
 	Win();
 	$("p").click(function(){
 		Move(this,1);
