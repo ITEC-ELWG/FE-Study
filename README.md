@@ -35,7 +35,7 @@ ELWG前端学习小组任务提交处
 
 ## 学习帮助
 
-* 善用Google（Google如果被墙可以上[gg.wbb.im][]或者Chrome插件[红杏]()（需付费）翻墙）。基本上你遇到的80%以上的技术疑问，都能在Google上找到答案，并且你提出的疑问基本上都有人在一个叫[Stack Overflow][]的神奇网站上提问过并且有人做了很好的回答。（某度就算了，学技术你基本上很难在某度给出的搜索结果找到满意的答案）
+* 善用Google（Google如果被墙可以~~[gg.wbb.im][]~~[替代网站][]或者~~Chrome插件[红杏][]~~代理软件[土行孙][]（需付费）翻墙）。基本上你遇到的80%以上的技术疑问，都能在Google上找到答案，并且你提出的疑问基本上都有人在一个叫[Stack Overflow][]的神奇网站上提问过并且有人做了很好的回答。**记住：想要在技术的道路上走得更远，就不要使用某度。**
 * 提高英文阅读能力。基本上所有计算机技术都是外国人发明的，所以英文的文档和说明都比较全面和精细
 * 了解某个概念。例如：*什么是Javascript?*先wiki后百度百科
 * 了解无固定答案的问题。例如：*什么是良好的编码习惯？*建议在知乎上搜索或提问
@@ -56,7 +56,9 @@ ELWG前端学习小组任务提交处
 [HTML-CSS-JS Prettify]: https://github.com/victorporof/Sublime-HTMLPrettify
 [Git]: https://sublime.wbond.net/packages/Git
 [gg.wbb.im]: http://gg.wbb.im
+[替代网站]: https://search.disconnect.me/searchTerms/
 [红杏]: http://honx.in/i/VHbK8M6vDwU_Jlvu
+[土行孙]: https://txs.li/share/71bad3um
 [通天塔]: http://tmd123.com
 [Stack Overflow]: http://stackoverflow.com/
 [Google编码规范]: https://code.google.com/p/google-styleguide/
