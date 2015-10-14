@@ -1,0 +1,38 @@
+body
+{
+	margin: 0;
+}
+p
+{
+	margin: 0;
+}
+div.content
+{
+	font-size: 0;
+	width: 306px;
+	height: 306px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+}
+p
+{
+	font-family: Consolas;
+	font-size: 30px;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	color: white;
+	vertical-align: top; /*inline-block对齐问题???  添加vertical-align得到解决 */
+	background-color: #1ABD9B;
+	border: 1px solid #71B3B1;
+}
+p.blank
+{
+	background-color: #A9CDCA;
+	/*line-height: 16px;*/
+}
