@@ -1,0 +1,34 @@
+body{
+    background-image: url("img/bg.jpg");
+    width: 100%;
+}
+.container {
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+h1{
+    font-style: italic; 
+    font-size: 80px;
+    color: #ADD8E6;        /*light blue*/
+    text-align: center;    /*此定义为水平方向*/
+}
+.input{
+    width: 300px;
+    height: 300px;
+    font-size: 30px;
+    position: center;  /*此center定义为垂直方向*/
+    margin-left: 37%;  
+}
+.input_text{
+    padding: 9px;      /*两方格之间的垂直距离*/
+}
+.login_btn{
+    font: 16px/20px Arial;
+    border: 1px solid #DDD;
+    padding: 5px 12px;
+    margin: 20px;      /*登录按键与上面的间距*/
+    background: #FFF;
+    color: black;
+    text-decoration: none;
+}
