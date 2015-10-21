@@ -14,7 +14,8 @@ ELWG前端学习小组任务（中级）
 * 学习Smarty模板[Smarty3手册](http://www.smarty.net/docs/zh_CN/)，参照[《Smarty简介》PPT](http://itec-elwg.github.io/LectureSlides/intro-smarty/)的知识点学习
 
 ## 任务3：CSS框架
-* 学习[Furatto 2.0](http://icalialabs.github.io/furatto/old_docs/v2/index.html)（“Getting Started”“Docs”“Javascript”“Components”部分）
+* ~~学习[Furatto 2.0](http://icalialabs.github.io/furatto/old_docs/v2/index.html)（“Getting Started”“Docs”“Javascript”“Components”部分）~~
+* 学习[Bootstrap 3.0](http://getbootstrap.com/)（“Getting Started”“CSS”“Components”“Javascript”部分）
 
 ## 任务4：CSS预处理器
 * 了解CSS预处理器的概念
