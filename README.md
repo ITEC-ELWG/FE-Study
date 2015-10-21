@@ -31,7 +31,8 @@ ELWG前端学习小组任务提交处
 ## 推荐开发环境
 
 * 浏览器与调试：Chrome + DevTools / Firefox + Firebug
-* 编辑器：Sublime Text 2/3（插件：[Package Control][]，[HTML-CSS-JS Prettify][]，[Git][]）
+* 编辑器：Sublime Text 2/3（插件：[Package Control][]，[HTML-CSS-JS Prettify][]，[Git][]）、Vim、Emacs
+* IDE：[WebStorm][]、[PhpStorm][]
 
 ## 学习帮助
 
@@ -55,6 +56,8 @@ ELWG前端学习小组任务提交处
 [Package Control]: https://sublime.wbond.net/installation
 [HTML-CSS-JS Prettify]: https://github.com/victorporof/Sublime-HTMLPrettify
 [Git]: https://sublime.wbond.net/packages/Git
+[WebStorm]: https://www.jetbrains.com/webstorm/
+[PhpStorm]: https://www.jetbrains.com/phpstorm/
 [gg.wbb.im]: http://gg.wbb.im
 [替代网站]: https://search.disconnect.me/searchTerms/
 [红杏]: http://honx.in/i/VHbK8M6vDwU_Jlvu
