@@ -1,4 +1,4 @@
-ELWG前端学习小组任务提交处
+ELWG前端学习
 =====
 
 ## 说明
@@ -47,11 +47,14 @@ ELWG前端学习小组任务提交处
 * 记住：**你的代码是写给别人看的，不是写给机器看的，请随时注意保持你的代码的可读性**
 * 从头到尾保持你的编码风格一致
 * 和项目成员遵循同一种编码风格
-* 参考[Google编码规范][]
+* 参考[前端编码规范](https://github.com/ecomfe/spec)或[Google编码规范][]
 
-## 推荐书籍
+## 推荐资料
 
 * [推荐书籍传送门](https://github.com/ELWG-FE-Study/tasks/blob/master/recommended-books.md)
+* [前端网址导航](http://www.whycss.com/)
+* [MDN](https://developer.mozilla.org/zh-CN/docs/Web)
+* [前端技能汇总](https://github.com/JacksonTian/fks)
 
 [Package Control]: https://sublime.wbond.net/installation
 [HTML-CSS-JS Prettify]: https://github.com/victorporof/Sublime-HTMLPrettify
