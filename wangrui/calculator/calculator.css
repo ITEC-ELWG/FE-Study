@@ -1,0 +1,67 @@
+table{
+	width: 460px;
+	height: 500px;
+	background-color: white;
+	border: 2px solid gray;
+	border-collapse: separate;
+}
+caption{
+	color: black;
+	font-size: 30px;
+}
+td{
+	padding: 0 0 0 0;
+}
+
+#show{
+    border-right: 1px solid #696969;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+    width: 450px;
+    height: 65px;
+    padding-top: 0;
+    margin-top: 0;
+    text-align: right;
+    color: black;
+    font-size: 25px;
+}
+.empty{
+	border: none;
+}
+
+.back,.percent,.reset,.devide,.time,.minus,.add,.equal,
+.zer,.one,.two,.thr,.fou,.fiv,.six,.sev,.eig,.nin,.dot{
+	width:100%;
+    height:100%;
+}
+.reset,.devide,.time,.minus,.add{
+	background-color: #C0C0C0;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+.back{
+	padding-left: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.percent{
+     font-weight: bold;
+     font-size: 25px;
+}
+.equal{
+     font-weight: bold;
+     font-size: 25px;
+     background-color: #00BFFF;
+}
+
+.dot,.zer,.one,.two,.thr,.fou,.fiv,.six,.sev,.eig,.nin{
+	/*border: 1px solid #696969;*/
+	background-color: white;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.dot,.zer,.one,.two,.fou,.fiv,.sev,.eig{
+	padding-left: 15px;
+}
