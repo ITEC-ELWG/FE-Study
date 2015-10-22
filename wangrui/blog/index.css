@@ -1,0 +1,150 @@
+body{
+	background-color: #E0FFFF;
+	padding: 0;
+	margin: 0 0 0 0;
+	border: 0;
+}
+header{
+	background-color: #1E90FF;
+	width: 100%;
+	height: 65px;
+	margin-top: 0;
+	padding: 0;
+	border: 0;
+}
+div.header{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+div.blog{
+    float: left;
+    margin-left: 50px;
+    width: 100%;
+    margin-top: 0px;
+    display: inline-block;
+   /* vertical-align: center;*/
+}
+
+a.myblog{
+	text-decoration: none;
+	display: inline-block;
+}
+a.first{
+	text-decoration: none;
+    display: inline-block;
+    padding-left: 380px;
+}
+a.category{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 27px;      /*标签之间间隔的距离*/
+}
+
+h2.head{
+    color: white;
+    font-size: 30px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+h3{
+	color: white;
+	font-size: 20px;
+}
+
+nav.menu{
+	position: fixed;
+	/*float: left;*/
+	width: 150px;
+    margin-left: 22px;
+    margin-top: 0;
+    padding-top: 55px;
+}
+p.lead{
+	font-size: 18px;
+    color: #2F4F4F;
+}
+a.note{
+    text-decoration: none;
+}
+a.note:hover{
+	font-weight: bold; 
+}
+
+a.return{
+    margin-left: -22px;
+    padding: 10px 13px;
+    background-color: #00BFFF;
+    color: black;
+    font-size: 14px;
+    font-family: ;
+    text-align: none;
+    text-decoration: none;
+}
+a.return:hover{
+	background-color: #1E90FF;
+}
+
+
+article.content{
+	position: relative;
+	margin-top: 0;     
+	margin-left: 170px;
+	padding-top: 0；
+}
+a.link{
+
+}
+
+section.follow{
+	padding-top: 4px;
+}
+div.tip{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 50px;
+    padding-right: 30px;
+    float: left;         
+}
+div.paragraph{
+    padding-left: 200px;    
+}
+p.time{
+    color: black;
+    font-size: 22px;
+    font-family: Georgia;
+}
+h2.title{
+	color: #00BFFF;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+a.tag{
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    text-align: none;
+    text-decoration: none;
+}
+a.tag:hover{
+	background-color: #006400;
+}
+
+p.copyright{
+	vertical-align: center;
+}
+
+div.footer{
+	background-color: #008B8B; 
+	padding-bottom: 0;
+	width: 100%;
+	height: 35px;
+	font-family: "italic", "sans-serif", "微软雅黑", "Helvetica Neue";
+	color: black;
+	text-align: center;
+	font-size: 18px;
+}
+
+
+
