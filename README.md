@@ -51,10 +51,12 @@ ELWG前端学习
 
 ## 推荐资料
 
-* [推荐书籍传送门](https://github.com/ELWG-FE-Study/FE-Study/blob/master/recommended-books.md)
-* [前端网址导航](http://www.whycss.com/)
-* [MDN](https://developer.mozilla.org/zh-CN/docs/Web)
+
 * [前端技能汇总](https://github.com/JacksonTian/fks)
+* [前端网址导航](http://www.whycss.com/)
+* [如何跟上前端开发的最新前沿](https://uptodate.frontendrescue.org/zh/)
+* [MDN](https://developer.mozilla.org/zh-CN/docs/Web)
+* [实验室前人推荐书籍传送门](https://github.com/ELWG-FE-Study/FE-Study/blob/master/recommended-books.md)
 
 [Package Control]: https://sublime.wbond.net/installation
 [HTML-CSS-JS Prettify]: https://github.com/victorporof/Sublime-HTMLPrettify
