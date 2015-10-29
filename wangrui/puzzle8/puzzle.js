@@ -51,7 +51,7 @@ $(document).ready(function(){
         for(var j=0; j<newarr.length-1; j++){
         	if ($("td").eq(j).text()-1 != j) return;
         }
-        alert("Well Done!/n Click the RESET button to start again!");
+        alert("Congratulations! You win!\n Click the RESET button to start again!");
     })
 })
 
