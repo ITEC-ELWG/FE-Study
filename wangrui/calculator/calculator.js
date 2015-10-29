@@ -89,21 +89,27 @@ function Operate(sign){
 
 //加减乘除计算
 function count(){
-//等号将字符串转换为第二个数值
-	num2 = parseFloat(txt.value);
-	switch(lastoperator){
-		case '+':
-		result = num1+num2;break;
-   		case '-':
-   		result = num1-num2;break;
-   	    case '*':
-   		result = num1*num2;break;
-   		case '/':
-   		result = num1/num2;break;
-   		default:
-   		break;
+//第一种情况是没有输入操作符直接输入等号
+	if (lastoperator == "") {
+		txt.value = txt.value;
 	}
-	txt.value = result;
+//第二种情况是等号将显示的字符串转换为第二个数值	
+	else{
+        num2 = parseFloat(txt.value);
+	    switch(lastoperator){
+            case '+':
+		    result = num1+num2;break;
+   		    case '-':
+   		    result = num1-num2;break;
+   	        case '*':
+   		    result = num1*num2;break;
+   		    case '/':
+   		    result = num1/num2;break;
+   		    default:
+   		    break;
+	    }
+	    txt.value = result;
+	}
 	isPressEqual = true; 
 	operator ="";
 	lastoperator ="";
