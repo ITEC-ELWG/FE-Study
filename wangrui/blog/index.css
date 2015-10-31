@@ -1,57 +1,78 @@
-body{
+body {
 	background-color: #E0FFFF;
 	padding: 0;
 	margin: 0 0 0 0;
 	border: 0;
 }
-header{
+header {
 	background-color: #1E90FF;
 	width: 100%;
-	height: 65px;
+	height: 100px;
 	margin-top: 0;
 	padding: 0;
 	border: 0;
 }
-div.header{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-div.blog{
-    float: left;
-    margin-left: 50px;
+.blog {
+    /*float: left;*/   /*当左右各设置left和right属性时候就不用整体浮动*/
     width: 100%;
-    margin-top: 0px;
     display: inline-block;
-   /* vertical-align: center;*/
 }
 
-a.myblog{
+.leftname {
+    margin-left: 0;
+    margin-top: -5px;
+    margin-bottom: -45px;
+    width: 300px;
+    float: left;
+}
+.rightlabel {
+    /*margin-left: 600px;*/
+    margin-right: 90px;
+    float: right;
+}
+
+.myblog {
+	padding-left: 60px;
 	text-decoration: none;
 	display: inline-block;
 }
-a.first{
-	text-decoration: none;
-    display: inline-block;
-    padding-left: 380px;
-}
-a.category{
+.category {
     text-decoration: none;
     display: inline-block;
-    padding-left: 27px;      /*标签之间间隔的距离*/
+    margin-left: 20px;      /*标签之间间隔的距离*/
+    margin-top: 25px;      /*注意padding仍属于点击的一部分，margin就不属于*/
+}
+.box {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    float: left;
+    padding-left: 10px;    /*说明整体点击部分为85+15即100px*/
+    border-radius: 0.5em;
+}
+.box:hover {
+    background-color: #A9A9A9;  /*#00BFFF;*/
+    transition-duration: 0.5s;
+}
+.picture {
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding-top: 10px;
 }
 
-h2.head{
+h2.head {
     color: white;
     font-size: 30px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Arial, sans-serif, Helvetica;
 }
-h3{
+.word {
 	color: white;
 	font-size: 20px;
+    line-height: 2px;
 }
 
-nav.menu{
+.menu {
 	position: fixed;
 	/*float: left;*/
 	width: 150px;
@@ -59,18 +80,19 @@ nav.menu{
     margin-top: 0;
     padding-top: 55px;
 }
-p.lead{
+.lead {
 	font-size: 18px;
     color: #2F4F4F;
 }
-a.note{
+.note {
     text-decoration: none;
 }
-a.note:hover{
-	font-weight: bold; 
+.note:hover {
+	font-weight: bold;
+    /*text-decoration: underline;*/ 
 }
 
-a.return{
+/*.return {
     margin-left: -22px;
     padding: 10px 13px;
     background-color: #00BFFF;
@@ -80,70 +102,72 @@ a.return{
     text-align: none;
     text-decoration: none;
 }
-a.return:hover{
+.return:hover {
 	background-color: #1E90FF;
-}
+}*/
 
-
-article.content{
-	position: relative;
+.content {
 	margin-top: 0;     
-	margin-left: 170px;
+	margin-left: 160px;
 	padding-top: 0；
 }
-a.link{
+.link {
 
 }
 
-section.follow{
-	padding-top: 4px;
+.follow {
+
 }
-div.tip{
+.tip {
+    float: left; 
+    margin-top: -5px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 50px;
-    padding-right: 30px;
-    float: left;         
+    /*padding-right: 30px;*/
+        
 }
-div.paragraph{
-    padding-left: 200px;    
+.paragraph {
+    padding-left: 180px; 
+    line-height: 140%;   
 }
-p.time{
+.time {
     color: black;
     font-size: 22px;
     font-family: Georgia;
 }
-h2.title{
+h2.title {
 	color: #00BFFF;
+    margin-bottom: -3px;
 	padding-left: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 }
-a.tag{
+.tag {
     padding: 8px 12px;
-    background-color: green;
+    background-color: #228B22;/*green;*/
     color: white;
     font-size: 15px;
     text-align: none;
     text-decoration: none;
 }
-a.tag:hover{
+.tag:hover {
 	background-color: #006400;
 }
 
-p.copyright{
+.copyright {
 	vertical-align: center;
 }
 
-div.footer{
+.footer {
 	background-color: #008B8B; 
 	padding-bottom: 0;
 	width: 100%;
-	height: 35px;
+	height: 40px;
 	font-family: "italic", "sans-serif", "微软雅黑", "Helvetica Neue";
-	color: black;
+	color: white;
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 
