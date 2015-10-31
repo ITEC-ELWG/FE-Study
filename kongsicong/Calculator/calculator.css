@@ -1,0 +1,41 @@
+body,input,div,button {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+#calculator {
+	width: 25%;
+	height: 300px;
+	margin: auto;
+	margin-top: 10%;
+	
+}
+.button {
+	width: 20%;
+	height: 80%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.button:hover {
+	background: #27AE60;
+}
+.button:active {
+	background: #E67E22;
+}
+.func {
+	background: #7F8C8D;
+	font-weight: bolder;
+}
+#show {
+	position: absolute;
+	width: 94%;
+	height: 80%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+.buttonGroup {
+	position: relative;
+	width: 100%;
+	height: 16%;
+}
