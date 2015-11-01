@@ -1,0 +1,17 @@
+
+
+body {
+    text-align:center;
+    background:#fafaff;
+    margin:20%;
+}
+input {
+    width:250px;
+    height:30px;
+    margin:3px;
+    padding:3px;
+    border:1px solid #000;
+    background:#fafaff;
+}
+ 
+

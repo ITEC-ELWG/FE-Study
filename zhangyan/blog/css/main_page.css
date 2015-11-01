@@ -1,0 +1,67 @@
+html {
+  font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
+  background: color-background;
+  background: color-background -webkit-linear-gradient(#00ade3, #080046, #000) fixed;
+  background: color-background -moz-linear-gradient(#00ade3, #080046, #000) fixed;
+  background: color-background -o-linear-gradient(#00ade3, #080046, #000) fixed;
+  background: color-background -ms-linear-gradient(#00ade3, #080046, #000) fixed;
+  background: color-background linear-gradient(#00ade3, #080046, #000) fixed;
+}
+body {
+  background: #ecf8ff;
+  padding-top: 0;
+}
+html,
+body {
+  height: auto;
+  overflow: auto;
+}
+
+.head {
+    font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
+    background:#336699;
+    width:100%;
+    height:40px;
+}
+.div1 {
+    text-align:center;
+    font-size:150%;
+    float:left;
+    padding:0px;
+    border:4px;
+    color:#FFFFFF;
+}
+#ul1 {
+    list-style-type:none;
+    margin:auto;
+    font-size:25%;
+    color:#FFFFFF;
+}
+#li1 {
+    list-style-type:none;
+    padding:13px;
+    float:right;
+    display:block;
+}
+a {
+    text-decoration:none;
+}
+#ul2 {
+    clear: both;
+    color: red;
+    font-size: 100%;
+    line-height: 100px;
+    overflow: hidden;
+    margin-right: 100px;
+}
+.footer {
+    font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
+    position:relative;
+    background:#336699;
+    width:100%;
+    height:30px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    
+    text-align:center;
+}
