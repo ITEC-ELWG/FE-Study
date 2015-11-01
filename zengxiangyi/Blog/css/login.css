@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body {  
+  height:100%;  
+  margin: 0px; 
+  width: 100%; 
+}  
+.page-container {
+	height: 100%;
+	width: 100%;
+	background: url(../images/back0.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.main_box {
+    position: absolute; 
+    top:50%; 
+    left:50%; 
+    margin-top:-260px; 
+    margin-left: -300px; 
+    padding: 30px; 
+    width:600px; 
+    height:460px;
+	background:url(../images/1.png);
+    border-radius: 10px;
+    z-index: 99;
+}
+ 
+
+.login_logo {
+	margin-bottom: 20px; 
+	height: 45px; 
+	text-align: center;
+	color: #CD853F;
+	font-style: italic;
+	text-shadow:#f3f3f3 1px 1px 0px, #b2b2b2 1px 4px 0;
+}
+
+.login_msg {
+	text-align: center; 
+	font-size: 16px;
+}
+.login_form {
+	padding-top: 20px; 
+	font-size: 16px;
+}
+.login_box .form-control {
+	display: inline-block; 
+	*display: inline; 
+	zoom: 1; 
+	width: auto; 
+	font-size: 18px;
+}
+.login_box .form-control.password {
+	width: 315px;
+}
+
+.login_box .form-control.code {
+	width: 164px;
+}
+
+.login_box .form-group {
+	margin-bottom: 20px;
+}
+.login_box .form-group label.t {
+	width: 120px; 
+	text-align: right; 
+	cursor: pointer;
+}
+.login_box .form-group.space {
+	padding-top: 15px; 
+	border-top: 1px #FFF dotted;
+}
+
+.login_box .form-group img {
+	margin-top: 1px; 
+	height: 32px; 
+	vertical-align: top;
+}
+ .m {
+	cursor: pointer;
+}
+.bottom {
+	text-align: center; 
+	font-size: 12px;
+}
+
+#checkCode {
+   width:240px;
+   height:35px;
+   font-size:18px;
+   font-family:Arial;
+   font-style:italic;
+   letter-spacing:1px;
+   font-weight:bolder;
+   padding-right: 102px;
+   text-align: center;
+   float: right;
+   cursor: pointer;
+   color: blue;
+   padding-top: 3px;
+}
+
