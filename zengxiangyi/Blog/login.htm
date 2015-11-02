@@ -11,12 +11,10 @@
 <meta name="author" content="zxy">
 
 <link rel="stylesheet" href="css/login.css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
+
  
 
-<script src="js/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
-<script type="text/javascript" src="js/check.js"></script>
+
 
  
 </head>
@@ -27,49 +25,42 @@
 	<div class="main_box">
 		<div class="login_box">
 			<div class="login_logo">
-				<h2>blog's world</h2>
+				<h1>blog's world</h1>
 			</div>
 		
 			<div class="login_form">
-				<form action="main.htm" id="login_form" method="post">
+				<form action="index.htm" id="login_form" method="post">
 					<div class="form-group">
-						<label for=" " class="t" >账　号：</label> 
-						<input id="email" value="" name=" " type=" " 
-						class="password form-control x319 in" placeholder = "请输入账号">
+						<label>账　号：</label> 
+						<input id="email" value="" name=" " type="text" 
+						class="form-control" placeholder = "请输入账号">
 					</div>
 					<div class="form-group">
-						<label for="j_password" class="t" >密　码：</label> 
+						<label>密　码：</label> 
 						<input id="password" value="" name="password" type="password" 
-						class="password form-control" placeholder = "请输入密码">
+						class="form-control" placeholder = "请输入密码">
 					</div>
 					<div class="form-group">
-						<label for="j_captcha" class="t">验证码：</label>
-						 <input id="captcha" name="j_captcha" type="text" class="form-control code" placeholder = "请输入验证码">
+						<label>验证码：</label>
+						 <input id="captcha" name="captcha" type="text" class="form-control" placeholder = "请输入验证码">
 						<div id="checkCode" onclick="createCode()";>点击获取验证码</div>
 						
 					</div>
 					<div class="form-group">
-						<label class="t"></label>
-						<label for="j_remember" class="m">
-						<input id="j_remember" type="checkbox" value="true">&nbsp;记住登陆账号</label>
+						<input id="remember" type="checkbox" value="true">&nbsp;记住登陆账号</label>
 					</div>
 					<div class="form-group space">
-						<label class="t"></label>　　　
-						<button type="button"  id="submit_btn" 
-						class="btn btn-primary btn-lg" >&nbsp;登&nbsp;录&nbsp </button>
-						<input type="reset" value="&nbsp;重&nbsp;置&nbsp;" class="btn btn-default btn-lg">
+						 
+						<a href="index.htm" ><button type="button"  id="submit_btn" 
+						class="btn" >&nbsp;登&nbsp;录&nbsp </button></a>
+						<button type="button"  id="reg_btn" 
+						class="btn" >&nbsp;注&nbsp;册&nbsp </button>
 					</div>
 				</form>
 			</div>
 		</div>
 	
 	</div>
-</div>
-
- 
-
-
-<div style="text-align:center;">
 </div>
 </body>
 </html>

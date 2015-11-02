@@ -1,10 +1,9 @@
-@charset "utf-8";
-/* CSS Document */
 
 html, body {  
   height:100%;  
   margin: 0px; 
   width: 100%; 
+  font-family:Arial;
 }  
 .page-container {
 	height: 100%;
@@ -22,8 +21,8 @@ html, body {
     margin-top:-260px; 
     margin-left: -300px; 
     padding: 30px; 
-    width:600px; 
-    height:460px;
+    width:540px; 
+    height:400px;
 	background:url(../images/1.png);
     border-radius: 10px;
     z-index: 99;
@@ -46,61 +45,91 @@ html, body {
 .login_form {
 	padding-top: 20px; 
 	font-size: 16px;
+
 }
-.login_box .form-control {
+
+#login_form {
+	padding-left: 80px;
+	font-weight: bold;
+}
+
+.form-control {
 	display: inline-block; 
 	*display: inline; 
 	zoom: 1; 
-	width: auto; 
-	font-size: 18px;
+	width: 300px; 
+	font-size: 17px;
+	height: 20px;
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid #A9A9A9;
 }
-.login_box .form-control.password {
+
+#captcha {
+	width: 120px;
+}
+
+.password {
 	width: 315px;
 }
 
-.login_box .form-control.code {
+.code {
 	width: 164px;
 }
 
-.login_box .form-group {
+.form-group {
 	margin-bottom: 20px;
 }
-.login_box .form-group label.t {
-	width: 120px; 
-	text-align: right; 
-	cursor: pointer;
-}
-.login_box .form-group.space {
+ 
+.space {
 	padding-top: 15px; 
 	border-top: 1px #FFF dotted;
+	text-align: center;
+	padding-right: 80px;
 }
 
-.login_box .form-group img {
-	margin-top: 1px; 
-	height: 32px; 
-	vertical-align: top;
-}
- .m {
-	cursor: pointer;
-}
+
 .bottom {
 	text-align: center; 
 	font-size: 12px;
 }
 
 #checkCode {
-   width:240px;
+   width:150px;
    height:35px;
-   font-size:18px;
+   font-size:17px;
    font-family:Arial;
    font-style:italic;
-   letter-spacing:1px;
+   //letter-spacing:1px;
    font-weight:bolder;
-   padding-right: 102px;
+   padding-right: 100px;
    text-align: center;
    float: right;
    cursor: pointer;
    color: blue;
-   padding-top: 3px;
+   padding-top: 6px;
+   display: inline;
+   
 }
+
+.btn {
+
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 9px;
+	border-radius: 5px;
+	margin: 10px;
+	background: #4169E1;
+	border: 0px;
+	color: snow;
+	font-weight: bolder;
+
+
+}
+
+.btn:hover {
+	background: #6495ED;
+}
+
+
 
