@@ -1,0 +1,65 @@
+body {
+	background: #1ABCBA;
+	padding: 0;
+}
+.inputbox {
+	width: 80%;
+	height: 30px;
+	margin: 10% 10% 5% 10%;
+	background: #7F8C8D;
+	border: 1px solid #7F8C8D;
+}
+.inputbox:focus {
+	background: #D9DFE6;
+}
+#login {
+	background: #1ABC9C;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	min-width: 400px;
+	width: 500px;
+	height: 550px;
+	min-height: 500px;
+
+}
+#title {
+	color: #8E44AD;
+	line-height: 120px;
+	text-align: center;
+	position: relative;
+	margin: auto;
+	width: 50%;
+	height: 15%;
+	font-size: 40px;
+}
+#button {
+	box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	margin: 10% 0 10% 0
+}
+#button>input,#go {
+	font: normal large bold;
+	color: #000000;
+	background: #34495E;
+	padding: 0 0 0 0;
+	width: 30%;
+	height: 42px;
+	margin: 5% 9% 5% 10%;
+	border: 1px solid #8E44AD;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#button>input:hover {
+	color: #E74C3C;
+	background: #E8E06E;
+}
+#go:hover {
+	color: #E74C3C;
+	background: #E8E06E;
+}
+
