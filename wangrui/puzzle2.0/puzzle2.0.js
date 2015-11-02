@@ -5,22 +5,22 @@ $(document).ready(function(){
     $(".confirm").click(function(){
 //必须先清上一次的数值对容器的影响
         $(".container").empty();
-	    if ($("#num").value != "") {
-		    n = $("#num")[0].value;
-		    m = 300/n-2;
-		}
-		$(".box").css("width",m+"px"); //含字母的表达
+        if ($("#num").value != "") {
+            n = $("#num")[0].value;
+            m = 300/n-2;
+        }
+        $(".box").css("width",m+"px"); //含字母的表达
         $(".box").css("height",m+"px");
 //:first保证每一次克隆是在第一次的基础上,且克隆之后设为可见
         for (var i=0; i<(n*n); i++) {
             $(".container").append($(".box:first").clone(true) .css("visibility","visible"));
-	    }
+        }
 
 //从服务器获取随机数组
         var  num= {"m" : n};        
         $.post("../puzzle2.0/n_random.php",num,function(data,status){
-    	    if (status == "success") { 
-    	        //alert(data);  	    	
+            if (status == "success") { 
+                //alert(data);              
                 for (var i=0; i<(n*n); i++) {
                     if (data[i] == 0) {
                         var aimbox = $(".box").eq(i);
@@ -33,8 +33,8 @@ $(document).ready(function(){
                             "line-height": 300/n + "px"
                         // "padding-top": 100/n + "px"
                         });
-    		        }
-    	        }
+                    }
+                }
             }
         },"json")          
     })
