@@ -1,24 +1,23 @@
-
-
- body {
+body {
     text-align: center;
     margin: 10% 50%;
     background: #fafaff;
 }
+
 form {
     border: 1px inset #000;
     text-align: center;
     margin: 0 auto;
 }
+
 div {
     width: 250px;
     height: 30px;
     margin: 5px;
-    
-
 }
- #login {
- 	width: 250px;
+
+#login {
+    width: 250px;
     height: 30px;
     margin: 15px;
     padding: 10px;
@@ -26,7 +25,8 @@ div {
     background: #fafaff;
     border-radius: 10px;
     box-shadow: 0px 1px 2px #000;
- }
+}
+
 p {
-	margin: 25px;
+    margin: 25px;
 }
