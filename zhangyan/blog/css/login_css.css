@@ -2,16 +2,18 @@
 
  body {
     text-align: center;
+    margin: 35%;
     background: #fafaff;
-    margin: 20%;
+}
+form {
+    border: 1px inset #000;
 }
 div {
     width: 250px;
     height: 30px;
     margin: 5px;
-    padding: 3px;
-    border: 1px solid #000;
-    background: #fafaff;
+    
+
 }
  #login {
  	width: 250px;
