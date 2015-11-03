@@ -1,76 +1,94 @@
-body{
-	background-color: #E0FFFF;
-	padding: 0;
-	margin: 0 0 0 0;
-	border: 0;
+body {
+    background-color: #E0FFFF;
+    padding: 0;
+    margin: 0 0 0 0;
+    border: 0;
 }
-header{
-	background-color: #1E90FF;
-	width: 100%;
-	height: 65px;
-	margin-top: 0;
-	padding: 0;
-	border: 0;
-}
-div.header{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-div.blog{
-    float: left;
-    margin-left: 50px;
+header {
+    background-color: #1E90FF;
     width: 100%;
-    margin-top: 0px;
-    display: inline-block;
-   /* vertical-align: center;*/
-}
-
-a.myblog{
-	text-decoration: none;
-	display: inline-block;
-}
-a.first{
-	text-decoration: none;
-    display: inline-block;
-    padding-left: 380px;
-}
-a.category{
-    text-decoration: none;
-    display: inline-block;
-    padding-left: 27px;      /*标签之间间隔的距离*/
-}
-
-h2.head{
-    color: white;
-    font-size: 30px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-}
-h3{
-	color: white;
-	font-size: 20px;
-}
-
-nav.menu{
-	position: fixed;
-	/*float: left;*/
-	width: 150px;
-    margin-left: 22px;
+    height: 100px;
     margin-top: 0;
-    padding-top: 55px;
+    padding: 0;
+    border: 0;
 }
-p.lead{
-	font-size: 18px;
-    color: #2F4F4F;
-}
-a.note{
-    text-decoration: none;
-}
-a.note:hover{
-	font-weight: bold; 
+.blog {
+    /*float: left;*/   /*当左右各设置left和right属性时候就不用整体浮动*/
+    width: 100%;
+    display: inline-block;
 }
 
-a.return{
+.leftname {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    width: 300px;
+    float: left;
+}
+.rightlabel {
+    /*margin-left: 600px;*/
+    margin-right: 90px;
+    float: right;
+}
+
+.myblog {
+    padding-left: 60px;
+    text-decoration: none;
+    display: inline-block;
+}
+.box {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;      /*标签之间间隔的距离*/
+    margin-top: 25px;      /*注意padding仍属于点击的一部分，margin就不属于*/
+    padding: 8px 10px;
+    border-radius: 0.5em;
+}
+.box:hover {
+    background-color: #A9A9A9;  /*#00BFFF;*/
+    transition-duration: 0.5s;
+}
+.word {
+    color: white;
+    font-size: 20px;
+}
+.picture {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.head {
+    color: white;
+    font-size: 35px;
+    font-family: "Trebuchet MS", Arial, sans-serif, Helvetica;
+}
+
+.menu {
+    position: fixed;
+    /*float: left;*/
+    width: 150px;
+    margin-top: 0;
+    padding-top: 50px;
+}
+.rank{
+    list-style-type: none;
+}
+.lead {
+    font-size: 18px;
+    color: #2F4F4F;
+    margin-left: -20px;
+    line-height: 200%;
+}
+.note {
+    text-decoration: none;
+}
+.note:hover {
+    font-weight: bold;
+    /*text-decoration: underline;*/ 
+}
+
+/*.return {
     margin-left: -22px;
     padding: 10px 13px;
     background-color: #00BFFF;
@@ -80,70 +98,67 @@ a.return{
     text-align: none;
     text-decoration: none;
 }
-a.return:hover{
-	background-color: #1E90FF;
-}
+.return:hover {
+    background-color: #1E90FF;
+}*/
 
-
-article.content{
-	position: relative;
-	margin-top: 0;     
-	margin-left: 170px;
-	padding-top: 0；
+.content {
+    margin-top: 0;     
+    margin-left: 160px;
+    padding-top: 0；
 }
-a.link{
+.follow {
 
 }
-
-section.follow{
-	padding-top: 4px;
-}
-div.tip{
+.tip {
+    float: left; 
+    margin-top: -5px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 50px;
-    padding-right: 30px;
-    float: left;         
+    /*padding-right: 30px;*/        
 }
-div.paragraph{
-    padding-left: 200px;    
+.paragraph {
+    padding-left: 180px; 
+    line-height: 140%;   
 }
-p.time{
+.time {
     color: black;
     font-size: 22px;
     font-family: Georgia;
 }
-h2.title{
-	color: #00BFFF;
-	padding-left: 0;
-	padding-top: 0;
-	padding-bottom: 0;
+.title {
+    color: #00BFFF;
+    margin-bottom: -3px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
-a.tag{
+.tag {
     padding: 8px 12px;
-    background-color: green;
+    background-color: #228B22;/*green;*/
     color: white;
     font-size: 15px;
     text-align: none;
     text-decoration: none;
 }
-a.tag:hover{
-	background-color: #006400;
+.tag:hover {
+    background-color: #006400;
 }
 
-p.copyright{
-	vertical-align: center;
+.copyright {
+    vertical-align: center;
 }
 
-div.footer{
-	background-color: #008B8B; 
-	padding-bottom: 0;
-	width: 100%;
-	height: 35px;
-	font-family: "italic", "sans-serif", "微软雅黑", "Helvetica Neue";
-	color: black;
-	text-align: center;
-	font-size: 18px;
+.footer {
+    background-color: #008B8B; 
+    padding-bottom: 0;
+    width: 100%;
+    height: 40px;
+    font-family: "italic", "sans-serif", "微软雅黑", "Helvetica Neue";
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
 
 
