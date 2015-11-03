@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>puzzle</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="puzzle2.0.css"/>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="puzzle2.0.js"></script>
+</head>
+<body>
+    <p class="title">Puzzle2.0</p>
+<!-- 定义主体容器 -->
+    <div class="container"></div>
+    <div class="intro">
+        <h3>Input number ( >1 ): </h3>
+        <input type="text" id="num"/>
+        <button class="confirm">确认</button>
+    </div>
+<!-- 将下面的div移出container使得empty事件不会影响clone 且容器外不可见-->
+    <div class="box" style="visibility: hidden"></div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+@charset"utf-8";
+/* CSS Document */
+/*公用*/
+
+.comWidth {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.leftArea {
+    float: left;
+}
+.rightArea {
+    float: right;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+a:hover {
+    color: #8C0000;
+}
+/*logo*/
+
+.blog_name {
+    font: 22px/50px"Microsoft YaHei", "微软雅黑";
+    color: #FFF;
+    display: block;
+    background-color: #
+}
+.logoBar {
+    height: 105px;
+    background-color: #1D7AD9;
+}
+.logo {
+    padding-left: 200px;
+    padding-top: 13px;
+}
+/*底部*/
+
+.footer {
+    text-align: center;
+    background-color: #D4D4D4;
+    line-height: 24px;
+    padding: 30px 0;
+}
+.footer i {
+    font-style: normal;
+    margin: 0 5px;
+}
+.footer a {
+    color: #000;
+}
+.footer a:hover {
+    color: #F60;
+}
+.web {
+    padding-top: 30px;
+}
+.web img {
+    margin: 0 12px;
+}
+.hr_25 {
+    height: 25px;
+}
+.hr_45 {
+    height: 45px;
+}
+.hr_7 {
+    height: 7px;
+    overflow: hidden;
+}
+.hr_15 {
+    height: 15px;
+    overflow: hidden;
+}
+/*登陆*/
+/*.login_logo .comWidth{width:460px;}*/
+
+.welcome_title, .welcome_signature {
+    float: left;
+    padding-left: 24px;
+}
+.welcome_title {
+    font: 22px/85px"Microsoft YaHei", "微软雅黑";
+    color: #FFF;
+}
+.welcome_signature {
+    font: 22px/65px Arial;
+    color: #FFF;
+    padding-top: 40px;
+}
+.loginBox {
+    width: 458px;
+    border: #999 solid 1px;
+    margin: 10px auto;
+    position: relative;
+}
+.login_cont {
+    padding: 15px 76px;
+}
+.l_tit {
+    color: #666;
+    line-height: 20px;
+}
+.login_input {
+    border: #999 solid 1px;
+    height: 32px;
+    line-height: 32px\9;
+    text-indent: 5px;
+    width: 100%;
+}
+.user_icon {
+    background: url(../img/user_icon.jpg) right center no-repeat;
+}
+.mb_10 {
+    margin-bottom: 10px;
+}
+.autoLogin {
+    padding-top: 27px;
+    padding-bottom: 28px;
+}
+.checked {
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+.login_btn {
+    width: 309px;
+    height: 36px;
+    background: url(../img/login_btn.jpg) left top no-repeat;
+}
+.login_partners {
+    padding-top: 34px;
+}
+.login_list li {
+    float: left;
+    line-height: 20px;
+}
+.login_list span {
+    color: #999;
+    margin: 0 2px;
+}
+.reg_link {
+    width: 115px;
+    height: 31px;
+    background: url(../images/icon/red_link.jpg) left top no-repeat;
+    position: absolute;
+    right: 31px;
+    bottom: -31px;
+}
+.red_logo .comWidth {
+    width: 630px;
+}
+.regBox {
+    width: 628px;
+    margin: 10px auto;
+    border: #CCC solid 1px;
+}
+.reg_item {
+    font: 14px/34px"宋体";
+    width: 110px;
+    text-align: right;
+    float: left;
+}
+.reg_item i {
+    color: red;
+    font-style: normal;
+    margin-right: 5px;
+}
+.input_item {
+    width: 306px;
+    float: left;
+}
+.regBox li {
+    height: 70px;
+    vertical-align: top;
+}
+.regBox .autoLogin {
+    height: 46px;
+    padding: 0;
+}
+.regBox .login_cont {
+    padding: 45px 76px 20px 76px;
+}
+/*导航*/
+
+.navBox {
+    height: 35px;
+    background-color: #1369C0;
+    color: #FFF;
+}
+.shopClass {
+    width: 190px;
+    position: relative;
+}
+.shopClass h3 {
+    text-align: center;
+    line-height: 35px;
+}
+.shopClass_icon {
+    width: 11px;
+    height: 7px;
+    overflow: hidden;
+    background-position: 0 -39px;
+    display: inline-block;
+    margin-left: 11px;
+}
+.nav, .shopClass h3 {
+    font-family: "Arial";
+    font-weight: bold;
+}
+.nav {
+    line-height: 35px;
+}
+.nav li {
+    float: left;
+}
+.nav a {
+    height: 35px;
+    display: inline-block;
+    padding: 0 35px;
+    color: #FFF;
+    font-size: 16px;
+}
+.nav .active {
+    background-color: #4593FD;
+}
+/*内容*/
+
+.contentBox {
+    background-color: #E5E5E5;
+    border-bottom: solid 1px #CCC;
+    /*margin-bottom: 10px;*/
+}
+.cb_tit {
+    height: 50px;
+    border-bottom: solid 1px #CCC;
+    padding-top: 10px;
+}
+.cb_TitLeft {
+    display: inline-block;
+    padding: 0 45px;
+    background-color: #4593FD;
+}
+.cb_TitCen {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.cb_TitRight {
+    padding: 0 35px;
+    padding-top: 20px;
+}
+.conTit {
+    font: 18px/50px"Microsoft YaHei", "微软雅黑";
+    color: #1D7AD9;
+    font-weight: bold;
+}
+.cb_titFont {
+    font: 16px/50px"Microsoft YaHei", "微软雅黑";
+    color: #FFF;
+}
+.conDate {
+    color: #000;
+    font: 14px/30px"Arial";
+    font-weight: bold;
+}
+.cb_content {
+    padding: 20px 50px;
+    font: 16px/22px"Microsoft YaHei", "微软雅黑";
+    color: #000;
+}
+.checkMoreBox {
+    height: 40px;
+    background-color: #7373FF;
+}
+.cmb_font {
+    font: 16px/40px"Arial";
+    color: #FFF;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+}
+.cb_TitLeft:hover {
+    opacity: 0.8;
+}

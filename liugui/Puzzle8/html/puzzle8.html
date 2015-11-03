@@ -1,0 +1,50 @@
+<!DocType HTML>
+
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="author" content="">
+	<meta name="copyright" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<title>拼图游戏</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/css.css">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <!--注意：由于在调用js文件时首先要用到jQuery库，所以必须把包含库放在前面！否则会出现错误，提示$未定义-->
+
+	
+</head>
+
+<body class="bg">
+<div class="mainBox">
+	<ul>
+		<li class="number" id="0" value="0" >
+		1</li><li class="number" id="1" value="1" >
+		2</li><li class="number" id="2" value="2" >
+		3</li><li class="number" id="3" value="3" >
+		4</li><li class="number" id="4" value="4" >
+		5</li><li class="number" id="5" value="5" >
+		6</li><li class="number" id="6" value="6" >
+		7</li><li class="special" id="8" value="8" >
+		9</li><li class="number" id="7" value="7" >
+		8</li>		
+	</ul>
+</div>
+
+<div class="reset">
+<input type="submit" class="buttonCss" value="重   置" name="resetPosition" >
+</div>
+<div class="nInput">请输入n:<input name="box" id="box" type="text" placeholder="n为整数" class="box" value="" />
+<input type="submit" value="确定" class="submit" />
+</div>
+
+<!--注意script标签的存放位置，如果script需要调用html标签，而script却在HTML之前被加载了，那么是会出错的，解决方法是放在后面-->
+    <script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/js.js"></script>
+</body>
+
+</html>

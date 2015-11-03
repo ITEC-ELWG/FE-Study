@@ -1,0 +1,51 @@
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width:100%;
+	height:100%;
+}
+.header {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 20px;
+	top: 0px;
+}
+
+.content {
+	text-align: left;
+	height:100%;
+	width:100%;
+	float:left;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20px;
+	background-color: #d93a49;
+	clear:both;
+	text-align:center;
+}
+
+.button {
+	text-align: center;
+}
+h1 {
+	margin-left: 1cm;
+	margin-bottom:0;
+}
+h2 {
+	margin-left: 1cm;
+	margin-bottom:0;
+	font-size:18px;
+}
+ul {
+	margin:0;
+}
+li {
+	list-style:none;
+}

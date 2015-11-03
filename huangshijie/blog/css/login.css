@@ -1,0 +1,22 @@
+body{
+	font-size: 14px;
+	background: radial-gradient(circle, #94d2f8, #3a92c8) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	color:#66757F;
+}
+
+.content{
+	max-width: 920px;
+	min-width: 720px;
+	margin: 50px auto 0 auto;
+}
+
+.img-con{
+	width: 525px;
+	margin: 0 auto;
+}
+
+.form-con{
+	width: 220px;
+	margin: 0 auto;
+	margin-top: 20px;
+}

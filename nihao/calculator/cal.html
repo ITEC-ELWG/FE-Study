@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="cal.css">
+	<script src="cal.js"></script>
+	<title>calculator</title>
+</head>
+<body>
+<form>
+<h1>CALCULATOR</h1>
+<hr color="red";>
+<div class="container">
+<input type="text" name="expr" style="width:396px; height:60px; background:#00FFFF" />
+<input type="button" id="ButtonPercent" value="%" onclick="percent(this.form)" />
+<input type="button" id="ButtonAC" value="AC" onclick="form.reset()" />
+<div>
+<input type="button" id="button" value="7" onclick="enter(this.form,seven)" />
+<input type="button" id="button" value="8" onclick="enter(this.form,eight)" />
+<input type="button" id="button" value="9" onclick="enter(this.form,nine)" />
+<input type="button" id="button" value="/" onclick="enter(this.form,divide)" />
+</div>
+<div>
+<input type="button" id="button" value="4" onclick="enter(this.form,four)" />
+<input type="button" id="button" value="5" onclick="enter(this.form,five)" />
+<input type="button" id="button" value="6" onclick="enter(this.form,six)" />
+<input type="button" id="button" value="*" onclick="enter(this.form,multiply)" />
+</div>
+<div>
+<input type="button" id="button" value="1" onclick="enter(this.form,one)" />
+<input type="button" id="button" value="2" onclick="enter(this.form,two)" />
+<input type="button" id="button" value="3" onclick="enter(this.form,three)" />
+<input type="button" id="button" value="-" onclick="enter(this.form,minus)" />
+</div>
+<div>
+<input type="button" id="button" value="0" onclick="enter(this.form,zero)" />
+<input type="button" id="button" value="." onclick="enter(this.form,point)" />
+<input type="button" id="button" value="=" onclick="compute(this.form)" />
+<input type="button" id="button" value="+" onclick="enter(this.form,plus)" />
+</div>
+</form>
+</body>
+</html>

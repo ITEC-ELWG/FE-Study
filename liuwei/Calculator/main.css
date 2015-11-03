@@ -1,0 +1,74 @@
+@charset"utf-8";
+/* CSS Document */
+/*numDisBox*/
+
+.comWidth {
+    width: 385px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.calBox {
+    height: 306px;
+    background-color: #DDD;
+    border: 1px solid #888;
+}
+a:hover {
+    color: #8C0000;
+}
+.numDisBox {
+    border-bottom: 1px solid #888;
+}
+.show {
+    width: 280px;
+    height: 45px;
+    margin: 15px 25px;
+    background-color: #FFF;
+    border: 1px solid #888;
+    font: 28px/45px"Arial";
+    font-weight: bold;
+    text-align: right;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.clearll {
+    clear: both;
+}
+/*numKeyBox*/
+
+.numKeyBox {
+    padding: 22px 5px 0px 20px;
+}
+.nb_5x5, .nb_5x5_f, .nb_5x10 {
+    width: 55px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+}
+.nb_5x5:hover, .nb_5x5_f:hover, .nb_5x10:hover {
+    opacity: 0.7;
+}
+.nb_5x5 {
+    height: 35px;
+    background-color: #CCC;
+    font: 26px/35px"Arial";
+    text-align: center;
+}
+.nb_5x5_f {
+    height: 35px;
+    background-color: #AAA;
+    font: 26px/35px"Arial";
+    text-align: center;
+}
+.nb_5x10 {
+    height: 87px;
+    background-color: #AAA;
+    font: 26px/85px"Arial";
+    text-align: center;
+}
+.nkb_leftArea {
+    width: 216px;
+}
+.nkb_rightArea {
+    width: 144px;
+}

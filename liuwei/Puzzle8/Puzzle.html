@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Puzzle8</title>
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="puzzle.js"></script>
+    <style type="text/css">
+    .puzzle-box {
+        height: 204px;
+        width: 204px;
+        margin: 0px auto;
+        margin-top: 50px;
+        border: 1px solid #02987B;
+        background-color: #1A52B8;
+        font: 16px/30px"Microsoft YaHei";
+        color: #FFF;
+    }
+    .user-box {
+        width: 306px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+    .green,
+    .blue {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border: 1px solid #02987B;
+        color: #FFF;
+        font: 45px/100px"Arial";
+        text-align: center;
+        float: left;
+    }
+    .green {
+        background-color: #1BBC9B;
+    }
+    .blue {
+        background-color: #1A52B8;
+    }
+    .btn-box {
+        height: 40px;
+        width: 306px;
+        margin: 10px auto;
+    }
+    .btn {
+        height: 40px;
+        width: 100px;
+        float: right;
+    }
+    .input-num {
+        height: 30px;
+        margin-left: 20px;
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="puzzle-box">
+        <!-- <div class="welcome-box"> -->
+        <p>Welcome to Puzzle Game!</p>
+        <p>Please input a number (1&lt;num&lt;21) and click button RUN.</p>
+        <!-- </div> -->
+    </div>
+    <div class="user-box">
+        <input class="input-num">
+        <div class="btn-box">
+            <button class="btn" id='btn'>RUN</button>
+        </div>
+    </div>
+</body>
+
+</html>

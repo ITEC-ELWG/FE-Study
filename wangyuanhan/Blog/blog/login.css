@@ -1,0 +1,36 @@
+#title {
+
+	position: absolute;
+	left: 213px;
+	top: 52px;
+	font-size: 70px;
+	font-family: "方正舒体";
+}
+
+.information {
+
+	position: absolute;
+	left: 220px;
+}
+
+.input {
+
+	background-color: transparent;
+	font-size: 13px;
+	font-family: "方正舒体";
+	height: 20px;
+	width: 220px;
+}
+
+#login {
+
+	position: absolute;
+	left: 210px;
+	top: 420px;
+}
+
+#login_bgp {
+
+	height: 40px;
+	width: 250px;
+}

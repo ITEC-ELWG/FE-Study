@@ -1,0 +1,23 @@
+table {
+	width: 299px;
+	height: 299px;
+	background-color: white;
+	text-align: center;
+	font-size: 30px;
+}
+caption {
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 30px;
+	font-family: Georgia;
+	font-style: italic;
+}
+.reset {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+.intro {
+	text-align: center;
+	padding-top: 20px;
+}

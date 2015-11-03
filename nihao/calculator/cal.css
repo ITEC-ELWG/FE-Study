@@ -1,0 +1,41 @@
+body{
+	background-color: #ffffff;
+}
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 430px;
+	line-height: 20px;
+	border-style: solid;
+	border-color: red;
+}
+
+#ButtonPercent{
+	height: 50px;
+	width: 150px;
+	margin-left: 10px;
+	margin-top: 20px;
+	background-color: #CDCD00;
+}
+#ButtonAC{
+	height: 50px;
+	width: 150px;
+	margin-left: 65px;
+	margin-top: 20px;
+	background-color: #CDCD00;
+}
+
+#button{
+	height: 50px;
+	width: 80px;
+	margin-left: 10px;
+	margin-top: 20px;
+	outline-color: #EE4000;
+	background-color: #CDCD00;
+}
+
+h1{
+	text-align: center;
+}
+
