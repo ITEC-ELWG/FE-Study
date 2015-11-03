@@ -1,17 +1,28 @@
 
 
-body {
-    text-align:center;
-    background:#fafaff;
-    margin:20%;
+ body {
+    text-align: center;
+    background: #fafaff;
+    margin: 20%;
 }
-input {
-    width:250px;
-    height:30px;
-    margin:3px;
-    padding:3px;
-    border:1px solid #000;
-    background:#fafaff;
+div {
+    width: 250px;
+    height: 30px;
+    margin: 5px;
+    padding: 3px;
+    border: 1px solid #000;
+    background: #fafaff;
 }
- 
-
+ #login {
+ 	width: 250px;
+    height: 30px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px outset #000;
+    background: #fafaff;
+    border-radius:10px;
+    box-shadow: 0px 1px 2px #000;
+ }
+p {
+	margin: 25px;
+}
