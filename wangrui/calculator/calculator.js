@@ -1,117 +1,121 @@
-var num1="",num2="",operator="",result="",lastoperator="";
+var num1 = "", num2 = "", operator= "", result = "", lastoperator = "";
 var txt = document.getElementById("show");
 var isPercentage = false; //百分比转换
 var isPressEqual = false; //纪录是否按下“＝”
 
 //百分制互换
 function percentage(){
-	if(isPercentage){
+    if(isPercentage){
         txt.value = (txt.value.substring(0,txt.value.length-1))*100;
-        isPercentage =false;
-        isPressEqual =true;
-	}
-	else{
+        isPercentage = false;
+        isPressEqual = true;
+    }
+    else{
         txt.value = txt.value/100 + "%";
         isPercentage = true;
-        isPressEqual =true;
-	}
+        isPressEqual = true;
+    }
 }
 //强行重置
 function reset(){
-	txt.value= "";
-	operator="";
-	num1="";
-	num2="";
-	isPercentage = false;
-	isPressEqual = false;
-	isPressOperator = false;
+    txt.value = "";
+    operator = "";
+    num1 = "";
+    num2 = "";
+    isPercentage = false;
+    isPressEqual = false;
+    isPressOperator = false;
 }
 
 //只针对显示屏上数字退格
 function withdraw(){
-	txt.value =txt.value.substring(0,txt.value.length-1);
+    txt.value = txt.value.substring(0,txt.value.length-1);
 }
 
 //输入数据及情形判断
 function inputNum(data){
-	var txt = document.getElementById("show");
+    var txt = document.getElementById("show");
 //已经进行过计算则清空方框重新计算
-	if (isPressEqual) {
-		txt.value="";
-		isPressEqual = false;
-	}
+    if (isPressEqual) {
+        txt.value = "";
+        isPressEqual = false;
+    }
 //初始输入连续为0显示一个
-	if (txt.innerHTML == "0") {
-		if (data == "0") {
-			txt.value == "0";
-		}
-	}
+    if (txt.innerHTML == "0") {
+        if (data == "0") {
+            txt.value == "0";
+        }
+    }
 //若已有运算符号则重新记录输入的数值
-    if (operator!="") {
-    	txt.value=data;
-    	operator="";
+    if (operator != "") {
+        txt.value = data;
+        operator = "";
     }
     else{
 //输入一个0之后变为输入的数值
-    	if (txt.value == "0") {
-    		txt.value = data;
-    	}
-    	else
-    		txt.value+=data;
+        if (txt.value == "0") {
+            txt.value = data;
+        }
+        else
+            txt.value += data;
     }
 }
 
 //输入小数点且重复输入无效
 function inputDot(){
-	if (txt.value.indexOf('.')> -1) {
-		txt.value= txt.value;//原显示值不变
-	}
-	else{
-		txt.value= txt.value + ".";
-	}
+    if (txt.value.indexOf('.')> -1) {
+        txt.value = txt.value;//原显示值不变
+    }
+    else if (isPressEqual) {
+        txt.value = ".";
+        isPressEqual = false;
+    }
+    else{
+        txt.value = txt.value + ".";
+    }
 }
 
 //输入操作符
 function Operate(sign){
 //不允许连续输入运算符
-	if (operator !="") {
-		txt.value="error";
-		operator ="";
-	}
+    if (operator != "") {
+        txt.value = "error";
+        operator = "";
+    }
 //运算符按键将字符串转换为第一个数值
-	else{
-		num1 = parseFloat(txt.value);
-		operator = sign;
-		lastoperator = operator;
-	}
+    else{
+        num1 = parseFloat(txt.value);
+        operator = sign;
+        lastoperator = operator;
+    }
 
 }
 
 //加减乘除计算
 function count(){
 //第一种情况是没有输入操作符直接输入等号
-	if (lastoperator == "") {
-		txt.value = txt.value;
-	}
-//第二种情况是等号将显示的字符串转换为第二个数值	
-	else{
+    if (lastoperator == "") {
+        txt.value = txt.value;
+    }
+//第二种情况是等号将显示的字符串转换为第二个数值   
+    else{
         num2 = parseFloat(txt.value);
-	    switch(lastoperator){
+        switch(lastoperator){
             case '+':
-		    result = num1+num2;break;
-   		    case '-':
-   		    result = num1-num2;break;
-   	        case '*':
-   		    result = num1*num2;break;
-   		    case '/':
-   		    result = num1/num2;break;
-   		    default:
-   		    break;
-	    }
-	    txt.value = result;
-	}
-	isPressEqual = true; 
-	operator ="";
-	lastoperator ="";
+            result = num1+num2;break;
+            case '-':
+            result = num1-num2;break;
+            case '*':
+            result = num1*num2;break;
+            case '/':
+            result = num1/num2;break;
+            default:
+            break;
+        }
+        txt.value = result;
+    }
+    isPressEqual = true; 
+    operator ="";
+    lastoperator ="";
 }
 

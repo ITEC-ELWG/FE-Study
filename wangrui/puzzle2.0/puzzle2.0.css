@@ -1,33 +1,33 @@
-.title{
-	text-align: center;
-	font-weight: bold;
-	font-size: 30px;
-	font-family: Georgia;
-	font-style: italic;
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Georgia;
+    font-style: italic;
 }
-.container{
-	border: 2px solid black;
-	text-align: center;
-	margin:0 auto;  
-	width: 300px;
-	height: 300px;
-	background-color: #DCDCDC;
+.container {
+    border: 2px solid black;
+    text-align: center;
+    margin:0 auto;  
+    width: 300px;
+    height: 300px;
+    background-color: #DCDCDC;
 }
-.intro{
-	text-align: center;
-	padding-top: 20px;
+.intro {
+    text-align: center;
+    padding-top: 20px;
 }
-.confirm{
-	margin-top: 20px;
+.confirm {
+    margin-top: 20px;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
 }
-.box{
+.box {
     float: left;
     background-color: #7FFFD4;/*#90EE90*//*#3CB371*/
     border: 1px solid black;
 }
-.target{
-	background-color: #DCDCDC;
+.target {
+    background-color: #DCDCDC;
 }
