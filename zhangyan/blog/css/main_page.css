@@ -1,12 +1,10 @@
 html {
     font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
 }
-
 body {
     background: #ecf8ff;
     padding-top: 0;
 }
-
 .header {
     font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
     background: #336699;
@@ -14,7 +12,6 @@ body {
     height: 70px;
     overflow: hidden;
 }
-
 .header h2 {
     font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
     background: #336699;
@@ -31,19 +28,16 @@ body {
     margin: auto;
     font-size: 75%;
 }
-
 #li1 {
     list-style-type: none;
     padding: 13px;
     float: right;
     display: block;
 }
-
 a {
     color: #3DB1FF;
     text-decoration: none;
 }
-
 #ul2 {
     clear: both;
     color: red;
@@ -52,7 +46,6 @@ a {
     overflow: hidden;
     margin-right: 100px;
 }
-
 .footer {
     font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
     position: absolute;
