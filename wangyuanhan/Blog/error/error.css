@@ -1,0 +1,15 @@
+#bgp {
+
+	width: 100%;
+	height: 100%;
+}
+
+#back {
+
+	font-size: 15px;
+	color: #FFFFFF;
+	position: absolute;
+	left: 393px;
+	top: 330px;
+	text-decoration: none;
+}
