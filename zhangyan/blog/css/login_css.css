@@ -2,11 +2,13 @@
 
  body {
     text-align: center;
-    margin: 35%;
+    margin: 10% 50%;
     background: #fafaff;
 }
 form {
     border: 1px inset #000;
+    text-align: center;
+    
 }
 div {
     width: 250px;
