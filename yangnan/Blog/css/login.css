@@ -1,0 +1,28 @@
+.container {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	position: absolute;  
+	top: 0; 
+	right: 0;
+	bottom: 0; 
+	left: 0;
+	overflow: auto; /*Chrome下显示有溢出*/
+}
+
+img {
+	display: block;
+	margin:auto;
+	margin-bottom: 10px;
+}
+
+input {
+	width: 290px;
+	margin: 5px;
+	padding: 8px;
+}
+
+#login_button {
+	color: white;
+	background: #377DD6;/*后续改变文本样式*/
+}
