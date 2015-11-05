@@ -1,0 +1,95 @@
+body {
+	background-image: url(img/debut_light.png);
+}
+header {
+	height: 60px;
+	background-color: white;
+	margin: -8px;
+}
+ul {
+	float: right;
+	margin-right: 150px;
+}
+li {
+	list-style: none;
+	font-family: arial;
+	float: left;
+	margin: 8px 30px;
+	color: #999;
+	font-size: 14px;
+}
+.head {
+	float: left;
+    margin-left: 10px;
+}
+.user {
+	margin: 8px 5px 10px 150px;
+}
+h1 {
+	font-size: 24px;
+	margin-top: 11px;
+	font-family: cursive;
+}
+.info {
+	float: left;
+	margin-bottom: 10px;
+}
+article {
+	margin: 20px 0 0 250px;
+}
+p {
+	color: #666;
+	line-height: 140%;
+	font-weight: lighter;
+	font-size: 16px;
+}
+.content {
+	margin: 30px 150px;
+	font-family: Helvetica;
+}
+hr {
+	 border-color:#cbcbcb;
+	 border-style:dotted;
+	 width:1000px;
+	 margin-top: 30px;
+}
+.title {
+	font-weight: normal;
+	font-size: 22px;
+}
+a {
+	font-family: Helvetica;
+	font-size: 12px;
+	color: #fff;
+	font-weight: lighter;
+}
+footer {
+	background-color: #4a4a4a;
+	height: 80px;
+	margin: 0 -8px;
+	padding: 20px 150px;
+	position: relative;
+	bottom: -8px;
+}
+.link {
+	color: #acff00;
+	font-style: italic;
+	text-decoration: none;
+}
+.sociallink {
+	margin: 10px 2px 0 0;
+	width: 24px;
+	height: 24px;
+}
+.date {
+	color: #999;
+	font-size: 14px;
+}
+.tag {
+	border-radius: 4px;
+	padding: 3px;
+	background-color: #ff0089;
+}
+.time {
+	margin: 10px 0;
+}
