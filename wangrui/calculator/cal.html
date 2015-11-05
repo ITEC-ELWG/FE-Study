@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calculator</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="cal.css"/>
+</head>
+<body>
+    <p class="title">Calculator</p>
+    <div class="container">
+        <ul class="row">
+            <li><input type="text" class="display" id="show" readonly="readonly"/></li>
+        </ul>
+        <ul class="row row-top">
+            <li class="square top withdraw" onclick="withdraw()">DEL</li>
+            <li class="square top" onclick="percentage()">%</li>
+            <li class="square top reset" onclick="reset()">AC</li>
+        </ul>
+        <ul class="row">
+            <li class="square left first" onclick="inputNum(7)">7</li>
+            <li class="square left" onclick="inputNum(8)">8</li>
+            <li class="square left" onclick="inputNum(9)">9</li>
+            <li class="square right" onclick="Operate('/')">/</li>
+        </ul>
+        <ul class="row">
+            <li class="square left first" onclick="inputNum(4)">4</li>
+            <li class="square left" onclick="inputNum(5)">5</li>
+            <li class="square left" onclick="inputNum(6)">6</li>
+            <li class="square right" onclick="Operate('*')">*</li>
+        </ul>
+        <ul class="row">
+            <li class="square left first" onclick="inputNum(1)">1</li>
+            <li class="square left" onclick="inputNum(2)">2</li>
+            <li class="square left" onclick="inputNum(3)">3</li>
+            <li class="square right" onclick="Operate('-')">-</li>
+        </ul>
+        <ul class="row">
+            <li class="square left first" onclick="inputNum(0)">0</li>
+            <li class="square left" onclick="inputDot('.')">.</li>
+            <li class="square equal" onclick="count()">=</li>
+            <li class="square right" onclick="Operate('+')">+</li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="cal.js"></script>
+</body>
+</html>
