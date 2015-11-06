@@ -22,13 +22,12 @@ body {
     padding-left: 20px;
     overflow: hidden;
 }
-
 .header ul {
     list-style-type: none;
     margin: auto;
     font-size: 75%;
 }
-#li1 {
+.li {
     list-style-type: none;
     padding: 13px;
     float: right;
@@ -38,7 +37,7 @@ a {
     color: #3DB1FF;
     text-decoration: none;
 }
-#ul2 {
+.ul {
     clear: both;
     color: red;
     font-size: 100%;
