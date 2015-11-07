@@ -1,0 +1,70 @@
+body {
+    text-align: center;
+	background: #DCDCDC;
+}
+
+#calculator {
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+#result {
+	text-align: right;
+	font-size: 30px;
+	background: #FFF5EE;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+input {
+	border-top:0px ;
+    border-left:0px ;
+    border-right:0px ;
+   	border: solid #1E90FF 1px;
+}
+
+input {
+    margin: 3px;
+    border: none;	
+}
+
+input, button {
+	outline:none;
+}
+
+.num, .cal, .eql, .other {
+	width: 72px;
+	height: 72px;
+	border: none;
+	border-radius: 15px;
+	font-size: 20px;
+    
+}
+.num, .cal, .eql, .other:hover {
+	cursor: pointer;
+}
+.num {
+	background: #FAF0E6;
+	color: #778899;
+	
+}
+
+.cal {
+	background: #F5DEB3;
+	color: #778899;
+}
+
+.eql {
+	background: #8B4513;
+	color: #F0F8FF;
+}
+
+.other {
+	background: #F5DEB3;
+	color: #778899;
+}
+
+
+
