@@ -114,14 +114,9 @@ function calculate() {
             }
         quit = 1; //避免重复按键
     }         
-    else {
-        if (num ==0 &&quit !=1 &&calcul  ==2) {
-            result = -numshow;
-            quit =1;
-        }else{
-            result = numshow;
+    else{
+        result = numshow;
         }
-    }
     numshow = String(result);
     document.calculator.numScreen.value = numshow;
     num = result; //存储当前值
