@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>calculator</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="calcu-head">
+            <h6>简单的计算器</h6></div>
+        <form name="calculator" action="" method="get">
+            <div id="calcu-screen">
+                <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur();" />
+            </div>
+            <div id="calcu-btn">
+                <ul>
+                    <!--设置按钮-->
+                    <li onclick="command(7)">7</li>
+                    <li onclick="command(8)">8</li>
+                    <li onclick="command(9)">9</li>
+                    <li class="tool" onclick="del()">DEL</li>
+                    <li class="tool" onclick="clearscreen()">AC</li>
+                    <li onclick="command(4)">4</li>
+                    <li onclick="command(5)">5</li>
+                    <li onclick="command(6)">6</li>
+                    <li class="tool" onclick="times()">&times;</li>
+                    <li class="tool" onclick="divide()">&divide;</li>
+                    <li onclick="command(1)">1</li>
+                    <li onclick="command(2)">2</li>
+                    <li onclick="command(3)">3</li>
+                    <li class="tool" onclick="plus()">+</li>
+                    <li class="tool" onclick="minus()">-</li>
+                    <li onclick="command(0)">0</li>
+                    <li onclick="dzero()">00</li>
+                    <li onclick="dot()">.</li>
+                    <li class="tool" onclick="persent()">%</li>
+                    <li class="tool" onclick="equal()">=</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <script language="javascript" src="index.js"></script>
+</body>
+
+</html>
