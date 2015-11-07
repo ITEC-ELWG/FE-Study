@@ -1,3 +1,8 @@
+/*
+	说明：基本都是按照window的计算器显示的，比如输入：1 + =， 输出2（自动补全第二个数为1），
+可以连续等于输出结果，可以修改数字，运算符号，清零等，以及用户各种可能的输入，都基本有考虑。
+*/
+
 var currentNum = "";
 var finishedNum = new Array();
 
@@ -20,7 +25,7 @@ function init() {
 	result = document.getElementById('result');
 	inputs = document.getElementsByTagName('input');
 	result.value = "0";
-
+	currentNum = "0";
 	for (var i = 1; i < inputs.length; i++) {
 		inputs[i].onclick = function() {
 			classify(this);
@@ -56,10 +61,8 @@ function classify(currentPressed) {
 				currentNum = "";
 			}
 
-			if ((currentPressed.value == ".")&&(currentNum[1] == ".")) {
-				console.log();
+			if ((currentPressed.value == ".")&&(currentNum[1] == ".")) {		
 				return;
-		 
 			}
 
 			//数字最开始输入不允许是小数点
@@ -70,7 +73,7 @@ function classify(currentPressed) {
 			//不允许开始连续输入两个0
 			else if((currentPressed.value != ".")&&(currentNum == "0")) {
 				currentNum = currentPressed.value;
-				finishedNum[0] = currentNum;
+				ifNumPush();
 				result.value = currentNum;
 				return;
 			}
@@ -112,6 +115,7 @@ function classify(currentPressed) {
 				if (currentNum == "") {
 					currentNum = 0;
 				}
+				ifNumPush();
 				result.value = currentNum;
 			}
 			
@@ -121,6 +125,7 @@ function classify(currentPressed) {
 			currentCal = "";
 			currentNum = "";
 			currentResult = "";
+			lastCal = "";
 			finishedNum.splice(0, finishedNum.length);
 			finishedCal.splice(0, finishedCal.length);
 			result.value = "0";
@@ -143,7 +148,6 @@ function calculate(){
 			currentNum = "0";
 		}
 		result.value = currentNum;
-		console.log("hi");
 		return;
 	}
 	
@@ -163,9 +167,11 @@ function calculate(){
 		finishedCal.push(lastCal);
 		finishedNum.push(currentResult);
 		finishedNum.push(lastNum);
-
 		calculate();
 		return;
+	}
+	if (currentResult == "Infinity") {
+		currentResult = "除数不能为零";
 	}
 	result.value = currentResult;
 	currentNum = "";
