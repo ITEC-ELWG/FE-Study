@@ -1,22 +1,20 @@
-﻿
-function startTime()
-{
-var today=new Date()
-var h=today.getHours()
-var m=today.getMinutes()
-var s=today.getSeconds()
-// add a zero in front of numbers<10
-m=checkTime(m)
-s=checkTime(s)
-document.getElementById('time').innerHTML=h+":"+m+":"+s
-t=setTimeout('startTime()',500)
+﻿function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+        // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    t = setTimeout('startTime()', 500);
 }
 
-function checkTime(i)
-{
-if (i<10) 
-  {i="0" + i}
-  return i
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
 }
 
 var num = 0,
@@ -65,8 +63,8 @@ function clearscreen() { //清除数据
     num = 0;
     result = 0;
     numshow = "0";
-    calcul =0;
-    quit =0;
+    calcul = 0;
+    quit = 0;
     document.calculator.numScreen.value = "0";
 }
 
@@ -96,11 +94,11 @@ function divide() { //除法
 
 function persent() { //求百分数
     numshow = Number(document.calculator.numScreen.value);
-    result = numshow*0.01;
+    result = numshow * 0.01;
     umshow = String(result);
-    document.calculator.numScreen.value = String(numshow*0.01);
+    document.calculator.numScreen.value = String(numshow * 0.01);
     num = result; //存储当前值
-    quit =1;
+    quit = 1;
 }
 
 function equal() {
@@ -110,6 +108,7 @@ function equal() {
     result = 0;
     numshow = "0";
 }
+
 function calculate() {
     numshow = Number(document.calculator.numScreen.value);
     if (num != 0 && quit != 1) { //判断前一个运算数是否为零以及防重复按键的状态
@@ -131,12 +130,11 @@ function calculate() {
                     return;
                 }
                 break;
-            }
-        quit = 1; //避免重复按键
-    }         
-    else{
-        result = numshow;
         }
+        quit = 1; //避免重复按键
+    } else {
+        result = numshow;
+    }
     numshow = String(result);
     document.calculator.numScreen.value = numshow;
     num = result; //存储当前值
