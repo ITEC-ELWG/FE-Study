@@ -1,4 +1,6 @@
-﻿1
+﻿1 
+document.getElementById("time").innerHTML=document.getElementById("time").innerHTML+Date();
+
 var num = 0,
     result = 0,
     numshow = "0";
