@@ -1,19 +1,20 @@
 html {
     font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
 }
+
 body {
     background: #ecf8ff;
     padding-top: 0;
 }
+
 .header {
-    font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
     background: #336699;
     width: 100%;
     height: 70px;
     overflow: hidden;
 }
+
 .header h2 {
-    font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
     background: #336699;
     height: 25px;
     float: left;
@@ -22,22 +23,26 @@ body {
     padding-left: 20px;
     overflow: hidden;
 }
+
 .header ul {
     list-style-type: none;
     margin: auto;
     font-size: 75%;
 }
-.li {
+
+.nav {
     list-style-type: none;
     padding: 13px;
     float: right;
     display: block;
 }
+
 a {
     color: #3DB1FF;
     text-decoration: none;
 }
-.ul {
+
+.content {
     clear: both;
     color: red;
     font-size: 100%;
@@ -45,8 +50,8 @@ a {
     overflow: hidden;
     margin-right: 100px;
 }
+
 .footer {
-    font-family: "Lato", "sans-serif", "微软雅黑", "Helvetica Neue";
     position: absolute;
     background: #336699;
     width: 100%;
