@@ -1,0 +1,20 @@
+.calculator-plane{
+    width: 232px;
+}
+
+#output {
+    width: 231px;
+    height: 30px;
+    margin-bottom: 4px;
+    text-align: right;
+}
+
+.calculator-div {
+    float: right;
+}
+
+.input {
+    width: 50px;
+    height: 30px;
+    margin: 1px;
+}

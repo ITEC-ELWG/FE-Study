@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset  =  "UTF-8">
+	<title>计算器</title>
+</head>
+
+<link rel = "stylesheet" type = "text/css" href = "calculator.css">
+
+<body class = "container">
+	<div class = "calculator">
+		<div class = "calculator-screen">
+			<input id = "screen" type = "text" name = "calScreen" value = "0" />
+		</div>
+		<div class = "calculator-fun">
+			<div class = "fun-button">
+				<button class = "button-style" type = "button" onclick = "calSign()" style = "font-size: 30px">+/-</button>
+			</div>
+			<div class = "fun-button">
+				<button class = "button-style" type = "button" onclick = "calPer()" style = "font-size: 30px">%</button>
+			</div>
+			<div class = "fun-button">
+				<button class = "button-style" type = "button" onclick = "calDelete()" style = "font-size: 30px">DC</button>
+			</div>
+			<div class = "fun-button">
+				<button class = "button-style" type = "button" onclick = "calClear()" style = "font-size: 30px">AC</button>
+			</div>
+		</div>
+		<div class = "calculator-num" >
+			<div class = "num-line">
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(7)">7</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(8)">8</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(9)">9</button>
+				</div>
+			</div>
+			<div class = "num-line">
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(4)">4</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(5)">5</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(6)">6</button>
+				</div>
+			</div>
+			<div class = "num-line">
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(1)">1</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(2)">2</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(3)">3</button>
+				</div>
+			</div>
+			<div class = "num-line">
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calNumber(0)">0</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calDot()">.</button>
+				</div>
+				<div class = "num-button">
+					<button class = "button-style" type = "button" onclick = "calResult()" style = "background-color: #003E9E"> = </button>
+				</div>
+			</div>
+		</div>
+		<div class = "calculator-cal">
+			<div class = "cal-button">
+				<button class = "button-style" type = "button" onclick = "calDiv()">÷</button>
+			</div>
+			<div class = "cal-button">
+				<button class = "button-style" type = "button" onclick = "calMul()">×</button>
+			</div>
+			<div class = "cal-button">
+				<button class = "button-style" type = "button" onclick = "calSub()">-</button>
+			</div>
+			<div class = "cal-button">
+				<button class = "button-style" type = "button" onclick = "calAdd()">+</button>
+			</div>
+		</div>
+	</div>
+
+<script type = "text/javascript" src = "calculator.js"></script>
+
+</body>
+
+</html>

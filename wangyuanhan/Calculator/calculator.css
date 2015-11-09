@@ -1,0 +1,136 @@
+html, body {  
+
+	height: 100%;
+	width: 100%;
+	margin: 0px; 
+	font-family: "方正舒体";
+}
+
+.container {
+
+	height: 100%;
+	width: 100%;
+	background: url(./image/bgp.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.calculator {
+
+	height: 500px;
+	width: 450px;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	background-color: #336666;
+	border-radius: 22px;
+	opacity: 0.6;
+	box-shadow: 22px 22px 13px #000000;
+}
+
+.calculator-screen {
+
+	height: 20%;
+	width: 95%;
+	position: absolute;
+	top: 4%;
+	left: 3%;
+	border-radius: 22px;
+}
+
+#screen {
+
+	height: 85%;
+	width: 98.5%;
+	border-radius: 22px;
+	text-align: right;
+	font-size: 40px;
+	background-color: #FFFFFF;
+	outline: none;
+}
+
+.calculator-fun {
+
+	height: 14.6%;
+	width: 96%;
+	position: absolute;
+	top: 25%;
+	left: 2%;
+	border-radius: 22px;
+}
+
+.fun-button {
+
+	height: 100%;
+	width: 25%;
+	border-radius: 22px;
+	float: left;
+}
+
+.calculator-num {
+
+	height: 58.4%;
+	width: 72%;
+	position: absolute;
+	top: 40%;
+	left: 2%;
+	border-radius: 22px;
+}
+
+.num-line {
+
+	height: 25%;
+	width: 100%;
+	border-radius: 22px;
+}
+
+.num-button {
+
+	height: 100%;
+	width: 33.3333%;
+	border-radius: 22px;
+	float: left;
+}
+
+.button-style {
+
+	height: 92%;
+	width: 94%;
+	margin: 1%;
+	border-radius: 22px;
+	font-size: 40px;
+	color: #FFFFFF;
+	background-color: #003E4E;
+	box-shadow: 7px 7px 7px 7px #000000;
+	outline: none;
+}
+
+.button-style:active {
+
+	height: 86%;
+	width: 90%;
+	margin: 4%;
+	border-radius: 22px;
+	font-size: 40px;
+	color: #FFFFFF;
+	background-color: #000000;
+	box-shadow: 4px 4px 4px 4px #000000;
+	outline: none;
+}
+
+.calculator-cal {
+
+	height: 58.4%;
+	width: 24%;
+	position: absolute;
+	top: 40%;
+	left: 74%;
+	border-radius: 22px;
+}
+
+.cal-button {
+
+	height: 25%;
+	width: 100%;
+	border-radius: 22px;
+}

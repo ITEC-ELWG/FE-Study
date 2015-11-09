@@ -1,0 +1,32 @@
+body {
+    background-image: url(img/debut_light.png);
+}
+img {
+    margin-top: 80px;
+}
+h1 {
+    font-family: cursive;
+    font-size: 40px;
+}
+input {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ededed;
+    width: 170px;
+    height: 30px;
+    border-width: 1px;
+    padding-left: 5px;
+    margin: 5px;
+    font-size: 12px;
+    outline: none;
+}
+button {
+    width: 170px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    background: #ff0089;
+    border-style: none;
+    font-size: 14px;
+}
