@@ -1,0 +1,65 @@
+body{
+    font-size: 15px;
+    line-height: 2.0;
+    font-family: "微软雅黑";
+	width: 100%;
+}
+.login-background {
+    width:100%;
+    height: 200px; 
+    color: #fff;
+    background-color:#0078d8;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+}
+.login-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -80px;
+    margin-left: -160px;
+}
+.logo-img {
+    background-image: url(img/logoimg.png);
+    width: 100px;
+    height: 145px;
+    display: block;
+}
+.login-main {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+}
+.logo {
+    display: inline-block;
+    margin-right: 50px;
+}
+input {
+    border: 0;
+}
+.username-wrapper {
+    background: #ffffff;
+    border-radius: 5px;
+    padding: .5px 5px;
+}
+.password-wrapper {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: .5px 5px;
+    margin-top: 10px;
+}
+.signinbtn-wrapper {
+    margin-top: 10px;
+}
+.signinbtn {
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+    line-height: 2;
+    color: #fff;
+    background-color: #80c3f7;
+    border: 1px solid #0078d8;
+    border-radius: 5px;
+    cursor: pointer;
+}
