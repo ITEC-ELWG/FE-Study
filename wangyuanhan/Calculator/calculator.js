@@ -124,7 +124,7 @@ function cal(calI) {
 
 	function calNumber() {
 
-		if((x.value == 0 && dot == 0) || x.value == "+" || x.value == "-" || x.value == "×" || x.value == "÷" || res == 1) {
+		if((x.value === "0" && dot == 0) || x.value == "+" || x.value == "-" || x.value == "×" || x.value == "÷" || res == 1) {
 
 			x.value = String(calI);
 			res = 0;
