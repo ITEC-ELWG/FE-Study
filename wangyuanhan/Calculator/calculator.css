@@ -113,7 +113,7 @@ html, body {
 	border-radius: 22px;
 	font-size: 40px;
 	color: #FFFFFF;
-	background-color: #000000 !important;
+	background-color: #000000;
 	box-shadow: 4px 4px 4px 4px #000000;
 	outline: none;
 }
