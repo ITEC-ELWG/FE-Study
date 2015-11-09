@@ -1,4 +1,6 @@
-﻿body {
+﻿/*尽可能少的使用标签选择器和id选择器，样式尽量使用类选择器！*/
+
+body {
     font-size: 12px;
     font-family: Arial, Georgia, "Times New Roman", Times, serif;
     color: #555;
@@ -6,12 +8,15 @@
     background-color: #e2e2e2;
 }
 
-h6 {
+
+/*我觉得body加点css还是很好用的，保留吧*/
+
+.time {
     margin: 0;
     font-size: 12px;
 }
 
-#calculator {
+.calculator {
     width: 240px;
     height: auto;
     overflow: hidden;
@@ -21,11 +26,11 @@ h6 {
     background-color: #f2f2f2;
 }
 
-#calculator div {
+.calcu-screen {
     clear: both;
 }
 
-#calculator ul {
+.calcu-btns {
     padding: 0;
     margin: 5px 14px;
     border: #fff 1px solid;
@@ -33,7 +38,7 @@ h6 {
     overflow: hidden
 }
 
-#calculator li {
+.button {
     list-style: none;
     float: left;
     width: 32px;
@@ -45,29 +50,44 @@ h6 {
     background-color: #eaeaea;
 }
 
-#calculator li.tool {
+.tool {
+    list-style: none;
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+    display: inline;
+    line-height: 32px;
+    font-size: 14px;
+    background-color: #eaeaea;
     background-color: #e2e2e2;
 }
 
-#calculator li:hover {
+.button:hover {
     background-color: #f9f9f9;
     cursor: pointer;
 }
 
-#calculator li:active {
+.button:active {
     background-color: #fc0;
     cursor: pointer;
 }
 
-#calculator li.tool:active {
+.tool:active {
     background-color: #d8e8ff;
     cursor: pointer;
 }
 
-#calcu-head {
+.tool:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.calcu-head {
     text-align: center;
     padding: 10px 15px 5px;
 }
+
 .screen {
     width: 220px;
     height: 24px;
