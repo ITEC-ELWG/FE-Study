@@ -10,35 +10,35 @@
 </head>
 
 <body onload ="startTime()">
-    <div id="calculator">
-        <div id="calcu-head">
-            <h6 id="time"></h6>
+    <div class="calculator">
+        <div class="calcu-head">
+            <h6 id="time" class="time"></h6>
         </div>
         <form name="calculator" action="" method="get">
-            <div id="calcu-screen">
+            <div id="calcu-screen" class="calcu-screen">
                 <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur();" />
             </div>
-            <div id="calcu-btn">
-                <ul>
+            <div>
+                <ul class = "calcu-btns">
                     <!--设置按钮-->
-                    <li onclick="command(7)">7</li>
-                    <li onclick="command(8)">8</li>
-                    <li onclick="command(9)">9</li>
+                    <li class="button" onclick="command(7)">7</li>
+                    <li  class="button" onclick="command(8)">8</li>
+                    <li  class="button" onclick="command(9)">9</li>
                     <li class="tool" onclick="del()">DEL</li>
                     <li class="tool" onclick="clearscreen()">AC</li>
-                    <li onclick="command(4)">4</li>
-                    <li onclick="command(5)">5</li>
-                    <li onclick="command(6)">6</li>
+                    <li  class="button" onclick="command(4)">4</li>
+                    <li  class="button" onclick="command(5)">5</li>
+                    <li  class="button" onclick="command(6)">6</li>
                     <li class="tool" onclick="times()">&times;</li>
                     <li class="tool" onclick="divide()">&divide;</li>
-                    <li onclick="command(1)">1</li>
-                    <li onclick="command(2)">2</li>
-                    <li onclick="command(3)">3</li>
+                    <li  class="button" onclick="command(1)">1</li>
+                    <li  class="button" onclick="command(2)">2</li>
+                    <li  class="button" onclick="command(3)">3</li>
                     <li class="tool" onclick="plus()">+</li>
                     <li class="tool" onclick="minus()">-</li>
-                    <li onclick="command(0)">0</li>
-                    <li onclick="dzero()">00</li>
-                    <li onclick="dot()">.</li>
+                    <li class="button"  onclick="command(0)">0</li>
+                    <li  class="button" onclick="dzero()">00</li>
+                    <li  class="button" onclick="dot()">.</li>
                     <li class="tool" onclick="persent()">%</li>
                     <li class="tool" onclick="equal()">=</li>
                 </ul>
