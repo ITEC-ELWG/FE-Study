@@ -2,7 +2,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0px;
-	font-family:verdana;
+	font-family: verdana;
 }
 
 body {
@@ -30,8 +30,9 @@ header {
 	margin-top: 15px;
 	font-weight: bolder;
 	margin-right: 25px;
-	z-index: 100;
-
+	//z-index: 100;
+	width: 310px;
+	padding-right: 50px;
 
 }
 
@@ -52,13 +53,12 @@ header {
 }
 
 #content {
-	z-index: 2;
-	//height: 100%;
+	//z-index: 2;
 	color: #000000;
 	background-color: #ffffff;
 	position: absolute;
 	top: 180px;
-	width: 80%;
+	width: 1150px;
 	left: 10%;
 	border-radius: 10px;
 }
@@ -68,33 +68,38 @@ h4 {
 	line-height: 200px;
 	font-size: 30px;
 	font-style: italic;
-	text-shadow:#f3f3f3 1px 1px 0px, #4682B4 10px 10px 0;
+	text-shadow: #f3f3f3 1px 1px 0px, #4682B4 10px 10px 0;
 	width: 50%;
 
 }
 
 #left {
-
-	//height: 80%;
 	width: 25%;
 	border-radius: 10px;
 	border: solid 1px #DEB887;
-	margin: 15px 0px 15px 15px;
 	margin-right: 10px;
-	float: left;
+	margin-left: 15px;
+	position: relative;
+	top: -170px;
 	background-repeat: no-repeat;
 	background-size: 70% 70%;
-	background-position: 50% 0%;
 	text-align: center;
 	color: #696969;
+	display: inline-block;
 
 }
 
 #left img {
- 
-	max-width:60%;
-	height:auto; 
+	max-width: 60%;
+}
 
+.operation {
+	cursor: pointer;
+}
+
+.operation img {
+	height: 30px;
+	margin: 5px;
 }
 
 hr {
@@ -115,23 +120,19 @@ hr {
 }
 
 #right {
+	display: inline-block;
 	margin: 15px 15px 15px 0px;
-	//height: 95%;
-	width: 70.5%;
+	max-width: 70%;
 	border: solid 1px #DEB887;
 	border-radius: 10px;
-	position: absolute;
-	left: 28%;
 
 }
 .passage {
-	//height: 18%;
 	box-shadow: 8px 8px 5px #888888;
 	background: #F5FFFA;
 	margin: 20px;
 	border-radius: 5px;
-	padding: 10px;
- 	
+	padding: 10px; 	
 }
 .passage h3 {
 	color: #00BFFF;
@@ -139,19 +140,23 @@ hr {
 
 
 .passage p {
-	 color: #696969;
+	color: #696969;
+}
+
+.currentItem {
+	background: #2F4F4F;
+	color: #ffffff;
 }
 
 footer {
-	height:70px;
-	position: absolute; 
-    top: 1050px;
-    background-color: #696969;
-    width: 100%;
-    color: #ffffff;
-    margin-top: 100px;
- 	text-align: center;
- 	line-height: 50px;
+	height: 70px;
+	background-color: #696969;
+	width: 100%;
+	color: #ffffff;
+	margin-top: 280px;
+	text-align: center;
+	line-height: 70px;
+
 }
  
 

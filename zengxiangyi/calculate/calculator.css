@@ -20,29 +20,31 @@ body {
 
 input {
 	border-top:0px ;
-    border-left:0px ;
-    border-right:0px ;
-   	border: solid #1E90FF 1px;
+	border-left:0px ;
+	border-right:0px ;
+	border: solid #1E90FF 1px;
 }
 
 input {
-    margin: 3px;
-    border: none;	
+	margin: 3px;
+	border: none;	
 }
 
 input, button {
 	outline:none;
 }
 
-.num, .cal, .eql, .other {
+.input-button {
 	width: 72px;
 	height: 72px;
 	border: none;
 	border-radius: 15px;
 	font-size: 20px;
-    
+	background: #F5DEB3;
+	color: #778899;
+
 }
-.num, .cal, .eql, .other:hover {
+.input-button:hover {
 	cursor: pointer;
 }
 .num {
@@ -51,9 +53,12 @@ input, button {
 	
 }
 
-.cal {
-	background: #F5DEB3;
-	color: #778899;
+#down {
+	opacity: 0.4;
+}
+
+#up {
+	opacity: 1;
 }
 
 .eql {
@@ -61,10 +66,6 @@ input, button {
 	color: #F0F8FF;
 }
 
-.other {
-	background: #F5DEB3;
-	color: #778899;
-}
 
 
 

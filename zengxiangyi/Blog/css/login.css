@@ -1,10 +1,10 @@
 
 html, body {  
-  height:100%;  
-  margin: 0px; 
-  width: 100%; 
-  font-family:Arial;
-}  
+	height: 100%;  
+	margin: 0px; 
+	width: 100%; 
+	font-family: Arial;
+}
 .page-container {
 	height: 100%;
 	width: 100%;
@@ -14,41 +14,36 @@ html, body {
 }
 
 
-.main_box {
-    position: absolute; 
-    top:50%; 
-    left:50%; 
-    margin-top:-260px; 
-    margin-left: -300px; 
-    padding: 30px; 
-    width:540px; 
-    height:400px;
-	background:url(../images/1.png);
-    border-radius: 10px;
-    z-index: 99;
+.main-box {
+	position: absolute; 
+	top: 50%; 
+	left: 50%; 
+	margin-top: -260px; 
+	margin-left: -300px; 
+	padding: 30px; 
+	width: 540px; 
+	height: 400px;
+	background: url(../images/1.png);
+	border-radius: 10px;
+	z-index: 99;
 }
  
 
-.login_logo {
+.login-logo {
 	margin-bottom: 20px; 
 	height: 45px; 
 	text-align: center;
 	color: #CD853F;
 	font-style: italic;
-	text-shadow:#f3f3f3 1px 1px 0px, #b2b2b2 1px 4px 0;
+	text-shadow: #f3f3f3 1px 1px 0px, #b2b2b2 1px 4px 0;
 }
-
-.login_msg {
-	text-align: center; 
-	font-size: 16px;
-}
-.login_form {
+.login-form {
 	padding-top: 20px; 
 	font-size: 16px;
 
 }
 
-#login_form {
+#login-form {
 	padding-left: 80px;
 	font-weight: bold;
 }
@@ -95,21 +90,20 @@ html, body {
 }
 
 #checkCode {
-   width:150px;
-   height:35px;
-   font-size:17px;
-   font-family:Arial;
-   font-style:italic;
-   //letter-spacing:1px;
-   font-weight:bolder;
-   padding-right: 100px;
-   text-align: center;
-   float: right;
-   cursor: pointer;
-   color: blue;
-   padding-top: 6px;
-   display: inline;
-   
+	width: 150px;
+	height: 35px;
+	font-size: 17px;
+	font-family: Arial;
+	font-style: italic;
+	font-weight: bolder;
+	padding-right: 100px;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+	color: blue;
+	padding-top: 6px;
+	display: inline;
+
 }
 
 .btn {
@@ -127,7 +121,7 @@ html, body {
 
 }
 
-.btn:hover {
+.btn: hover {
 	background: #6495ED;
 }
 
