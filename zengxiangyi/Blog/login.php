@@ -16,13 +16,12 @@
 <meta name="author" content="zxy">
 
 <link rel="stylesheet" href="css/login.css">
+<script type="text/javascript" src = "js/md5.js"></script>
+<script type="text/javascript" src = "js/login.js"></script>
 
 </head>
 
 <body>
-
-	
-
 <div class="page-container">
 	<div class="main-box">
 		<div class="login-box">
@@ -67,14 +66,24 @@
 				die('Unable to connect!'). mysqli_connect_error();
 			}
 
-			$sql = "SELECT * from user where account = '$account' and password = password('$password')";
+			$sql = "SELECT * from user where account = '$account'";
 			$result = $mysqli->query($sql);
-			if($result->fetch_array()){
-				header ( "Location:index.php" );
+			$row = $result->fetch_array();
+			if($row){
+				if (password_verify($password, $row[1])) {
+					header ( "Location:index.php" );
+				}	
+				else
+				{
+					echo "<p class = 'feedback'>密码错误！</p>";
+				}
 			}
-			else{
-				echo "<p class = 'feedback'>用户名或密码错误！</p>";
+
+			else
+			{
+				echo "<p class = 'feedback'>用户名错误！</p>";
 			}
+			
 		}
 	?>
 	</div>
