@@ -1,0 +1,54 @@
+button {
+    margin-left: 6px;
+    margin-top: 5px;
+    width: 85px;
+    height: 55px;
+    font-size: 30px;
+    cursor: pointer;
+    border: 0;
+}
+.cal-wrapper {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    border: 1px gray solid;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+}
+.disp-block {
+    margin-top: 5px;
+    margin-left: 8px;
+    width: 380px;
+    height: 60px;
+    font-size: 30px;
+    text-align: right;
+}
+.cal-panel {
+    margin-left: 2px;
+}
+.cal-line {
+    margin-top: 5px;
+}
+.cal-line1 {
+    margin-left: 198px;
+}
+.percent,
+.clear,
+.divid,
+.mul,
+.sub,
+.add {
+    background-color: gray;
+}
+.equ {
+    background-color: blue;
+    color: white;
+}
+span {
+    font-family: "微软雅黑";
+    font-size: 10px;
+    margin-left: 140px;
+    margin-top: 20px;
+}
