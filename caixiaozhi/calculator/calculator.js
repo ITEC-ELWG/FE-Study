@@ -1,3 +1,6 @@
+/*
+当除数为0时，在底部显示被除数不能为0，同时令当前数值等于除数
+*/
 var num1 = 0;
 var num2 = 0;
 var disp = document.getElementsByClassName("disp-block")[0];
@@ -82,7 +85,6 @@ document.getElementsByClassName("equ")[0].onclick = function () {
 }
 
 function calculator() {
-    dotPress = 0;
     if (calType == 0) {
         num1 = Number(disp.value);
     }
@@ -109,7 +111,8 @@ function calculator() {
                 }
                 break;
         }
-        disp.value = String(num1);    }
+        disp.value = String(num1);    
+    }
     quit = 1;
 }
 
