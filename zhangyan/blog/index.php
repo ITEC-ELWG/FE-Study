@@ -1,8 +1,14 @@
-﻿<!DOCTYPE html PUBLIC 
-  "-//W3C//DTD XHTML 1.0 Strict//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+﻿<?php
+header("Content-Type:text/html; charset=utf-8");
+?>
 
+<?php
+if (!empty($_COOKIE['state'])) {
+    echo "<script>alert('请登录个人账号');window.location.href='login.php'</script>";
+    exit;
+}
+?>
+<html>
 <head>
     <title>Index</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">

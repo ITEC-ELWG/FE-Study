@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content- Type">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Login Page</title>
     <link href="css/login_css.css" rel="stylesheet" type="text/css" />
     <link rel="short icon" href="imgs/sign_in.png" type="image/x-icon">
@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <form>
+        <form  class="frame" action="add.php" name="user-info" method="post">
             <p>
                 <img src="imgs/sign_img.png" />
             </p>
@@ -22,8 +22,10 @@
             <p>
                 <input type="text" name="password" placeholder="password" />
             </p>
+            <p>
+                <input name="add" type="submit" class="btn" value="注册"/>
+            </p>
         </form>
-        <p><a href="index.html" class="login">Let me in!</a></p>
     </div>
 </body>
 
