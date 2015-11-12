@@ -125,5 +125,9 @@ html, body {
 	background: #6495ED;
 }
 
-
+.feedback {
+	text-decoration: none;
+	color: red;
+	text-align: center;
+}
 

@@ -31,7 +31,7 @@ header {
 	font-weight: bolder;
 	margin-right: 25px;
 	//z-index: 100;
-	width: 310px;
+	width: 315px;
 	padding-right: 50px;
 
 }
@@ -80,7 +80,7 @@ h4 {
 	margin-right: 10px;
 	margin-left: 15px;
 	position: relative;
-	top: -170px;
+	top: -137px;
 	background-repeat: no-repeat;
 	background-size: 70% 70%;
 	text-align: center;
