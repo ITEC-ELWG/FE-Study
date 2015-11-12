@@ -22,7 +22,7 @@ header("Content-Type:text/html; charset=utf-8");
     mysql_select_db($dbNAME,$con);
     mysql_query("set names utf-8");
 
-    $query = mysql_query("SELECT id,password FROM `blog`.`blog_form`",$con);
+    $query = mysql_query("SELECT *  FROM `blog`.`blog_form` WHERE id='$name'",$con);
     $result = mysql_fetch_array($query);//获取结果集
 
     if ($name==$result["id"] && $psw==$result["password"]) {
