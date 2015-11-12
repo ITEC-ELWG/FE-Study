@@ -1,14 +1,30 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+	if (!$_SESSION['views']) {
+		header("Location:login.php");	
+	}
+
+
+?>
 <html>
 <head>
-	<title>曾祥意的Blog</title>
+	<title>
+	<?php
+		echo $_SESSION['views']."的Blog";
+	?>
+	</title>
 	<meta charset = "UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src = ""></script>
 </head>
 <body>
 	<header>
-	<h4>欢迎来到曾祥意的主页！</h4>
+	<h4>
+	<?php
+		echo "欢迎来到".$_SESSION['views']."的主页！";
+	?>
+	</h4>
 		
 		<div id="icon">
 
@@ -25,7 +41,12 @@
 		<div id = "left">
 			<div id = "title">个人信息</div>
 			<p><img src="images/head.jpg"></p>
-			<p>曾祥意</p>
+
+			<p>
+			<?php
+				echo $_SESSION['views'];
+			?>
+			</p>
 			<hr>
 			<p>原创：23篇</p>
 			<p>转载：3篇</p>
