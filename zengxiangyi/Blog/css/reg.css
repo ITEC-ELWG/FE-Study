@@ -1,0 +1,48 @@
+html{
+	width: 100%;
+	height: auto;
+}
+
+.reg-info {
+	margin: 10px 5px;
+	text-align: right;
+	color: #ffffff;
+}
+
+form {
+	margin-left: 40%;
+	margin-top: 150px;
+	width: 270px;
+	background-color: #4682B4;
+	height: 250px;
+	padding: 10px 50px 30px 30px;
+	border-radius: 5px;
+}
+
+h2 {
+	text-align: center;
+	padding-left: 20px;
+}
+
+input {
+	border-radius: 5px;
+	height: 20px;
+	border: none;
+}
+
+.btn {
+	margin-left: 100px;
+	color: #2F4F4F;
+	background-color:  	#B0C4DE;
+	padding: 15px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 6px;
+	font-weight: bold;
+}
+
+p {
+	color: red;
+	text-align: center;
+	padding-left: 40px;
+}

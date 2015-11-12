@@ -34,12 +34,16 @@ function init() {
 
 		//修改按下按钮的样式
 		inputs[i].onmousedown = function() {
-			this.style.opacity = 0.4;
-
+			//this.style.opacity = 0.4;
+			this.id = "down";
 		}
+		
 		inputs[i].onmouseup = function() {
-			this.style.opacity = 1;
+			this.id = "";
+		}
 
+		inputs[i].onmouseout = function() {
+			this.id = "";
 		}
 	}
 }
@@ -50,7 +54,7 @@ function classify(currentPressed) {
 
 //对当前按键进行分类
 	switch(currentPressed.className) {
-		case "num": 
+		case "input-button num": 
 			//输入等号运算后，如果输入数字，则清空上次的结果，重新运算
 			currentResult = "";
 
@@ -87,7 +91,7 @@ function classify(currentPressed) {
 			}	
 			break;
 
-		case "cal":
+		case "input-button cal":
 			//输入等号运算后，如果继续输入运算符，就将之前的结果保存，如1+1＝2，再输入：＋1＝3
 			if (currentResult) {
 				finishedNum.push(currentResult);
@@ -104,11 +108,11 @@ function classify(currentPressed) {
 			}
 			break;
 
-		case "eql":
+		case "input-button eql":
 			calculate();
 			break;
 
-		case "other del":
+		case "input-button del":
 			if ((!currentCal) &&(!currentResult)) {
 				currentNum = currentNum.substring(0, currentNum.length - 1);
 				finishedNum[finishedNum.length - 1] = currentNum;
@@ -121,7 +125,7 @@ function classify(currentPressed) {
 			
 			break;
 
-		case "other clear":
+		case "input-button clear":
 			currentCal = "";
 			currentNum = "";
 			currentResult = "";
@@ -132,7 +136,7 @@ function classify(currentPressed) {
 
 			break;
 
-		case "other time":
+		case "input-button time":
 			showTime = 1;
 			showLeftTime();	
 			break;		

@@ -1,14 +1,30 @@
 <!DOCTYPE html>
+<?php
+	session_start();
+	if (!$_SESSION['views']) {
+		header("Location:login.php");	
+	}
+
+
+?>
 <html>
 <head>
-	<title>曾祥意的Blog</title>
+	<title>
+	<?php
+		echo $_SESSION['views']."的Blog";
+	?>
+	</title>
 	<meta charset = "UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src = ""></script>
 </head>
 <body>
 	<header>
-	<h4>欢迎来到曾祥意的主页！</h4>
+	<h4>
+	<?php
+		echo "欢迎来到".$_SESSION['views']."的主页！";
+	?>
+	</h4>
 		
 		<div id="icon">
 
@@ -25,13 +41,18 @@
 		<div id = "left">
 			<div id = "title">个人信息</div>
 			<p><img src="images/head.jpg"></p>
-			<p>曾祥意</p>
+
+			<p>
+			<?php
+				echo $_SESSION['views'];
+			?>
+			</p>
 			<hr>
 			<p>原创：23篇</p>
 			<p>转载：3篇</p>
 			<p>评论：167次</p>
-			<p style="cursor: pointer;"><img src="images/iconfont-aixin.png" style = "height: 28px; margin-right: 10px;">
-			<img src="images/iconfont-xinxi.png" style = "height: 30px;"></p>
+			<p class="operation"><img src="images/iconfont-aixin.png" >
+			<img src="images/iconfont-xinxi.png" ></p>
 
 		</div>
 		<div id = "right">
@@ -47,13 +68,10 @@
 				<h3>CocoaPods安装和使用</h3>
 				<p>&nbsp;&nbsp;在安装CocoaPods之前，首先要在本地安装好Ruby环境。至于如何在Mac中安装好Ruby环境，请google一下，本文不再涉及。假如你在本地已经安装好Ruby环境，那么下载和安装CocoaPods将十分简单，只需要一行命令。在Terminator（也就是终端）中输入以下命令（注意，本文所有命令都是在终端中输入并运行的。</p>
 			</div>
-			<div class="passage">
-				<h3>UIView的子类们</h3>
-				<p>&nbsp;&nbsp;UIView是视图的基类，UIViewController是视图控制器的基类，UIResponder是表示一个可以在屏幕上响应触摸事件的对象；UIwindow是UIView的子类，UIWindow的主要作用：一是提供一个区域来显示UIView，二是将事件（event）的分发给UIView，一个应用基本上只有一个UIWindow</p>
-			</div>
+
 		 	<table>
 		 		<th>
-		 			<td style="background: #2F4F4F;color: #ffffff;"> 1 </td>
+		 			<td class = "currentItem"> 1 </td>
 		 			<td> 2 </td>
 		 			<td> 3 </td>
 		 			<td> 4 </td>
@@ -65,7 +83,6 @@
 		 	</table>
 		</div>
 	</div>
-
 	<footer>
 		<p>Copyright © 2015 曾祥意. All rights reserved. </p>
 	</footer>
