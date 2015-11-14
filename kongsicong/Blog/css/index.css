@@ -24,6 +24,19 @@ body {
 	color: #ECF0F1;
 	font-weight: bold;
 }
+.account {
+	color: white;
+	position: absolute;
+	width: 40%;
+	height: 100px;
+	left: 10%;
+	top: 7%;
+	font-weight: bold;
+}
+.account>a {
+	color: white;
+	font-weight: bold;
+}
 #nav {
 	text-align: center;
 	box-orient: horizontal;
