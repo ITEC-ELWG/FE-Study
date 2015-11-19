@@ -1,0 +1,42 @@
+* {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	border: 0;
+}
+html, body {
+	height: 100%;
+	min-height: 775;
+}
+.content {
+	position: relative;
+	margin: 0 auto 0 auto;
+}
+.puzzlen {
+	position: relative;
+	background: #3598DB;
+	top: 30px;
+	left: 85px;
+}
+
+.reset {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 20px;
+	left: 100px;
+	width: 100px;
+	height: 30px;
+	font-family: 2em;
+}
+input {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	top: 20px;
+	left: 100px;
+	width: 100px;
+	height: 30px;
+	font-family: 2em;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
