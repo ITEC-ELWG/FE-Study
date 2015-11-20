@@ -1,0 +1,55 @@
+#registerForm {
+    width: 560px;
+    height: 205px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto; /*Chrome下显示有溢出*/
+}
+
+label {
+    width: 136px;
+    height: 41px;
+    line-height:41px;
+    float:left;
+    text-align: right;
+}
+
+input {
+    width: 200px;
+    height: 31px;
+    margin: 5px;
+}
+
+span {
+    font-size:14px;
+}
+
+#pwd-again{
+    float: left;/*与后续block必须设置*/
+}
+
+#pwd-again-img {
+    width:19px;
+    height:19px;
+    margin-top: 11px;
+    float: left;
+    display:none;
+}
+
+#pwd-again-tips{
+    width: 147px;
+    height: 41px;
+    line-height:41px;
+    float: left;
+    display: block;
+}
+
+.register-button {
+    margin-left: 135px;
+    color: white;
+    background: #377DD6;
+}

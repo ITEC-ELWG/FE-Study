@@ -15,6 +15,19 @@
 				<button><a href="#">Blog</a></button>
 				<button><a href="#">Cont</a></button>
 			</div>
+			<?php 
+				if(!isset($_SESSION['account'])){
+					if(!isset($_COOKIE['account'])){
+						echo '<div class="account"><a href="login.php">login</a><br><a href="register.php">register</a></div>';
+					}else{
+						$user=$_COOKIE['account'];
+						echo '<div class="account"><span>'. $user.'</span><br><a href="logout.php">log out</a></div>';
+					}
+				}else{
+					$user=$_SESSION['account'];
+					echo '<div class="account"><span>'. $user.'</span><br><a href="logout.php">log out</a></div>';
+				}
+			?>
 		</div>
 		<div id="content">
 			<div class="main">

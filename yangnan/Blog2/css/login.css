@@ -1,0 +1,36 @@
+.container {
+	width: 260px;
+	height: 300px;
+	margin: auto;
+	position: absolute;  
+	top: 0; 
+	right: 0;
+	bottom: 0; 
+	left: 0;
+	overflow: auto; /*Chrome下显示有溢出*/
+}
+
+img {
+	display: block;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+input {
+	width: 250px;
+	margin: 5px;
+	padding: 8px;
+}
+
+.btn-login {
+    width: 105px;
+	color: white;
+	background:#377DD6;
+}
+
+.btn-reg {
+	width: 105px;
+	color: #6d798c;
+	background: whitesmoke;
+	float: right;
+}

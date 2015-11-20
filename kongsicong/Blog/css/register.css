@@ -1,0 +1,88 @@
+* {
+	padding: 0 0 0 0 ;
+	margin: 0 0 0 0 ;
+	border: 0;
+}
+html,body {
+	height: 800px;
+	background: #23233B;
+}
+.content {
+	height: 80%;
+	width: 40%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 10%;
+	color: white;
+}
+.form {
+	height: 100%;
+	width: 100%;
+}
+.inputbox {
+	position: relative;
+	left: 20%;
+	height: 6%;
+	width: 70%;
+	margin: 2.5% auto 2.5% auto;
+	border-radius: 5px;
+	border: 1px solid blue;
+	font-size: 1.2em;
+	text-align: center;
+	background: #645A63;
+}
+.hint {
+	position: relative;
+	left: 25%;
+	height: 6%;
+	font-size: 1.2em;
+	text-align: center;
+}
+.inputbox:focus {
+	background: white;
+}
+.sex {
+	height: 6%;
+	width: 70%;
+	position: relative;
+	left: 20%;
+	margin: 2.5% 0 2.5% 0;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 1.2em;
+}
+.sex>span,.sex>input {
+	vertical-align: middle;
+}
+.self-intr {
+	width: 70%;
+	position: relative;
+	left: 20%;
+	text-align: center;
+	height: 30%;
+	font-size: 1.2em;
+}
+.text {
+	width: 100%;
+	border-radius: 5px;
+	height: 70%;
+	background: #645A63;
+}
+.text:focus {
+	background: white;
+}
+.button {
+	position: relative;
+	margin-top: 2.5%;
+	width: 25%;
+	height: 6%;
+	font-size: 1.2em;
+	left: 20%;
+	border-radius: 5px;
+	color: white;
+	background: #27AE60;
+}
+.cancel {
+	left: 40%;
+}
