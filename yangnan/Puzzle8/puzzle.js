@@ -37,7 +37,7 @@ function initNumber() {
                 alert("请输入数字n且2<n<10");
             } else {
                 var randomNum = eval(data);
-                //randomNum=[1,2,3,4,5,6,0,7,8]; 测试功能：判断游戏是否获胜
+                //randomNum=[1,2,3,4,5,6,0,7,8]; //测试功能：判断游戏是否获胜
                 for (var i = 0; i < dim * dim; i++) {
                     if (randomNum[i] == 0) {
                         $("td").eq(i).text("").addClass("zero");
@@ -119,10 +119,7 @@ function exchange(index, indexZero) {
     var indexText = $("td").eq(index).text();
     $("td").eq(index).text("").addClass("zero");
     $("td").eq(indexZero).text(indexText).removeClass("zero");
-    if (isWin()) {
-        alert("恭喜你成功啦！");
-        initNumber();
-    }
+    isWin();
 }
 
 //判断游戏是否获胜
@@ -135,8 +132,8 @@ function isWin() {
             var rankWin = rankWin + i;
         }
         if (rank === rankWin) {
-            return true;
+            alert("恭喜你成功啦！");
+            initNumber();
         }
     }
-    return false;
 }
