@@ -1,0 +1,27 @@
+input {
+    height: 30px;
+    margin: 10px 2px;
+}
+
+button {
+    height: 30px;
+    margin: 10px 2px;
+}
+
+table {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    border-spacing: 0px;
+}
+
+td {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #12AC8D;
+    background-color: #1BBA9B;
+}
+
+.zero {
+    background-color: #3598DB;
+}
