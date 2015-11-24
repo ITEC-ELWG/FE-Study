@@ -10,7 +10,7 @@ html, body {
 
 	height: 100%;
 	width: 100%;
-	background: url(./image/bgp_login.jpeg);
+	background: url(./image/bgp_register.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -21,7 +21,7 @@ html, body {
 	width: 400px;
 	background-color: #555555;
 	position: absolute;
-	left: 12%;
+	right: 12%;
 	top: 13%;
 	border-radius: 13px;
 	box-shadow: 22px 22px 13px #000000;
@@ -81,9 +81,7 @@ html, body {
 	box-shadow: 7px 7px 4px #000000;
 	outline: none;
 	margin-top: 2%;
-	margin-left: 4%;
-	position: relative;
-	left: 5%;
+	margin-left: 38%;
 }
 
 .button-style:active {
@@ -96,8 +94,7 @@ html, body {
 	color: black;
 	box-shadow: 4px 4px 4px #000000;
 	outline: none;
-	margin-top: 2%;
-	margin-left: 5%;
+	margin-left: 38%;
 }
 
 .warning {
@@ -105,5 +102,5 @@ html, body {
 	color: #880000;
 	font-size: 11px;
 	text-align: center;
-	margin-top: 11%;
+	margin-top: 30%;
 }
