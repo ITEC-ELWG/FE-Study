@@ -1,13 +1,12 @@
-﻿<?php
-header("Content-Type:text/html; charset=utf-8");
+﻿<!DOCTYPE html>
+<?php
+     session_start();
+
+   if(empty($_SESSION['username'])){
+    echo "<script>window.location.replace('login.php')</script>";
+   }
 ?>
 
-<?php
-if (!empty($_COOKIE['state'])) {
-    echo "<script>alert('请登录个人账号');window.location.href='login.php'</script>";
-    exit;
-}
-?>
 <html>
 <head>
     <title>Index</title>
