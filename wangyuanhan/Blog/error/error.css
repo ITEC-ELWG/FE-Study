@@ -1,15 +1,30 @@
-#bgp {
+html, body {  
 
-	width: 100%;
 	height: 100%;
+	width: 100%;
+	margin: 0px; 
+	font-family: "方正舒体";
+	background: url(./bgp.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-#back {
+.main {
+
+	height: 20px;
+	width: 80px;
+	background-color: #0066FF;
+	position: absolute;
+	top: 50.5%;
+	left: 28%;
+	text-align: center;
+	padding: 0.5%;
+	border-radius: 4px;
+}
+
+.button {
 
 	font-size: 15px;
 	color: #FFFFFF;
-	position: absolute;
-	left: 393px;
-	top: 330px;
 	text-decoration: none;
 }
