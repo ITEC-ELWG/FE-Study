@@ -21,7 +21,13 @@ header("Content-Type:text/html; charset=utf-8");
         {
             if($psw == $psw_confirm)
             {
-                mysql_connect("localhost","root","root");   //连接数据库
+                try{
+                    mysql_connect("localhost","root","root");
+                }catch (Exception $e){
+                    echo "数据库连接失败".$e->getMessage();
+                    exit;
+                }
+                //mysql_connect("localhost","root","root");   //连接数据库
                 mysql_select_db("blog");  //选择数据库
                 mysql_query("set names 'utf8'"); //设定字符集
                 $psw = MD5($psw);

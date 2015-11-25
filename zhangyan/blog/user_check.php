@@ -8,7 +8,12 @@ header("Content-Type:text/html; charset=utf-8");
         $user = $_POST["username"];
         $psw = $_POST["password"];
         $psw = MD5($psw);
-        mysql_connect("localhost","root","root");
+        try{
+            mysql_connect("localhost","root","root");
+        }catch (Exception $e){
+            echo "数据库连接失败".$e->getMessage();
+            exit;
+        }
         mysql_select_db("blog");
         mysql_query("set names 'utf8'");
         $sql = "select username,password from blog_form where username = '$_POST[username]' and password = '$psw'";
