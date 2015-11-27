@@ -1,0 +1,38 @@
+*
+{
+	margin: 0; 
+	padding: 0;
+}
+
+html, body
+{
+	height:100%;
+	width:100%;
+	background:#EBE897;
+	overflow: auto;
+
+}
+canvas
+{
+	display: block;
+	background:#EBE897;
+}
+
+.submit
+{
+	padding: 5px;
+	border-radius: 5px;
+	background: #648AFF;
+	color: #fffff0;
+}
+
+form
+{
+	padding: 10px;
+}
+
+.inputNum
+{
+	width: 50px;
+	font-size: 18px;
+}
