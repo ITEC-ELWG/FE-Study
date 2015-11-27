@@ -30,8 +30,7 @@ header {
 	margin-top: 15px;
 	font-weight: bolder;
 	margin-right: 25px;
-	//z-index: 100;
-	width: 315px;
+	width: 320px;
 	padding-right: 50px;
 
 }
@@ -53,7 +52,6 @@ header {
 }
 
 #content {
-	//z-index: 2;
 	color: #000000;
 	background-color: #ffffff;
 	position: absolute;
@@ -66,9 +64,9 @@ header {
 h4 {
 	display: inline;
 	line-height: 200px;
-	font-size: 30px;
+	font-size: 40px;
 	font-style: italic;
-	text-shadow: #f3f3f3 1px 1px 0px, #4682B4 10px 10px 0;
+	text-shadow: #f3f3f3 1px 1px 0px, #4682B4 4px 4px 0;
 	width: 50%;
 
 }

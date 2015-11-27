@@ -5,7 +5,6 @@
 		header("Location:login.php");	
 	}
 
-
 ?>
 <html>
 <head>
@@ -16,13 +15,13 @@
 	</title>
 	<meta charset = "UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src = ""></script>
+
 </head>
 <body>
 	<header>
 	<h4>
 	<?php
-		echo "欢迎来到".$_SESSION['views']."的主页！";
+		echo "欢迎来到  ".$_SESSION['views']." 的主页！";
 	?>
 	</h4>
 		
