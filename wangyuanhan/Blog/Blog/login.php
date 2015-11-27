@@ -15,6 +15,7 @@
 </head>
 
 <link rel="stylesheet" href="login.css">
+<script type="text/javascript" src="md5.js"></script>
 
 <body>
 <div class="container">
@@ -22,15 +23,15 @@
 		<div class="sign">
 			<p>SIGN IN</p>
 		</div>
-		<form class="login-input" action="login.php" method="post">
+		<form class="login-input" action="login.php" method="post" onsubmit="encrypt_login()">
 			<div class="input-box">
 				<input class="input-style" type="text" name="username" placeholder = "username"><br>
 			</div>
 			<div class="input-box">
-				<input class="input-style" type="password" name="password" placeholder = "password"><br>
+				<input id="key" class="input-style" type="password" name="password" placeholder = "password"><br>
 			</div>
 			<div>
-				<a href="./register.html"><button type="button" class="button-style">UP</button></a>
+				<a href="./register.php"><button type="button" class="button-style">UP</button></a>
 				<input class="button-style" type="submit" value="IN">
 			</div>
 		</form>
@@ -51,17 +52,7 @@
 				} else {
 					
 					connectDB();
-						
-					$result = mysql_query("SELECT password FROM blog_user WHERE username = '$username'");
-					$result = mysql_fetch_assoc($result);
-						
-					if (password_verify($password, $result['password'])) {
-							
-						header('Location: index.php');
-					} else {
-							
-						echo "<p class = 'warning'>用户名或密码不正确</p>";
-					}
+					loginVerify($username, $password);
 				}
 			}
 		?>
