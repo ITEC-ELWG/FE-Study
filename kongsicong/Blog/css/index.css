@@ -1,120 +1,261 @@
-body {
-	
-	width: 80%;
-	min-width: 400px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: -21px;
-	background-image: url(body-bg.jpg);
-	background-size: auto ;
-	
+* {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
 }
-#header {
-	padding-top: 0;
-	opacity: 0.9;
-	filter: alpha(opacity=90);
-	-moz-opacity: 0.9;
-	height: 100px;
-	border-radius: 10px 10px 10px 10px;
-	margin-bottom: 5px;
-	
+html,body {
+	height: 100%;
+	min-width: 1024px;
 }
-#header>h1 {
-	text-align: center;
-	color: #ECF0F1;
-	font-weight: bold;
-}
-.account {
-	color: white;
-	position: absolute;
-	width: 40%;
-	height: 100px;
-	left: 10%;
-	top: 7%;
-	font-weight: bold;
-}
-.account>a {
-	color: white;
-	font-weight: bold;
-}
-#nav {
-	text-align: center;
-	box-orient: horizontal;
-	-moz-box-orient: horizontal;
-	-webkit-box-orient: horizontal;
-	width: 100%;
 
+/*header css*/
+.header {
+	width: 100%;
+	height: 130px;
 }
-#nav>button {
-	border: 2px solid #E67E22;
-	border-radius: 10px 10px 10px 10px;
-	width: 10%;
-	height: 30px;
-	overflow: hidden;
-	text-overflow: ellipsis;
+.logo {
+	width: 830px;
+	height: 90px;
+	margin: 0 auto 0 auto;
+}
+
+.logo_img {
+	vertical-align: middle;
+	height: 100%;
+}
+.logo_hust {
+	width: 15%;
+	position: relative;
+}
+.logo_ksc {
+	width: 15%;
+	position: relative;
+}
+.logo_title {
+	width: 42%;
+	position: relative;
+	font-size: 1.4em;
+	font-weight: bolder;
+	color: #73A0DA;
+	letter-spacing: 10px;
+	margin-right: 0 1% 0 1%;
+}
+.input_search {
+	width: 20%;
+	height: 37%;
+}
+.bn_search {
+	border: 0;
+	width: 4%;
+	height: 37%;
+	background-color: #73A0DA;
+	background-image: url(../img/logo_search.jpg);
+	background-size: cover;
+}
+.nav {
+	width: 100%;
+	height: 40px;
 	text-align: center;
-	color: #ECF0F1;
-	min-width: 60px;
+	background-color: #0099cc;
 }
-#nav>button:hover {
-	background: #C2B5C7;
-}
-a {
+
+.nav_link {
+	display: inline-block;
+	width: 143px;
+	height: 100%;
+	vertical-align: middle;
 	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	font-family:微软雅黑;
+	line-height:38px;   
+}
+.nav_link:hover {
+	background-color: #0079a1;
+}
+.user {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+/*content css*/
+.content {
+	width: 900px;
+	height: 600px;
+	margin: 1% auto 1% auto;
+	position: relative;
+}
+/*lecture-info css*/
+.lecture-info {
+	border: 1px solid #e1e0e0;
+	width: 34%;
+	height: 300px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.info>* {
+	vertical-align: top;
+}
+.info {
+	margin-top: 3%;
+}
+.info>div {
+	display: inline-block;
+}
+.label {
+	margin-top: 0;
+	margin-bottom: 1%;
+	height: 40px;
+	width: 100px;
+	background: #0099cc;
+	color: white;
+	text-align: center;
+	line-height: 38px;
+	word-spacing: 5px;
+	border-right: 6px double #00aafd;
+	font-size:18px;
+	font-family:微软雅黑;
+	display: inline-block;
+}
+
+.more{
+	font-size:16px;
+	font-family:微软雅黑;
+	display: inline-block;
+	margin-left:20px;
+	color: #0099cc;
+	margin-top:0px;
+}
+
+.more>a{
+	text-decoration: none;
+	color: #0099cc;
+}
+.more>a:hover{
+	color: #55aaff;
+	font-weight:bold;
+}
+
+
+.rank {
+	font-weight: bolder;
+	text-align: center;
+	font-size: 20px;
+}
+
+.lec-details{
+	font-weight:20px;
+	line-height:25px;
+	margin-left:15px;
+	margin-right:15px;
+	margin-top:10px;
+	font-size:18px;
+}
+
+.lec-speaker{
+	font-family:华文行楷;
+	font-size:24px;
+}
+
+.lec-speaker-title{
+	margin-left:80px;
+	
+}
+
+/*lecture_photo css*/
+.lecture-photo {
+	border: 1px solid #e1e0e0;
+	width: 64%;
+	height: 300px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.scroll {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 300px;
+}
+
+
+/*lecture-news css*/
+.news {
+	border: 1px solid #e1e0e0;
+	width: 49%;
+	height: 280px;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.news_detail,.team_detail {
+	width: 95%;
+	height: 50px;
+	border-top: 1px dashed gray;
+	margin-left:10px;
+	font-size:18px;
+	margin-top:5px;
+}
+.news_detail>span,.team_detail>span {
+	color: gray;
+	font-size:16px;
+	float:right;
+	margin-right:13px;
+	margin-top:3px;
+	font-family:微软雅黑;
+}
+
+.news_detail>a,.team_detail>a {
+	color: black;
+	text-decoration: none;
+	line-height: 26px;
 	overflow: hidden;
 }
-#content {
-	padding-top: 1px;
-	opacity: 0.8;
-	filter: alpha(opacity=80);
-	-moz-opacity: 0.8;
+.news_detail>a:hover,.team_detail>a:hover {
+	color: #0099cc;
+}
+/*lecture-team css*/
+.team {
+	border: 1px solid #e1e0e0;
+	width: 49%;
+	height: 280px;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+/*footer css*/
+.footer {
 	width: 100%;
-	text-align: center;
+	height: 80px;
+	background-image: url(../img/bottom.jpg);
 }
-h2 {
-	color: #ECF0F1;
+.footer_text {
+	margin: 0 auto 0 auto;
+	position: relative;
+	top: 50%;
+	font-family:微软雅黑;
+	font-weight:normal;
+	font-size:15px;
 }
-.main {
-	height: 200px;
+.copyright {
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	left: 30%;
 }
-.main>div {
-	background: #ECF0F1;
-	margin: auto;
-	overflow: auto;
-	text-align: left;
-	width: 100;
-	height: 100px;
-	border: 3px solid #C0392B;
-	border-radius: 10px 10px 10px 10px;
-	text-overflow: ellipsis;
-	white-space: normal;
+.inner_web {
+	text-decoration: none;
+	color: black;
 }
-p {
-	text-indent: 2em;
-}
-#footer {
-	font-size: 1.1em;
-	background: #2D2625;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
-	-moz-opacity: 0.5;
-	height: 100px;
-	width: 100%;
-	border-radius: 10px 10px 10px 10px;
-}
-#footer>span {
-	display: block;
-	margin: auto;
-	text-align: center;
-	color: #E74C3C;
-	height: 50%;
-}
-#footer>span>a {
-	font-family: mysh;
-	color: #E74C3C;
-	height: 50%;
-	text-align: center;
-}
-a:hover {
-	color: #E74C3C;
+.inner_web:hover {
+	color: red;
 }

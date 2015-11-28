@@ -2,11 +2,10 @@
 	header("Content-type: text/html;charset=utf-8");
 	if(isset($_POST["submit"])){
 		include("conn.php");
-		$account=$_POST["account"];
-		$password=sha1($_POST["password"]);
-		$name=$_POST["realname"];
+		$account=trim($_POST["account"]);
+		$password=trim(sha1($_POST["password"]));
+		$name=trim($_POST["realname"]);
 		$sql = "insert into user (account,password,name) values ('$account','$password','$name');";
-		echo $sql;
 		$result=$mysqliObj->query($sql);
 		if($result){
 			echo "insert success";
@@ -26,7 +25,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="css\register.css">
-		<script type="text/javascript" src="js\register.js"></script>
 	</head>
 	<body>
 		<div class="content" >
@@ -38,5 +36,8 @@
 				<input type="submit" value="ok" name="submit" class="button ok" id="submit"/><input type="reset" value="cancel" class="button cancel"/>
 			</form>
 		</div>
+		<script type="text/javascript" src="js\sha1.js"></script>
+		<script type="text/javascript" src="js\register.js"></script>
+
 	</body>
 </html>
