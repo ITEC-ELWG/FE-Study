@@ -1,106 +1,171 @@
-#top_title_bgp {
+html, body {  
 
-	width: 101%;
-	height: 100px;
-	position: absolute;
-	left: -10px;
-	top: -10px;
+	height: 100%;
+	width: 100%;
+	margin: 0px; 
+	font-family: "方正舒体";
+	background-color: #AAAAAA;
 }
 
-#top_title {
+header {
 
-	font-family: "方正舒体";
-	font-size: 40px;
+	width: 100%;
+	position: fixed;
+	background: url(./image/bgp_YXSWORLD.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
+}
+
+.top {
+
+	height: 90px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.top-left {
+
+	height: 100%;
+	width: 30%;
+	float: left;
+	border-radius: 11px;
+	text-align: center;
+}
+
+.top-title {
+
+	font-size: 44px;
 	color: #AAAAAA;
-	position: relative;
-	top: 11px
+	margin-top: 5%;
 }
 
-.top_tag {
+.top-right {
 
-	font-family: "方正舒体";
+	height: 100%;
+	width: 70%;
+	border-radius: 11px;
+	text-align: right;
+}
+
+.top-tag {
+
+	font-size: 22px;
+	color: #AAAAAA;
+	outline: none;
+	text-decoration: none;
+	margin-left: 4%;
+	position: relative;
+	top: 37%;
+	left: 37%;
+}
+
+.top-tag:hover {
+
+	font-size: 22px;
+	color: #000000;
+	outline: none;
+	text-decoration: none;
+	margin-left: 4%;
+	position: relative;
+	top: 37%;
+	left: 37%;
+}
+
+.center {
+
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+.text {
+
+	height: 25%;
+	width: 100%;
+	border-radius: 11px;
+	margin-bottom: 7%;
+}
+
+.text-left {
+
+	height: 100%;
+	width: 20%;
+	border-radius: 11px;
+	float: left;
+}
+
+.text-time {
+
 	font-size: 20px;
-	color: #AAAAAA;
-	text-decoration: none;
+	color: #000000;
+	margin-top: 4%;
+	margin-bottom: 17%;
 }
 
-.top_tag:hover {
+.text-tag {
 
-	font-family: "方正舒体";
-	font-size: 25px;
-	color: #AAAAAA;
-	text-decoration: none;
-}
-
-.center_left {
-
-	position: relative;
-	left: 20px;
-	top: -40px;
-}
-
-.center_right {
-
-	position: relative;
-	left: 20px;
-	top: 30px;
-}
-
-.center_time {
-
-	font-family: "方正舒体";
-	font-size: 20px;
-}
-
-.center_tag {
-
-	font-family: "方正舒体";
-	font-size: 25px;
-	color: #AAAAAA;
-	background-color: #666666;
-	text-decoration: none;
-}
-
-.center_tag:hover {
-
-	font-family: "方正舒体";
-	font-size: 25px;
-	color: #AAAAAA;
+	font-size: 22px;
+	color: #000000;
 	background-color: #444444;
+	padding: 4%;
 	text-decoration: none;
+	border-radius: 11px;
+	box-shadow: 7px 7px 7px 4px #222222;
 }
 
-.center_title {
+.text-tag:active {
 
-	font-family: "方正舒体";
+	font-size: 22px;
+	color: #000000;
+	background-color: #444444;
+	padding: 2%;
+	text-decoration: none;
+	border-radius: 11px;
+	box-shadow: 4px 4px 4px 4px #222222;
+}
+
+.text-right {
+
+	height: 100%;
+	width: 80%;
+	margin-left: 20%;
+	border-radius: 11px;
+}
+
+.text-title {
+
 	font-size: 30px;
-	font-weight: bold;
-	color: #272727;
+	color: #000000;
+	margin-top: 4%;
 }
 
-.center_text {
+.text-main {
 
-	font-family: "方正舒体";
-	font-size: 20px;
-	box-shadow: 10px 10px 4px #444444;
-	position: relative;
-	top: -30px
+	word-wrap: break-word;
+	padding: 2%;
+	box-shadow: 11px 11px 11px 7px #222222;
 }
 
-#bottom_title_bgp {
+footer {
 
-	width: 101%;
-	height: 100px;
-	position: absolute;
-	left: -10px;
-	bottom: -700px;
+	width: 100%;
+	background: url(./image/bgp_YXSWORLD.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
 }
 
-#bottom_title {
+.bottom {
 
-	font-family: "方正舒体";
-	font-size: 20px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+.copyright {
+
 	color: #AAAAAA;
-	position: relative;
-	top: 90px
+	font-size: 17px;
+	padding-top: 1.7%;
+	padding-left: 16%;
 }
