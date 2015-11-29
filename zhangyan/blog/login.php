@@ -23,7 +23,7 @@
                 <input type="text" name="username" placeholder="username" />
             </p>
             <p>
-                <input type="text" name="password" placeholder="password" id="password" />
+                <input type="password" name="password" placeholder="password" id="password" />
             </p>
             <p>
                 <input name="Signin" type="submit" class="btn" value="登陆"></input>

@@ -1,0 +1,23 @@
+body {
+    background: #ebe4ea;
+    text-align: center;
+    color: #d9a3d5;
+}
+
+input {
+    height: 30px;
+    margin: 10px 2px;
+}
+table {
+	border:1px #d9a3d5 solid;
+}
+td {
+    padding: 50px;
+    background-color: #e8d1e7;
+    font-size: 25px;
+    margin: 2px;
+}
+
+.zero {
+    background-color: #ebe4ea;
+}

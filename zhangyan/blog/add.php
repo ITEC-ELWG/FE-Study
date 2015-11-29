@@ -8,14 +8,17 @@ header("Content-Type:text/html; charset=utf-8");
         $psw = $_POST["password"];
         $psw_confirm = $_POST["confirm"];
         if(!preg_match('/^[\w\x80-\xff]{3,15}$/', $user)){
-        exit('错误：用户名不符合规定。<a href="javascript:history.back(-1);">返回</a>');
+        echo "<script>alert('用户名不符合规范'); history.go(-1);</script>";
+        exit;
         }
         if(strlen($psw) < 6){
-        exit('错误：密码长度不符合规定。<a href="javascript:history.back(-1);">返回</a>');
+        echo "<script>alert('密码长度不符合规范'); history.go(-1);</script>";
+        exit;
         }
         if($user == "" || $psw == "" || $psw_confirm == "")
         {
             echo "<script>alert('请确认信息完整性！'); history.go(-1);</script>";
+            exit;
         }
         else
         {
@@ -37,6 +40,7 @@ header("Content-Type:text/html; charset=utf-8");
                 if($num)    //如果已经存在该用户
                 {
                     echo "<script>alert('用户名已存在'); history.go(-1);</script>";
+                    exit;
                 }
                 else    //不存在当前注册用户名称
                 {
@@ -46,22 +50,26 @@ header("Content-Type:text/html; charset=utf-8");
                     if($res_insert)
                     {
                         
-                        echo "<script>alert('注册成功！');window.location.replace('login.php')</script>"; 
+                        echo "<script>alert('注册成功！');window.location.replace('login.php')</script>";
+                        exit; 
                     }
                     else
                     {
                         echo "<script>alert('系统繁忙，请稍候！'); history.go(-1);</script>";
+                        exit;
                     }
                 }
             }
             else
             {
                 echo "<script>alert('密码不一致！'); history.go(-1);</script>";
+                exit;
             }
         }
     }
     else
     {
         echo "<script>alert('信息不完整！'); history.go(-1);</script>";
+        exit;
     }
 ?>
