@@ -1,39 +1,42 @@
 <?php
 header("Content-Type:text/html; charset=utf-8");
 ?>
-
 <?php
-    $name=$_POST['username'];
-    $psw =$_POST['password'];
-
-    if (!$name || !$psw) {
-        echo "<script> alert('账号和密码不可为空');window.location.href='login.php';</script>";
-        exit;
+    session_start();
+    if(isset($_POST["username"]) && isset($_POST["password"]))
+    {
+        $user = $_POST["username"];
+        $psw = $_POST["password"];
+        $psw = MD5($psw);
+        try{
+            mysql_connect("localhost","root","root");
+        }catch (Exception $e){
+            echo "数据库连接失败".$e->getMessage();
+            exit;
+        }
+        mysql_select_db("blog");
+        mysql_query("set names 'utf8'");
+        $sql = "select username,password from blog_form where username = '$_POST[username]' and password = '$psw'";
+        $result = mysql_query($sql);
+        $num = mysql_num_rows($result);
+        if($num)
+        {
+            session_regenerate_id(ture);
+            $_SESSION['username']= $user;
+            echo "<script>window.location.replace('index.php')</script>";
+        }
+        else
+        {
+            echo "<script>alert('用户名或密码不正确！');history.go(-1);</script>";
+        }
+            
+    }
+    else
+    {
+        echo "<script>alert('账号密码不能为空'); history.go(-1);</script>";
     }
 
-    $con = mysql_connect("localhost","root","root");
-    if (!$con) {
-        die('could not connet:' . mysql_error());
-        /*die()函数输出一条消息，并退出当前脚本。
-        */
-    }
-    
-    $dbNAME = "blog";
-    mysql_select_db($dbNAME,$con);
-    mysql_query("set names utf-8");
 
-    $query = mysql_query("SELECT *  FROM `blog`.`blog_form` WHERE id='$name'",$con);
-    $result = mysql_fetch_array($query);//获取结果集
-
-    if ($name==$result["id"] && $psw==$result["password"]) {
-        
-        echo "<script>window.location.href='index.php';</script>";
-        setcookie("state", "login", time() + 3600);
-    }
-    else{
-        echo "<script>alert('账号或密码错误');window.location.href='login.php'</script>";
-    }
-    mysql_close($con);
 ?>
 
 
