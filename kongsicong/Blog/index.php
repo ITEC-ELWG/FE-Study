@@ -1,3 +1,10 @@
+<?php 
+	if(!isset($_SESSION['userId'])){
+		if(!isset($_COOKIE['userId'])){
+			echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=login.php'>";
+		}
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,66 +12,134 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/scroll.css">
 	</head>
+	
 	<body>
-		<div id="header">
-			<h1>Mikong's Home Page</h1>
-			<div id="nav">
-				<button><a href="#">Home</a></button>
-				<button><a href="#">Info</a></button>
-				<button><a href="#">Blog</a></button>
-				<button><a href="#">Cont</a></button>
+		<div class="header">
+			<div class="logo">
+				<img src="img\logo_hust.png" class="logo_img logo_hust">
+				<img src="img\logo_ksc.jpg" class="logo_img logo_ksc">
+				<span class="logo_img logo_title">孔小葱的个人主页</span>
+				<input type="search" class="logo_img input_search"><button class=" logo_img bn_search"></button>
 			</div>
-			<?php 
-				if(!isset($_SESSION['account'])){
-					if(!isset($_COOKIE['account'])){
-						echo '<div class="account"><a href="login.php">login</a><br><a href="register.php">register</a></div>';
-					}else{
-						$user=$_COOKIE['account'];
-						echo '<div class="account"><span>'. $user.'</span><br><a href="logout.php">log out</a></div>';
-					}
-				}else{
-					$user=$_SESSION['account'];
-					echo '<div class="account"><span>'. $user.'</span><br><a href="logout.php">log out</a></div>';
-				}
-			?>
+			<div class="nav">
+				<a href="#" class="nav_link">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+				<a href="#" class="nav_link">个人简介</a>
+				<a href="#" class="nav_link">学习天地</a>
+				<a href="#" class="nav_link">个人荣誉</a>
+				<a href="#" class="nav_link">当前研究</a>
+				<a href="#" class="nav_link">与我联系</a>
+			</div>
+			<div class="user">
+				<span><?php echo $_COOKIE['userName']?></span><br>
+				<span><?php if(isset($_SESSION['userId'])||isset($_COOKIE['userId'])) echo '<a href="logout.php">logout</a>'?></span>
+			</div>
 		</div>
-		<div id="content">
-			<div class="main">
-				<h2>中国共产党第十八届中央委员会第五次全体会议公报</h2>
-				<div> 
-					<p>中国共产党第十八届中央委员会第五次全体会议，于2015年10月26日至29日在北京举行。</p>
-					<p>出席这次全会的有，中央委员199人，候补中央委员156人。中央纪律检查委员会常务委员会委员和有关方面负责同志列席了会议。党的十八大代表中部分基层同志和专家学者也列席了会议。全会由中央政治局主持。中央委员会总书记习近平作了重要讲话.</p>
-					<p>全会听取和讨论了习近平受中央政治局委托作的工作报告，审议通过了《中共中央关于制定国民经济和社会发展第十三个五年规划的建议》。习近平就《建议（讨论稿）》向全会作了说明。</p>
-					<p>全会充分肯定党的十八届四中全会以来中央政治局的工作。一致认为，面对国内外形势的深刻复杂变化特别是经济下行压力加大的挑战，中央政治局高举中国特色社会主义伟大旗帜，全面贯彻党的十八大和十八届三中、四中全会精神，以马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观为指导，深入贯彻习近平总书记系列重要讲话精神，团结带领全党全军全国各族人民，坚持“四个全面”战略布局，坚持统筹国内国际两个大局，坚持稳中求进工作总基调，积极引领经济发展新常态，着力推进改革开放，加强和创新宏观调控，有效化解各种风险和挑战，保持经济平稳较快发展和社会和谐稳定，开展“三严三实”专题教育，隆重纪念中国人民抗日战争暨世界反法西斯战争胜利70周年，党和国家各项事业取得了新的重大成就。</p>
-                </div>
-			</div>
-			<div class="main">
-				<h2>“全面放开二孩”落地需经4程序 抢生属违法要罚款</h2>
-				<div>
-					<p>以“单独二孩”政策的推出为参照系，全面放开二孩要落地，恐怕至少要经历4个关键程序：第1关：中共中央的决定;第2关：国务院制定调整意见，全国人大常委会批准;第3关：各地实施方案报批;第4关：地方人大修订计生条例。国家卫计委下属的中国人口与发展研究中心主任姜卫平昨日表示，全面落实该政策还需等待各地人大修改地方的法律之后，方可最终落地。</p>
-					<h3>开放二孩要先修法</h3>
-					<p>姜卫平透露，全面放开二孩的政策落实应该是参照“单独二孩”政策的实施。他强调，全面放开二孩依旧需要依法落实，首先有个修法的过程。</p>
-　　         		<p>2013年11月，十八届三中全会决定启动实施“单独二孩”政策。当年12月国务院就向全国人大常委会提交了“调整完善生育政策的议案                        ”，12月末的全国人大常委会就通过中共中央、国务院印发的《关于调整完善生育政策的意见》。</p>
-　　           		
-　　           		<p>该《意见》明确了各地落实“单独二孩”的实施方案。首先，各省(区市)的政府制定实施方案，接着报国务院主管部门(
-					即国家卫计委备案)。之后，各省人大或其常委会修订地方性法规。</p>
+		<div class="content">
+			<div class="lecture-info">
+				<div class="label">个人信息</div>
+				<div class ="more">
+					<a href="#">更多</a> >>
+				</div>
+				<div class="info rank">孔小葱的主页</div>
+				<div class="info lec-details">
+					<strong>姓&nbsp;名:</strong>
+					<div class="lec-speaker">
+						<span>孔思聪</span>
+					</div></br>
+					<div class="lec-speaker-title">
+						<span>华中科技大学大四学生</br>电信学院12级提高班</span>
+					</div></br>
 
+					<strong>性&nbsp;别:</strong>
+					<div>
+						<span>男</br></span><br>
+					</div>
+					</br>
+					
+					<strong>民&nbsp;族:</strong>
+					<div>
+						<span>汉<br>
+						</span><br>
+					</div>
+					</br>
+					
+					<strong>籍&nbsp;贯:</strong>
+					<div>
+						<span>湖北省荆门市沙洋县</span><br>
+					</div>
+				</div>
+			</div>
+			
+			<div class="lecture-photo">
+				<div class="scroll" id="scroll" >
+					<ul>
+						<li><a href="#"><img src="img/1.jpg" class="photo_scroll"></a></li
+						><li><a href="#"><img src="img/2.jpg" class="photo_scroll"></a></li
+						><li><a href="#"><img src="img/3.jpg" class="photo_scroll"></a></li
+						><li><a href="#"><img src="img/4.jpg" class="photo_scroll"></a></li>
 
-                </div>
+					</ul>
+					<ol>
+						<li class="active">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+					</ol>
+				</div>
 			</div>
-			<div class="main">
-				<h2>蔡依林演唱会在建舞台灯架坍塌 致1死10多伤</h2>
-				<div>
-				<p>10月29日下午5时许，广西体育中心内，蔡依林演唱会正在进行舞台搭建，灯架突然坍塌，据悉，已造成一人死亡，十数人受伤。参与此次演唱会的会务公司相关人士透露，灯架坍塌可能与预算有关。</p>
-    			<p>随后，蔡依林本人也在微博上对此事做出了回应，她称自己内心十分难过，并呼吁大家为伤亡者祈祷：“知道事故消息，內心十分难过，一起为伤亡的工作人员祈祷。”</p>
-   				<p>此前，正在广西体育馆内搭建的舞台，是为了10月31日蔡依林PLAY世界巡回演唱会广西站做准备。已有的事故现场图片显示，数条大型灯架倾斜或脱落，据悉，已造成一人死亡，十数人受伤。</p>
-   				</div>
+			<div class="news">
+				<div class="label">最近文章</div>
+				<div class ="more">
+					<a href="#">更多</a> >>
+				</div>
+				<div class="news_detail">
+					<a href="lec_previous.html">基于kinect的3D人脸识别研究</a>
+					<span>2015.11.18</span>
+				</div>
+				<div class="news_detail ">
+					<a href="lec_previous.html">基于摄像头的2D人脸识别研究</a>
+					<span>2015.11.18</span>
+				</div>
+				<div class="news_detail">
+					<a href="lec_previous.html">基于kinect的3D人脸识别研究</a>
+					<span>2015.11.18</span>
+				</div>
+				<div class="news_detail">
+					<a href="lec_previous.html">基于摄像头的2D人脸识别研究</a>
+					<span>2015.11.18</span>
+				</div>
+			</div
+			><div class="team">
+				<div class="label">个人收藏</div>
+				<div class ="more">
+					<a href="#">更多</a> >>
+				</div>
+					<div class="team_detail">
+						<a href="team.html">【健身文化】多读书，多看报，少吃零食多睡觉</a>
+						<span>2015.11.18</span>
+					</div>
+					<div class="team_detail">
+						<a href="team.html">【健身文化】多读书，多看报，少吃零食多睡觉</a>
+						<span>2015.11.18</span>
+					</div>
+					<div class="team_detail">
+						<a href="team.html">【健身文化】多读书，多看报，少吃零食多睡觉</a>
+						<span>2015.11.18</span>
+					</div>
+					<div class="team_detail">
+						<a href="team.html">【健身文化】多读书，多看报，少吃零食多睡觉</a>
+						<span>2015.11.18</span>
+					</div>
 			</div>
 		</div>
-		<div id="footer">
-			<span>copyright:© Mikong 2015-10-30</span>
-			<span><a href="#nav">want more interesting and click me</a></span>
+		<div class="footer">
+			<div class="footer_text">
+				<span class="copyright">&copy; made by kongsicong | 湖北省武汉市洪山区珞喻路1037号 &nbsp;&nbsp;<a href="#" class="inner_web">内部网登录</a></span>
+			</div>
 		</div>
+		<script type = "text/javascript" language = "javascript" src = "js/move.js"></script>
+		<script type="text/javascript" src="js/scroll.js"></script>
 	</body>
 </html>

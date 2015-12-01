@@ -3,10 +3,12 @@
   	$dbuser = "root";
   	$dbpwd = "";
   	$dbname = "test";
-  	$mysqliObj = new mysqli($dbhost,$dbuser,$dbpwd,$dbname);
-	if(mysqli_connect_errno()){
- 		echo "连接失败".mysqli_connect_error();
- 		exit();
-	}
+  	try{
+  		$mysqliObj = new mysqli($dbhost,$dbuser,$dbpwd,$dbname);
+  	}
+  	catch(Exception $e){
+  		echo "Failed to get DB handle: " . $e->getMessage() . "\n";
+  		exit();
+  	}
 	$mysqliObj->query("set names utf8;"); 
 ?>

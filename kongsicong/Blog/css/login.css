@@ -58,6 +58,9 @@ html,body {
 .login {
 	left: 10%;
 }
+.login:hover {
+	cursor: pointer;
+}
 .register {
 	left: 30%;
 }

@@ -10,7 +10,10 @@
 	</head>
 	<body>
 		<div id="calculator">
-			<div class="buttonGroup"><input id="show" type="text"></div>
+			<div class="buttonGroup">
+				<input id="show" class="show" type="text"><br>
+				<input id="showRes" class="showRes" type="text">
+			</div>
 			<div id="button1" class="buttonGroup">
 				<button id="AC" class="button func">AC</button
 				><button id="percent" class="button func">%</button
@@ -18,28 +21,28 @@
 				><button id="switch" class="button func">on</button>
 				</div>
 			<div id="button2" class="buttonGroup"> 
-				<button class="button">7</button
-				><button class="button">8</button
-				><button class="button">9</button
-				><button class="button func">/</button>
+				<button class="number">7</button
+				><button class="number">8</button
+				><button class="number">9</button
+				><button class="button func cal" id="divide">/</button>
 			</div>
 			<div id="button3" class="buttonGroup">
-				<button class="button">4</button
-				><button class="button">5</button
-				><button class="button">6</button
-				><button class="button func">*</button>
+				<button class="number">4</button
+				><button class="number">5</button
+				><button class="number">6</button
+				><button class="button func cal" id="times">*</button>
 			</div>
 			<div id="button4" class="buttonGroup">
-				<button class="button">1</button
-				><button class="button">2</button
-				><button class="button">3</button
-				><button class="button func">-</button>
+				<button class="number">1</button
+				><button class="number">2</button
+				><button class="number">3</button
+				><button class="button func cal" id="minus">-</button>
 			</div>
 			<div id="button5" class="buttonGroup">
-				<button class="button">0</button
-				><button class="button">.</button
+				<button class="number">0</button
+				><button class="number">.</button
 				><button class="button" id="result">=</button
-				><button class="button func">+</button>
+				><button class="button func cal" id="add">+</button>
 			</div>
 		</div>
 	</body>

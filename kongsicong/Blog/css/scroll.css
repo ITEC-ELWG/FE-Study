@@ -1,0 +1,41 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.scroll {
+	position: relative;
+	/*width: 500px;
+	height: 250px;*/
+	overflow: hidden;
+}
+.scroll>ul {
+	position: relative;
+	left: 0;
+	
+}
+.scroll>ul>li {
+	list-style: none;
+	display: inline-block;
+}
+.photo_scroll {
+	width: 100%;
+}
+.scroll>ol {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+.scroll>ol>li {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	list-style: none;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+.scroll>ol>li:hover {
+	cursor: pointer;
+}
+.active {
+	background-color: yellow;
+}

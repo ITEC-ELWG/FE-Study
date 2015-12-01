@@ -17,7 +17,7 @@ body {
 	top: 20%;
 	
 }
-.button {
+button {
 	width: 20%;
 	height: 80%;
 	margin-left: 2.5%;
@@ -26,23 +26,30 @@ body {
 	text-overflow: ellipsis;
 	font-size: 1em;
 }
-.button:hover {
+button:hover {
 	background: #27AE60;
 }
-.button:active {
+button:active {
 	background: #E67E22;
 }
 .func {
 	background: #7F8C8D;
 	font-weight: bolder;
 }
-#show {
-	position: absolute;
+.show,.showRes {
+	position: relative;
 	width: 94%;
-	height: 80%;
+	height: 40%;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
 }
+.showRes {
+	border-top: 0;
+}
+.show {
+	border-bottom: 0;
+}
+
 .buttonGroup {
 	position: relative;
 	width: 100%;
