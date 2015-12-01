@@ -1,10 +1,12 @@
-var dim = 3; //宫格行列数，默认为3
+var dim = 3; //表格行列数，默认为3
 $(document).ready(function() {
     initPuzzle(); //生成表格
-    initNumber(); //获取乱序排列的数据并显示
+    initNumber(); //从服务器获取乱序排列的数据并显示
     $("button").click(reset); //绑定重置按钮点击事件的响应函数
 });
 
+//键盘事件响应函数
+//若为“上下左右”键，寻找将要移动的单元格，若存在，移动单元格。
 $(document).keydown(function(event) {
     var k = event.keyCode;
     if (k > 36 && k < 41) { //判断是否为方向键
@@ -17,7 +19,8 @@ $(document).keydown(function(event) {
     }
 });
 
-//自定义表格。先清空原有表格，再重新添加。并绑定单元格点击事件。
+//自定义表格。并绑定单元格点击事件。
+//先清空原有表格，再重新添加。
 function initPuzzle() {
     $("table").empty();
     for (var row = 0; row < dim; row++) {
@@ -26,10 +29,10 @@ function initPuzzle() {
     for (var col = 0; col < dim; col++) {
         $("<td></td>").appendTo("tr");
     }
-    $("td").click(tdClicked); //设定短时间内点击无效     
+    $("td").click(tdClicked);     
 }
 
-//获取乱序排列的数据并显示
+//从服务器获取乱序排列的数据并显示
 function initNumber() {
     $.post("random_number_generator.php", {dim: dim}, function(data, status) {
         if (status == "success") {
@@ -37,12 +40,13 @@ function initNumber() {
                 alert("请输入数字n且2<n<10");
             } else {
                 var randomNum = eval(data);
+                var tds = $("td");
                 //randomNum=[1,2,3,4,5,6,0,7,8]; //测试功能：判断游戏是否获胜
                 for (var i = 0; i < dim * dim; i++) {
                     if (randomNum[i] == 0) {
-                        $("td").eq(i).text("").addClass("zero");
+                        tds.eq(i).text("").addClass("zero");
                     } else {
-                        $("td").eq(i).text(randomNum[i]).removeClass("zero");
+                        tds.eq(i).text(randomNum[i]).removeClass("zero");
                     }
                 }
             }
@@ -74,12 +78,14 @@ function validate(input) {
 }
 
 //单元格点击事件
+//获取被点击的单元格四周的单元格，若有空单元格，移动
 var tdClicked = function() {
-    var index = $("td").index($(this)); //点击的td在表格中的序号
+    var tds = $("td");
+    var index = tds.index($(this)); //点击的单元格在表格中的序号
     for (var i = 1; i < 5; i++) {
         var surIndex = getSurround(index, i);
         if (typeof surIndex !== "undefined") {
-            if ($("td").eq(surIndex).hasClass("zero")) {
+            if (tds.eq(surIndex).hasClass("zero")) {
                 exchange(index, surIndex);
                 return;
             }
@@ -88,7 +94,7 @@ var tdClicked = function() {
 }
 
 //获取某一方向单元格的序号
-//index：单元格在表格中的序号   direction:方向
+//index：当前单元格在表格中的序号   direction:方向
 function getSurround(index, direction) {
     switch (direction) {
     case 1://上

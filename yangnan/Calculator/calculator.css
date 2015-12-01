@@ -2,15 +2,15 @@
     width: 232px;
 }
 
-#output {
+.output {
     width: 231px;
     height: 30px;
     margin-bottom: 4px;
     text-align: right;
 }
 
-.calculator-div {
-    float: right;
+.div-first {
+	text-align: right;
 }
 
 .input {
