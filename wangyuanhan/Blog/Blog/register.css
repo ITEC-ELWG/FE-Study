@@ -29,7 +29,7 @@ html, body {
 
 .sign {
 
-	height: 30%;
+	height: 25%;
 	width: 100%;
 	position: relative;
 	top: 0%;
@@ -41,7 +41,7 @@ html, body {
 
 .login {
 
-	height: 50%;
+	height: 55%;
 	width: 100%;
 	border-radius: 13px;
 }
@@ -102,5 +102,5 @@ html, body {
 	color: #880000;
 	font-size: 11px;
 	text-align: center;
-	margin-top: 30%;
+	margin-top: 40%;
 }

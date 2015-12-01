@@ -13,6 +13,7 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="register.css">
+<script type="text/javascript" src="md5.js"></script>
 
 <body>
 <div class="container">
@@ -21,12 +22,15 @@
 			<p>SIGN UP</p>
 		</div>
 		<div class="login">
-			<form class="login-input" action="register.php" method="post">
+			<form class="login-input" action="register.php" method="post"  onsubmit="encrypt_register()">
 				<div class="input-box">
 					<input class="input-style" type="text" name="username" placeholder = "username"><br>
 				</div>
 				<div class="input-box">
-					<input class="input-style" type="password" name="password" placeholder = "password"><br>
+					<input id="key" class="input-style" type="password" name="password" placeholder = "password"><br>
+				</div>
+				<div class="input-box">
+					<input id="key_confirm" class="input-style" type="password" name="password_confirm" placeholder = "password confirm"><br>
 				</div>
 				<div>
 					<input class="button-style" type="submit" value="UP">
@@ -37,6 +41,7 @@
 					
 					$username = $_POST['username'];
 					$password = $_POST['password'];
+					$password_confirm = $_POST['password_confirm'];
 						
 					if (empty($username)) {
 				
@@ -52,34 +57,13 @@
 							  (strlen($password) != strlen(filter_var($password, FILTER_SANITIZE_EMAIL)))) {
 						
 						echo "<p class = 'warning'>密码不合规范</p>";
+					} elseif ($password != $password_confirm) {
+
+						echo "<p class = 'warning'>两次输入密码不一致</p>";
 					} else {
 						
-						$username = filter_var($username, FILTER_SANITIZE_EMAIL);
 						connectDB();
-						
-						$password = password_hash($password, PASSWORD_DEFAULT);
-						
-						$result = mysql_query("SELECT username FROM blog_user WHERE username = '$username'");
-						$result = mysql_fetch_assoc($result);
-						
-						if ($username == $result['username']) {
-						
-							echo "<p class = 'warning'>该用户名已被注册</p>";
-						} else {
-						
-							$username = strval($username);
-							$password = strval($password);
-							
-							mysql_query("INSERT INTO blog_user(username, password) VALUES ('$username', '$password')");
-						
-							if (mysql_errno()) {
-						
-								echo mysql_error();
-							} else {
-						
-								header('Location: login.php');
-							}
-						}
+						registerVerify(strval($username), strval($password));
 					}
 				}
 			?>
