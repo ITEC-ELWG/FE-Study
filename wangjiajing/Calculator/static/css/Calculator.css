@@ -1,0 +1,52 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: #FEFFA5;
+}
+
+.input {
+    width: 310px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 30px;
+    font-family: SimHei;
+    border: 1px solid #000000;
+    text-align: right;
+}
+
+.null,
+.symbol,
+.num,
+.dot,
+.equal {
+    width: 70px;
+    height: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 20px;
+    font-family: SimHei;
+    border: 1px solid #000000;
+    text-align: center;
+    vertical-align: medium;
+    margin-top: 2px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+
+.null {
+    background-color: #FEFFA5;
+    border: 0px;
+}
+
+.symbol {
+    background-color: #DAD6DD;
+}
+
+.equal {
+    background-color: #FF864F;
+    color: #000000;
+}
