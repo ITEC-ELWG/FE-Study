@@ -28,31 +28,30 @@ $(document).ready(function() {
         }
     }
 
-    //移动
+     //移动
     var move = function() {
-        for (var i = 0; i < 9; i++) {
-            $(".block")[i].onclick = function() {
-                var that = $(this);
-                var move0 = $(".move")[0];
-                if (canmove(this)) {
-                    var temp = this.innerHTML;
-                    this.innerHTML = "";
-                    move0.innerHTML = temp;
-                    that.addClass("move");
-                    $(move0).removeClass("move");
-                }
-            }
+        var that = $(this);
+        var move0 = $(".move")[0];
+        if (canmove(this)) {
+            var temp = this.innerHTML;
+            this.innerHTML = "";
+            move0.innerHTML = temp;
+            that.addClass("move");
+            $(move0).removeClass("move");
         }
     }
-    move();
+
+    for (var i = 0; i < 9; i++) {
+        $(".block")[i].onclick = move;
+    }
 
     //提示赢了
     var win = function() {
         for (var i = 0; i < 8; i++) {
-                if ($(".block")[i].innerHTML != i + 1) {
-                    return;
-                }
+            if ($(".block")[i].innerHTML != i + 1) {
+                return;
             }
+        }
         alert("You win!");
     }
     win();
