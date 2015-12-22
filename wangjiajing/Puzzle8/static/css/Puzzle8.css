@@ -7,7 +7,7 @@ body {
 }
 
 .block {
-	width: 70px;
+    width: 70px;
     height: 70px;
     background-color: #FEFFA5;
     color: #000000;
@@ -23,13 +23,16 @@ body {
 }
 
 .move {
-	background-color: #FAA75F;
+    background-color: #FAA75F;
+}
+
+.text {
+    border: 1px solid #000000;
 }
 
 .input {
-	width: 70px;
+    width: 70px;
     height: 30px;
-    border: 1px solid #000000;
     background-color: #FFFFFF;
     color: #000000;
     font-size: 20px;
@@ -39,15 +42,5 @@ body {
     margin-top: 5px;
 }
 
-.reset {
-	width: 70px;
-    height: 30px;
-    background-color: #FFFFFF;
-    color: #000000;
-    font-size: 20px;
-    font-family: SimHei;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 5px;
-}
+
 }
