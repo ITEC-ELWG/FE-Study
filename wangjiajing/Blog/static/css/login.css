@@ -1,0 +1,175 @@
+        body {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute; 
+            background-color: #FEFFA5;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .login {
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            margin-top: 50px;
+            margin-right: 633px;
+            margin-left: 633px;
+        }
+        
+        .username {
+            font-size: 30px;
+            width: 300px;
+            height: 50px;
+            margin-top: 50px;
+            margin-right: 533px;
+            margin-bottom: 0px;
+            margin-left: 533px;
+            background-color: #FAFBC2;
+        }
+        
+        .password {
+            font-size: 30px;
+            width: 300px;
+            height: 50px;
+            margin-top: 20px;
+            margin-right: 533px;
+            margin-bottom: 0px;
+            margin-left: 533px;
+            background-color: #FAFBC2;
+        }
+        
+        .loginBtn {
+            width: 300px;
+            height: 50px;
+            background-color: #FFC835;
+            margin-top: 20px;
+            margin-right: 533px;
+            margin-bottom: 0px;
+            margin-left: 533px;
+            border: 0px;
+            padding: 0px;
+        }
+        
+        h5 {
+            font-size: 30px;
+            font-family: SimHei;
+            text-align: center;
+            color: #000000;
+            white-space: pre;
+            margin-top: 2px;
+            margin-right: 50px;
+            margin-bottom: 2px;
+            margin-left: 50px;
+        }
+        
+        .titleBk {
+            height: 60px;
+            background-color: #FFE0AA;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .title {
+            height: 60px;
+            width: 300px;
+            line-height: 60px;
+            font-size: 40px;
+            font-family: SimHei;
+            color: #000000;
+            white-space: pre;
+            float: left;
+            margin-left: 200px;
+        }
+        
+        .classifyBk {
+            line-height: 60px;
+            margin-left: 950px;
+        }
+        
+        .classify {
+            font-size: 18px;
+            font-family: SimHei;
+            text-align: center;
+            color: #000000;
+            white-space: pre;
+            display: inline;
+            padding: 5px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .study {
+            margin-top: 0px;
+            margin-right: 200px;
+            margin-bottom: 0px;
+            margin-left: 200px;
+        }
+        
+        .left {
+            float: left;
+            width: 150px;
+            height: 170px;
+            margin-top: 5px;
+        }
+        
+        .date {
+            padding: 0px;
+            margin: 0px;
+            color: #000000;
+            font-size: 16px;
+            font-family: SimHei;
+            text-align: left;
+            white-space: pre;
+        }
+        
+        .label {
+            padding: 3px;
+            margin: 1px;
+            background-color: #6D0875;
+            color: #FFFFFF;
+            font-size: 15px;
+            font-family: SimHei;
+            text-align: center;
+            white-space: pre;
+        }
+        
+        .list {
+            font-size: 20px;
+            font-family: SimHei;
+            text-align: center;
+            color: #000000;
+            white-space: pre;
+        }
+        
+        .loadBtn {
+            width: 1025px;
+            height: 50px;
+            background-color: #FFC835;
+            margin-top: 0px;
+            margin-right: 200px;
+            margin-bottom: 0px;
+            margin-left: 200px;
+            border: 0px;
+            padding: 0px;
+        }
+        
+        .copyrightBk {
+            background-color: grey;
+            margin-top: 20px;
+        }
+        
+        .copyright {
+            font-size: 15px;
+            font-family: SimHei;
+            text-align: center;
+            color: #FFFFFF;
+            white-space: pre;
+            margin-bottom: 0px;
+        }
