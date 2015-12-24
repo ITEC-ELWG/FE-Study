@@ -1,78 +1,121 @@
 var buttons = document.getElementsByClassName("button");
 var input = document.getElementsByClassName("input");
 var symbol = document.getElementsByClassName("symbol");
+var equal = document.getElementsByClassName("equal");
 var str = "";
+var btnLen = buttons.length;
+var inputLen = input[0].value.length;
+var inputArr = new Array;
+var sign = "";
 
 //显示
-var show = function() {
-    var btnlen = buttons.length;
-    for (var i = 0; i < btnlen; i++) {
-        buttons[i].onclick = function() {
-            str += this.innerHTML.toString();
+//实现不在数字前面显示 0，如不会显示 0023这样的数字，即使输入 0023，也只显示 23
+var link = function() {
+    var strLen = str.length + 1;
+    str += this.innerHTML.toString();
+    for (var i = 0; i < strLen; i++) {
+        if (str[i] == 0 && str[i + 1] >= 0 && str[i + 1] <= 9) {
+            continue;
+        } else {
+            str = str.substring(i, strLen);
             input[0].value = str;
-        };
-    };
-};
+            return;
+        }
+    }
+}
+
+var show = function() {
+    for (var i = 0; i < btnLen; i++) {
+        if (buttons[i].innerHTML >= 0 && buttons[i].innerHTML <= 9 || buttons[i].innerHTML == ".") {
+            buttons[i].onclick = link;
+        } else {
+            str = "";
+        }
+    }
+}
 show();
 
 //清零
 var clear = function() {
-    symbol[1].onclick = function() {
-        input[0].value = 0;
-        str = "";
-    };
-};
-clear();
+    input[0].value = 0;
+    str = "";
+    sign = "";
+}
+
+var clearAct = function() {
+    symbol[1].onclick = clear;
+}
+clearAct();
 
 //百分比
 var percent = function() {
-    buttons[0].onclick = function() {
-    	if (isNaN(input[0].value)) {
-    		alert("请输入一个数字！");
-    	} else{
+    if (isNaN(input[0].value)) {
+        alert("请输入一个数字！");
+    } else {
         str = input[0].value * 100 + buttons[0].innerHTML;
         input[0].value = str;
-        str = "";
     }
-    };
-};
-percent();
+    str = "";
+    sign = "";
+}
 
-//基本运算
+var percentAct = function() {
+    buttons[0].onclick = percent;
+}
+percentAct();
+
+//不可以不输入数字就输入乘除号，但可以输入正负号，且一次计算两个数
+for (var i = 2; i < 6; i++) {
+    symbol[i].onclick = function() {
+        inputArr[0] = input[0].value;
+        if (inputArr[0] == "" && this.innerHTML == symbol[4].innerHTML) {
+            input[0].value = "-";
+            str = "-";
+        } else if (inputArr[0] == "" && this.innerHTML == symbol[5].innerHTML) {
+            input[0].value = "+";
+            str = "+";
+        } else if (sign != "") {
+            alert("这是一个计算两个数的计算器！");
+        } else if ((this.innerHTML == symbol[2].innerHTML || this.innerHTML == symbol[3].innerHTML) && inputArr[0] == "") {
+            alert("请输入正确的表达式！");
+        } else {
+            sign = this;
+            str = "";
+        }
+
+    }
+
+}
+
+//两个数的基本运算
 var calculate = function() {
-    //var inputlen = input[0].value.length;
-    var equal = document.getElementsByClassName("equal");
+    inputArr[1] = input[0].value;
 
-    equal[0].onclick = function() {
-        for (var i = 1; i < input[0].value.length; i++) {
-            var num1 = parseFloat(input[0].value.substring(0, i));
-            var num2 = parseFloat(input[0].value.substring(i + 1, input[0].value.length));
-
-            if ((input[0].value.substring(0, i) == symbol[2].innerHTML) || (input[0].value.substring(0, i) == symbol[3].innerHTML)) {
-            	alert("请输入正确的表达式！");
-            } else{
-            switch (input[0].value[i]) {
-                case symbol[2].innerHTML:
-                    if (num2 == 0) {
-                        alert("除数不能为0！");
-                    } else {
-                        str = (num1 / num2).toString();
-                    }
-                    break;
-                case symbol[3].innerHTML:
-                    str = (num1 * num2).toString();
-                    break;
-                case symbol[4].innerHTML:
-                    str = (num1 - num2).toString();
-                    break;
-                case symbol[5].innerHTML:
-                    str = (num1 + num2).toString();
-                    break;
+    switch (sign.innerHTML) {
+        case symbol[2].innerHTML:
+            if (inputArr[1] == 0) {
+                alert("除数不能为0！");
+            } else {
+                str = (inputArr[0] / inputArr[1]).toString();
             }
-        }
-        }
-        input[0].value = str;
-        str = "";
-    };
-};
-calculate();
+            break;
+        case symbol[3].innerHTML:
+            str = (inputArr[0] * inputArr[1]).toString();
+            break;
+        case symbol[4].innerHTML:
+            str = (inputArr[0] - inputArr[1]).toString();
+            break;
+        case symbol[5].innerHTML:
+            str = (parseInt(inputArr[0]) + parseInt(inputArr[1])).toString();
+            break;
+    }
+
+    input[0].value = str;
+    str = "";
+    sign = "";
+}
+
+var calculateAct = function() {
+    equal[0].onclick = calculate;
+}
+calculateAct();
