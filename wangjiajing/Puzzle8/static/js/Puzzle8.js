@@ -1,17 +1,24 @@
 $(document).ready(function() {
     //生成随机数组
     var getrandom = function() {
-        var array = new Array(1, 2, 3, 4, 5, 6, 7, 8);
+        var array = new Array(4, 5, 3, 1, 9, 8, 7, 6, 2);
         var randomsort = function() {
             return Math.random() > 0.5 ? -1 : 1;
-        };
+        }
         return array.sort(randomsort);
-    };
+    }
     var arr = getrandom();
     var getrandomshow = function() {
-        for (var i = 0; i < 8; i++) {
-            $(".block")[i].innerHTML = arr[i];
+        var move0 = $($(".move")[0]);
+        for (var i = 0; i < 9; i++) {
+            var blocki = $($(".block")[i]);
+            blocki.html(arr[i]);
+            if (blocki.html() == 9) {
+                blocki.html("");
+                blocki.addClass("move");
+            }
         }
+        move0.removeClass("move");
     }
     getrandomshow();
 
@@ -28,16 +35,16 @@ $(document).ready(function() {
         }
     }
 
-     //移动
+    //移动
     var move = function() {
         var that = $(this);
-        var move0 = $(".move")[0];
+        var move0 = $($(".move")[0]);
         if (canmove(this)) {
             var temp = this.innerHTML;
-            this.innerHTML = "";
-            move0.innerHTML = temp;
+            that.html("");
+            move0.html(temp);
             that.addClass("move");
-            $(move0).removeClass("move");
+            move0.removeClass("move");
         }
     }
 
@@ -48,7 +55,8 @@ $(document).ready(function() {
     //提示赢了
     var win = function() {
         for (var i = 0; i < 8; i++) {
-            if ($(".block")[i].innerHTML != i + 1) {
+            var blocki = $($(".block")[i]);
+            if (blocki.html() != i + 1) {
                 return;
             }
         }
