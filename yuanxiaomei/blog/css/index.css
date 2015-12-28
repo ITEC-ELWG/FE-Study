@@ -25,7 +25,23 @@ header {
     width: 300px;
     float: left;
 }
-
+.my_writing{
+    margin-left: 50px;
+    padding: 0;
+}
+.my_writing .essay_list,.my_writing.paragraph{
+    /*height: 200px;*/
+    /*line-height: 200px;*/
+}
+.essay_list {
+    position: absolute;
+    margin: 0;
+    width: 150px;
+    height: auto;
+}
+.paragraph{
+    margin-left:180px;
+}
 .my_note{
     font-size: 20px;
 }
@@ -64,56 +80,21 @@ header {
     font-size: 35px;
 
 }
-.menu {
-    position: fixed;
-    width: 300px;
-    margin-top: 0;
-    padding-top: 200px;
-}
-.my_menu{
-    list-style-type: none;
-}
-.start {
-    font-size: 18px;
-    color: #333333;
-    margin-left: -20px;
-    line-height: 200%;
-}
+
 .my_note {
     color: #53e3a6;
     text-decoration: none;
 }
 
-.my_writing{
-    margin-top: 0;
-    margin-left: 240px;
-    padding: 0;
-
-}
-
-.essay_list {
-
-    margin-top: -5px;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 50px;
-
-}
-
-.paragraph {
-    padding-left: 200px;
-    line-height: 140%;
-}
-
 .time {
+    height: 20px;
     color: black;
-    font-size: 22px;
+    font-size: 16px;
 
 }
 
 .wirting {
     color: #53e3a6;
-    margin-bottom: -3px;
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -144,10 +125,7 @@ header {
     text-decoration: none;
 }
 .footer {
-    font-size: 13px;
-    font-size: 0.8125rem;
-    line-height: 16px;
-    line-height: 1rem;
+
     padding-top: 40px;
     padding-bottom: 40px;
     color: #ffffff;
