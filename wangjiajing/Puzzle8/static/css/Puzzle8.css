@@ -7,8 +7,8 @@ body {
 }
 
 .block {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background-color: #FEFFA5;
     color: #000000;
     font-size: 20px;
@@ -17,9 +17,9 @@ body {
     vertical-align: middle;
     padding: 0px;
     margin-top: 0px;
-    margin-right: -4px;
+    margin-right: -2px;
     margin-bottom: 0px;
-    margin-left: -4px;
+    margin-left: -2px;
 }
 
 .move {
@@ -39,7 +39,12 @@ body {
     font-family: SimHei;
     text-align: center;
     vertical-align: middle;
-    margin-top: 5px;
 }
 
+.matrix {
+    float: left;
+}
+
+.right {
+    margin-left: 500px;
 }
