@@ -1,32 +1,39 @@
 $(document).ready(function() {
     var n;
+    var inputArr = $(".input");
+    var matrix = $(".matrix");
 
     //重置
-    $(".input")[1].onclick = function() {
+    inputArr[1].onclick = function() {
         //先清除再生成
-        $(".matrix").empty();
-        n = parseInt($(".input")[0].value);
+        matrix.empty();
+        n = parseInt(inputArr[0].value);
         if (isNaN(n)) {
             alert("请输入n!");
         } else if (n <= 2 || n >= 10) {
             alert("n的取值应为（2<n<10）!");
         } else {
             generate();
+            var blockArr = $(".block");
             var arr = getrandom();
             getrandomshow(arr);
-            for (var i = 0; i < n * n; i++) {
-                $(".block")[i].onclick = move;
-            }
+            // for (var i = 0; i < n * n; i++) {
+            //     blockArr[i].onclick = move;
+            // }
+            blockArr.each(function(i) {
+                this.onclick = move;
+            });
         }
     }
 
     //生成n*n的棋盘
     var generate = function() {
+        var blockArr = $(".block");
         for (var i = 0; i < n; i++) {
             var rowStr = "";
 
             rowStr += '<div class="row' + i + '">' + '</div>';
-            $(".matrix").append(rowStr);
+            matrix.append(rowStr);
             for (var j = 0; j < n; j++) {
                 var blockStr = "";
 
@@ -34,7 +41,7 @@ $(document).ready(function() {
                 $(".row" + i).append(blockStr);
             };
         };
-        $($(".block")[n * n - 1]).addClass("move");
+        $(blockArr[n * n - 1]).addClass("move");
     }
 
     //生成随机数组
@@ -52,31 +59,50 @@ $(document).ready(function() {
     //将随机数组值赋给棋盘
     var getrandomshow = function(arr) {
         var move0 = $($(".move")[0]);
-        for (var i = 0; i < n * n; i++) {
-            var blocki = $($(".block")[i]);
+        // for (var i = 0; i < n * n; i++) {
+        //     var blocki = $($(".block")[i]);
+        //     blocki.html(arr[i] + 1);
+        //     if (blocki.html() == n * n) {
+        //         blocki.html("");
+        //         blocki.addClass("move");
+        //     }
+        // }
+        var blockArr = $(".block");
+        blockArr.each(function(i) {
+            var blocki = $(this);
             blocki.html(arr[i] + 1);
             if (blocki.html() == n * n) {
                 blocki.html("");
                 blocki.addClass("move");
             }
-        }
+        });
         if (move0.html() != "") {
             move0.removeClass("move");
         }
-
     }
 
     //判断点击的块能不能移动
     var canmove = function(cur) {
+        var moveArr = $(".move");
+        var blockArr = $(".block");
         for (var i = 0; i < n * n; i++) {
-            if ($(".block")[i] == cur) {
-                if ($(".block")[i - n] == $(".move")[0] || $(".block")[i - 1] == $(".move")[0] || $(".block")[i + 1] == $(".move")[0] || $(".block")[i + n] == $(".move")[0]) {
+            if (blockArr[i] == cur) {
+                if (blockArr[i - n] == moveArr[0] || blockArr[i - 1] == moveArr[0] || blockArr[i + 1] == moveArr[0] || blockArr[i + n] == moveArr[0]) {
                     return true;
                 } else {
                     return false;
                 }
             }
         }
+        // blockArr.each(function(i){
+        //     if (this == cur) {
+        //         if (blockArr[i - n] == moveArr[0] || blockArr[i - 1] == moveArr[0] || blockArr[i + 1] == moveArr[0] || blockArr[i + n] == moveArr[0]) {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     }
+        // });
     }
 
     //移动
@@ -93,8 +119,9 @@ $(document).ready(function() {
 
     //提示赢了
     var win = function() {
+        var blockArr = $(".block");
         for (var i = 0; i < n * n - 1; i++) {
-            var blocki = $($(".block")[i]);
+            var blocki = $(blockArr[i]);
             if (blocki.html() != i + 1) {
                 return;
             }
@@ -108,43 +135,31 @@ $(document).ready(function() {
 
     //键盘移动
     $(document).keyup(function(e) {
+        var blockArr = $(".block");
+        var moveArr = $(".move");
         var move0 = $($(".move")[0]);
 
-        for (var i = 0; i < n * n; i++) {
-            if ($(".move")[0] == $(".block")[i]) {
+        // for (var i = 0; i < n * n; i++) {
+        //     if (moveArr[0] == blockArr[i]) {
+
+        blockArr.each(function(i) {
+            if (moveArr[0] == this) {
                 switch (e.keyCode) {
                     case 37:
-                        var left = $($(".block")[i - 1]);
-                        if (i != 0) {
-                            move0.html(left.html());
-                            left.html("");
-                            left.addClass("move");
-                            move0.removeClass("move");
-                            return;
-                        };
+                        var right = $(blockArr[i + 1]);
+                        for (var j = 1; j <= n; j++) {
+                            if (i == n * j - 1) {
+                                return;
+                            }
+                        }
+                        move0.html(right.html());
+                        right.html("");
+                        right.addClass("move");
+                        move0.removeClass("move");
+                        return;
                         break;
                     case 38:
-                        var top = $($(".block")[i - n]);
-                        if (i >= n) {
-                            move0.html(top.html());
-                            top.html("");
-                            top.addClass("move");
-                            move0.removeClass("move");
-                            return;
-                        };
-                        break;
-                    case 39:
-                        var right = $($(".block")[i + 1]);
-                        if (i != n * n - 1) {
-                            move0.html(right.html());
-                            right.html("");
-                            right.addClass("move");
-                            move0.removeClass("move");
-                            return;
-                        };
-                        break;
-                    case 40:
-                        var bottom = $($(".block")[i + n]);
+                        var bottom = $(blockArr[i + n]);
                         if (i < n * n - n) {
                             move0.html(bottom.html());
                             bottom.html("");
@@ -153,8 +168,35 @@ $(document).ready(function() {
                             return;
                         };
                         break;
+                    case 39:
+                        var left = $(blockArr[i - 1]);
+                        for (var j = 0; j < n; j++) {
+                            if (i == n * j) {
+                                return;
+                            }
+                        }
+                        move0.html(left.html());
+                        left.html("");
+                        left.addClass("move");
+                        move0.removeClass("move");
+                        return;
+                        break;
+                    case 40:
+                        var top = $(blockArr[i - n]);
+                        if (i >= n) {
+                            move0.html(top.html());
+                            top.html("");
+                            top.addClass("move");
+                            move0.removeClass("move");
+                            return;
+                        };
+                        break;
                 }
             }
-        }
+        });
+
+        //     }
+        // }
+
     });
 });
