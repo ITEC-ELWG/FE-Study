@@ -1,10 +1,4 @@
-<?php
-if(!isset($_SESSION['userId'])){
-    if(!isset($_COOKIE['userId'])){
-        echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=login.php'>";
-    }
-}
-?>
+
 <!DOCTYPE html>
 <html>
 <head>

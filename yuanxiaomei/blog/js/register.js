@@ -12,7 +12,7 @@ window.onload = function(){
         var s=true;
         //验证账户名是否为空
         if(account.value==""){
-            account.nextSibling.innerHTML="账户名不能为空";
+            account.nextSibling.innerHTML="账户不能为空";
             s=false;
         }else{
             account.nextSibling.innerHTML="";
