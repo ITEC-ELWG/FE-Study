@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-weight: 300;
 }
+
 body {
     margin: 0 auto;
     text-align: center;
@@ -11,11 +12,12 @@ body {
     background-color: #53e3a6;
 
 }
-.h_title{
+
+.h_title {
     font-size: 50px;
 }
 
-.field{
+.field {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -34,12 +36,14 @@ body {
     transition-duration: 0.25s;
     font-weight: 300;
 }
+
 .field:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
+
 .field:focus {
     background-color: white;
     width: 300px;
-    color:#424f71;
+    color: #424f71;
 }
 

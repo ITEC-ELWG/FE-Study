@@ -1,9 +1,10 @@
-body{
+body {
     background-color: #ffffff;
     padding: 0;
     margin: 0 0 0 0;
     border: 0;
 }
+
 header {
     background-color: #53e3a6;
     width: 100%;
@@ -12,11 +13,13 @@ header {
     padding: 0;
     border: 0;
 }
-.my_index{
+
+.my_index {
     width: 100%;
     display: inline-block;
 }
-.brand{
+
+.brand {
     color: #333333;
     font-size: 40px;
     margin-left: 0;
@@ -25,39 +28,47 @@ header {
     width: 300px;
     float: left;
 }
-.my_writing{
+
+.my_writing {
     line-height: 20px;
     margin-left: 50px;
     padding: 0;
 }
-.my_writing .essay_list,.my_writing.paragraph{
+
+.my_writing .essay_list, .my_writing.paragraph {
     /*height: 200px;*/
     /*line-height: 200px;*/
 }
+
 .essay_list {
     position: absolute;
     margin: 0;
     width: 150px;
     height: auto;
 }
-.paragraph{
-    margin-left:180px;
+
+.paragraph {
+    margin-left: 180px;
 }
-.my_note{
+
+.my_note {
     font-size: 20px;
 }
-.my_label{
+
+.my_label {
     margin-right: 100px;
     float: right;
 }
-.my_blog{
+
+.my_blog {
     color: #333333;
     padding-left: 60px;
     text-decoration: none;
     display: inline-block;
-    margin:0 auto;
+    margin: 0 auto;
 }
-.label_title{
+
+.label_title {
     color: #ffffff;
     font-size: 20px;
     text-decoration: none;
@@ -67,15 +78,18 @@ header {
     padding: 8px 10px;
     border-radius: 0.5em;
 }
+
 .label_title:hover {
     background-color: #aae3d8;
     transition-duration: 0.5s;
 }
+
 .pic {
     width: 20px;
     height: 20px;
     float: left;
 }
+
 .head {
     color: white;
     font-size: 35px;
@@ -112,19 +126,21 @@ header {
 .list:hover {
     background-color: #424f71;
 }
-.more{
+
+.more {
     text-align: center;
     background-color: #53e3a6;
     padding-top: 55px;
     font-size: 40px;
 
-
 }
-.more_out{
+
+.more_out {
     text-align: center;
     color: #333333;
     text-decoration: none;
 }
+
 .footer {
 
     padding-top: 40px;
@@ -134,11 +150,13 @@ header {
     text-transform: uppercase;
     font-weight: 700;
 }
+
 .footer p {
     margin: 0;
     padding-top: 2px;
 }
-.copyright{
+
+.copyright {
     font-size: 20px;
     text-align: center;
 

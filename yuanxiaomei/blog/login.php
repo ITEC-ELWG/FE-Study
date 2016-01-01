@@ -1,7 +1,4 @@
 <?php
-session_start();
-?>
-<?php
 if (isset($_POST['action']) && $_POST['action'] == 'submitted') {
     $dbhost = "localhost";
     $dbuser = "root";
@@ -22,16 +19,18 @@ if (isset($_POST['action']) && $_POST['action'] == 'submitted') {
         $dbc = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
         $sql = "SELECT * FROM user WHERE account=$account";
         $data = mysqli_query($dbc, $sql);
-        if (mysqli_num_rows($data) == 0 ){
-            echo"没有这个账号";
+        if (mysqli_num_rows($data) == 0) {
+            echo "没有这个账号";
             echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=login.php'>";
         } else {
             $pwd = "SELECT * FROM user WHERE password =$password";
-            $result = mysqli_query($dbc,$pwd);
+            $result = mysqli_query($dbc, $pwd);
             if (mysqli_num_rows($result) == 0) {
                 echo "密码错误";
                 echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=login.php'>";
             } else {
+                setcookie("account", $account, time() + 3600);
+                setcookie("password", $password, time() + 3600);
                 echo "登录成功";
                 echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=index.php'>";
             }
