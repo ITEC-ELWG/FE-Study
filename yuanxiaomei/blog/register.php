@@ -51,9 +51,9 @@ if (isset($_POST['action']) && $_POST['action'] == 'submitted') {
     <html>
     <head>
         <meta charset="utf-8">
-        <title>Login</title>
-        <meta name="description" content="Login">
-        <meta name="joyyuanxm" content="login for my index">
+        <title>register</title>
+        <meta name="description" content="register">
+        <meta name="joyyuanxm" content="register">
         <link rel="stylesheet" type="text/css" href="css/register.css"/>
         <link rel="shortcut icon" href="images/title.png">
     </head>

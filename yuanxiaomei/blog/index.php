@@ -4,6 +4,7 @@
 <head>
     <title>my blog</title>
     <meta charset="utf-8"/>
+    <link rel="shortcut icon" href="images/title.png">
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
 
@@ -44,7 +45,7 @@
             </aside>
             <div class="paragraph">
                 <h2 class="title">学习笔记（一）</h2>
-                <p>123</p>
+                <p>2333333333333333333333333333333333333333333333<br>23333333<br>2333<br>233<br></p>
             </div>
         </article>
         <hr/>

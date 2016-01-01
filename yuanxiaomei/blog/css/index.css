@@ -26,6 +26,7 @@ header {
     float: left;
 }
 .my_writing{
+    line-height: 20px;
     margin-left: 50px;
     padding: 0;
 }
@@ -67,7 +68,7 @@ header {
     border-radius: 0.5em;
 }
 .label_title:hover {
-    background-color: #4007e3;
+    background-color: #aae3d8;
     transition-duration: 0.5s;
 }
 .pic {
@@ -87,7 +88,7 @@ header {
 }
 
 .time {
-    height: 20px;
+    line-height: 20px;
     color: black;
     font-size: 16px;
 
