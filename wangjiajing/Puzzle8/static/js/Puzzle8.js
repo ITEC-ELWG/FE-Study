@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     //生成随机数组
     function getRandom(data) {
-        arr = eval('(' + data + ')');
+        arr = JSON.parse(data);
         getRandomShow(arr);
     }
 
