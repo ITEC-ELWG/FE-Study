@@ -4,6 +4,7 @@ $(document).ready(function() {
     var inputArr = $(".input");
     var matrix = $(".matrix");
     var isCanMove;
+    var arr;
 
     //重置
     inputArr[1].onclick = function() {
@@ -18,8 +19,7 @@ $(document).ready(function() {
         } else {
             generate();
             blockArr = $(".block");
-            var arr = getRandom();
-            getRandomShow(arr);
+            $.get("http://localhost/Puzzle8/php/puzzle8.php?num=" + n).done(getRandom);
             moveArr = $(".move");
             move0 = $($(".move")[0]);
             blockArr.each(function(i) {
@@ -46,25 +46,31 @@ $(document).ready(function() {
     }
 
     //生成随机数组
-    var getRandom = function() {
-        var array = new Array;
-        for (var i = 0; i < n * n; i++) {
-            array[i] = i;
-        };
+    // var getRandom = function() {
+    //     var array = new Array;
+    //     for (var i = 0; i < n * n; i++) {
+    //         array[i] = i;
+    //     };
 
-        function shuffle(array) {
-            var curIndex = array.length,
-                randomIndex, temp;
-            while (curIndex !== 0) {
-                randomIndex = Math.floor(Math.random() * curIndex);
-                curIndex--;
-                temp = array[curIndex];
-                array[curIndex] = array[randomIndex];
-                array[randomIndex] = temp;
-            };
-        }
-        shuffle(array);
-        return array;
+    //     function shuffle(array) {
+    //         var curIndex = array.length,
+    //             randomIndex, temp;
+    //         while (curIndex !== 0) {
+    //             randomIndex = Math.floor(Math.random() * curIndex);
+    //             curIndex--;
+    //             temp = array[curIndex];
+    //             array[curIndex] = array[randomIndex];
+    //             array[randomIndex] = temp;
+    //         };
+    //     }
+    //     shuffle(array); 
+    //     return array;
+    // }
+
+    //生成随机数组
+    function getRandom(data) {
+        arr = eval('(' + data + ')');
+        getRandomShow(arr);
     }
 
     //将随机数组值赋给棋盘
@@ -180,7 +186,6 @@ $(document).ready(function() {
                     }
                 }
             });
-
         });
     }
 });
