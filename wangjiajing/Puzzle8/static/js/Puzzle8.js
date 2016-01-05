@@ -19,7 +19,7 @@ $(document).ready(function() {
         } else {
             generate();
             blockArr = $(".block");
-            $.get("http://localhost/Puzzle8/php/puzzle8.php?num=" + n).done(getRandom);
+            $.get("php/puzzle8.php?num=" + n).done(getRandom);
             moveArr = $(".move");
             move0 = $($(".move")[0]);
             blockArr.each(function(i) {
