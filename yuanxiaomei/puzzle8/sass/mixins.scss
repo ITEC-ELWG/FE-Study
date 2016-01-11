@@ -1,0 +1,23 @@
+@mixin inline-block($alignment: $inline-block-alignment) {
+  display: inline-block;
+  @if $alignment and $alignment != none {
+    vertical-align: $alignment;
+  }
+}
+@mixin table-equal($children: li) {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    $childrenEle: li div p a span strong;
+    @if index($childrenEle, $children) {
+        #{$children} {
+            display: table-cell;
+            text-align: center;
+        }
+    }
+    @else {
+        .#{$children} {
+            display: table-cell;
+        }
+    }
+}

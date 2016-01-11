@@ -1,0 +1,14 @@
+@function srem($px,$base:14){
+    @return $px / $base * -1rem; 
+} 
+@function rem($px,$base:14){
+    @return $px / $base * 1rem; 
+} 
+
+@function per($px,$base:14){
+    @return $px / $base; 
+}
+
+@function perc($px,$base:14){
+    @return $px / $base *100%; 
+}
