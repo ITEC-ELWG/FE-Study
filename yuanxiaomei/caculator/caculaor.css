@@ -1,45 +1,71 @@
-h1 {
+
+body {
     text-align: center;
+    background: rgba(92, 255, 188, 0.75);
 }
 
-table {
-    border-spacing: 10px 15px;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #E3EFEC;
-}
+#calculator {
 
-table td {
-    cursor: pointer;
-    width: 20px;
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-}
-
-tr:nth-child(2) td:nth-child(3) {
-    background-color: #ff6269;
-}
-
-tr:nth-child(2) td:nth-child(4) {
-    background-color: #6de769;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
 }
 
 #display {
-    cursor: default;
-    height: 30px;
-    margin-bottom: 20px;
+    width:312px;
+    height:50px;
     text-align: right;
-    background-color: #fafafa;
-    color: #333333;
-    font-size: 25px;
+    font-size: 45px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4px;
+
+}
+input {
+    margin: 3px;
+    border: none;
 }
 
-body {
-    background-color: #53e3a6;
-    font-family: 'Orbitron', sans-serif;
+input, button {
+    outline:none;
 }
+
+.btn_in {
+    width: 72px;
+    height: 72px;
+    border: none;
+    font-size: 20px;
+    background: rgba(15, 255, 94, 0.91);
+    color: #ffffff;
+
+}
+.btn_in:hover {
+    cursor: pointer;
+}
+.on{
+    background-color: #19beff;
+}
+.del{
+    background-color: rgb(255, 94, 178);
+}
+.clear{
+    background-color: rgb(255, 33, 21);
+}
+.num {
+    background: #949494;
+    color: #ffffff;
+
+}
+.equal {
+    background: #ffd624;
+    color: #ffffff;
+}
+
+#down {
+    opacity: 0.4;
+}
+
+#up {
+    opacity: 1;
+}
+
+
