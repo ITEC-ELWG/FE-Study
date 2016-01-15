@@ -1,66 +1,162 @@
-/**
- * Created by JOYyuan on 16/1/14.
- */
-window.onload =function(){
-    var display_in = document.getElementById("display_in");//in
-    var display_out = document.getElementById("display_out");//out
-    var turn = document.getElementById("turn");//开关按键
-    var equal = document.getElementById("equal");//等号按键
-    var AC = document.getElementById("AC");//清零按键
-    var del = document.getElementById("delete");//删除输入按键
-    var add = document.getElementById("add");//+按键
-    var minus = document.getElementById("minus");//-按键
-    var times = document.getElementById("times");//*按键
-    var divide = document.getElementById("divide");//除号按键
-    var percent = document.getElementById("percent");//百分号
-    var numberButton = document.getElementsByClassName("btn");//数字按键
-    var buttons = document.getElementsByTagName("button");
-    var cal = document.getElementsByClassName("cal");
-    var str = "";//显示框中显示字符
-    var operand1 = null;//保存输入的操作数1
-    var operand2 = null;//保存输入的操作数2
-    var operator = null;//保存输入的运算符
-    var res = "";//输入操作数的框保存的字符
 
-   display_in.value = str;
-    display_out.vlaue = res;
-    //开关功能
-    var count =1;
-    turn.onclick = function(){
-        if(count%2 == 1){
-            for(var i = 0;i < buttons.length;i++){
-                if(i != 3)buttons[i].disabled = "true";
+var num_in = "";
+var cal_in = "";
+var res_in = "";
+var num_out = "";
+var cal_out = "";
+//数组对象
+var cal_end = new Array();
+var num_end = new Array();
+var result;
+window.onload = function () {
+    function init() {
+        var inputs;
+        result = document.getElementById('display');
+        inputs = document.getElementsByTagName('input');
+        result.value = "0";
+        num_in = "0";
+        for (var i = 1; i < inputs.length; i++) {
+            inputs[i].onclick = function () {
+                selector(this);
             }
         }
-        else {
-            for(var i = 0;i < buttons.length;i++){
-                if(i != 3)buttons[i].disabled = null;
-            }
-        }
-        display_out.value = "0";
-        display_in.value = "";
-        str = "";
-        res = "0";
-        operand1 = null;
-        operator = null;
-        operand2 = null;
-        count++;
     }
-    //DISPLAY  numbers
-    for (var i = numberButton.length - 1; i >= 0; i--) {
-        numberButton[i].onclick = function() {
-            if(res.indexOf(".")!=-1 && this.innerHTML == ".")return;
-            if(res == "" && this.innerHTML == ".") {
-                res ="0.";
-                display_out.value = res;
+    init();
+}
+function selector(whichpre) {
+    switch (whichpre.className) {
+        case "btn_in num":
+            res_in = "";
+            if (cal_in) {
+                result.value = "";
+                cal_in= "";
+                num_in = "";
+            }
+            if ((whichpre.value == ".") && (num_in[1] == ".")) {
                 return;
             }
-            if (operand1 != null && operator == null) operand1 = null;
-            res = res + this.innerHTML;
-            display_out.value = res;
+            if ((!num_in) && ((whichpre.value) == ".")) {
+                return;
+            }
+
+            else if ((whichpre.value != ".") && (num_in == "0")) {
+                num_in = whichpre.value;
+                ifNumPush();
+                result.value = num_in;
+                return;
+            }
+            else {
+                num_in += whichpre.value;
+                result.value = num_in;
+                ifNumPush();
+            }
+            break;
+        case "btn_in cal":
+            if (res_in) {
+                num_end.push(res_in);
+                num_in = res_in;
+            }
+            if (num_in) {
+                cal_in = whichpre.value;
+                result.value = cal_in;
+                ifCalPush();
+            }
+            break;
+        case "btn_in equal":
+            calculate();
+            break;
+        case "btn_in del":
+            if ((!cal_in) && (!res_in)) {
+                num_in = num_in.substring(0, num_in.length - 1);
+                num_end[num_end.length - 1] = num_in;
+                if (num_in == "") {
+                    num_in = 0;
+                }
+                ifNumPush();
+                result.value = num_in;
+            }
+            break;
+        case "btn_in clear":
+           cal_in = "";
+            num_in = "";
+            res_in = "";
+            lastCal = "";
+            num_end.splice(0, num_end.length);
+            cal_end.splice(0, cal_end.length);
+            result.value = "0";
+            break;
+    }
+}
+function calculate() {
+    if ((!cal_end.length) && (!lastCal)) {
+        if (!num_in) {
+            num_in = "0";
         }
-    };
-
-
-
+        result.value = num_in;
+        return;
+    }
+    else if (cal_end.length) {
+        res_in = num_end[0];
+        if (cal_end.length == num_end.length) {
+            num_end.push(num_end[num_end.length - 1]);
+        }
+        for (var i = 0; i < cal_end.length; i++) {
+           res_in = calselector(res_in, cal_end[i], num_end[i + 1]);
+        }
+    }
+    else {
+        cal_end.push(lastCal);
+        num_end.push(res_in);
+        num_end.push(lastNum);
+        calculate();
+        return;
+    }
+    if (res_in == "Infinity") {
+       res_in = "illegal";
+    }
+    result.value = res_in;
+    num_in = "";
+    num_end.splice(0, num_end.length);
+    cal_end.splice(0, cal_end.length);
+}
+function ifNumPush() {
+    if (num_end.length > cal_end.length) {
+        num_end[num_end.length - 1] = num_in;
+    }
+    else {
+        num_end.push(num_in);
+    }
+    num_out= num_end[num_end.length - 1];
+}
+function ifCalPush() {
+    if (num_end.length > cal_end.length) {
+        cal_end.push(cal_in);
+    }
+    else {
+        cal_end[cal_end.length - 1] = cal_in;
+    }
+   cal_out = cal_end[cal_end.length - 1];
+}
+function calselector(numA, cal, numB) {
+    var res_in = numA + cal + numB;
+    var anum = parseFloat(numA);
+    var bnum = parseFloat(numB);
+    switch (cal) {
+        case "+":
+            res_in = anum + bnum;
+            break;
+        case "-":
+            res_in = anum - bnum;
+            break;
+        case "*":
+            res_in = anum * bnum;
+            break;
+        case "÷":
+            res_in= anum / bnum;
+            break;
+        case "%":
+            res_in = anum / 100;
+            break;
+    }
+    return res_in;
 }

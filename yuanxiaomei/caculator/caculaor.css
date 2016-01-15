@@ -41,6 +41,9 @@ input, button {
 .btn_in:hover {
     cursor: pointer;
 }
+.btn_in:active{
+    background-color: rgba(128, 128, 128, 0.52);
+}
 .on{
     background-color: #19beff;
 }
