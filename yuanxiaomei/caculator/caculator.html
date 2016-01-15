@@ -2,48 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="caculaor.css">
-    <title>caculator</title>
+    <!--初使缩放比例-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"content="text/css" href="caculaor.css">
+    <link rel="shortcut icon" href="caculator.png">
+    <script type="text/javascript"src="js/caculator.js"></script>
+    <title>caculator BY YXM</title>
 </head>
 <body>
 <h1 class="text-center">joyyuan<br />Caculator</h1>
-<table align='center'>
-    <tr>
-        <td colspan='4' id="display">
-            <span></span>
-        </td>
-    </tr>
-    <tr>
-        <td class='btn'>AC</td>
-        <td class='btn'>CE</td>
-        <td class='btn'>%</td>
-        <td class='btn'>÷</td>
-    </tr>
-    <tr>
-        <td class='btn'>7</td>
-        <td class='btn'>8</td>
-        <td class='btn'>9</td>
-        <td class='btn'>X</td>
-    </tr>
-    <tr>
-        <td class='btn'>4</td>
-        <td class='btn'>5</td>
-        <td class='btn'>6</td>
-        <td class='btn'>-</td>
-    </tr>
-    <tr>
-        <td class='btn'>1</td>
-        <td class='btn'>2</td>
-        <td class='btn'>3</td>
-        <td class='btn' rowspan="2">+</td>
-    </tr>
-    <tr>
-        <td class='btn'>0</td>
-        <td class='btn'>.</td>
-        <td class='btn'>=</td>
-    </tr>
-</table>
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script src="js/main.js"></script>
+<div id="calculator">
+    <input type="text" id="display" autofocus >
+    <br />
+
+    <input type="button" class="btn_in on" value="on">
+    <input type="button" class="btn_in del" value="Del">
+    <input type="button" class="btn_in clear" value="AC">
+    <input type="button" class="btn_in cal" value="%">
+    <br />
+
+    <input type="button" class="btn_in num" value="7">
+    <input type="button" class="btn_in num" value="8">
+    <input type="button" class="btn_in num" value="9">
+    <input type="button" class="btn_in cal" value="÷">
+    <br />
+
+    <input type="button" class="btn_in num" value="4">
+    <input type="button" class="btn_in num" value="5">
+    <input type="button" class="btn_in num" value="6">
+    <input type="button" class="btn_in cal" value="*">
+    <br />
+
+    <input type="button" class="btn_in num" value="1">
+    <input type="button" class="btn_in num" value="2">
+    <input type="button" class="btn_in num" value="3">
+    <input type="button" class="btn_in cal" value="-">
+    <br />
+
+    <input type="button" class="btn_in num" value="0">
+    <input type="button" class="btn_in num" value=".">
+    <input type="button" class="btn_in equal" value="=">
+    <input type="button" class="btn_in cal" value="+">
+    <br />
+
+</div>
 </body>
 </html>
