@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <!--初使缩放比例-->
@@ -12,37 +12,40 @@
 <body>
 <h1 class="text-center">joyyuan<br />Caculator</h1>
 <div id="calculator">
-    <input type="text" id="display" autofocus >
+    <div id="screen">
+        <input type="text" class="display" id="displayIn" readonly="readonly">
+        <input type="text" class="display" id="displayOut" readonly="readonly">
+    </div>
+
+    <br />
+    <button class="btn_in on" id="on">on</button>
+    <button class="btn_in del" id="del">del</button>
+    <button class="btn_in clear" id="AC">AC</button>
+    <button class="btn_in percent" id="percent">%</button>
     <br />
 
-    <input type="button" class="btn_in on" value="on">
-    <input type="button" class="btn_in del" value="Del">
-    <input type="button" class="btn_in clear" value="AC">
-    <input type="button" class="btn_in cal" value="%">
-    <br />
+    <button class="btn_in num" >7</button>
+    <button class="btn_in num" >8</button>
+    <button class="btn_in num" >9</button>
+    <button class="btn_in cal"id="divide" >÷</button>
 
-    <input type="button" class="btn_in num" value="7">
-    <input type="button" class="btn_in num" value="8">
-    <input type="button" class="btn_in num" value="9">
-    <input type="button" class="btn_in cal" value="÷">
     <br />
+    <button class="btn_in num" >4</button>
+    <button class="btn_in num" >5</button>
+    <button class="btn_in num" >6</button>
+    <button class="btn_in cal"id="multiply" >*</button>
 
-    <input type="button" class="btn_in num" value="4">
-    <input type="button" class="btn_in num" value="5">
-    <input type="button" class="btn_in num" value="6">
-    <input type="button" class="btn_in cal" value="*">
     <br />
+    <button class="btn_in num" >1</button>
+    <button class="btn_in num" >2</button>
+    <button class="btn_in num" >3</button>
+    <button class="btn_in cal"id="minus" >-</button>
 
-    <input type="button" class="btn_in num" value="1">
-    <input type="button" class="btn_in num" value="2">
-    <input type="button" class="btn_in num" value="3">
-    <input type="button" class="btn_in cal" value="-">
     <br />
-
-    <input type="button" class="btn_in num" value="0">
-    <input type="button" class="btn_in num" value=".">
-    <input type="button" class="btn_in equal" value="=">
-    <input type="button" class="btn_in cal" value="+">
+    <button class="btn_in num" >0</button>
+    <button class="btn_in num" id="num">.</button>
+    <button class="btn_in calculate" id="equal">=</button>
+    <button class="btn_in cal"id="plus" >+</button>
     <br />
 
 </div>
