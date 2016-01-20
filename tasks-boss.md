@@ -9,10 +9,23 @@ ELWG前端学习小组任务（副本）
 
 ### ELWG Life
 
-* 了解MVC设计模式的概念
-* 学习[Pure](http://purecss.io/) CSS框架（左边目录中的Base、Grids、Forms、Buttons、Tables、Menus部分）
-* **前期调研分析系统的需求，整理好需求文档，**
-* 【待定】
+#### 需求分析
+
+1. 单页应用，没有任何页面跳转
+2. 需求1
+3. 需求2
+
+#### 要求
+
+* 公共要求
+    * 学习[CodeIgniter 3.x](http://codeigniter.org.cn/user_guide/)框架
+    * 学习REST API，并根据需求分析设计一套API。参考资料：[REST API Tutorial](http://www.restapitutorial.com/)、[阮一峰RESTful API设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+* 前端要求
+    * 根据需求分析，设计该单页应用的**线框图**。推荐使用[ProcessOn](https://www.processon.com/i/56653f6be4b0fd92998feae3)或者Axure画
+    * 调研**至少3款**CSS框架，简要对比分析它们的优劣，并给出你选择其中一款的理由。需要写一份简短的调研报告提交给技术导师。
+    * 【完成上述公共要求和两项前端要求之后，再开放下面具体的技术要求】
+* 后端要求
+    * 【待定】
 
 ## 中级任务副本
 
