@@ -37,7 +37,7 @@ ELWG前端学习小组任务（副本）
 
 * 公共要求
     * 学习[CodeIgniter 3.x](http://codeigniter.org.cn/user_guide/)框架
-    * 学习REST API，并根据需求分析设计一套API，以书面形式提交给技术导师。参考资料：[REST API Tutorial](http://www.restapitutorial.com/)、[阮一峰RESTful API设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+    * 学习REST API，并根据需求分析设计一套API，~~以书面形式提交给技术导师~~直接在[RAP](http://rap.taobao.org/)（可视化API编辑网站）上编辑好了给技术导师查看。参考资料：[REST API Tutorial](http://www.restapitutorial.com/)、[阮一峰RESTful API设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 * 前端要求
     * 根据需求分析，设计该单页应用的**线框图**。推荐使用[ProcessOn](https://www.processon.com/i/56653f6be4b0fd92998feae3)或者Axure画
     * 调研**至少3款**CSS框架，简要对比分析它们的优劣，并给出你选择其中一款的理由。需要写一份简短的调研报告提交给技术导师。
