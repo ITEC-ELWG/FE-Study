@@ -3,12 +3,12 @@
  */
 var num = 3; //默认九宫格
 $(function() {
-    table_layout();
-    put_table_num();
+    initPic();
+    initNum();
     $("button").click(suffleCards);
 });
 
-function table_layout() {
+function initPic() {
     $("table").empty();
     for (var row = 0; row < num; row++) {
         $("<tr></tr>").appendTo("table");
@@ -19,13 +19,13 @@ function table_layout() {
     $("td").click(moveCard);
 }
 
-function put_table_num() {
+function initNum() {
     $.post("request.php", {
         num: num
     }, function(data, status) {
         if (status == "success") {
-            if (data == "fail") {
-                alert("[3,9]");
+            if (data == "dataIllegal") {
+                alert("1<n<10");
             } else {
                 var randomNum = eval(data);
                 for (var i = 0; i < num * num; i++) {
@@ -44,52 +44,52 @@ var suffleCards = function() {
     if (!numSet) {
         numSet = num;
     } else if (!isValid(numSet)) {
-        alert("[3,9]");
+        alert("1<n<10");
         return;
     }
     if (numSet != num) {
         num = parseInt(numSet);
-        table_layout();
+        initPic();
     }
-    put_table_num();
+    initNum();
 }
 
 function isValid(input) {
-    var reg = new RegExp("^[3-9]*$");
+    var reg = new RegExp("^[2-9]*$");
     return reg.test(input);
 }
 
 var moveCard = function() {
     var index = $("td").index($(this));
     for (var i = 1; i < 5; i++) {
-        var surIndex = table_in(index, i);
+        var surIndex = detectContext(index, i);
         if (typeof surIndex !== "undefined") {
             if ($("td").eq(surIndex).hasClass("zero")) {
-                ex_table(index, surIndex);
+                exContent(index, surIndex);
                 return;
             }
         }
     }
 }
 
-function table_in(index, direction) {
+function detectContext(index, direction) {
     switch (direction) {
-        case 1:
+        case 1: //上
             if (index > num - 1) {
                 return index - num;
             }
             break;
-        case 2:
+        case 2: //右
             if (index % num !== num - 1) {
                 return index + 1;
             }
             break;
-        case 3:
+        case 3: //下
             if (index < num * num - num) {
                 return index + num;
             }
             break;
-        case 4:
+        case 4: //左
             if (index % num !== 0) {
                 return index - 1;
             }
@@ -97,24 +97,24 @@ function table_in(index, direction) {
     }
 }
 
-function ex_table(index, indexZero) {
+function exContent(index, indexZero) {
     var indexText = $("td").eq(index).text();
     $("td").eq(index).text("").addClass("zero");
     $("td").eq(indexZero).text(indexText).removeClass("zero");
-    game_pass();
+    isWin();
 }
 
-function game_pass() {
+function isWin() {
     var zeroIndex = $("td").index($(".zero"));
     if (zeroIndex === num * num - 1) {
         var rank = $("td").text();
-        var pass_in = "1";
+        var rankWin = "1";
         for (var i = 2; i < num * num; i++) {
-            var pass_in = pass_in + i;
+            var rankWin = rankWin + i;
         }
-        if (rank === pass_in) {
+        if (rank === rankWin) {
             alert("SUCCEED！");
-            put_table_num();
+            initNum();
         }
     }
 }
@@ -123,9 +123,9 @@ $(document).keydown(function(event) {
     if (k > 36 && k < 41) {
         var zeroIndex = $("td").index($(".zero"));
         var direction = (k == 40) ? 1 : k - 35; //左：k=37 direction=2；上：k=38 direction=3；右：k=39 direction=4；下：k=40 direction=1；
-        var surIndex = table_in(zeroIndex, direction);
+        var surIndex = detectContext(zeroIndex, direction);
         if (typeof surIndex !== "undefined") {
-            ex_table(surIndex, zeroIndex);
+            exContent(surIndex, zeroIndex);
         }
     }
 });
