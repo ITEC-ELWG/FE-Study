@@ -14,6 +14,9 @@
     </script>
     <script src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.pt-BR.js">
     </script>
+    <script type="text/javascript" src="./../../res/js/core-min.js"></script>
+    <script type="text/javascript" src="./../../res/js/enc-base64.js"></script>
+    <script type="text/javascript" src="./../../res/js/hmac-sha1.js"></script>
     <script type="text/javascript" src="./../../res/js/add.js"></script>
 </head>
 
