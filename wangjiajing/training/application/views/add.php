@@ -20,7 +20,7 @@
 <body>
     <div class="container grade">
         <div>
-            <div><a href="./../../" class="close" data-dismiss="alert">&times;</a></div>
+            <div><a href="./../../v2" class="close" data-dismiss="alert">&times;</a></div>
             <h3 class="panel-title">添加通讯录</h3>
             <hr>
         </div>
@@ -85,17 +85,24 @@
                 <div class="form-group">
                     <label for="inputfile" class="col-sm-1 control-label">照片：</label>
                     <div class="col-sm-5">
-                        <input type="file" id="inputfile">
+                        <form method="post" action="http://upload.qiniu.com/" enctype="multipart/form-data">
+                            <input type="file" name="file" id="inputfile" onchange="uploadPicture()">
+                        </form>
                         <p class="help-block">请上传您的照片。</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                <span class="progress-label"></span>
+                            </div>
+                        </div>                  
                     </div>
                 </div>
             </form>
         </div>
         <div class="edit">
-            <a href="./../../">
+            <a href="./../../v2">
                 <button class="btn btn-default">取消</button>
             </a>
-            <a href="./../../">
+            <a href="./../../v2">
                 <button class="btn btn-warning save">保存</button>
             </a>
         </div>

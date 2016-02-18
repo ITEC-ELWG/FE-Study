@@ -9,12 +9,12 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('indexx');
+		$this->load->view('index');
 	}
 
 	public function test()
 	{
-		$this->load->view('test');
+		$this->load->view('indexx');
 
 	}
 }

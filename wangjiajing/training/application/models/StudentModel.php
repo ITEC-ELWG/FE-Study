@@ -35,7 +35,7 @@ class StudentModel extends CI_Model
     {
         $this->db->limit($limit, $offset);
         $this->db->order_by('studentId');
-        $this->db->select(STABLE.'.studentId, '.STABLE.'.name, '.STABLE.'.email, '.STABLE.'.phone, '.STABLE.'.birthday, '.STABLE.'.image, '
+        $this->db->select(STABLE.'.id, '.STABLE.'.studentId, '.STABLE.'.name, '.STABLE.'.email, '.STABLE.'.phone, '.STABLE.'.birthday, '.STABLE.'.image, '
             .TTABLE.'.tutor, '.GTABLE.'.grade');
         $this->db->from(STABLE);
         $this->db->join(GTABLE, GTABLE.'.id = '.STABLE.'.gradeId');
@@ -48,7 +48,7 @@ class StudentModel extends CI_Model
     {
         $this->db->limit($limit, $offset);
         $this->db->order_by('studentId');
-        $this->db->select(STABLE.'.studentId, '.STABLE.'.name, '.STABLE.'.email, '.STABLE.'.phone, '.STABLE.'.birthday, '.STABLE.'.image, '
+        $this->db->select(STABLE.'.id, '.STABLE.'.studentId, '.STABLE.'.name, '.STABLE.'.email, '.STABLE.'.phone, '.STABLE.'.birthday, '.STABLE.'.image, '
             .TTABLE.'.tutor, '.GTABLE.'.grade');
         $this->db->from(STABLE);
         $this->db->where($column, $val);
@@ -58,16 +58,11 @@ class StudentModel extends CI_Model
         return $query->result_array();
     }
 
-    public function searchNum()
-    {
-        return $this->db->count_all(STABLE);
-    }
-
     public function searchFromGradeTutor($gradeId, $tutorId, $limit = STUDENT_LIMIT, $offset = 0)
     {
         $this->db->limit($limit, $offset);
         $this->db->order_by('studentId');
-        $this->db->select(STABLE.'.studentId, '.STABLE.'.name, '.STABLE.'.email, '.STABLE.'.phone, '.STABLE.'.birthday, '.STABLE.'.image, '
+        $this->db->select(STABLE.'.id, '.STABLE.'.studentId, '.STABLE.'.name, '.STABLE.'.email, '.STABLE.'.phone, '.STABLE.'.birthday, '.STABLE.'.image, '
             .TTABLE.'.tutor, '.GTABLE.'.grade');
         $this->db->from(STABLE);
         $this->db->where('gradeId', $gradeId)->where('tutorId', $tutorId);
@@ -75,6 +70,11 @@ class StudentModel extends CI_Model
         $this->db->join(TTABLE, TTABLE.'.id = '.STABLE.'.tutorId');
         $query = $this->db->get();
         return $query->result_array();
+    }
+
+    public function searchNum()
+    {
+        return $this->db->count_all(STABLE);
     }
 
     public function update($id, $studentId, $name, $gradeId, $email, $phone, $birthday, $tutorId, $image)

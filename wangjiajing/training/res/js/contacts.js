@@ -10,7 +10,7 @@ $(document).ready(function() {
     var index;
 
     //index.php/StudentController/getStudentsList
-    $.get('index.php/StudentController/getStudentsList', {
+    $.get('students', {
         "gradeId": gradeId,
         "&tutorId": tutorId,
         "page": page
@@ -71,24 +71,16 @@ $(document).ready(function() {
     function determineDelete(i) {
         $($(".determine")[0]).bind('click',function() {
             $.ajax({
-                url: "index.php/StudentController/deleteStudent",
+                url: "students/" + pages,//应为id
                 type: "DELETE",
-                data: JSON.stringify(students[i].studentId)
-            }).done(function(data,status) {
-                alert(status);
+                data: JSON.stringify(students[i].studentId)//id
+            }).done(function(data) {
+                alert(data);
                 window.location.reload(true);
             });     
         });
 
     }
-
-    //编辑年级
-    function editGrade(){
-        var a = $('.editGrade').val();
-        
-    }
-    editGrade();
-
 
     //点击图片放大
     function enlarge() {
