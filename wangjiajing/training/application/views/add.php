@@ -6,6 +6,7 @@
     <title>添加通讯录</title>
     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css">
+    <!-- <link rel="stylesheet" href="./../../res/css/bootstrap-combined.min.css"> -->
     <link rel="stylesheet" href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="./../../res/css/contacts.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -104,10 +105,8 @@
         <div class="edit">
             <a href="./../../v2">
                 <button class="btn btn-default">取消</button>
-            </a>
-            <a href="./../../v2">
-                <button class="btn btn-warning save">保存</button>
-            </a>
+            </a>   
+            <button class="btn btn-warning save">保存</button>    
         </div>
     </div>
     <div class="hidden">

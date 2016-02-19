@@ -9,12 +9,16 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->view('guide');
+	}
+
+	public function v1()
+	{
 		$this->load->view('index');
 	}
 
-	public function test()
+	public function v2()
 	{
 		$this->load->view('indexx');
-
 	}
 }

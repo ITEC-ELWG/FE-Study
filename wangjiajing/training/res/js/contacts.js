@@ -9,7 +9,6 @@ $(document).ready(function() {
     var pages;
     var index;
 
-    //index.php/StudentController/getStudentsList
     $.get('students', {
         "gradeId": gradeId,
         "&tutorId": tutorId,
@@ -21,7 +20,6 @@ $(document).ready(function() {
         pages = dataArr.pages;
 
         generate();
-        enlarge();
         clickDelete();
     });
 
@@ -46,7 +44,7 @@ $(document).ready(function() {
             tdStr += '<td>' + student.phone + '</td>';
             tdStr += '<td>' + student.email + '</td>';
             tdStr += '<td>' + student.birthday + '</td>';
-            tdStr += '<td>' + '<img src="./res/img/person.png">' + '</td>';
+            tdStr += '<td>' + '<a href="./application/views/photo.php?studentImg='+student.image+'"><img src="' + student.image + '"></a>' + '</td>';
             tdStr += '<td>' + '<button class="btn btn-default btn-xs btn-edit btn-edit-' + i + '"><a href="./application/views/add.php?i=' + i + '">编辑</a></button>' + '</td>';
             tdStr += '<td>' + '<button class="btn btn-default btn-xs btn-delete btn-delete-' + i + '" data-toggle="modal" data-target="#delete">删除</button>' + '</td>';
 
@@ -59,7 +57,7 @@ $(document).ready(function() {
     function clickDelete() {
         $(".btn-delete").each(function(i) {
             var j = parseInt(i) + 1;
-            $('.btn-delete-' + j).click(function(){
+            $('.btn-delete-' + j).click(function() {
                 index = i;
                 determineDelete(index);
             });
@@ -69,24 +67,16 @@ $(document).ready(function() {
 
     //确认删除
     function determineDelete(i) {
-        $($(".determine")[0]).bind('click',function() {
+        $($(".determine")[0]).bind('click', function() {
             $.ajax({
-                url: "students/" + pages,//应为id
-                type: "DELETE",
-                data: JSON.stringify(students[i].studentId)//id
+                url: "students/" + students[i].id,
+                type: "DELETE"
             }).done(function(data) {
                 alert(data);
                 window.location.reload(true);
-            });     
+            });
         });
 
-    }
-
-    //点击图片放大
-    function enlarge() {
-        $("img").click(function() {
-            window.location.href = "./application/views/photo.html";
-        });
     }
 
 
