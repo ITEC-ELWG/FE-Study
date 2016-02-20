@@ -19,7 +19,7 @@ $(document).ready(function() {
         if (i >= 0) {
             edit();
             add();
-            // clickDelete();//更改信息。。。
+            addDelete();
         } else {
             add();
         }
@@ -54,18 +54,18 @@ $(document).ready(function() {
             var tutorId;
             var gradeId;
             for (var j = 0; j < tutors.length; j++) {
-                if(tutors[j].tutor == $("#tutor").val()){
+                if (tutors[j].tutor == $("#tutor").val()) {
                     tutorId = tutors[j].id;
                     break;
                 }
             };
             for (var j = 0; j < grades.length; j++) {
-                if(grades[j].grade == $("#grade").val()){
+                if (grades[j].grade == $("#grade").val()) {
                     gradeId = grades[j].id;
                     break;
                 }
             };
-            
+
             $.post("./../../students", {
                 "studentId": $("#studentId").val(),
                 "name": $("#name").val(),
@@ -76,10 +76,20 @@ $(document).ready(function() {
                 "birthday": $("#birthday").val(),
                 "image": pictureUrl
             }).done(function(data) {
-                alert(data);
                 window.parent.location.reload(true);
-                history.back();
             });
+        });
+    }
+
+    //删除数据库里旧的记录
+    function addDelete() {
+        $.ajax({
+            url: "students/" + studentsi.id,
+            type: "DELETE"
+        }).done(function(data) {
+            alert(data);
+            window.parent.location.reload(true);
+            history.back();
         });
     }
 

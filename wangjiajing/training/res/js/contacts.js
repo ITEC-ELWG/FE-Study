@@ -3,29 +3,66 @@ $(document).ready(function() {
     var dataArr;
     var student;
     var students;
+    var tutors;
+    var grades;
     var gradeId = "";
     var tutorId = "";
     var page = $("#page").val();
     var pages;
     var index;
 
-    $.get('students', {
-        "gradeId": gradeId,
-        "&tutorId": tutorId,
-        "page": page
-    }).done(function(data) {
+    //获取导师id
+    $.get('./tutors').done(function(data) {
         var json = JSON.parse(data);
-        dataArr = json.data;
-        students = dataArr.students;
-        pages = dataArr.pages;
-
-        generate();
-        clickDelete();
+        tutors = json.data;
+        $(".li-tutor").click(function() {
+            for (var j = 0; j < tutors.length; j++) {
+                if (tutors[j].tutor == $(this).html()) {
+                    tutorId = tutors[j].id;
+                    break;
+                }
+            };
+            getStudents();
+        });
     });
 
+    //获取年级id
+    $.get('./grades').done(function(data) {
+        var json = JSON.parse(data);
+        grades = json.data;
+        $(".li-grade").click(function() {
+            for (var j = 0; j < grades.length; j++) {
+                if (grades[j].grade == $(this).html()) {
+                    gradeId = grades[j].id;
+                    break;
+                }
+            };
+            getStudents();
+        });
+    });
 
-    //获取学生列表
+    getStudents();
+
+    //获取学生
+    function getStudents() {
+        $.get('students', {
+            "gradeId": gradeId,
+            "&tutorId": tutorId,
+            "page": page
+        }).done(function(data) {
+            var json = JSON.parse(data);
+            dataArr = json.data;
+            students = dataArr.students;
+            pages = dataArr.pages;
+
+            generate();
+            clickDelete();
+        });
+    }
+
+    //生成学生列表
     function generate() {
+        tbody.empty();
         for (var i = 1; i < students.length + 1; i++) {
             student = students[i - 1];
             var trStr = "";
@@ -44,7 +81,7 @@ $(document).ready(function() {
             tdStr += '<td>' + student.phone + '</td>';
             tdStr += '<td>' + student.email + '</td>';
             tdStr += '<td>' + student.birthday + '</td>';
-            tdStr += '<td>' + '<a href="./application/views/photo.php?studentImg='+student.image+'"><img src="' + student.image + '"></a>' + '</td>';
+            tdStr += '<td>' + '<a href="./application/views/photo.php?studentImg=' + student.image + '"><img src="' + student.image + '"></a>' + '</td>';
             tdStr += '<td>' + '<button class="btn btn-default btn-xs btn-edit btn-edit-' + i + '"><a href="./application/views/add.php?i=' + i + '">编辑</a></button>' + '</td>';
             tdStr += '<td>' + '<button class="btn btn-default btn-xs btn-delete btn-delete-' + i + '" data-toggle="modal" data-target="#delete">删除</button>' + '</td>';
 

@@ -19,16 +19,16 @@
             <label>年级：</label>
             <button class="btn btn-default btn-xs edit" data-toggle="modal" data-target="#grade">编辑年级</button>
             <ol class="breadcrumb">
-                <li>2014级学硕</li>
-                <li>2015级学硕</li>
-                <li>2016级工硕</li>
+                <li class="li-grade">2014级学硕</li>
+                <li class="li-grade">2015级学硕</li>
+                <li class="li-grade">2016级工硕</li>
             </ol>
             <label>导师：</label>
             <button class="btn btn-default btn-xs edit" data-toggle="modal" data-target="#tutor">编辑导师</button>
             <ol class="breadcrumb">
-                <li>许炜</li>
-                <li>程文青</li>
-                <li>夏天</li>
+                <li class="li-tutor">许炜</li>
+                <li class="li-tutor">程文青</li>
+                <li class="li-tutor">夏天</li>
             </ol>
         </div>
         <div class="right-block right">
