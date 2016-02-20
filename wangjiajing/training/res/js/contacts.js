@@ -1,12 +1,12 @@
-$(document).ready(function() {
+ $(document).ready(function() {
     var tbody = $(".tbody");
     var dataArr;
     var student;
     var students;
     var tutors;
     var grades;
-    var gradeId = "";
-    var tutorId = "";
+    var gradeId;
+    var tutorId;
     var page = $("#page").val();
     var pages;
     var index;
@@ -47,7 +47,7 @@ $(document).ready(function() {
     function getStudents() {
         $.get('students', {
             "gradeId": gradeId,
-            "&tutorId": tutorId,
+            "tutorId": tutorId,
             "page": page
         }).done(function(data) {
             var json = JSON.parse(data);

@@ -74,13 +74,8 @@ class TutorController extends CI_Controller
         }
         else
         {
-            $this->db->trans_start();
-            foreach($id as $key)
-            {
-                $this->TutorModel->delete($key);
-            }
-            $this->db->trans_complete();
-            if($this->db->trans_status() == false)
+            $result = $this->TutorModel->delete($id);
+            if($result == 0)
             {
                 echo toJsonFail(FAIL_TO_DELETE);
             }

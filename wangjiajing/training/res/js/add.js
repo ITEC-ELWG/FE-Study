@@ -19,7 +19,6 @@ $(document).ready(function() {
         if (i >= 0) {
             edit();
             add();
-            addDelete();
         } else {
             add();
         }
@@ -76,7 +75,8 @@ $(document).ready(function() {
                 "birthday": $("#birthday").val(),
                 "image": pictureUrl
             }).done(function(data) {
-                window.parent.location.reload(true);
+                addDelete();
+                location.href = document.referrer;
             });
         });
     }
@@ -84,12 +84,10 @@ $(document).ready(function() {
     //删除数据库里旧的记录
     function addDelete() {
         $.ajax({
-            url: "students/" + studentsi.id,
+            url: "./../../students/" + studentsi.id,
             type: "DELETE"
         }).done(function(data) {
-            alert(data);
-            window.parent.location.reload(true);
-            history.back();
+            alert(data);           
         });
     }
 
