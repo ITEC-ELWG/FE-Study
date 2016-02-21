@@ -24,7 +24,7 @@ $(document).ready(function() {
             var json = JSON.parse(data);
             tutors = json.data;
             generateTutor();
-            $(".li-tutor").click(function() {                
+            $(".li-tutor").click(function() {
                 if (isSingle) {
                     $('.selected').removeClass('selected');
                     gradeId = null;
@@ -51,7 +51,7 @@ $(document).ready(function() {
             var json = JSON.parse(data);
             grades = json.data;
             generateGrade();
-            $(".li-grade").click(function() {               
+            $(".li-grade").click(function() {
                 if (isSingle) {
                     $('.selected').removeClass('selected');
                     tutorId = null;
@@ -183,19 +183,32 @@ $(document).ready(function() {
             modalBodyGrade.empty();
             for (var i = 0; i < grades.length; i++) {
                 var divStr = "";
-                divStr += '<div><input type="checkbox" class="col-sm-2" checked>' + grades[i].grade + '</div>';
+                divStr += '<div><input type="checkbox" class="col-sm-2 check-grade" value="' + grades[i].id + '" checked>' + grades[i].grade + '</div>';
                 modalBodyGrade.append(divStr);
             };
         });
     }
 
-    //增加年级
+    //增加、删除年级
     function addGrade() {
         $('.save-grade').click(function() {
             $.post("./grades", {
                 "grade": $(".input-grade").val()
             }).done(function(data) {
                 window.location.reload(true);
+            });
+
+            var notChecked = $("input:not(:checked)");
+            notChecked.each(function() {
+                if ($(this).hasClass('check-grade')) {
+                    var notCheckedGradeId = $(this).val();
+                    $.ajax({
+                        url: "grades/" + notCheckedGradeId,
+                        type: "DELETE"
+                    }).done(function(data) {
+                        window.location.reload(true);
+                    });
+                };
             });
         });
     }
@@ -218,19 +231,32 @@ $(document).ready(function() {
             modalBodyTutor.empty();
             for (var i = 0; i < tutors.length; i++) {
                 var divStr = "";
-                divStr += '<div><input type="checkbox" class="col-sm-2" checked>' + tutors[i].tutor + '</div>';
+                divStr += '<div><input type="checkbox" class="col-sm-2 check-tutor" value="' + tutors[i].id + '" checked>' + tutors[i].tutor + '</div>';
                 modalBodyTutor.append(divStr);
             };
         });
     }
 
-    //增加导师
+    //增加、删除导师
     function addTutor() {
         $('.save-tutor').click(function() {
             $.post("./tutors", {
                 "tutor": $(".input-tutor").val()
             }).done(function(data) {
                 window.location.reload(true);
+            });
+
+            var notChecked = $("input:not(:checked)");
+            notChecked.each(function() {
+                if ($(this).hasClass('check-tutor')) {
+                    var notCheckedTutorId = $(this).val();
+                    $.ajax({
+                        url: "tutors/" + notCheckedTutorId,
+                        type: "DELETE"
+                    }).done(function(data) {
+                        window.location.reload(true);
+                    });
+                };
             });
         });
     }
