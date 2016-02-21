@@ -17,24 +17,16 @@
         <div class="left">
             <h3>标签：</h3>
             <label>年级：</label>
-            <button class="btn btn-default btn-xs edit" data-toggle="modal" data-target="#grade">编辑年级</button>
-            <ol class="breadcrumb">
-                <li class="li-grade">2014级学硕</li>
-                <li class="li-grade">2015级学硕</li>
-                <li class="li-grade">2016级工硕</li>
-            </ol>
+            <button class="btn btn-default btn-xs edit edit-grade" data-toggle="modal" data-target="#grade">编辑年级</button>
+            <ol class="breadcrumb breadcrumb-grade"></ol>           
             <label>导师：</label>
-            <button class="btn btn-default btn-xs edit" data-toggle="modal" data-target="#tutor">编辑导师</button>
-            <ol class="breadcrumb">
-                <li class="li-tutor">许炜</li>
-                <li class="li-tutor">程文青</li>
-                <li class="li-tutor">夏天</li>
-            </ol>
+            <button class="btn btn-default btn-xs edit edit-tutor" data-toggle="modal" data-target="#tutor">编辑导师</button>
+            <ol class="breadcrumb breadcrumb-tutor"></ol>           
         </div>
         <div class="right-block right">
             <div class="btn-group-vertical right">
                 <button class="btn btn-default btn-lg"><a href="./application/views/add.php">添加</a></button>
-                <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#delete">删除</button>
+                <button class="btn btn-default btn-lg many">多选</button>
             </div>
             <div class="turn">
                 <input type="text" class="turn-input" id="page">
@@ -86,25 +78,20 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="gradeLabel">编辑年级</h4>
                 </div>
+                <div class="modal-body modal-body-grade"></div>
                 <div class="modal-body">
-                    <div>
-                        <input type="checkbox" class="col-sm-2" checked>2014级学硕</div>
-                    <div>
-                        <input type="checkbox" class="col-sm-2" checked>2015级工硕</div>
-                    <div>
-                        <input type="checkbox" class="col-sm-2" checked>2016级学硕</div>
                     <form action="" class="form-horizontal">
                         <div class="form-group">
                             <label for="grade" class="col-sm-2 control-label">年级：</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="grade">
+                                <input type="text" class="form-control input-grade">
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">保存</button>
+                    <button type="button" class="btn btn-warning save-grade" data-dismiss="modal">保存</button>
                 </div>
             </div>
         </div>
@@ -117,25 +104,20 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="tutorLabel">编辑导师</h4>
                 </div>
-                <div class="modal-body">
-                    <div>
-                        <input type="checkbox" class="col-sm-2 editGrade" checked>许炜</div>
-                    <div>
-                        <input type="checkbox" class="col-sm-2" checked>程文青</div>
-                    <div>
-                        <input type="checkbox" class="col-sm-2" checked>夏天</div>
+                <div class="modal-body modal-body-tutor"></div>
+                <div>
                     <form action="" class="form-horizontal">
                         <div class="form-group">
                             <label for="grade" class="col-sm-2 control-label">导师：</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="tutor">
+                                <input type="text" class="form-control input-tutor">
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-warning" data-dismiss="modal">保存</button>
+                    <button type="button" class="btn btn-warning save-tutor" data-dismiss="modal">保存</button>
                 </div>
             </div>
         </div>
