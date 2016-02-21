@@ -76,6 +76,7 @@ $(document).ready(function() {
                 "image": pictureUrl
             }).done(function(data) {
                 addDelete();
+                alert("操作成功！");
                 location.href = document.referrer;
             });
         });
@@ -86,8 +87,6 @@ $(document).ready(function() {
         $.ajax({
             url: "./../../students/" + studentsi.id,
             type: "DELETE"
-        }).done(function(data) {
-            alert(data);           
         });
     }
 

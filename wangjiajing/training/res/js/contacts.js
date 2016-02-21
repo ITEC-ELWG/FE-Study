@@ -1,4 +1,4 @@
- $(document).ready(function() {
+$(document).ready(function() {
     var tbody = $(".tbody");
     var dataArr;
     var student;
@@ -7,7 +7,7 @@
     var grades;
     var gradeId;
     var tutorId;
-    var page = $("#page").val();
+    var page;
     var pages;
     var index;
 
@@ -41,6 +41,12 @@
         });
     });
 
+    //获取页数
+    $('.turn-to').click(function() {
+        page = $("#page").val();
+        getStudents();
+    });
+
     getStudents();
 
     //获取学生
@@ -55,6 +61,11 @@
             students = dataArr.students;
             pages = dataArr.pages;
 
+            if (!page) {
+                $("#page").val('1/' + pages);
+            } else {
+                $("#page").val(page + '/' + pages);
+            }
             generate();
             clickDelete();
         });
@@ -109,8 +120,8 @@
                 url: "students/" + students[i].id,
                 type: "DELETE"
             }).done(function(data) {
-                alert(data);
                 window.location.reload(true);
+                alert("删除成功！");
             });
         });
 

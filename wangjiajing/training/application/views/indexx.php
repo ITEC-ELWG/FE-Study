@@ -38,7 +38,7 @@
             </div>
             <div class="turn">
                 <input type="text" class="turn-input" id="page">
-                <button type="submit" class="btn btn-default btn-sm">跳转</button>
+                <button type="submit" class="btn btn-default btn-sm turn-to">跳转</button>
             </div>
         </div>
         <table class="table table-bordered table-striped table-hover">
