@@ -24,8 +24,9 @@ body{
   padding-top: 10px;
   text-align: right;
   margin-right: 6px;
+  margin-left: -7px;
   font-size: 2.5rem;
-  /*overflow-x: auto;*/
+  overflow-x: auto;
   transition: all .2s ease-in-out;
 }
 
@@ -34,7 +35,9 @@ body{
   -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
 }
-.operators div{
+
+/*此处添加一些说明*/
+.operators div, #percent{
   display: inline-block;
   border: 1px solid #bbb;
   width: 80px;
@@ -46,14 +49,27 @@ body{
   
 }
 
-.operators div:hover {
+/*此处添加一些说明*/
+.aside {
+  display: inline-block;
+  vertical-align: top;
+}
+/*此处添加一些说明*/
+#percent {
+  display: block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/*此处添加一些说明*/
+.operators div:hover, #percent:hover {
   background-color: #ddd;
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
   border-color: #aaa;
 }
-
-.operators div:active {
+/*此处添加一些说明*/
+.operators div:active, #percent:active {
   font-weight: bold;
 }
 
@@ -83,12 +99,12 @@ body{
 }
 
 .equal {
-  display: inline-block;
+  display: block;
   border: 1px solid #3079ED;
   width: 80px;
   text-align: center;
   vertical-align: top;
-  padding: 122px 10px 122px 10px;
+  padding: 85px 10px 85px 10px;
   margin: 10px 6px 10px -8px;
   background-color: #4d90fe;
   color: white;

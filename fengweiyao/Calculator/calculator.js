@@ -44,6 +44,7 @@ function eventHandler(event) {
 		case "subtract":
 		case "times":
 		case "divide":
+		case "percent":
 			//对于点击运算键时，只考虑三种情况：
 			//1. 输出为空时，第一次点击运算键，则忽视此次点击。
 			//2. 当上一次点击同样是运算键时，去掉上一次运算符，更新为此次的运算符。
@@ -66,9 +67,13 @@ function eventHandler(event) {
 				case "divide":
 					operatorChar = "÷";
 					break;
+				//此处添加一些说明
+				case "percent":
+					operatorChar = "%";
+					break;
 			}
 			if (lastCharIndex >= 0) {
-				if (lastChar === "-" ||  lastChar === "+" || lastChar === "×" || lastChar === "÷"){					
+				if (lastChar === "-" ||  lastChar === "+" || lastChar === "×" || lastChar === "÷" || lastChar === "%"){					
 					outputString = outputString.slice(0, lastCharIndex);
 					outputString += operatorChar;
 
@@ -82,13 +87,47 @@ function eventHandler(event) {
 			break;
 
 		case "equal":
-			//there is some codes.
+			//这个部分对输入进行计算。
 			console.log("you clicked key = " + keyId);
 			haveCalculated = true;
-			numbers = outputString.split(/\+|\-|\×|\÷/g);
+
+
+			//此处添加说明
+			var percentIndexOffset = 0;
+			var percentIndex1 = 0;
+			var percentIndex2 = 0;
+			while(percentIndexOffset != 2 && percentIndex2 != -1){
+				percentIndex2 = outputString.indexOf("%", percentIndex1 + 1);
+				percentIndexOffset =  percentIndex2 - percentIndex1;
+				percentIndex1 = percentIndex2;
+			}
+			if (percentIndex2 != -1) {
+				alert("%只作为百分比来使用，不作为求余运算符使用。此时你的与运算中包含两个相邻的百分比值，如3%3%");
+				outputString = "";
+			}
+
+			
+			//如果最后多了一个运算符，则去掉。
+			var lastCharIndex = outputString.length - 1; 
+			var lastChar = outputString.charAt(lastCharIndex);
+			if (lastChar === "-" ||  lastChar === "+" || lastChar === "×" || lastChar === "÷") {
+				outputString = outputString.slice(0, lastCharIndex);
+			}
+
+			numbers = outputString.split(/\+|\-|\×|\÷|\%/g);
 			console.log("numbers = " + numbers);
 			operators = outputString.replace(/[0-9]|\./g, "").split("");
 			console.log("operators = " + operators);
+
+
+			//此处添加一些说明
+			var divideIndex = operators.indexOf("%");
+			while (divideIndex != -1) {
+				numbers.splice(divideIndex, 1, numbers[divideIndex] / 100);
+				if (numbers[divideIndex + 1] === "") {numbers.splice(divideIndex + 1, 1);}
+				operators.splice(divideIndex, 1);
+				divideIndex = operators.indexOf("%");
+			}
 
 			var divideIndex = operators.indexOf("÷");
 			while (divideIndex != -1) {
