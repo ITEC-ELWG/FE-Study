@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="caculator.css">
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+  <script type="text/javascript" src="calculator.js"></script>
   <title>Simple calculator</title>
 </head>
-<body>
+<body onload = "init()">
 <div class="calculator">
   <div class="output"></div>
   <div class="button">
   <div class="operators">
     <div id="plus">+</div>
     <div id="subtract">-</div>
-    <div id="times">&times;</div>
-    <div id="divide">&divide;</div>
+    <div id="times">×</div>
+    <div id="divide">÷</div>
   </div>
   <div class="left-panel">
     <div class="numbers">
@@ -35,11 +36,11 @@
     <div class="numbers">
       <div id="0">0</div>
       <div id=".">.</div>
-      <div id="c">C</div>
+      <div id="clear">C</div>
     </div>
   </div>
   
-  <div class="equal">=</div>
+  <div class="equal" id="equal">=</div>
   </div>
 </div>
 </body>
