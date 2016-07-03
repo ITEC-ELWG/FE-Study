@@ -12,7 +12,7 @@ $user->logout();
 	<title>logout</title>
 	<link rel="stylesheet" type="text/css" href="login.css" >
 </head>
-<body>
+<body style='color: white'>
 <?php 
 echo 'your username:'.$_SESSION['username']."<br />";
 ?>

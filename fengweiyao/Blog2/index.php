@@ -1,10 +1,6 @@
 <?php 
 require_once 'includes/config.php';
-if (!$user->is_logged_in()){
-    header('Location: login.php');
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="ch-CN">
 <head>
@@ -13,7 +9,6 @@ if (!$user->is_logged_in()){
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-
 <header class="header-container">
 <h1>冯伟尧的博客</h1>
 <nav class="nav">
@@ -25,8 +20,8 @@ if (!$user->is_logged_in()){
 		<li><a href="">关于</a></li>
 		<li id="tag"><a href="">标签</a></li>
 		<?php 
-		if ($user->is_logged_in()){
-// 		    echo "<li><a href=''>你好，".$_SESSION['username']."</a></li>";
+		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
+		    echo "<li><a href=''>欢迎, ".$_SESSION['username']."</a></li>";
 		    echo "<li><a href='logout.php'>退出</a></li>";
 		}
 		?>
