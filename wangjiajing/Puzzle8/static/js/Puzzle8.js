@@ -55,7 +55,7 @@ $(document).ready(function() {
     var getRandomShow = function(arr) {
         blockArr.each(function(i) {
             var blocki = $(this);
-            blocki.html(arr[i] + 1);
+            blocki.html(arr[i]);
             if (blocki.html() == n * n) {
                 blocki.html("");
                 blocki.addClass("move");
