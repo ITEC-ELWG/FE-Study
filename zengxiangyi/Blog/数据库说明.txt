@@ -1,0 +1,5 @@
+数据库名字是test
+表名是user
+总共三列：account，password，name
+account是主键，password采用密文保存
+做了session验证，未登陆用户不能跳过
