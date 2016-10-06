@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的小型计算器</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/calculator.css"/>
+    <script type="text/javascript" src="../js/calculator.js"></script>
+</head>
+<body>
+    <div class="global">
+        <input class="output" type="text" id="showWindow" value="" onfocus="this.blur()"/>
+        <div>
+            <button style="background:#24B4AD;color:#F7F065" class="button" type="button" id="AC" onclick="getValue(this.id)">AC</button>
+            <button style="background:#24B4AD;color:#F7F065" class="button" type="button" id="%" onclick="getValue(this.id)">%</button>
+            <button style="background:#24B4AD;color:#F7F065;clear:right" class="button" type="button" id="÷" onclick="getValue(this.id)">÷</button>
+            <button class="button" type="button" id="9" onclick="getValue(this.id)">9</button>
+            <button class="button" type="button" id="8" onclick="getValue(this.id)">8</button>
+            <button class="button" type="button" id="7" onclick="getValue(this.id)">7</button>
+            <button style="background:#24B4AD;color:#F7F065" class="button" type="button" id="x" onclick="getValue(this.id)">x</button>
+            <button class="button" type="button" id="6" onclick="getValue(this.id)">6</button>
+            <button class="button" type="button" id="5" onclick="getValue(this.id)">5</button>
+            <button class="button" type="button" id="4" onclick="getValue(this.id)">4</button>
+            <button style="background:#24B4AD;color:#F7F065" class="button" type="button" id="-" onclick="getValue(this.id)">-</button>
+            <button class="button" type="button" id="3" onclick="getValue(this.id)">3</button>
+            <button class="button" type="button" id="2" onclick="getValue(this.id)">2</button>
+            <button class="button" type="button" id="1" onclick="getValue(this.id)">1</button>
+            <button style="background:#24B4AD;color:#F7F065" class="button" type="button" id="+" onclick="getValue(this.id)">+</button>
+            <button style="background:#352092;color:#E9E2E2" class="button" type="button" id="=" onclick="getValue(this.id)">=</button>
+            <button class="button" type="button" id="." onclick="getValue(this.id)">.</button>
+            <button class="button" type="button" id="0" onclick="getValue(this.id)">0</button>
+        </div>
+        <div class="footer">Copyright@Einskang 2016.10.03 WuHan China</div>
+    </div>
+</body>
+</html>

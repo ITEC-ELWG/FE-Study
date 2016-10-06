@@ -1,0 +1,49 @@
+div.global {
+    position: relative;
+    top: 150px;
+    margin: 0px auto;
+    width: 340px;
+    height: 330px;
+    padding: 40px 10px 20px 10px;
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    border-color: #96C2F1;
+    background-image: url(../image/calculator.png);
+}
+input.output {
+    position: relative;
+    margin: 0px auto 10px auto;
+    padding: 0px;
+    height: 40px;
+    width: 333px;
+    text-align: right;
+    font-size: 30px;
+    font-family: Arial, serif;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #A34F11;
+}
+button.button {
+    height: 40px;
+    width: 75px;
+    margin: 5px;
+    padding: 0px;
+    text-decoration: none;
+    background: #2F435E;
+    color: #F2F2F2;
+    font-size: 16px;
+    font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    float: right;
+}
+div.footer {
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    font-family: Times, serif;
+    width: 100%;
+    float: left;
+    position: relative;
+    top: 20px;
+}
