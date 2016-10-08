@@ -10,8 +10,20 @@ div.login {
     margin-top: 0px;
     padding-top: 100px;
 }
+img.login {
+    position: relative;
+    padding: 10px;
+}
+form.login {
+    padding-left: -40px;
+    margin-left: -40px;
+}
+input.login {
+    padding: 2px;
+    margin: 10px;
+}
 span.login {
-    font-size: 18px;
+    font-size: 22px;
     color: #003EFF;
     position: relative;
     top: 3px;
@@ -33,6 +45,24 @@ a:hover {
 a:active {
     color: #0000FF;
     text-decoration: none;
+}
+span.header {
+    font-family: Times;
+    font-weight: bold;
+}
+p.list {
+    padding: 10px 0px 10px 0px;
+}
+p.link {
+    font-size: 25px;
+    font-family: 楷体, serif;
+    color: #F50E25;
+}
+span.link {
+    left: 20px;
+}
+li.li {
+    padding: 10px 0px 10px 0px;
 }
 div.header {
     text-align: center;

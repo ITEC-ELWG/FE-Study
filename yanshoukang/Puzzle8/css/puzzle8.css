@@ -3,25 +3,25 @@ body.global {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
-div.global {
+div.puzzle {
     position: relative;
-    top: 100px;
+    top: 50px;
     border-width: 2px;
     border-style: solid;
     border-color: #69E0EC;
     margin: 0px auto 0px auto;
     padding: 10px 10px 10px 10px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     background-image: url(../image/image.jpg);
 }
 div.block {
     border-width: 0px;
     padding: 0px 0px 0px 0px;
     margin: 2px 2px 2px 2px;
-    width: 62px;
-    height: 62px;
-    line-height: 62px;
+    width: 96px;
+    height: 96px;
+    line-height: 96px;
     background-color: #92E85A;
     color: #001CF3;
     text-align: center;
@@ -29,49 +29,58 @@ div.block {
     font-size: 30px;
     float: left;
     font-weight: bold;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 div.input {
     position: relative;
-    top: 120px;
+    top: 80px;
     padding: 0px 0px 0px 0px;
     margin: 0px auto 0px auto;
-    width: 129px;
-    height: 21px;
+    width: 205px;
 }
 button.input {
     padding: 0px;
     margin: 0px;
     font-family: 楷体, serif;
-    font-size: 10px;
-    width: 55px;
+    font-size: 18px;
+    width: 100px;
     float: left;
+    text-align: center;
 }
 input.input {
-    width: 70px;
-    height: 10px;
-    font-size: 10px;
+    width: 100px;
+    height: 20px;
+    font-size: 20px;
     float: left;
-    border-color: initial;
     border-width: 2px;
+    text-align: center;
 }
 p.input {
     font-family: 楷体, serif;
-    font-size: 10px;
+    font-size: 20px;
     text-align: center;
-    margin: 10px 0px 0px 0px;
+    margin: 0px;
     padding: 0px;
     border-width: 0px;
     clear: left;
+    position: relative;
+    top: 15px;
 }
 div.footer {
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
     color: black;
     font-family: Times, serif;
     width: 100%;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
     position: relative;
-    top: 180px;
+    top: 100px;
+}
+div.explanation {
+    position: relative;
+    top: 50px;
+    margin: 0px auto 0px auto;
+    padding: 0px;
+    width: 369px;
 }
