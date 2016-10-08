@@ -40,11 +40,19 @@ function createPuzzle(argument) {
 
     for (var i = 0; i < order * order; i++) {
         array[i] = i;// 设置序号
-        value[i] = order * order - i - 1;
     }
 
+    $.post("../php/puzzle8.php", {order: order}, function(data, status) {
+        if (status == "success") value = eval(data);
+        else return;
+    })
 
-    messPuzzle();// 洗牌算法，打乱数组
+    setTimeout("", 50);// 程序运行暂停一段时间，等待数据传输完成
+
+    if (undefined == value[0]) {
+        alert("请求超时，请重试！");
+        return;
+    }
 
     for (var i = 0; i < order; i++) borderTop[i] = i;
     for (var i = 0; i < order; i++) borderButtom[i] = order * (order - 1) + i;
@@ -126,23 +134,6 @@ function puzzleLeft() {
     blank = temp;
 
     isSucceed();
-}
-
-function messPuzzle() {
-    var len = value.length;
-    var i;
-    var j;
-    var temp;
-    var n = Math.floor(len / 2) + 1;
-    while(n--) {
-        i = Math.floor(Math.random() * len);
-        j = Math.floor(Math.random() * len);
-        if(i != j) {
-            temp = value[i];
-            value[i] = value[j];
-            value[j] = temp;
-        }
-    }
 }
 
 function isSucceed() {
