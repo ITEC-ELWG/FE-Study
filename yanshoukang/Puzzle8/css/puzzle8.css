@@ -1,0 +1,77 @@
+body.global {
+    border-width: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+div.global {
+    position: relative;
+    top: 100px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #69E0EC;
+    margin: 0px auto 0px auto;
+    padding: 10px 10px 10px 10px;
+    width: 200px;
+    height: 200px;
+    background-image: url(../image/image.jpg);
+}
+div.block {
+    border-width: 0px;
+    padding: 0px 0px 0px 0px;
+    margin: 2px 2px 2px 2px;
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    background-color: #92E85A;
+    color: #001CF3;
+    text-align: center;
+    font-family: Times, serif;
+    font-size: 30px;
+    float: left;
+    font-weight: bold;
+    border-radius: 3px;
+}
+div.input {
+    position: relative;
+    top: 120px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px auto 0px auto;
+    width: 129px;
+    height: 21px;
+}
+button.input {
+    padding: 0px;
+    margin: 0px;
+    font-family: 楷体, serif;
+    font-size: 10px;
+    width: 55px;
+    float: left;
+}
+input.input {
+    width: 70px;
+    height: 10px;
+    font-size: 10px;
+    float: left;
+    border-color: initial;
+    border-width: 2px;
+}
+p.input {
+    font-family: 楷体, serif;
+    font-size: 10px;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    border-width: 0px;
+    clear: left;
+}
+div.footer {
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    font-family: Times, serif;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    top: 180px;
+}

@@ -1,0 +1,71 @@
+body.background {
+    background-image: url(../image/login.jpg);
+    background-size: 100%;
+    background-attachment:fixed;
+}
+div.login {
+    text-align: center;
+    color: #A9A9A9;
+    font-family: Times;
+    margin-top: 0px;
+    padding-top: 100px;
+}
+span.login {
+    font-size: 18px;
+    color: #003EFF;
+    position: relative;
+    top: 3px;
+    font-family: 楷体;
+}
+a.login {
+    font-size: 20px;
+    font-family: 黑体;
+    text-decoration: none;
+}
+a:link {
+    color: #00008B;
+    text-decoration: none;
+}
+a:hover {
+    color: #F04812;
+    text-decoration: none;
+}
+a:active {
+    color: #0000FF;
+    text-decoration: none;
+}
+div.header {
+    text-align: center;
+    font-size: 40px;
+    font-family: 楷体, serif;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+div.list {
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 微软雅黑, serif;
+    margin-left: 0px;
+    padding-left: 8px;
+    margin-right: 0px;
+    padding-right: 8px;
+    float: left;
+}
+div.content {
+    width: 75%;
+    margin: 0px;
+    padding: 25px 0px 0px 20px;
+    font-family: 仿宋, serif;
+    font-size: 20px;
+    float: left;
+}
+div.footer {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-family: Times, serif;
+    width: 100%;
+    float: left;
+}
