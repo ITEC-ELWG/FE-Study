@@ -1,33 +1,31 @@
-.login-table
+.register-table
 {
 	
 	position:absolute;
 	top:25%;
 	left:37%;
 	padding:3px;
-	border:1px solid gray;
-	border-radius:.25rem;
 }
 
-.login-table-head
+.register-table-head
 {
 	border:1px solid
 	border-radius:.3rem
 }
 
-.login-input
+.register-input
 {
 	margin-top: 10px;
 }
 
-.login-input input
+.register-input input
 {
 	width:295px;
 	height:30px;	
 	border-radius:.4rem;
 }
 
-.login-table-button
+.register-table-button
 {
 	line-height: 35px;
 	padding:2px;
@@ -44,19 +42,18 @@
 	border-radius .5rem;
 }
 
-.btn_login
+.table_width{
+	width:300px;
+}
+
+.blue
 {
-	color:#fff;
-	background-color:#0275d8;
-	border-color:#0275d8;
+	background-color:blue;
+	color:White;
 }
 
 .alert_text{
 	color:Red;
-}
-
-.table_width{
-	width:300px;
 }
 
 .float-xs-right

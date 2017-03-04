@@ -5,8 +5,6 @@
 	top:25%;
 	left:37%;
 	padding:3px;
-	border:1px solid gray;
-	border-radius:.25rem;
 }
 
 .login-table-head
@@ -49,14 +47,6 @@
 	color:#fff;
 	background-color:#0275d8;
 	border-color:#0275d8;
-}
-
-.alert_text{
-	color:Red;
-}
-
-.table_width{
-	width:300px;
 }
 
 .float-xs-right
