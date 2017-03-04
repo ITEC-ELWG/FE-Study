@@ -1,0 +1,179 @@
+nav
+{
+	background-color:#2465BA;
+	border-radius:.25rem;
+	padding:5px 10px;
+}
+
+li
+{
+	display:list-item;
+	text-align:-webkit-match-parent;
+}
+
+.navbar
+{
+	color:rgb(151,173,202);
+	display:table;
+	zoom:1;
+	margin-right:auto;
+}
+
+.nav-container
+{
+	width:1100px;
+	display:block;
+	list-style-type:none;
+	margin:auto;
+}
+
+.nav-item
+{
+	cursor:pointer;
+	font-weight:bold;
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 0px 10px;
+}
+
+.nav-text{
+	margin:10px 5px;
+	color:White;
+}
+
+.nav-home{
+	touch-action:manipulation;
+	text-decoration:none;
+}
+
+.nav-link
+{
+	color:rgb(151,173,202);
+ 	line-height:39px;
+	margin:auto;
+	text-decoration:none;
+}
+
+.nav-link:hover{
+	color:White;
+}
+
+.active
+{
+	background-color:rgb(228, 228, 228);
+}
+
+.nav-home
+{
+	color: White;
+	cursor:pointer;
+	background-color: transparent;
+	border:1px solid transparent;
+	font-size:30px;
+        margin:0px;
+}
+
+.to-left{
+	float:left;
+}
+
+.to-right{
+	float:right;
+}
+
+section
+{
+	background-color:#EAFFEF;
+}
+
+.sec-container
+{
+	width:900px;
+	margin:5px 150px;
+	background-color:rgb(228, 228, 228);
+}
+
+.sec-content
+{
+	border-bottom:1px solid Gray;
+	background-color:White;
+}
+
+.sec-head-container
+{
+	background-color:rgb(228, 228, 228);
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:20px;
+	padding:2px 15px 0px 10px;
+	height:25px;
+	border-bottom:1px solid Gray;
+}
+
+.sec-head
+{
+	display:block;
+	list-style-type:none;
+}
+
+.sec-head-title
+{
+	background-color:#229CC0;
+	cursor:pointer;
+	color:White;
+	text-decoration:none;
+	padding-right:20px;
+}
+
+.sec-head-time
+{
+	font-size:15px;
+	padding-top:5px;
+}
+
+.sec-body
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:20px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+p.sec-news
+{
+	margin:5px 2px;
+	text-indent:2em;
+}
+
+.sec-more
+{
+	background-color:#2465BA;
+	text-align:center;
+}
+
+.sec-more-link
+{
+	width:1100px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:20px;
+	cursor:pointer;
+	color:rgb(151,173,202);
+}
+
+.sec-more-link:hover
+{
+	color:White;
+}
+
+footer
+{
+	background-color:Blue;
+	padding:1px 10px;
+	text-align:left;
+}
+
+.footer-text
+{
+	text-indent:12em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:10px;
+	color:White;
+}
