@@ -28,10 +28,10 @@
             </li>
 
             <li class="nav-item to-right">
-                <a class="nav-link" href="login.php">Logout</a>
+                <a id="logout" class="nav-link" href="index.js.php">Logout</a>
             </li>
 
-            <li class="nav-text to-right"> 欢迎，<?php echo $_SESSION['login_In']; ?></li>
+            <li id="inform" class="nav-text to-right"> 欢迎，<?php echo $_SESSION['login_In']; ?></li>
 
             <li class="nav-item to-left active">
                 <a class="nav-link" href="index.php">Diary</a>
