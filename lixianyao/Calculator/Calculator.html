@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Calculator_style.css" />
+	<link rel="stylesheet" type="text/css" href="public_style.css" />
+	<script src="calculator.js"> </script>
+</head>
+
+<body>
+	<div id="calculbox" class="boxWidth">
+	    <div id="screenbox" class="boxWidth">
+		<input id="screen" readonly="readonly" >
+		</input>
+	    </div>
+	    <div id="buttonbox" class="boxWidth">
+<!--第一行按键-->
+		<div class="btnline">
+		    <button value="function" class="btn btnSize to-left blue" name="%">
+			%
+		    </button>
+		    <button value="function" class="btn btnSize to-right blue" name="AC">
+			AC
+		    </button>
+		</div>
+
+<!--第二行按键-->
+		<div class="btnline">
+		    <button value="number" class="btn btnSize to-left" name="7">
+			7
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="8">
+			8
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="9">
+			9
+		    </button>
+		    <button value="function" class="btn btnSize to-right" name="+">
+			+
+		    </button>
+		</div>
+
+<!--第三行按键-->
+		<div class="btnline">
+		    <button value="number" class="btn btnSize to-left" name="4">
+			4
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="5">
+			5
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="6">
+			6
+		    </button>
+		    <button value="function" class="btn btnSize to-right" name="-">
+			-
+		    </button>
+		</div>
+
+<!--第四行按键-->
+		<div class="btnline">
+		    <button value="number" class="btn btnSize to-left" name="1">
+			1
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="2">
+			2
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="3">
+			3
+		    </button>
+		    <button value="function" class="btn btnSize to-right" name="*">
+			*
+		    </button>
+		</div>
+
+<!--第五行按键-->
+		<div class="btnline">
+		    <button value="function" class="btn btnSize to-left" name=".">
+			.
+		    </button>
+		    <button value="number" class="btn btnSize to-left" name="0">
+			0
+		    </button>
+		    <button value="function" class="btn btnSize to-left" name="=">
+			=
+		    </button>
+		    <button value="function" class="btn btnSize to-right" name="/">
+			/
+		    </button>
+		</div>
+
+	    </div>
+	</div>
+	<p id="notice" text-align="center"> 为方便控制屏显，小数已锁定四舍五入到5位； 另%号的作用是把当前操作数/100</p>
+</body>
+
+</html>

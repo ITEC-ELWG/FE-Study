@@ -1,0 +1,42 @@
+.boxWidth
+{
+	width:350px;
+}
+
+.btnSize
+{
+	width:75px;
+	height:50px;
+}
+
+.btnline
+{
+	width:330px;
+	height:60px;
+}
+
+.btn
+{
+	margin:2px 2px;
+	padding:auto;
+	border-radius:.25rem;
+
+	text-align:center;
+	font-size:40px;
+}
+
+.blue
+{
+	background-color:Blue;
+	color:White;
+}
+
+.to-left
+{
+	float:left;
+}
+
+.to-right
+{
+	float:right;
+}

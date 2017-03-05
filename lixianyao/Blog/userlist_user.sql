@@ -1,0 +1,2 @@
+INSERT INTO userlist.user (account, password, name) VALUES ('wayne', '$2y$10$08dq3wDZC68iim5N2bpnyudwilIFbyDwJwR6UK2LvrZXvCJXt7fU.', 'lixiao');
+INSERT INTO userlist.user (account, password, name) VALUES ('xcer', '$2y$10$.7SC.TXO6UwplIQHrCd8OOo0ZJtTokYHOGQ6OheTT25yxYW.RR5dy', 'dazhi');

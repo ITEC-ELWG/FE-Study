@@ -1,0 +1,62 @@
+.register-table
+{
+	
+	position:absolute;
+	top:25%;
+	left:37%;
+	padding:3px;
+}
+
+.register-table-head
+{
+	border:1px solid
+	border-radius:.3rem
+}
+
+.register-input
+{
+	margin-top: 10px;
+}
+
+.register-input input
+{
+	width:295px;
+	height:30px;	
+	border-radius:.4rem;
+}
+
+.register-table-button
+{
+	line-height: 35px;
+	padding:2px;
+}
+
+.btn
+{
+	display:inline-block;
+	text-align:center;
+	white-space:nowrap;
+	vertical-align:middle;
+	cursor:pointer;
+	padding:.5rem 1rem;
+	border-radius .5rem;
+}
+
+.table_width{
+	width:300px;
+}
+
+.blue
+{
+	background-color:blue;
+	color:White;
+}
+
+.alert_text{
+	color:Red;
+}
+
+.float-xs-right
+{
+	float: right;
+}

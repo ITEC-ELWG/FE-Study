@@ -1,0 +1,30 @@
+#calculbox
+{
+	height:420px;
+	background-color: whitesmoke;;
+	border:1px solid;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5%;
+}
+
+#screenbox
+{
+	height:90px;
+	border-bottom:1px solid;
+}
+
+#screen
+{
+	height:70px;
+	width:330px;
+	margin:6px 9px;
+
+	text-align:right;
+	font-size:40px;
+}
+
+#buttonbox
+{
+	padding:10px 10px;
+}
