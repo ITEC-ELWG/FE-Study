@@ -1,0 +1,65 @@
+.login-table
+{
+	
+	position:absolute;
+	top:25%;
+	left:37%;
+	padding:3px;
+	border:1px solid gray;
+	border-radius:.25rem;
+}
+
+.login-table-head
+{
+	border:1px solid
+	border-radius:.3rem
+}
+
+.login-input
+{
+	margin-top: 10px;
+}
+
+.login-input input
+{
+	width:295px;
+	height:30px;	
+	border-radius:.4rem;
+}
+
+.login-table-button
+{
+	line-height: 35px;
+	padding:2px;
+}
+
+.btn
+{
+	display:inline-block;
+	text-align:center;
+	white-space:nowrap;
+	vertical-align:middle;
+	cursor:pointer;
+	padding:.5rem 1rem;
+	border-radius .5rem;
+}
+
+.btn_login
+{
+	color:#fff;
+	background-color:#0275d8;
+	border-color:#0275d8;
+}
+
+.alert_text{
+	color:Red;
+}
+
+.table_width{
+	width:300px;
+}
+
+.float-xs-right
+{
+	float: right;
+}
