@@ -1,0 +1,81 @@
+body {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    margin:0;
+    line-height: 2;
+    background-color: #d9f3e3;
+    width:100%;
+}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+.header {
+    height: 80px;
+    background-color: #0f6b38;
+    width: 100%;
+    z-index: 1;
+    color:#fff;
+}
+.header h1 {
+    margin:-2px 0 0 70px;
+    font-size:37px;
+}
+.list {
+    margin:-50px 0 0 800px;
+}
+.a-list {
+    color: #fff;;
+    margin-left: 30px;
+}
+.nav {
+    line-height:50px;
+    background-color:#e5f36b;
+    height:200px;
+    width:200px;
+    float:left;
+    padding:10px;
+}
+.nav-wrapper {
+    font-size:20px;
+    color:#000;
+    list-style-type:square;
+}
+.a-nav{
+    color:#000;
+}
+.section {
+    margin-top:10px;
+    width:1000px;
+    float:right;
+    padding:10px;
+}
+.info {
+	float: left;
+	margin-bottom: 10px;
+}
+article {
+	margin:0 20px 30px 135px;
+}
+.time {
+	margin-top:10px;
+}
+.date {
+	color: #444242;
+	font-size: 14px;
+}
+.tag {
+	border-radius: 4px;
+	padding: 3px;
+	background-color: #135492;
+    color:#fff;
+    text-align: center;
+}
+.footer {
+    background-color: #4a4a4a;
+	height: 80px;
+	padding: 10px 150px;
+    clear:both;
+    text-align:center;
+    color:#fff;
+}
