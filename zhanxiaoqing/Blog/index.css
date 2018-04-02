@@ -21,10 +21,10 @@ a:hover {text-decoration:underline;}
     margin:-2px 0 0 70px;
     font-size:37px;
 }
-.list {
+menu {
     margin:-50px 0 0 800px;
 }
-.a-list {
+.menu {
     color: #fff;;
     margin-left: 30px;
 }
@@ -50,14 +50,14 @@ a:hover {text-decoration:underline;}
     float:right;
     padding:10px;
 }
-.info {
+.message {
 	float: left;
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 article {
 	margin:0 20px 30px 135px;
 }
-.time {
+time {
 	margin-top:10px;
 }
 .date {
