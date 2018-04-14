@@ -12,7 +12,7 @@ img {
 h1 {
     font-family: Zapf Chancery;
     font-size: 36px;
-    color: #2c2828a8
+    color: #2c2828a8;
     }
 input {
     border-radius: 4px;
@@ -33,4 +33,5 @@ button {
     border-radius: 10px;
     background: #0f6b38;
     font-size: 20px;
+    margin-top: 20px;
     }
