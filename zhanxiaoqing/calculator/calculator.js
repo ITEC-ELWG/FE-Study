@@ -23,7 +23,7 @@ for (var i = 0; i < 10; i++) {
         }
         else {
             num += data; 
-            num2 = num;//操作符按下，则显示的为操作数2
+            num2 = num;
             disp.value += data;
         }
     }
@@ -127,8 +127,10 @@ function calculate() {
 		default:
 		break;
     }
-    disp.value = String(result); 
-    opePress = 0;
+    disp.value = String(result);
+	num1=disp.value;
+	num2="";
+	num=num1;
+	opePress = 0;
     dotPress = 0;
-    num1 = disp.value;
 }
