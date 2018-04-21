@@ -1,5 +1,6 @@
 var num1 = 0;//操作数1
 var num2 = 0;//操作数2
+var num = 0;
 var disp = document.getElementsByTagName("input")[0];
 disp.value = "0";
 var opeType = 0;//操作类型
@@ -9,29 +10,31 @@ var dotPress = 0;//小数点是否按下
 for (var i = 0; i < 10; i++) {
     document.getElementsByClassName("num")[i].onclick = function () {
         var data = this.innerHTML;
-        if (disp.value == "0") {
-            disp.value = data;//屏幕中只有一个0，则重新显示
-        }
-        else {
-            disp.value = disp.value + data;
-        }
-        
         if (opePress == 0) {
-            num1 = disp.value;//操作符未按下，则显示的为操作数1
+            if (disp.value == "0") {
+                num = data;//屏幕中只有一个0，则重新显示
+                disp.value = num;
+            }
+            else {
+                num += data;
+                disp.value = num;
+            }
+            num1 = num;
         }
         else {
-            num2 = disp.value;//操作符按下，则显示的为操作数2
+            num += data; 
+            num2 = num;//操作符按下，则显示的为操作数2
+            disp.value += data;
         }
     }
 }
 
 document.getElementsByClassName("dot")[0].onclick = function () {
     if (dotPress == 0) {//判断小数点是否按下
-        disp.value = disp.value + this.innerHTML;
+        num += this.innerHTML;
+        disp.value += this.innerHTML;
     }
-    else {
-        return false;
-    }
+    else return false;
     dotPress = 1;
 }
 
@@ -46,6 +49,7 @@ document.getElementsByClassName("percent")[0].onclick = function () {
 document.getElementsByClassName("clear")[0].onclick = function () {
     num1 = 0;
     num2 = 0;
+    num = 0;
     disp.value = 0;
     opeType = 0;
     opePress = 0;
@@ -53,47 +57,60 @@ document.getElementsByClassName("clear")[0].onclick = function () {
 }
 
 document.getElementsByClassName("add")[0].onclick = function () {
-    if (opePress) {
-        alert ("错误！")//若操作符按下两次，则报错
+    if (opePress == 1) {
+        if (num2 != "") calculate();
+        else return false;
     }
     opeType = 1;
     opePress = 1;
-    disp.value = 0;
+    disp.value += this.innerHTML;
     dotPress = 0;
+    num = "";
 }
 
 document.getElementsByClassName("sub")[0].onclick = function () {
-    if (opePress) {
-        alert ("错误！")//若操作符按下两次，则报错
+    if (opePress == 1) {
+        if (num2 != "") calculate();
+        else return false;
     }
     opeType = 2;
     opePress = 1;
-    disp.value = 0;
+    disp.value += this.innerHTML;
     dotPress = 0;
+    num = "";
 }
 
 document.getElementsByClassName("mul")[0].onclick = function () {
-    if (opePress) {
-        alert ("错误！")//若操作符按下两次，则报错
+    if (opePress == 1) {
+        if (num2 != "") calculate();
+        else return false;
     }
     opeType = 3;
     opePress = 1; 
-    disp.value = 0;
+    disp.value += this.innerHTML;
     dotPress = 0;
+    num = "";
 }
 
 document.getElementsByClassName("divid")[0].onclick = function () {
-    if (opePress) {
-        alert ("错误！")//若操作符按下两次，则报错
+    if (opePress == 1) {
+        if (num2 != "") calculate();
+        else return false;
     }
     opeType = 4;
     opePress = 1;
-    disp.value = 0;
+    disp.value += this.innerHTML;
     dotPress = 0;
+    num = "";
 }
 
 /*等号按下时进行计算*/
 document.getElementsByClassName("equ")[0].onclick = function () {
+    calculate();
+}
+
+function calculate() {
+    if (!opePress) return false;
     var result;
     switch(opeType) {
 		case 1:
