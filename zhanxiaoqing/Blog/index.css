@@ -1,10 +1,9 @@
 body {
     font-size: 15px;
     font-family: "微软雅黑";
-    margin:0;
     line-height: 2;
     background-color: #d9f3e3;
-    width:100%;
+    margin:0;
 }
 a:link {text-decoration:none;}
 a:visited {text-decoration:none;}
@@ -13,55 +12,56 @@ a:hover {text-decoration:underline;}
 .header {
     height: 80px;
     background-color: #0f6b38;
-    width: 100%;
-    z-index: 1;
-    color:#fff;
 }
 .header h1 {
-    margin:-2px 0 0 70px;
+    position:absolute;
+    left:150px;
+    top:-20px;
     font-size:37px;
+    color:#fff;
 }
-.list {
-    margin:-50px 0 0 800px;
+nav {
+    position:absolute;
+    right:150px;
+    top:30px;
 }
-.a-list {
-    color: #fff;;
+.menu {
+    color: #fff;
     margin-left: 30px;
 }
 .nav {
     line-height:50px;
     background-color:#e5f36b;
-    height:200px;
-    width:200px;
+    height:190px;
+    width:180px;
     float:left;
     padding:10px;
+    
 }
 .nav-wrapper {
+    margin-left: 10px;
     font-size:20px;
     color:#000;
     list-style-type:square;
+    
 }
 .a-nav{
     color:#000;
 }
 .section {
-    margin-top:10px;
     width:1000px;
     float:right;
     padding:10px;
 }
-.info {
+.message {
 	float: left;
-	margin-bottom: 10px;
 }
 article {
-	margin:0 20px 30px 135px;
+    margin:0 120px 30px 120px;
 }
-.time {
-	margin-top:10px;
-}
-.date {
-	color: #444242;
+time {
+    margin-top:10px;
+    color: #444242;
 	font-size: 14px;
 }
 .tag {
