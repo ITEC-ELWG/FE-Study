@@ -1,0 +1,37 @@
+body {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    line-height: 2;
+    background-color: #bbddc8;
+    margin:0;
+}
+
+.top {
+    background-color: rgb(0, 174, 255);
+    height: 80px;
+}
+
+.title, .nav {
+    position: absolute;
+}
+
+.title {
+    left: 100px;
+    top: 10px;
+    font-size: 35px;
+}
+
+.nav {
+    right: 150px;
+    top: 20px;
+}
+
+.nav-list {
+    float: left;
+}
+
+.nav-list a {
+    display: block;
+    width: 60px;
+    font-size: 20px;
+}
