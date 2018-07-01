@@ -1,0 +1,53 @@
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.background {
+	width: 100%;
+	height: 100%;
+	background-image: url(../calculator/img/0.jpg);
+}
+.calculator {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	top: 150px;
+	margin: 0px auto;
+	border: solid 1px;
+	background-color: #000000;
+}
+.screen {
+	text-align: right;
+	font-size: 50px;
+	width: 90%;
+	height: 20%;
+	position: absolute;
+	top: 4%;
+	left: 4%;
+	background-color: #ffffff;
+	padding: 5px;
+}
+.fun-button {
+	text-align: center;
+	font-size: 40px;
+	width: 80px;
+	height: 80px;
+	float: left;
+	border: solid 1px;
+	border-radius: 20px;
+	margin: 2px;
+	background-color: #585858;
+	color: #000;
+}
+.num-button {
+	width: 80px;
+	height: 80px;
+	float: left;
+	border: solid 1px;
+	border-radius: 20px;
+	margin: 2px;
+	color: #000;
+	background-color: #B8B8B8;
+}
