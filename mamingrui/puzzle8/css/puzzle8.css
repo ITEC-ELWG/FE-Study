@@ -1,0 +1,103 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+#container{
+  position: relative;
+  width: 620px;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 1px;
+}
+
+#game{
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #8dff71;
+  box-shadow: 0 0 10px #8dff71;
+}
+
+#game div{
+  position: absolute;
+  width: 149px;
+  height: 149px;
+  box-shadow: 1px 1px 2px #777;
+  background-color: #20a6fa;
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  line-height: 150px;
+  cursor: pointer;
+}
+
+#game div:hover{
+  color: #8dff71;
+}
+
+#control{
+  width: 150px;
+  height: 450px;
+  float: right;
+}
+
+#control rowspan{
+  height: 25px;
+  font-size: 20px;
+  color: #222;
+  margin-top: 10px;
+}
+
+
+#reset{
+  display: inline-block;
+  font-size: 28px;
+  width: 100px;
+  height: 28px;
+  background-color: #20a6fa;
+  color: #ffe171;
+  text-shadow: 1px 1px 2px #c1ff71;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #4c98f5;
+  text-align: center;
+  cursor: pointer;
+}
+/*给Reset按钮设置属性*/
+#d1{
+  left: 0px;
+}
+#d2{
+  left: 150px;
+}
+#d3{
+  left: 300px;
+}
+#d4{
+  top: 150px;
+}
+#d5{
+  top: 150px;
+  left: 150px;
+}
+#d6{
+  top: 150px;
+  left: 300px;
+}
+#d7{
+  top: 300px;
+}
+#d8{
+  left: 150px;
+  top: 300px;
+}
+/*这是预先给每个小方块按照顺序排好位置*/
