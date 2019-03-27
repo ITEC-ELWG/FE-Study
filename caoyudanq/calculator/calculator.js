@@ -1,5 +1,5 @@
 // JavaScript Document 
-//表达式状态
+//运算表达式状态
 var flag1;//输入第一个数字
 var flag2;//输入第一个数字+运算符
 var flag3;//输入第一个数字+运算符+第二个数字

@@ -9,10 +9,10 @@
 .cal_result{
     padding: 10px;
     height: 10%;
-	}
+}
 .num{
 	clear:right;
-	}
+}
 
 button.num,button.operator,button.row1,button.equal{
     border: #000 thin solid;
@@ -21,18 +21,18 @@ button.num,button.operator,button.row1,button.equal{
     width: 18%;
     height: 20%;
     cursor: pointer;
-	}
+}
 button.equal{
     background-color: #797976;
-	}
+}
 button.operator{
     background: #cacabe;
-	}
+}
 button.row1{
     background: #cacabe;
     float: right;
     margin: 9px;
-	}	
+}	
 #result{
     width: 100%;
     height: 100%;
@@ -42,4 +42,4 @@ button.row1{
     font-family: "Times New Roman", Times, serif;
     font-size: 25px;
     text-align: right;
-	}
+}
