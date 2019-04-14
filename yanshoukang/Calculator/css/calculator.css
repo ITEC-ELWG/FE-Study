@@ -1,6 +1,6 @@
 div.global {
     position: relative;
-    top: 150px;
+    top: 90px;
     margin: 0px auto;
     width: 340px;
     height: 330px;
@@ -23,7 +23,7 @@ input.output {
     border-width: 2px;
     border-color: #A34F11;
 }
-button.button {
+button.button1 {
     height: 40px;
     width: 75px;
     margin: 5px;
@@ -37,10 +37,53 @@ button.button {
     border-radius: 5px;
     float: right;
 }
+button.button2 {
+    height: 40px;
+    width: 75px;
+    margin: 5px;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    float: right;
+    background: #24B4AD;
+    color: #F7F065;
+}
+button.button3 {
+    height: 40px;
+    width: 75px;
+    margin: 5px;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    float: right;
+    background: #24B4AD;
+    color: #F7F065;
+    clear: right;
+}
+button.button4 {
+    height: 40px;
+    width: 75px;
+    margin: 5px;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 微软雅黑, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    float: right;
+    background: #352092;
+    color: #E9E2E2;
+}
 div.footer {
     text-align: center;
-    font-size: 15px;
     color: black;
+    font-size: 15px;
     font-family: Times, serif;
     width: 100%;
     float: left;
