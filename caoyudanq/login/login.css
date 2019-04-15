@@ -1,15 +1,10 @@
 @charset "utf-8";
-<<<<<<< HEAD
-
-
-=======
 /* CSS Document */
->>>>>>> 7ee377e895212995b142c62cc6383fec957178c1
 .center {
-	font-family: Verdana, sans-serif;
-	margin-left :auto;
-	margin-right:auto;
-	width:40%;
-	text-align: center;
+    font-family: Verdana, sans-serif;
+    margin-left : auto;
+    margin-right: auto;
+    width: 40%;
+    text-align: center;
 }
 
