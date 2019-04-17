@@ -9,35 +9,38 @@
 <body>
     <div class="calculator"> 
         <div class="cal_result">
-            <input name="result" type="text" value=null id="result" />
+            <input name="result" type="text" value=null id="result"/>
         </div>  
-        <div>
-            <button type="button" class="row1" onclick="myfunction(this.id)" id="%">%</button>  
-            <button type="button" class="row1" onclick="myfunction(this.id)" id="AC">AC</button>         
+        <div style="overflow: hidden;">
+            <button type="button" class="row1 click_event" id="empty"></button>
+            <button type="button" class="row1 click_event" id="empty"></button>
+            <button type="button" class="row1 click_event" id="%">%</button>  
+            <button type="button" class="row1 click_event" id="AC">AC</button> 
+
         </div>
         <div class="num">
-            <button type="button" class="num" onclick="myfunction(this.id)" id="7">7</button>
-            <button type="button" class="num" onclick="myfunction(this.id)" id="8">8</button>
-            <button type="button" class="num" onclick="myfunction(this.id)" id="9">9</button> 
-            <button type="button" class="operator" onclick="myfunction(this.id)" id="+">+</button>
+            <button type="button" class="num click_event" id="7">7</button>
+            <button type="button" class="num click_event" id="8">8</button>
+            <button type="button" class="num click_event" id="9">9</button> 
+            <button type="button" class="operator click_event" id="+">+</button>
         </div>
         <div class="num">
-            <button type="button" class="num" onclick="myfunction(this.id)" id="4">4</button>
-            <button type="button" class="num" onclick="myfunction(this.id)" id="5">5</button>
-            <button type="button" class="num" onclick="myfunction(this.id)" id="6">6</button>  
-            <button type="button" class="operator" onclick="myfunction(this.id)" id="-">-</button>        
+            <button type="button" class="num click_event" id="4">4</button>
+            <button type="button" class="num click_event" id="5">5</button>
+            <button type="button" class="num click_event" id="6">6</button>  
+            <button type="button" class="operator click_event" id="-">-</button>        
         </div>
         <div class="num">
-            <button type="button" class="num" onclick="myfunction(this.id)" id="1">1</button>
-            <button type="button" class="num" onclick="myfunction(this.id)" id="2">2</button>
-            <button type="button" class="num" onclick="myfunction(this.id)" id="3">3</button> 
-            <button type="button" class="operator" onclick="myfunction(this.id)" id="*">*</button>        
+            <button type="button" class="num click_event" id="1">1</button>
+            <button type="button" class="num click_event" id="2">2</button>
+            <button type="button" class="num click_event" id="3">3</button> 
+            <button type="button" class="operator click_event" id="*">*</button>        
         </div> 
         <div class="num">
-            <button type="button" class="num" onclick="myfunction(this.id)" id="0">0</button>
-            <button type="button" class="operator" onclick="myfunction(this.id)" id=".">.</button>
-            <button type="button" class="equal" onclick="myfunction(this.id)" id="=">=</button> 
-            <button type="button" class="operator" onclick="myfunction(this.id)" id="/">/</button>        
+            <button type="button" class="num click_event" id="0">0</button>
+            <button type="button" class="operator click_event" id=".">.</button>
+            <button type="button" class="equal click_event" id="=">=</button> 
+            <button type="button" class="operator click_event" id="/">/</button>        
         </div>
     </div>	
 </body>
