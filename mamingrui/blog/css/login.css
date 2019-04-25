@@ -1,0 +1,34 @@
+body.background {
+    background-image: url(../img/leaves-pattern.png);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+div.login {
+    text-align: center;
+    padding-top: 80px;
+    color: brown;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img.login {
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+span {
+    font-size: 20px;
+    position: relative;
+}
+
+button.login {
+    margin-top: 10px;
+    width: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #0f0d0d8f;
+}
+
+button.login:hover {
+    color: rgba(114, 25, 25, 0.911);
+}
