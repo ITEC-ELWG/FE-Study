@@ -5,7 +5,10 @@ line-height:3;
 margin:120px 0 0 0;
 background-color:white;
 }
-
+.content-title
+{
+font-weight:bold;
+}
 a{
 text-decoration:none;
 color:white;
