@@ -38,7 +38,7 @@ for(var i=2;i<18;i++)
 {
    document.getElementsByClassName("button")[i].onclick=function(){
    var data = this.value;
-var result = document.getElementById("result");
+
     switch(data){
     case "0":
  case "1":
@@ -109,4 +109,4 @@ num2=" ";
 numtemp = num1;
 expression = num1;
 }
-    }
+}
