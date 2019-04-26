@@ -1,6 +1,7 @@
+
 body{
-tet-align:center;
-background:grey;
+text-align: center;
+background: grey;
 margin-top:100px;
 }
 
@@ -27,4 +28,3 @@ margin-top:5px;
 {
 margin-left:200px;
 }
-
