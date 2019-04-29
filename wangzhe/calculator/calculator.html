@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "ch-ZN">
+
+<head>
+	<meta charset = "UTF-8">
+	<title>my calculator</title>
+	<link rel = "stylesheet" type = "text/css" href = "../calculator/css/calculator.css"/>
+	<script type="text/javascript" src="../calculator/calculator.js"></script>
+</head>
+
+<body class = "background">
+		<div class = "calculator">
+			<input class = "screen" type = "text" id = "result" value = "" onfocus = "this.blur()"/> 
+			<div>
+				<button class = "fun-button" type = "button" id = "AC" onclick = "clean()"/>AC</button>
+				<button class = "fun-button" type = "button" id = "%" onclick = "percent()">%</button>
+				<button class = "fun-button" type = "button" id = "÷" onclick = "divide()">÷</button>
+				<button class = "fun-button" type = "button" id = "*" onclick = "multiply()">*</button>
+				<button class = "num-button" type = "button" id = "7" onclick = "num(7)"/>7</button>
+				<button class = "num-button" type = "button" id = "8" onclick = "num(8)"/>8</button>
+				<button class = "num-button" type = "button" id = "9" onclick = "num(9)"/>9</button>
+				<button class = "fun-button" type = "button" id = "-" onclick = "minus()">-</button>
+				<button class = "num-button" type = "button" id = "4" onclick = "num(4)"/>4</button>
+				<button class = "num-button" type = "button" id = "5" onclick = "num(5)"/>5</button>
+				<button class = "num-button" type = "button" id = "6" onclick = "num(6)"/>6</button>
+				<button class = "fun-button" type = "button" id = "+" onclick = "plus()">+</button>
+				<button class = "num-button" type = "button" id = "1" onclick = "num(1)"/>1</button>
+				<button class = "num-button" type = "button" id = "2" onclick = "num(2)"/>2</button>
+				<button class = "num-button" type = "button" id = "3" onclick = "num(3)"/>3</button>
+				<button class = "fun-button" type = "button" id = "=" onclick = "equal()">=</button>
+				<button class = "fun-button" type = "button" id = "." onclick = "dot()">.</button>
+				<button class = "num-button" type = "button" id = "0" onclick = "num(0)"/>0</button>
+			</div>
+		</div>
+</body>
+
+</html>

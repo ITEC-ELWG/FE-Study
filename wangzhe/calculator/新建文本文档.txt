@@ -1,0 +1,71 @@
+function equal() {
+	if (Boo) {
+		alert("error symbol");
+
+	}else {
+		if (result.value == '') {
+			alert("error input")
+		}
+	}else {
+		a = result.value;
+		switch(ope) {
+			case 1: if (a == '0') {
+				alert("0 can't do divisor");
+			}else {
+				sum = sum / a;
+			}
+			case 2: sum = sum * a;
+			case 3: sum = sum + a;
+			case 4: sum = sum - a;
+		}
+	}
+}
+
+function divide() {
+	if (Boo) {
+		alert("error symbol");
+	}else {
+		if (result.value == '') {
+			alert("error input")
+		}else {
+			sum = result.value;
+		}
+	}
+	ope = 1;
+}
+function multiply() {
+	if (Boo) {
+		alert("error symbol");
+	}else {
+		if (result.value == '') {
+			alert("error input")
+		}else {
+			sum = result.value;
+		}
+	}
+	ope = 2;
+}
+function plus() {
+	if (Boo) {
+		alert("error symbol");
+	}else {
+		if (result.value == '') {
+			alert("error input")
+		}else {
+			sum = result.value;
+		}
+	}
+	ope = 3;
+}
+function minus() {
+	if (Boo) {
+		alert("error symbol");
+	}else {
+		if (result.value == '') {
+			alert("error input")
+		}else {
+			sum = result.value;
+		}
+	}
+	ope = 4;
+}
