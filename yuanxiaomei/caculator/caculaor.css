@@ -5,31 +5,31 @@ body {
 }
 
 #calculator {
-
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
 }
 
-#display {
-    width:312px;
-    height:50px;
-    text-align: right;
-    font-size: 45px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 4px;
+#screen{
+    width: 350px;
+    margin: 0 auto;
+}
+.display{
+    width: 316px;
+    height:30px;
+    margin: 0 auto;
+    font-size: 25px;
 
 }
-input {
+input, button {
     margin: 3px;
     border: none;
-}
-
-input, button {
+    padding: 2px;
     outline:none;
 }
 
 .btn_in {
+
     width: 72px;
     height: 72px;
     border: none;
@@ -63,12 +63,5 @@ input, button {
     color: #ffffff;
 }
 
-#down {
-    opacity: 0.4;
-}
-
-#up {
-    opacity: 1;
-}
 
 
