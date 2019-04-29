@@ -1,0 +1,122 @@
+body{
+  width: 500px;
+  margin: 4% auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.8rem;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.calculator {
+  padding: 20px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+}
+
+.output {
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  height: 60px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 6px;
+  margin-left: -7px;
+  font-size: 2.5rem;
+  overflow-x: auto;
+  transition: all .2s ease-in-out;
+}
+
+.output:hover {
+  border: 1px solid #bbb;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*此处添加一些说明*/
+.operators div, #percent{
+  display: inline-block;
+  border: 1px solid #bbb;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 6px 10px -8px;
+  background-color: #ddd;
+  border-radius: 1px;
+  
+}
+
+/*此处添加一些说明*/
+.aside {
+  display: inline-block;
+  vertical-align: top;
+}
+/*此处添加一些说明*/
+#percent {
+  display: block;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/*此处添加一些说明*/
+.operators div:hover, #percent:hover {
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+/*此处添加一些说明*/
+.operators div:active, #percent:active {
+  font-weight: bold;
+}
+
+.left-panel {
+    display: inline-block;
+}
+
+.numbers div{
+  display: inline-block;
+  border: 1px solid #ddd;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 6px 10px -8px;
+  border-radius: 1px;
+  background-color: #f9f9f9;
+}
+
+.numbers div:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.numbers div:active {
+  font-weight: bold;
+}
+
+.equal {
+  display: block;
+  border: 1px solid #3079ED;
+  width: 80px;
+  text-align: center;
+  vertical-align: top;
+  padding: 85px 10px 85px 10px;
+  margin: 10px 6px 10px -8px;
+  background-color: #4d90fe;
+  color: white;
+  border-radius: 1px;
+}
+
+.equal:hover {
+  background-color: #307CF9;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #1857BB;
+}
+
+div.equal:active {
+ font-weight: bold;
+}
