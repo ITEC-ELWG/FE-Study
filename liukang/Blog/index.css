@@ -14,8 +14,8 @@ text-decoration:none;
 color:white;
 }
 .page-header{
-background-color:#00529c;
-position:fixed;
+background-color:grey;
+position: absolute;
 top:0;
 left:0;
 z-index:58;
@@ -53,12 +53,7 @@ color:white;
 text-align:center;
 }
 
-aside{
 
-margin-right:10px;
-display: inline-block;
-width:100px;
-}
 .article-nav-link
 {
  position: relative;
