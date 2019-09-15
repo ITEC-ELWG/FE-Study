@@ -1,0 +1,27 @@
+.background {
+    background-image: url(images/bg.jpg);
+    background-size: 100%;
+}
+.image {
+    width: 100px;
+    height: 100px;
+}
+.login {
+    padding-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+.btn {
+    margin-top: 10px;
+    background-color: rgb(107, 81, 86);
+    font-weight:bold;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+}
+a {
+    text-decoration:none;
+}
+a:link {color: rgb(152, 182, 199)}		/* 未访问的链接 */
+a:visited {color: rgb(255, 255, 255)}	/* 已访问的链接 */
+a:hover {color: rgb(248, 206, 18)}	/* 鼠标移动到链接上 */
