@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
     color:rgb(255, 255, 255);
@@ -5,6 +9,10 @@ a {
 }
 h3 {
     color: #cc8c8c;
+}
+hr {
+    border: 1;
+    width: 80%;
 }
 .header {
     background: #7c6464;
@@ -18,17 +26,17 @@ h3 {
     margin-left: 130px;
 }
 .navContent {
-    display: inline-block;
-    margin-left: 450px;
+    display: flex;
+    margin-left: 800px;
 }
-.nav_img {
+.navImg {
     margin-right: 8px;
     width: 15px;
-    height: 15px;
+    height: 15px; 
 }
-.a_nav {
+.aNav {
     margin-left: 30px;
-    margin-top: 1px;
+    margin-top: -30px;
     font-size: 15px;
 }
 section {
