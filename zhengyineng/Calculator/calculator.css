@@ -1,0 +1,24 @@
+body{
+	padding: 0;
+    margin: 0;
+}
+button {
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 90px;
+    height: 55px;
+    font-size: 30px;
+}
+.calculator {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    top: 25%;
+    left: 35%;
+}
+.display-box {
+    margin-left: 5px;
+    width: 350px;
+    height: 40px;
+    font-size: 25px;
+}
