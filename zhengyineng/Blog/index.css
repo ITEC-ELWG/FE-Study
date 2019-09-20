@@ -17,24 +17,26 @@ hr {
 .header {
     background: #7c6464;
     width: 100%;
+    min-width: 1500px;
     height: 70px;
+    display: flex;
+    align-items: center;
 }
-.navName {
-    display: inline-block;
+.headerName {
     font-size: 35px;
     margin-top: 10px;
     margin-left: 130px;
 }
 .navContent {
-    display: flex;
-    margin-left: 800px;
+    /* margin-left: 35%; */
+    margin: 0 auto;
 }
 .navImg {
     margin-right: 8px;
     width: 15px;
     height: 15px; 
 }
-.aNav {
+.navText {
     margin-left: 30px;
     margin-top: -30px;
     font-size: 15px;
@@ -64,4 +66,6 @@ section {
 }
 .content {
     margin-left: 200px;
+    width: 80%;
+    min-width: 900px;
 }
