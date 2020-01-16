@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+}
+hr{
+    color: black;
+    border-style: solid;
+    width: 90%;
+    margin: 0 auto;
+}
+#header{
+    background-color: #00529d;
+    margin: 0;
+    position: absolute;
+    width: 70%;
+    height: 120px;
+}
+.h1{
+    margin: 0;
+    padding: 30px 0 30px 80px;
+    color: white;
+    height: 60px;
+}
+#nav{
+    background-color: #00529d;
+    position: absolute;
+    height: 60px;
+    width: 30%;
+    margin-left: 70%;
+    padding: 30px 0 30px 80px;
+    line-height: 50px;
+}
+#nav a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    height: 60px;
+    padding-left: 30px;
+}
+#section{
+    background-color: #c3c3c3;
+    position: absolute;
+    width: 100%;
+    margin: 120px 0 0 0;
+    height: 726px;
+}
+#section .passage{
+    width: 100%;
+    margin: 0;
+}
+#section .passage .content{
+    float: left;
+    margin: 0 0 100px 0;
+    width: 80%;
+    height: 120px;
+}
+#section .passage .navigation{
+     width: 10%;
+     margin: 0 0 100px 150px;
+     height: 120px;
+     float: left;
+ }
+#section .passage .navigation p{
+    margin: 30px 0 0 0;
+    color: #000000;
+    font-size: medium;
+    width: 100%;
+}
+#section .passage .navigation .tag{
+    float: left;
+    font-size: medium;
+    margin: 15px 15px 0 0;
+    background-color: #4c9c8d;
+    width: 60px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+#section .passage .content p{
+     margin: 30px 0 0 100px;
+     width: 100%;
+     height: 100%;
+}
+#footer{
+    position: absolute;
+    margin: 796px 168px 0 168px;
+    width: 80%;
+    background-color: purple;
+}
+#footer p{
+    height: 20px;
+    margin: 5px auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+}

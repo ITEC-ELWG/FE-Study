@@ -1,0 +1,49 @@
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+
+}
+.div{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.sign-passage{
+    color: #666666;
+    font-size: xx-large;
+    font-weight: bolder;
+    position: relative;
+    top: 240px;
+    border-bottom-width: 0;
+    margin-bottom:0.5em;
+    margin-top: 0.5em;
+}
+.login-img{
+    position: relative;
+    top:250px;
+}
+.label{
+    position: relative;
+    top:230px
+}
+.usr-name{
+    margin: 1em;
+    width: 170px;
+    font-size: large;
+}
+.usr-pswd{
+    margin: 1em;
+    width: 170px;
+    font-size: large;
+}
+.commit-button{
+    margin-top: 10px;
+    width: 180px;
+    font-size: large;
+    background-color: aqua;
+    border-radius: 20px;
+    border: 2px solid;
+}
