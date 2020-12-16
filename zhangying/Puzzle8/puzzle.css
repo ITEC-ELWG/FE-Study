@@ -1,0 +1,25 @@
+.puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 5px 5px;
+    background-color: white;
+}
+
+.puzzle div {
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    background-color: #1bbc9b;
+    cursor: pointer;
+}
+
+.puzzle div.obj {
+    background-color: skyblue;
+}
+
+button {
+    margin: 5px 120px;
+}

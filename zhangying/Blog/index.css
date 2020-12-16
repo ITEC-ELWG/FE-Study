@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ebf8ff;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h2 {
+    font-size: 20px;
+    color: #5490c5;
+    margin-top: 5px;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
+
+header {
+    background-color: #00529c;
+    height: 50px;
+}
+
+header .headtitle {
+    float: left;
+    margin-left: 210px;
+    line-height: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+header .nav {
+    float: right;
+    margin-right: 180px;
+}
+
+header .nav ul li {
+    float: left;
+    margin-right: 30px;
+}
+
+header .nav ul li a {
+    display: block;
+    height: 49px;
+    line-height: 49px;
+    /*这里设置为50效果更好，但会引起section部分浮动问题，可通过设置z-index解决，忘记怎么设置了*/
+}
+
+header .nav ul li a:hover {
+    border-bottom: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+
+section {
+    /* height: 500px; */
+    overflow: hidden;
+    margin: 0 260px;
+}
+
+section .part {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cfd9de;
+}
+
+section .side {
+    float: left;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+
+section .place {
+    border: 1px solid #14a286;
+    border-radius: 3px;
+    background-color: #14a286;
+    color: white;
+    margin-top: 3px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+
+section .part .content {
+    float: left;
+    margin-left: 200px;
+}
+
+section .part img {
+    float: right;
+    margin-top: 8px;
+}
+
+footer {
+    background-color: #2d3e50;
+    height: 50px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-size: 12px;
+    line-height: 25px;
+}

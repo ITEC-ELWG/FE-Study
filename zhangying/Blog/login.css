@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(49, 40, 22);
+}
+
+#loginblock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    box-shadow: 0 0 15px #000;
+    text-align: center;
+    background-color: rgb(69, 76, 78);
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+    outline: none;
+    margin: 5px;
+}
+
+.info {
+    width: 200px;
+    height: 28px;
+}
+
+.submit {
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(61, 118, 141);
+}
