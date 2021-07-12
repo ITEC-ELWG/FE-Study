@@ -1,0 +1,294 @@
+*{
+margin: 0px;
+padding: 0px;
+text-decoration: none;
+color: white;
+font-family: montserrat;
+box-sizing: border-box;
+}
+
+body{
+min-height: 100vh;
+background-image: linear-gradient(120deg,#2c3e50,#bdc3c7);
+}
+
+#header{
+background: rgba(250,250,250,0.3);
+/* position: fixed; */
+position: absolute;
+width: 100%;
+padding-left: 5%;
+padding-top: 3%;
+padding-bottom: 1%;
+}
+
+#header h1{
+font-family: 'Indie Flower', cursive;
+/* color: #F2F6DF; */
+font-size: 45px;
+}
+
+
+
+
+.navi ul li{
+display: inline-block;/*排列方式，排列到一行*/
+font-size: 20px;
+margin-right: 60px;/*外填充距离*/
+position: relative;
+top: -33px;
+float: right;
+
+}
+
+.homepage-wapper #profile{
+position: absolute;
+left: 50%;
+top: 30%;
+transform: translate(-50%,-50%);
+
+}
+
+.homepage-wapper h1{
+position: absolute;
+left: 50%;
+top: 43%;
+transform: translate(-50%,-50%);
+font-family: "Sofia";
+/* font-family: 'Indie Flower', cursive; */
+/* font-size: 22px; */
+border:solid 2px white;/*白色的方框*/
+border-radius: 6px;/*边角设置弧度*/
+padding: 4px;/*上下内填充*/
+padding-left: 14px;/*左内边距*/
+padding-right: 14px;/*右内边距*/
+}
+
+.homepage-wapper p{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+font-family: 'Indie Flower', cursive;
+font-size: 25px;
+font-weight: bold;
+}
+
+
+.navi u1 li #about{
+position: relative;
+left: 0%;
+top: 0%;
+bottom: 0%;
+
+}
+
+#wrapper{
+margin: auto;
+width: 960px;
+margin-top: 20px;
+}
+
+
+.main{
+width: 840px;
+background-color: white;
+float: left;
+margin-right:10px;
+margin-bottom: 3%;
+padding: 20px;
+border-radius: 4px;
+}
+
+
+.item{
+margin-top: 14px;
+padding-bottom: 20px;
+border-bottom: dotted 1px #999;    
+
+}
+
+
+.item_img{
+float: left;
+width: 100px;
+}
+
+
+.item_img img{
+width: 80px;
+}
+
+
+.item_content{
+margin-bottom: 10px;
+}
+
+
+.item_content h2{
+font-size: 14px;
+color: #FF6347;
+margin: 0;
+}
+
+
+.item_info{
+font-size: 12px;
+font-style: italic;
+margin:0;
+color: #999;
+}
+
+.item_desc{
+font-size: 14px;
+margin: 0;
+color: gray;
+margin-top:10px; /*与h2有一定的边距*/
+border-left: solid 1px #ccc;/*设置左边框*/
+padding-left: 10px;/*设置左填充*/
+}
+.side{
+position: absolute;
+right: 4%;
+width: 255px;
+background-color: white ;
+float: right;
+padding: 20px;
+border-radius: 6px;
+margin-left: 3px;
+height: 525px;
+}
+
+
+.author_img{
+margin-top: 20px;
+width: 120px;
+margin:auto;
+}
+
+
+.author_img img{
+width: 120px;
+border:solid 1px #ccc;
+border-radius: 4px;
+}
+
+
+.author_desc{
+text-align: center;
+border:solid 1px #ccc;
+border-radius: 4px;
+background-color: #eee;
+padding-top:10px;
+padding-bottom: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+
+.author_desc h4{
+margin:0;
+margin-bottom: 10px;
+color: #2c3e50;
+}
+
+
+.author_desc p{
+margin:0;
+font-size: 14px;
+margin-bottom: 10px;
+color: #2c3e50;
+}
+
+
+.top_article h4{
+color: #2c3e50;    
+font-size:14px;
+font-style: italic;
+margin:0;
+border-bottom: dotted 1px #999;
+border-top: 10px;
+}
+
+
+.top_article ul{
+margin-left:0;
+padding-left:10px;
+list-style: none;
+
+
+}
+
+
+.top_article ul li{
+color: #2c3e50;
+margin:0;
+font-size: 14px;
+margin-top: 5px;
+
+
+}
+
+.site-info{
+margin-top: 30px;
+border-top: solid 1px #ccc;/*分界线*/
+}
+
+
+.site-info p{
+font-size: 14px;
+color: gray;
+text-align: center;
+/*padding-left: 60px;/*左填充*/
+margin:0;
+margin-top: 10px;
+}
+
+.side_nav{
+position: fixed;
+left: 6%;
+top: 78%;
+transform: translate(-50%,-50%); 
+width: 170px;
+background-color: white ;
+padding: 20px;
+border-radius: 6px;
+height: 290px;
+
+}        
+
+.go_to_top a{
+color: #2c3e50;
+font-size: 14px;
+padding-left:21%;
+padding-right:20%;
+padding-bottom: 5%;
+border-bottom: dotted 1px black;
+}
+
+.go_to_bottom a{
+color: #2c3e50;
+font-size: 14px;
+padding-left:21%;
+padding-right:20%;
+padding-top: 5%;
+border-top: dotted 1px black;
+}
+
+.side_nav ul{
+margin: left 2px;
+padding-left:10px; 
+}
+
+.side_nav ul li{
+list-style:url('./images/item_icon.png');
+margin-top: 5px;  
+margin-bottom: 10px;   
+}
+
+.side_nav ul li a{
+color: #2c3e50;
+font-size: 14px;
+/* margin-top: 5px;  
+margin-bottom: 10px;    */
+}
