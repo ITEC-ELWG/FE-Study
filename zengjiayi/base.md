@@ -6,7 +6,7 @@
 - [x] task 0：准备工作 :smiling_imp:
 - [x] task 1：初识Git和Github :hushed:
 - [x] task 2：HTML与CSS入门 :expressionless:
-- [ ] task 3：Javascript入门 :yum:
+- [x] task 3：Javascript入门 :yum:
 - [ ] task 4：初识服务器后台和数据库 :confused:
 - [ ] task 5：神奇的jQuery :grinning:
 
