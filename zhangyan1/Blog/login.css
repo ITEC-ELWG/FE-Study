@@ -1,0 +1,42 @@
+#header{
+    color:lightslategray;
+    text-align:center;
+    padding: 5px;
+    position: relative;
+    top: 180px;
+}
+form{
+    text-align: center;
+}
+button{
+    background-color:lightslategray; 
+    color: white;
+    border: none;
+    font-size: 16px;
+    width: 180px;
+    border-radius: 8px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    top: 220px;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+button:hover {opacity: 1}
+input{
+    font-size: 16px;
+    color:lightslategray;
+    position: relative;
+    top: 220px;
+    caret-color: silver;
+    padding: 5px;
+}
+input:focus{
+    outline: 1px solid lightslategray;
+}

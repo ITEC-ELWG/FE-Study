@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="puzzle.css"/>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        function move(id){
+            var near = [id-1, id+1, id-3, id+3];
+            var temp = id;
+            var tempvalue = document.getElementById(id).innerHTML;
+            for(var i=0; i<near.length; i++){
+                if(near[i]<=9 && near[i]>=1){
+                    if(document.getElementById(near[i]).innerHTML == ''){
+                        document.getElementById(temp).innerHTML = '';
+                        document.getElementById(temp).parentElement.style.backgroundColor = "rgb(221, 126, 142)";
+                        document.getElementById(near[i]).innerHTML = tempvalue;
+                        document.getElementById(near[i]).parentElement.style.backgroundColor = "lightpink";
+                    }
+                }
+            }
+            check();
+        }
+        $(document).keydown(function(event){
+            var tempid=0;
+            var tempvalue;
+            if(event.keyCode == 87){//W
+                for(var i=1; i<=6; i++){
+                    if(document.getElementById(i).parentElement.style.backgroundColor != "lightpink"){
+                        tempid = i;
+                        break;
+                    }
+                }
+                if(tempid != 0){
+                    document.getElementById(tempid).innerHTML = document.getElementById(tempid+3).innerHTML;
+                    document.getElementById(tempid+3).innerHTML = '';
+                    document.getElementById(tempid).parentNode.style.backgroundColor = "lightpink";
+                    document.getElementById(tempid+3).parentNode.style.backgroundColor = "rgb(221, 126, 142)";
+                }
+            }
+            else if(event.keyCode == 65){//A
+                for(var i=1; i<=9; i++){
+                    if(document.getElementById(i).parentElement.style.backgroundColor != "lightpink"){
+                        tempid = i;
+                        break;
+                    }
+                }
+                if(tempid != 0 && tempid != 3 && tempid != 6 && tempid != 9){
+                    document.getElementById(tempid).innerHTML = document.getElementById(tempid+1).innerHTML;
+                    document.getElementById(tempid+1).innerHTML = '';
+                    document.getElementById(tempid).parentNode.style.backgroundColor = "lightpink";
+                    document.getElementById(tempid+1).parentNode.style.backgroundColor = "rgb(221, 126, 142)";
+                }
+            }
+            else if(event.keyCode == 83){//S
+                for(var i=4; i<=9; i++){
+                    if(document.getElementById(i).parentElement.style.backgroundColor != "lightpink"){
+                        tempid = i;
+                        break;
+                    }
+                }
+                if(tempid != 0){
+                    document.getElementById(tempid).innerHTML = document.getElementById(tempid-3).innerHTML;
+                    document.getElementById(tempid-3).innerHTML = '';
+                    document.getElementById(tempid).parentNode.style.backgroundColor = "lightpink";
+                    document.getElementById(tempid-3).parentNode.style.backgroundColor = "rgb(221, 126, 142)";
+                }
+            }
+            else if(event.keyCode == 68){//D
+                for(var i=1; i<=9; i++){
+                    if(document.getElementById(i).parentElement.style.backgroundColor != "lightpink"){
+                        tempid = i;
+                        break;
+                    }
+                }
+                if(tempid != 0 && tempid != 1 && tempid != 4 && tempid != 7){
+                    document.getElementById(tempid).innerHTML = document.getElementById(tempid-1).innerHTML;
+                    document.getElementById(tempid-1).innerHTML = '';
+                    document.getElementById(tempid).parentNode.style.backgroundColor = "lightpink";
+                    document.getElementById(tempid-1).parentNode.style.backgroundColor = "rgb(221, 126, 142)";
+                }
+            }
+            check();
+        });
+        function init(){
+            $("#9").html('');
+            $("#9").parent().css("background-color", "rgb(221, 126, 142)");
+            var arr = [];
+            while(arr.length<8){
+                var rand = Math.round(Math.random()*10)+1;
+                if(arr.indexOf(rand)<0 && rand<=8){
+                    arr.push(rand);
+                }
+            }
+            for(i=0;i<=7;i++){
+                document.getElementById(i+1).innerHTML = arr[i];
+                document.getElementById(i+1).parentElement.style.backgroundColor = "lightpink";
+            }
+        }
+
+        function check(){
+            var check = 0;
+            for(var i=1;i<=8;i++){
+                if(document.getElementById(i).innerHTML == i){
+                    check += 1;
+                }
+            }
+            if(check > 7){
+                alert("恭喜您，您已通关！");
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="main">
+        <div class="block" onclick="move(1)">
+            <p id="1">1</p>
+        </div>
+        <div class="block" onclick="move(2)">
+            <p id="2">2</p>
+        </div>
+        <div class="block" onclick="move(3)">
+            <p id="3">3</p>
+        </div>
+        <div class="block" onclick="move(4)">
+            <p id="4">4</p>
+        </div>
+        <div class="block" onclick="move(5)">
+            <p id="5">5</p>
+        </div>
+        <div class="block" onclick="move(6)">
+            <p id="6">6</p>
+        </div>
+        <div class="block" onclick="move(7)">
+            <p id="7">7</p>
+        </div>
+        <div class="block" onclick="move(8)">
+            <p id="8"></p>
+        </div>
+        <div class="block" onclick="move(9)">
+            <p id="9">8</p>
+        </div>
+    </div>
+    <br/>
+    <button type="button" onclick="init()">重置</button>
+    <p id="readMe">
+        游戏方法：使用<b>鼠标左键</b>或<b>键盘W/A/S/D</b>操作，将数字从左上角开始按1至8排序吧！如果你觉得玩不下去了，单击重置按钮，重新打乱顺序.
+    </p>
+</body>
+</html>

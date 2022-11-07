@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css"/>
+    <script>
+        class calculator{
+            constructor(){
+                this.sign = 0;
+                this.flag = 0;
+                this.result = 0;
+                this.a = 0;
+                this.b = 0;
+                this.reserve = 0;
+                this.per = 0;
+            }
+            init(){
+                this.sign = 0;
+                this.flag = 0;
+                this.result = 0;
+                this.a = 0;
+                this.b = 0;
+                this.show = "0";
+                this.reserve = 0;
+                document.getElementById("result").innerHTML = this.show;
+                document.getElementById("result").style.fontSize = "24px";
+                this.per = 0;
+            }
+            input(x,isDot=0){
+                if(isDot == 1 && this.flag == 0){
+                    this.a = this.a.toString() + ".";
+                    this.show = this.a;
+                    document.getElementById("result").innerHTML = this.show;
+                    if(this.show.length > 16){
+                        document.getElementById("result").style.fontSize = "15px";
+                    }
+                    else{
+                        document.getElementById("result").style.fontSize = "24px";
+                    }
+                }
+                else if(isDot == 1 && this.flag == 1){
+                    this.b = this.b.toString() + ".";
+                    this.show += ".";
+                    document.getElementById("result").innerHTML = this.show;
+                    if(this.show.length > 16){
+                        document.getElementById("result").style.fontSize = "15px";
+                    }
+                    else{
+                        document.getElementById("result").style.fontSize = "24px";
+                    }
+                }
+                else if(this.flag == 0 && ((this.a !== 0 && this.a != this.result)
+                                    || this.a.toString().indexOf(".") !== -1)){
+                    this.a = this.a.toString() + x;
+                    this.a = Number(this.a)
+                    this.show = this.a;
+                    document.getElementById("result").innerHTML = this.show;
+                    if(this.show.length > 16){
+                        document.getElementById("result").style.fontSize = "15px";
+                    }
+                    else{
+                        document.getElementById("result").style.fontSize = "24px";
+                    }
+                }
+                else if(this.flag == 0 && ((this.a === 0 && this.a.toString().indexOf(".") == -1) || this.a == this.result)){
+                    this.a = x;
+                    this.show = this.a;
+                    document.getElementById("result").innerHTML = this.show;
+                    if(this.show.length > 16){
+                        document.getElementById("result").style.fontSize = "15px";
+                    }
+                    else{
+                        document.getElementById("result").style.fontSize = "24px";
+                    }
+                }
+                else if(this.flag == 1 && (this.b != 0 || this.b.toString().indexOf(".") != -1)){
+                    this.b = this.b.toString() + x;
+                    this.b = Number(this.b)
+                    this.show += x;
+                    document.getElementById("result").innerHTML = this.show;
+                    if(this.show.length > 16){
+                        document.getElementById("result").style.fontSize = "15px";
+                    }
+                    else{
+                        document.getElementById("result").style.fontSize = "24px";
+                    }
+                }
+                else if(this.flag == 1 && this.b == 0){
+                    this.b = x;
+                    this.show += this.b;
+                    document.getElementById("result").innerHTML = this.show;
+                    if(this.show.length > 16){
+                        document.getElementById("result").style.fontSize = "15px";
+                    }
+                    else{
+                        document.getElementById("result").style.fontSize = "24px";
+                    }
+                }
+            }
+            calcu(sign){
+                this.flag = 1;
+                if(sign == 1 || sign == 2){
+                    if(this.b != 0){
+                        this.a = this.midEqual();
+                        this.b = 0;
+                    }
+                    if(sign == 1){
+                        this.sign = 1;
+                        this.show += "+";
+                    }
+                    else if(sign == 2){
+                        this.sign = 2;
+                        this.show += "-";
+                    }
+                }
+                else if(sign == 3 || sign == 4){
+                    if(this.b != 0 && (this.sign == 3 || this.sign == 4)){
+                        this.a = this.midEqual();
+                        this.b = 0;
+                    }
+                    else if(this.b != 0){
+                        if(this.sign == 1){
+                            if(this.reserve != 0){
+                                if(this.reserve.indexOf("+") != -1){
+                                    var temp;
+                                    temp = this.reserve.split("+");
+                                    this.reserve = Number(temp[0]) + Number(this.a) + "+";
+                                }
+                                else if(this.reserve.indexOf("-") != -1){
+                                    var temp;
+                                    temp = this.reserve.split("-");
+                                    this.reserve = Number(temp[0]) - Number(this.a) + "+";
+                                }
+                            }
+                            else{
+                                this.reserve = this.a.toString() + "+";
+                            }
+                            //console.log("o%", this.reserve);
+                        }
+                        else if(this.sign == 2){
+                            if(this.reserve != 0){
+                                if(this.reserve.indexOf("+") != -1){
+                                    var temp;
+                                    temp = this.reserve.split("+");
+                                    this.reserve = Number(temp[0]) + Number(this.a) + "-";
+                                }
+                                else if(this.reserve.indexOf("-") != -1){
+                                    var temp;
+                                    temp = this.reserve.split("-");
+                                    this.reserve = Number(temp[0]) - Number(this.a) + "-";
+                                }
+                            }
+                            else{
+                                this.reserve = this.a.toString() + "-";
+                            }
+                            //console.log("o%", this.reserve);
+                        }
+                        this.a = this.b;
+                        this.b = 0;
+                    }
+                    if(sign == 3){
+                        this.sign = 3;
+                        this.show += "*";
+                    }
+                    else if(sign == 4){
+                        this.sign = 4;
+                        this.show += "/";
+                    }
+                }
+                document.getElementById("result").innerHTML = this.show;
+                if(this.show.length > 16){
+                    document.getElementById("result").style.fontSize = "15px";
+                }
+                else{
+                    document.getElementById("result").style.fontSize = "24px";
+                }
+            }
+            perc(){
+                if(this.b ==0){
+                    this.a = this.a/100;
+
+                }
+                else{
+                    this.b = this.b/100;
+                }
+                this.per = 1;
+                this.show += "%";
+                document.getElementById("result").innerHTML = this.show;
+                if(this.show.length > 16){
+                    document.getElementById("result").style.fontSize = "15px";
+                }
+                else{
+                    document.getElementById("result").style.fontSize = "24px";
+                }
+            }
+            midEqual(){
+                let z=0;
+                if(this.sign == 1){
+                    z = this.a + this.b;
+                }
+                if(this.sign == 2){
+                    z = this.a - this.b;
+                }
+                if(this.sign == 3){
+                    z = this.a * this.b;
+                }
+                if(this.sign == 4){
+                    z = this.a / this.b;
+                }
+                return z;
+            }
+            Equal(){ 
+                if(this.sign == 1){
+                    this.result = this.a + this.b;
+                }
+                if(this.sign == 2){
+                    this.result = this.a - this.b;
+                }
+                if(this.sign == 3){
+                    this.result = this.a * this.b;
+                }
+                if(this.sign == 4){
+                    this.result = this.a / this.b;
+                }
+                if(this.b == 0){
+                    this.result = this.a;
+                }
+                if(this.reserve != 0 || this.reserve.toString().indexOf(".") != -1){
+                    if(this.reserve.toString().indexOf("+") != -1){
+                        var t = this.reserve.toString().split("+");
+                        for(var q=0;q<t.length;q++){//实际上t.length=1
+                            this.result += Number(t[q]);
+                        }     
+                    }
+                    else{
+                        var t = this.reserve.toString().split("-");
+                        this.result = Number(t[0]) - this.result;
+                    }
+                    
+                }
+                document.getElementById("result").style.fontSize = "24px";
+                document.getElementById("result").innerHTML = this.result;
+                //console.log(document.getElementById("result").offsetWidth);
+                var temp = this.result.toString();
+                if(temp.length > 10){
+                    document.getElementById("result").innerHTML = this.result.toExponential(10);
+                    //console.log(document.getElementById("result").offsetWidth);
+                }
+                this.flag = 0;
+                this.a = this.result;
+                this.b = 0;
+                this.show = this.result;
+                this.reserve = 0;
+                this.per = 0;
+            }
+        }
+        var cal = new calculator();
+    </script>
+</head>
+<body>
+    <div>
+        <p id="result"">0</p>
+        <button type="button" class="AC" onclick="cal.init()">AC</button>
+        <button type="button" class="percent" onclick="cal.perc()">%</button>
+        <br/>
+        <button type="button" class="seven" value ="7" onclick="cal.input(7)">7</button>
+        <button type="button" class="eight" value ="8" onclick="cal.input(8)">8</button>
+        <button type="button" class="nine" value ="9" onclick="cal.input(9)">9</button>
+        <button type="button" class="pls" onclick="cal.calcu(1)">+</button>
+        <br/>
+        <button type="button" class="four" value ="4" onclick="cal.input(4)">4</button>
+        <button type="button" class="five" value ="5" onclick="cal.input(5)">5</button>
+        <button type="button" class="six" value ="6" onclick="cal.input(6)">6</button>
+        <button type="button" class="min" onclick="cal.calcu(2)">-</button>
+        <br/>
+        <button type="button" class="one" value ="1" onclick="cal.input(1)">1</button>
+        <button type="button" class="two" value ="2" onclick="cal.input(2)">2</button>
+        <button type="button" class="three" value ="3" onclick="cal.input(3)">3</button>
+        <button type="button" class="mul" onclick="cal.calcu(3)">x</button>
+        <br/>
+    
+        <button type="button" class="zero" value ="0" onclick="cal.input(0)">0</button>
+        <button type="button" class="dot" onclick="cal.input(0,1)">.</button>
+        <button type="button" class="equ" onclick="cal.Equal()">=</button>
+        <button type="button" class="div" onclick="cal.calcu(4)">÷</button>
+    </div>
+    <h3 id="readMe">
+        使用说明：支持小数、整数加减乘除，支持多项式运算，支持对于上一个结果继续进行运算.
+        式子太长时文字缩小，结果太长时换为科学记数法
+    </h3>
+    <h3 id="TODO">
+        TODO:增添等括号功能，升级计算器功能.
+    </h3>
+    <p id="ps">
+        注：由于浮点数的运算特性，部分浮点数计算可能不精确.
+    <p>
+</body>
+</html>
