@@ -1,0 +1,118 @@
+
+header{
+    background-color: rgb(203, 153, 160);
+    color: white;
+    font-size: 20px;
+    padding:3px;
+}
+nav{
+    position: relative;
+}
+h3{
+    padding-left: 5px;
+}
+
+ul{
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(245, 243, 238);
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+li{float: left;}
+a{
+    display:block;
+    margin: 0;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: rgb(227, 144, 156);
+    
+}
+a:hover{
+    background-color: rgb(203, 153, 160);
+    color: white;
+}
+
+
+div.main{
+    margin-top: 15px;
+}
+
+div.pi{
+    float: left;
+    width: 23%;
+    height: 1000px;
+    background-color: lightgrey;
+}
+
+
+section{
+    float: right;
+    width: 70%;
+    background-color:rgb(246, 238, 239) ;
+    padding: 15px;
+    padding-left: 0;
+    margin: 15px;
+    
+    border-radius: 15px;
+}
+section.more{
+    display: none;
+}
+button{
+    left: 500px;
+    position: relative;
+    background-color:rgb(203, 153, 160); 
+    color: white;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 3px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+button:hover {opacity: 1}
+h2{
+    margin:0;
+    padding-left: 15px;
+    border-left: 5px pink;
+    border-left-style: solid;
+    color: rgb(61, 61, 61);
+}
+p{
+    padding-left: 15px;
+    color: rgb(86, 86, 86);
+}
+div.artfoot{
+    width: 96%;
+    display: inline;
+    text-align: right;
+    color: darkgrey;
+    font-size: 10px;
+}
+div.name{
+    display: inline;
+    text-align: right;
+}
+div.time{
+    display: inline;
+    text-align: right;
+}
+
+footer{
+    text-align: center;
+    clear: both;
+}

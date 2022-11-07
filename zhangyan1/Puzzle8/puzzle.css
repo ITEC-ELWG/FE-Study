@@ -1,0 +1,42 @@
+div.main{
+    width: 480px;
+    height: 480px;
+}
+div.block{
+    width: 150px;
+    height: 150px;
+    float: left;
+    background-color: lightpink;
+    border: solid 5px rgb(221, 126, 142);
+    border-radius: 8px;
+}
+p{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 45px;
+}
+button{
+    background-color:rgb(177, 186, 196); 
+    color: white;
+    border: none;
+    font-size: 16px;
+    width: 180px;
+    border-radius: 8px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    left:147px;
+    height: 50px;
+
+}
+button:hover {opacity: 1}
+p#readMe{
+    width: 480px;
+    color: rgb(255, 105, 130);
+    font-size: 16px;
+    text-align: left;
+}

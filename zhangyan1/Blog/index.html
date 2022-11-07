@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+    <script>
+        function dis(){
+            var secset=document.getElementsByClassName("more");
+        	for (var i = 0; i<secset.length;i++) {
+                    secset[i].style.display="block";
+        		 };
+            var buttset=document.getElementsByTagName("button");
+        	for (var i = 0; i<secset.length;i++) {
+                buttset[i].style.display="none";
+        		 };
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Zhang Yan's Blog</h1>
+    </header>
+    <nav>
+        <ul>
+            <li class="h"><a href="#home">首页</a></li>
+            <li class="c"><a href="#class">分类</a></li>
+            <li class="b"><a href="#belong">归档</a></li>
+            <li class="r"><a href="#read">读书</a></li>
+            <li class="a"><a href="#about">关于</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="pi">
+            <h3>个人简介</h3>
+            <p>这是个人简介....</p>
+        </div>
+        <section>
+            <h2>文章1</h2>
+            <p>文章的内容...</p>
+            <div class="artfoot first">
+                <div class="name">@Yan</div>
+                <div class="time">2022-10-13</div>
+            </div>
+        </section>
+        <section>
+            <h2>文章2</h2>
+            <p>文章的内容...</p>
+            <div class="artfoot second">
+                <div class="name">@Yan</div>
+                <div class="time">2022-10-14</div>
+            </div>
+        </section>
+        <section>
+            <h2>文章3</h2>
+            <p>文章的内容...</p>
+            <div class="artfoot third">
+                <div class="name">@Yan</div>
+                <div class="time">2022-10-15</div>
+            </div>
+        </section>
+        <button id="1" type="button" onclick="dis()">显示更多</button>
+        <section class="more">
+            <h2>文章4</h2>
+            <p>文章的内容...</p>
+            <div class="artfoot fourth">
+                <div class="name">@Yan</div>
+                <div class="time">2022-10-15</div>
+            </div>
+        </section>
+        <section class="more">
+            <h2>文章5</h2>
+            <p>文章的内容...</p>
+            <div class="artfoot fifth">
+                <div class="name">@Yan</div>
+                <div class="time">2022-10-16</div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        CopyRight @zhangyan
+    <footer>
+</body>
+</html>
